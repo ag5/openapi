@@ -7173,7 +7173,7 @@
   ],
   "info": {
     "termsOfService": "https://www.ag5.com",
-    "title": "YoapiIntegration",
+    "title": "AG5 API v3",
     "description": "\n\n## Authentication\n\nThis API uses Bearer token authentication.\n\nRequests to this API should contain an Authorization header like this:\n\n```\nAuthorization: Bearer [Token]\n```\n",
     "contact": {
       "url": "https://www.ag5.com/",
@@ -7182,6 +7182,5 @@
     },
     "version": "1.0"
   },
-  ],
   "openapi": "3.0.0"
 }
