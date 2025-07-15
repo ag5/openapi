@@ -1,26 +1,122 @@
 components:
+    parameters:
+        cursor:
+            description: |
+                Cursor for pagination. This should be the `nextCursor` value from a previous response.
+                Leave empty to start from the beginning.
+            in: query
+            name: cursor
+            schema:
+                format: byte
+                type: string
+        limit:
+            description: Maximum number of items to return (1-1000)
+            in: query
+            name: limit
+            schema:
+                default: 10
+                maximum: 1000
+                minimum: 1
+                type: integer
+        orgID:
+            description: |
+                Organization identifier. This can be either:
+                - Organization UUID (e.g., `123e4567-e89b-12d3-a456-426614174000`)
+                - Organization slug (e.g., `acme-corp`)
+            examples:
+                slug:
+                    summary: Organization slug
+                    value: acme-corp
+                uuid:
+                    summary: Organization UUID
+                    value: 123e4567-e89b-12d3-a456-426614174000
+            in: path
+            name: orgID
+            required: true
+            schema:
+                type: string
     responses:
         BadRequest:
             content:
                 application/json:
+                    examples:
+                        invalidInput:
+                            summary: Invalid input data
+                            value:
+                                code: INVALID_INPUT
+                                details:
+                                    field: email
+                                    reason: Invalid email format
+                                message: The provided input data is invalid
                     schema:
                         $ref: '#/components/schemas/Error'
             description: Bad request
         InternalError:
             content:
                 application/json:
+                    examples:
+                        internalError:
+                            summary: Internal server error
+                            value:
+                                code: INTERNAL_ERROR
+                                message: An unexpected error occurred
                     schema:
                         $ref: '#/components/schemas/Error'
             description: Internal server error
         NotFound:
             content:
                 application/json:
+                    examples:
+                        resourceNotFound:
+                            summary: Resource not found
+                            value:
+                                code: NOT_FOUND
+                                details:
+                                    id: 123e4567-e89b-12d3-a456-426614174000
+                                    resource: employee
+                                message: The requested resource was not found
                     schema:
                         $ref: '#/components/schemas/Error'
             description: Not found
+        RateLimitExceeded:
+            content:
+                application/json:
+                    examples:
+                        rateLimitExceeded:
+                            summary: Rate limit exceeded
+                            value:
+                                code: RATE_LIMIT_EXCEEDED
+                                message: Too many requests. Please retry after some time.
+                    schema:
+                        $ref: '#/components/schemas/Error'
+            description: Rate limit exceeded
+            headers:
+                X-RateLimit-Limit:
+                    description: The rate limit ceiling for the current period
+                    schema:
+                        type: integer
+                X-RateLimit-Remaining:
+                    description: The number of requests remaining in the current period
+                    schema:
+                        type: integer
+                X-RateLimit-Reset:
+                    description: The time at which the current period resets
+                    schema:
+                        type: integer
         Unauthorized:
             content:
                 application/json:
+                    examples:
+                        invalidToken:
+                            summary: Invalid authentication token
+                            value:
+                                code: INVALID_TOKEN
+                                message: The provided authentication token is invalid or expired
+                        missingToken:
+                            summary: Missing authentication token
+                            value:
+                                code: MISSING_AUTH
+                                message: Authentication token is required
                     schema:
                         $ref: '#/components/schemas/Error'
             description: Unauthorized
@@ -3222,10 +3318,26 @@ components:
         Error:
             properties:
                 code:
-                    description: Error code
+                    description: Machine-readable error code
+                    enum:
+                        - INVALID_INPUT
+                        - MISSING_AUTH
+                        - INVALID_TOKEN
+                        - NOT_FOUND
+                        - INTERNAL_ERROR
+                        - RATE_LIMIT_EXCEEDED
+                        - PROPOSAL_CONFLICT
+                        - APPROVAL_REQUIRED
                     type: string
+                details:
+                    additionalProperties: true
+                    description: Additional error details
+                    type: object
                 message:
-                    description: Error message
+                    description: Human-readable error message
+                    type: string
+                requestId:
+                    description: Unique request identifier for support
                     type: string
             required:
                 - code
@@ -4268,6 +4380,30 @@ components:
             required:
                 - data
                 - total
+            type: object
+        PaginationInfo:
+            properties:
+                cursor:
+                    description: Current cursor position
+                    type: string
+                hasNext:
+                    description: Whether there are more pages
+                    type: boolean
+                hasPrevious:
+                    description: Whether there are previous pages
+                    type: boolean
+                limit:
+                    description: Maximum number of items returned
+                    type: integer
+                nextCursor:
+                    description: Cursor for the next page (if available)
+                    type: string
+                total:
+                    description: Total number of items available
+                    type: integer
+            required:
+                - total
+                - limit
             type: object
         PositionAssignment:
             properties:
@@ -6746,10 +6882,29 @@ components:
                     format: uuid
                     type: string
             type: object
+    securitySchemes:
+        bearerAuth:
+            bearerFormat: JWT
+            description: |
+                JWT token obtained from the authentication service.
+
+                To obtain a token, make a POST request to `/auth/token` with your credentials.
+            scheme: bearer
+            type: http
 info:
-    description: Skills Management API
-    title: AG5 OpenAPI v4
+    contact:
+        email: api-support@ag5.com
+        name: AG5 API Support
+        url: https://support.ag5.com
+    description: "# AG5 Skills Management API\n\n## Overview\nThe AG5 Skills Management API provides a comprehensive solution for managing employee\nskills within your organization. This API supports both direct operations and a\nproposal-based workflow for changes that require approval.\n\n## Proposal System\nMany operations in this API use a proposal-based workflow:\n- **Direct Operations**: Read-only operations (GET) directly access current data\n- **Proposal Operations**: Modifications (CREATE, UPDATE, DELETE) create proposals\n- **Automatic vs Manual Approval**: Proposals may be automatically approved based on \n  system configuration or require manual approval\n\n## Authentication\nAll API endpoints require authentication using a Bearer token.\n\n```\nAuthorization: Bearer <your-token>\n```\n\n## Rate Limiting\nAPI calls are rate-limited to ensure fair usage:\n- 1000 requests per hour per organization\n- Rate limit headers are included in all responses\n\n## Pagination\nList endpoints support cursor-based pagination:\n- Use `limit` parameter to control page size (max 1000)\n- Use `cursor` parameter with the value from previous response\n- Total count is included in all list responses\n"
+    license:
+        name: Commercial
+        url: https://ag5.com/terms
+    title: AG5 Skills Management API
     version: 0.1.0
+    x-logo:
+        altText: AG5 Logo
+        url: https://www.ag5.com/wp-content/themes/ag5/assets/images/ag5-logo.png
 openapi: 3.0.3
 paths:
     /{orgID}/createcustomfielddefinitions:
@@ -14273,6 +14428,37 @@ paths:
               required: true
               schema:
                 type: string
+security:
+    - bearerAuth: []
 servers:
-    - description: API base path
-      url: /api
+    - description: Production server
+      url: https://api.ag5.com/api/orgkeep/v4
+tags:
+    - description: Operations related to employee management
+      name: Employees
+    - description: Operations related to skills and competencies
+      name: Skills
+    - description: Operations for proposal-based changes
+      name: Proposals
+x-webhooks:
+    proposalStatusChanged:
+        post:
+            description: Triggered when a proposal's status changes
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            properties:
+                                newStatus:
+                                    type: string
+                                previousStatus:
+                                    type: string
+                                proposalId:
+                                    format: uuid
+                                    type: string
+                                timestamp:
+                                    format: date-time
+                                    type: string
+                            type: object
+                required: true
+            summary: Proposal status changed
