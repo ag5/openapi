@@ -20,13 +20,9 @@ components:
                 type: integer
         orgID:
             description: |
-                Organization identifier. This can be either:
-                - Organization UUID (e.g., `123e4567-e89b-12d3-a456-426614174000`)
-                - Organization slug (e.g., `acme-corp`)
+                Organization:
+                - OrgKeep UUID (e.g., `123e4567-e89b-12d3-a456-426614174000`)
             examples:
-                slug:
-                    summary: Organization slug
-                    value: acme-corp
                 uuid:
                     summary: Organization UUID
                     value: 123e4567-e89b-12d3-a456-426614174000
@@ -107,16 +103,16 @@ components:
             content:
                 application/json:
                     examples:
-                        invalidToken:
-                            summary: Invalid authentication token
+                        invalidApiKey:
+                            summary: Invalid API key
                             value:
                                 code: INVALID_TOKEN
-                                message: The provided authentication token is invalid or expired
-                        missingToken:
-                            summary: Missing authentication token
+                                message: The provided API key is invalid or expired
+                        missingApiKey:
+                            summary: Missing API key
                             value:
                                 code: MISSING_AUTH
-                                message: Authentication token is required
+                                message: API key is required. Please provide the X-API-Key header
                     schema:
                         $ref: '#/components/schemas/Error'
             description: Unauthorized
@@ -1591,19 +1587,10 @@ components:
             type: object
         CreateRepositoryRequest:
             properties:
-                createCommit_id:
-                    format: uuid
-                    type: string
-                lastModifiedCommit_id:
-                    format: uuid
-                    type: string
-                recordOwner_id:
-                    format: uuid
+                code:
                     type: string
             required:
-                - createCommit_id
-                - lastModifiedCommit_id
-                - recordOwner_id
+                - code
             type: object
         CreateSkillDefinition:
             properties:
@@ -4183,23 +4170,14 @@ components:
             type: object
         Repository:
             properties:
-                createCommit_id:
-                    format: uuid
+                code:
                     type: string
                 id:
                     format: uuid
                     type: string
-                lastModifiedCommit_id:
-                    format: uuid
-                    type: string
-                recordOwner_id:
-                    format: uuid
-                    type: string
             required:
                 - id
-                - createCommit_id
-                - lastModifiedCommit_id
-                - recordOwner_id
+                - code
             type: object
         SkillDefinition:
             properties:
@@ -5596,14 +5574,7 @@ components:
             type: object
         UpdateRepositoryRequest:
             properties:
-                createCommit_id:
-                    format: uuid
-                    type: string
-                lastModifiedCommit_id:
-                    format: uuid
-                    type: string
-                recordOwner_id:
-                    format: uuid
+                code:
                     type: string
             type: object
         UpdateSkillDefinition:
@@ -6289,20 +6260,17 @@ components:
                     type: string
             type: object
     securitySchemes:
-        bearerAuth:
-            bearerFormat: JWT
-            description: |
-                JWT token obtained from the authentication service.
-
-                To obtain a token, make a POST request to `/auth/token` with your credentials.
-            scheme: bearer
-            type: http
+        apiKey:
+            description: "API key for authentication. \n\nInclude your API key in the `X-API-Key` header with every request.\n\nExample:\n```\nX-API-Key: your-api-key-here\n```\n"
+            in: header
+            name: X-API-Key
+            type: apiKey
 info:
     contact:
         email: api-support@ag5.com
         name: AG5 API Support
         url: https://support.ag5.com
-    description: "# AG5 Skills Management API\n\n## Overview\nThe AG5 Skills Management API provides a comprehensive solution for managing employee\nskills within your organization. This API supports both direct operations and a\nproposal-based workflow for changes that require approval.\n\n## Proposal System\nMany operations in this API use a proposal-based workflow:\n- **Direct Operations**: Read-only operations (GET) directly access current data\n- **Proposal Operations**: Modifications (CREATE, UPDATE, DELETE) create proposals\n- **Automatic vs Manual Approval**: Proposals may be automatically approved based on \n  system configuration or require manual approval\n\n## Authentication\nAll API endpoints require authentication using a Bearer token.\n\n```\nAuthorization: Bearer <your-token>\n```\n\n## Rate Limiting\nAPI calls are rate-limited to ensure fair usage:\n- 1000 requests per hour per organization\n- Rate limit headers are included in all responses\n\n## Pagination\nList endpoints support cursor-based pagination:\n- Use `limit` parameter to control page size (max 1000)\n- Use `cursor` parameter with the value from previous response\n- Total count is included in all list responses\n"
+    description: "# AG5 Skills Management API\n\n## Overview\nThe AG5 Skills Management API provides a comprehensive solution for managing employee\nskills within your organization. This API supports both direct operations and a\nproposal-based workflow for changes that require approval.\n\n## Proposal System\nMany operations in this API use a proposal-based workflow:\n- **Direct Operations**: Read-only operations (GET) directly access current data\n- **Proposal Operations**: Modifications (CREATE, UPDATE, DELETE) create proposals\n- **Automatic vs Manual Approval**: Proposals may be automatically approved based on \n  system configuration or require manual approval\n\n## Authentication\nAll API endpoints require authentication using an API key.\n\n```\nX-API-Key: <your-api-key>\n```\n\n## Rate Limiting\nAPI calls are rate-limited to ensure fair usage:\n- 1000 requests per hour per organization\n- Rate limit headers are included in all responses\n\n## Pagination\nList endpoints support cursor-based pagination:\n- Use `limit` parameter to control page size (max 1000)\n- Use `cursor` parameter with the value from previous response\n- Total count is included in all list responses\n"
     license:
         name: Commercial
         url: https://ag5.com/terms
@@ -13835,7 +13803,7 @@ paths:
               schema:
                 type: string
 security:
-    - bearerAuth: []
+    - apiKey: []
 servers:
     - description: Production server
       url: https://api.ag5.com/api/orgkeep/v4
