@@ -13808,10 +13808,6 @@ servers:
     - description: Production server
       url: https://api.ag5.com/api/orgkeep/v4
 tags:
-    - description: Operations related to employee management
-      name: Employees
-    - description: Operations related to skills and competencies
-      name: Skills
     - description: Operations for proposal-based changes
       name: Proposals
 x-webhooks:
