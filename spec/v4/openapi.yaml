@@ -8350,7 +8350,7 @@ paths:
                 type: string
     /{orgID}/deletecustomfielddefinitions:
         get:
-            description: List all deleteCustomFieldDefinitions proposals. These are proposed changes to create new CustomFieldDefinition records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deleteCustomFieldDefinitions proposals. These are proposed changes to delete CustomFieldDefinition records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteCustomFieldDefinition
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -8379,7 +8379,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List CustomFieldDefinition creation proposals
+            summary: List CustomFieldDefinition deletion proposals
             tags:
                 - CustomFieldDefinitions
                 - Proposals
@@ -8418,7 +8418,7 @@ paths:
                 - Proposals
     /{orgID}/deletecustomfielddefinitions/{id}:
         get:
-            description: Get details of a specific CustomFieldDefinition creation proposal by ID
+            description: Get details of a specific CustomFieldDefinition deletion proposal by ID
             operationId: getDeleteCustomFieldDefinition
             responses:
                 "200":
@@ -8433,7 +8433,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get CustomFieldDefinition creation proposal
+            summary: Get CustomFieldDefinition deletion proposal
             tags:
                 - CustomFieldDefinitions
                 - Proposals
@@ -8452,7 +8452,7 @@ paths:
                 type: string
     /{orgID}/deleteemployees:
         get:
-            description: List all deleteEmployees proposals. These are proposed changes to create new Employee records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deleteEmployees proposals. These are proposed changes to delete Employee records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmployee
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -8481,7 +8481,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List Employee creation proposals
+            summary: List Employee deletion proposals
             tags:
                 - Employees
                 - Proposals
@@ -8520,7 +8520,7 @@ paths:
                 - Proposals
     /{orgID}/deleteemployees/{id}:
         get:
-            description: Get details of a specific Employee creation proposal by ID
+            description: Get details of a specific Employee deletion proposal by ID
             operationId: getDeleteEmployee
             responses:
                 "200":
@@ -8535,7 +8535,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get Employee creation proposal
+            summary: Get Employee deletion proposal
             tags:
                 - Employees
                 - Proposals
@@ -8554,7 +8554,7 @@ paths:
                 type: string
     /{orgID}/deleteemployeeunavailabilities:
         get:
-            description: List all deleteEmployeeUnavailabilities proposals. These are proposed changes to create new EmployeeUnavailability records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deleteEmployeeUnavailabilities proposals. These are proposed changes to delete EmployeeUnavailability records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmployeeUnavailability
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -8583,7 +8583,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List EmployeeUnavailability creation proposals
+            summary: List EmployeeUnavailability deletion proposals
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
@@ -8622,7 +8622,7 @@ paths:
                 - Proposals
     /{orgID}/deleteemployeeunavailabilities/{id}:
         get:
-            description: Get details of a specific EmployeeUnavailability creation proposal by ID
+            description: Get details of a specific EmployeeUnavailability deletion proposal by ID
             operationId: getDeleteEmployeeUnavailability
             responses:
                 "200":
@@ -8637,7 +8637,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmployeeUnavailability creation proposal
+            summary: Get EmployeeUnavailability deletion proposal
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
@@ -8656,7 +8656,7 @@ paths:
                 type: string
     /{orgID}/deleteemploymentcontracts:
         get:
-            description: List all deleteEmploymentContracts proposals. These are proposed changes to create new EmploymentContract records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deleteEmploymentContracts proposals. These are proposed changes to delete EmploymentContract records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmploymentContract
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -8685,7 +8685,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List EmploymentContract creation proposals
+            summary: List EmploymentContract deletion proposals
             tags:
                 - EmploymentContracts
                 - Proposals
@@ -8724,7 +8724,7 @@ paths:
                 - Proposals
     /{orgID}/deleteemploymentcontracts/{id}:
         get:
-            description: Get details of a specific EmploymentContract creation proposal by ID
+            description: Get details of a specific EmploymentContract deletion proposal by ID
             operationId: getDeleteEmploymentContract
             responses:
                 "200":
@@ -8739,7 +8739,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmploymentContract creation proposal
+            summary: Get EmploymentContract deletion proposal
             tags:
                 - EmploymentContracts
                 - Proposals
@@ -8758,7 +8758,7 @@ paths:
                 type: string
     /{orgID}/deleteemploymentcontracttypes:
         get:
-            description: List all deleteEmploymentContractTypes proposals. These are proposed changes to create new EmploymentContractType records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deleteEmploymentContractTypes proposals. These are proposed changes to delete EmploymentContractType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmploymentContractType
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -8787,7 +8787,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List EmploymentContractType creation proposals
+            summary: List EmploymentContractType deletion proposals
             tags:
                 - EmploymentContractTypes
                 - Proposals
@@ -8826,7 +8826,7 @@ paths:
                 - Proposals
     /{orgID}/deleteemploymentcontracttypes/{id}:
         get:
-            description: Get details of a specific EmploymentContractType creation proposal by ID
+            description: Get details of a specific EmploymentContractType deletion proposal by ID
             operationId: getDeleteEmploymentContractType
             responses:
                 "200":
@@ -8841,7 +8841,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmploymentContractType creation proposal
+            summary: Get EmploymentContractType deletion proposal
             tags:
                 - EmploymentContractTypes
                 - Proposals
@@ -8860,7 +8860,7 @@ paths:
                 type: string
     /{orgID}/deleteemploymentrelations:
         get:
-            description: List all deleteEmploymentRelations proposals. These are proposed changes to create new EmploymentRelation records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deleteEmploymentRelations proposals. These are proposed changes to delete EmploymentRelation records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmploymentRelation
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -8889,7 +8889,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List EmploymentRelation creation proposals
+            summary: List EmploymentRelation deletion proposals
             tags:
                 - EmploymentRelations
                 - Proposals
@@ -8928,7 +8928,7 @@ paths:
                 - Proposals
     /{orgID}/deleteemploymentrelations/{id}:
         get:
-            description: Get details of a specific EmploymentRelation creation proposal by ID
+            description: Get details of a specific EmploymentRelation deletion proposal by ID
             operationId: getDeleteEmploymentRelation
             responses:
                 "200":
@@ -8943,7 +8943,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmploymentRelation creation proposal
+            summary: Get EmploymentRelation deletion proposal
             tags:
                 - EmploymentRelations
                 - Proposals
@@ -8962,7 +8962,7 @@ paths:
                 type: string
     /{orgID}/deleteemploymentrelationtypes:
         get:
-            description: List all deleteEmploymentRelationTypes proposals. These are proposed changes to create new EmploymentRelationType records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deleteEmploymentRelationTypes proposals. These are proposed changes to delete EmploymentRelationType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmploymentRelationType
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -8991,7 +8991,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List EmploymentRelationType creation proposals
+            summary: List EmploymentRelationType deletion proposals
             tags:
                 - EmploymentRelationTypes
                 - Proposals
@@ -9030,7 +9030,7 @@ paths:
                 - Proposals
     /{orgID}/deleteemploymentrelationtypes/{id}:
         get:
-            description: Get details of a specific EmploymentRelationType creation proposal by ID
+            description: Get details of a specific EmploymentRelationType deletion proposal by ID
             operationId: getDeleteEmploymentRelationType
             responses:
                 "200":
@@ -9045,7 +9045,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmploymentRelationType creation proposal
+            summary: Get EmploymentRelationType deletion proposal
             tags:
                 - EmploymentRelationTypes
                 - Proposals
@@ -9064,7 +9064,7 @@ paths:
                 type: string
     /{orgID}/deletegroupings:
         get:
-            description: List all deleteGroupings proposals. These are proposed changes to create new Grouping records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deleteGroupings proposals. These are proposed changes to delete Grouping records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteGrouping
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -9093,7 +9093,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List Grouping creation proposals
+            summary: List Grouping deletion proposals
             tags:
                 - Groupings
                 - Proposals
@@ -9132,7 +9132,7 @@ paths:
                 - Proposals
     /{orgID}/deletegroupings/{id}:
         get:
-            description: Get details of a specific Grouping creation proposal by ID
+            description: Get details of a specific Grouping deletion proposal by ID
             operationId: getDeleteGrouping
             responses:
                 "200":
@@ -9147,7 +9147,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get Grouping creation proposal
+            summary: Get Grouping deletion proposal
             tags:
                 - Groupings
                 - Proposals
@@ -9166,7 +9166,7 @@ paths:
                 type: string
     /{orgID}/deletegroupingtypes:
         get:
-            description: List all deleteGroupingTypes proposals. These are proposed changes to create new GroupingType records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deleteGroupingTypes proposals. These are proposed changes to delete GroupingType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteGroupingType
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -9195,7 +9195,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List GroupingType creation proposals
+            summary: List GroupingType deletion proposals
             tags:
                 - GroupingTypes
                 - Proposals
@@ -9234,7 +9234,7 @@ paths:
                 - Proposals
     /{orgID}/deletegroupingtypes/{id}:
         get:
-            description: Get details of a specific GroupingType creation proposal by ID
+            description: Get details of a specific GroupingType deletion proposal by ID
             operationId: getDeleteGroupingType
             responses:
                 "200":
@@ -9249,7 +9249,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get GroupingType creation proposal
+            summary: Get GroupingType deletion proposal
             tags:
                 - GroupingTypes
                 - Proposals
@@ -9268,7 +9268,7 @@ paths:
                 type: string
     /{orgID}/deletepositionassignments:
         get:
-            description: List all deletePositionAssignments proposals. These are proposed changes to create new PositionAssignment records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deletePositionAssignments proposals. These are proposed changes to delete PositionAssignment records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeletePositionAssignment
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -9297,7 +9297,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List PositionAssignment creation proposals
+            summary: List PositionAssignment deletion proposals
             tags:
                 - PositionAssignments
                 - Proposals
@@ -9336,7 +9336,7 @@ paths:
                 - Proposals
     /{orgID}/deletepositionassignments/{id}:
         get:
-            description: Get details of a specific PositionAssignment creation proposal by ID
+            description: Get details of a specific PositionAssignment deletion proposal by ID
             operationId: getDeletePositionAssignment
             responses:
                 "200":
@@ -9351,7 +9351,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get PositionAssignment creation proposal
+            summary: Get PositionAssignment deletion proposal
             tags:
                 - PositionAssignments
                 - Proposals
@@ -9370,7 +9370,7 @@ paths:
                 type: string
     /{orgID}/deleteratingscaleleveldescriptors:
         get:
-            description: List all deleteRatingScaleLevelDescriptors proposals. These are proposed changes to create new RatingScaleLevelDescriptor records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deleteRatingScaleLevelDescriptors proposals. These are proposed changes to delete RatingScaleLevelDescriptor records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteRatingScaleLevelDescriptor
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -9399,7 +9399,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List RatingScaleLevelDescriptor creation proposals
+            summary: List RatingScaleLevelDescriptor deletion proposals
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
@@ -9438,7 +9438,7 @@ paths:
                 - Proposals
     /{orgID}/deleteratingscaleleveldescriptors/{id}:
         get:
-            description: Get details of a specific RatingScaleLevelDescriptor creation proposal by ID
+            description: Get details of a specific RatingScaleLevelDescriptor deletion proposal by ID
             operationId: getDeleteRatingScaleLevelDescriptor
             responses:
                 "200":
@@ -9453,7 +9453,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get RatingScaleLevelDescriptor creation proposal
+            summary: Get RatingScaleLevelDescriptor deletion proposal
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
@@ -9472,7 +9472,7 @@ paths:
                 type: string
     /{orgID}/deleteratingscalelevels:
         get:
-            description: List all deleteRatingScaleLevels proposals. These are proposed changes to create new RatingScaleLevel records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deleteRatingScaleLevels proposals. These are proposed changes to delete RatingScaleLevel records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteRatingScaleLevel
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -9501,7 +9501,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List RatingScaleLevel creation proposals
+            summary: List RatingScaleLevel deletion proposals
             tags:
                 - RatingScaleLevels
                 - Proposals
@@ -9540,7 +9540,7 @@ paths:
                 - Proposals
     /{orgID}/deleteratingscalelevels/{id}:
         get:
-            description: Get details of a specific RatingScaleLevel creation proposal by ID
+            description: Get details of a specific RatingScaleLevel deletion proposal by ID
             operationId: getDeleteRatingScaleLevel
             responses:
                 "200":
@@ -9555,7 +9555,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get RatingScaleLevel creation proposal
+            summary: Get RatingScaleLevel deletion proposal
             tags:
                 - RatingScaleLevels
                 - Proposals
@@ -9574,7 +9574,7 @@ paths:
                 type: string
     /{orgID}/deleteratingscales:
         get:
-            description: List all deleteRatingScales proposals. These are proposed changes to create new RatingScale records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deleteRatingScales proposals. These are proposed changes to delete RatingScale records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteRatingScale
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -9603,7 +9603,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List RatingScale creation proposals
+            summary: List RatingScale deletion proposals
             tags:
                 - RatingScales
                 - Proposals
@@ -9642,7 +9642,7 @@ paths:
                 - Proposals
     /{orgID}/deleteratingscales/{id}:
         get:
-            description: Get details of a specific RatingScale creation proposal by ID
+            description: Get details of a specific RatingScale deletion proposal by ID
             operationId: getDeleteRatingScale
             responses:
                 "200":
@@ -9657,7 +9657,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get RatingScale creation proposal
+            summary: Get RatingScale deletion proposal
             tags:
                 - RatingScales
                 - Proposals
@@ -9676,7 +9676,7 @@ paths:
                 type: string
     /{orgID}/deleteskilldefinitions:
         get:
-            description: List all deleteSkillDefinitions proposals. These are proposed changes to create new SkillDefinition records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deleteSkillDefinitions proposals. These are proposed changes to delete SkillDefinition records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteSkillDefinition
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -9705,7 +9705,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List SkillDefinition creation proposals
+            summary: List SkillDefinition deletion proposals
             tags:
                 - SkillDefinitions
                 - Proposals
@@ -9744,7 +9744,7 @@ paths:
                 - Proposals
     /{orgID}/deleteskilldefinitions/{id}:
         get:
-            description: Get details of a specific SkillDefinition creation proposal by ID
+            description: Get details of a specific SkillDefinition deletion proposal by ID
             operationId: getDeleteSkillDefinition
             responses:
                 "200":
@@ -9759,7 +9759,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get SkillDefinition creation proposal
+            summary: Get SkillDefinition deletion proposal
             tags:
                 - SkillDefinitions
                 - Proposals
@@ -9778,7 +9778,7 @@ paths:
                 type: string
     /{orgID}/deleteskilldefinitiontypes:
         get:
-            description: List all deleteSkillDefinitionTypes proposals. These are proposed changes to create new SkillDefinitionType records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deleteSkillDefinitionTypes proposals. These are proposed changes to delete SkillDefinitionType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteSkillDefinitionType
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -9807,7 +9807,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List SkillDefinitionType creation proposals
+            summary: List SkillDefinitionType deletion proposals
             tags:
                 - SkillDefinitionTypes
                 - Proposals
@@ -9846,7 +9846,7 @@ paths:
                 - Proposals
     /{orgID}/deleteskilldefinitiontypes/{id}:
         get:
-            description: Get details of a specific SkillDefinitionType creation proposal by ID
+            description: Get details of a specific SkillDefinitionType deletion proposal by ID
             operationId: getDeleteSkillDefinitionType
             responses:
                 "200":
@@ -9861,7 +9861,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get SkillDefinitionType creation proposal
+            summary: Get SkillDefinitionType deletion proposal
             tags:
                 - SkillDefinitionTypes
                 - Proposals
@@ -9880,7 +9880,7 @@ paths:
                 type: string
     /{orgID}/deleteskillplannings:
         get:
-            description: List all deleteSkillPlannings proposals. These are proposed changes to create new SkillPlanning records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deleteSkillPlannings proposals. These are proposed changes to delete SkillPlanning records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteSkillPlanning
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -9909,7 +9909,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List SkillPlanning creation proposals
+            summary: List SkillPlanning deletion proposals
             tags:
                 - SkillPlannings
                 - Proposals
@@ -9948,7 +9948,7 @@ paths:
                 - Proposals
     /{orgID}/deleteskillplannings/{id}:
         get:
-            description: Get details of a specific SkillPlanning creation proposal by ID
+            description: Get details of a specific SkillPlanning deletion proposal by ID
             operationId: getDeleteSkillPlanning
             responses:
                 "200":
@@ -9963,7 +9963,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get SkillPlanning creation proposal
+            summary: Get SkillPlanning deletion proposal
             tags:
                 - SkillPlannings
                 - Proposals
@@ -9982,7 +9982,7 @@ paths:
                 type: string
     /{orgID}/deleteskillresults:
         get:
-            description: List all deleteSkillResults proposals. These are proposed changes to create new SkillResult records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deleteSkillResults proposals. These are proposed changes to delete SkillResult records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteSkillResult
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -10011,7 +10011,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List SkillResult creation proposals
+            summary: List SkillResult deletion proposals
             tags:
                 - SkillResults
                 - Proposals
@@ -10050,7 +10050,7 @@ paths:
                 - Proposals
     /{orgID}/deleteskillresults/{id}:
         get:
-            description: Get details of a specific SkillResult creation proposal by ID
+            description: Get details of a specific SkillResult deletion proposal by ID
             operationId: getDeleteSkillResult
             responses:
                 "200":
@@ -10065,7 +10065,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get SkillResult creation proposal
+            summary: Get SkillResult deletion proposal
             tags:
                 - SkillResults
                 - Proposals
@@ -10084,7 +10084,7 @@ paths:
                 type: string
     /{orgID}/deletetypesofproof:
         get:
-            description: List all deleteTypesOfProof proposals. These are proposed changes to create new TypesOfProof records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all deleteTypesOfProof proposals. These are proposed changes to delete TypesOfProof records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteTypesOfProof
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -10113,7 +10113,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List TypesOfProof creation proposals
+            summary: List TypesOfProof deletion proposals
             tags:
                 - TypesOfProof
                 - Proposals
@@ -10152,7 +10152,7 @@ paths:
                 - Proposals
     /{orgID}/deletetypesofproof/{id}:
         get:
-            description: Get details of a specific TypesOfProof creation proposal by ID
+            description: Get details of a specific TypesOfProof deletion proposal by ID
             operationId: getDeleteTypesOfProof
             responses:
                 "200":
@@ -10167,7 +10167,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get TypesOfProof creation proposal
+            summary: Get TypesOfProof deletion proposal
             tags:
                 - TypesOfProof
                 - Proposals
@@ -11842,7 +11842,7 @@ paths:
                 type: string
     /{orgID}/updatecustomfielddefinitions:
         get:
-            description: List all updateCustomFieldDefinitions proposals. These are proposed changes to create new CustomFieldDefinition records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all updateCustomFieldDefinitions proposals. These are proposed changes to update existing CustomFieldDefinition records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateCustomFieldDefinition
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -11871,7 +11871,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List CustomFieldDefinition creation proposals
+            summary: List CustomFieldDefinition update proposals
             tags:
                 - CustomFieldDefinitions
                 - Proposals
@@ -11910,7 +11910,7 @@ paths:
                 - Proposals
     /{orgID}/updatecustomfielddefinitions/{id}:
         get:
-            description: Get details of a specific CustomFieldDefinition creation proposal by ID
+            description: Get details of a specific CustomFieldDefinition update proposal by ID
             operationId: getUpdateCustomFieldDefinition
             responses:
                 "200":
@@ -11925,7 +11925,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get CustomFieldDefinition creation proposal
+            summary: Get CustomFieldDefinition update proposal
             tags:
                 - CustomFieldDefinitions
                 - Proposals
@@ -11944,7 +11944,7 @@ paths:
                 type: string
     /{orgID}/updateemployees:
         get:
-            description: List all updateEmployees proposals. These are proposed changes to create new Employee records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all updateEmployees proposals. These are proposed changes to update existing Employee records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateEmployee
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -11973,7 +11973,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List Employee creation proposals
+            summary: List Employee update proposals
             tags:
                 - Employees
                 - Proposals
@@ -12012,7 +12012,7 @@ paths:
                 - Proposals
     /{orgID}/updateemployees/{id}:
         get:
-            description: Get details of a specific Employee creation proposal by ID
+            description: Get details of a specific Employee update proposal by ID
             operationId: getUpdateEmployee
             responses:
                 "200":
@@ -12027,7 +12027,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get Employee creation proposal
+            summary: Get Employee update proposal
             tags:
                 - Employees
                 - Proposals
@@ -12047,7 +12047,7 @@ paths:
     /{orgID}/updateemployeeunavailabilities:
         get:
             description: |-
-                List all updateEmployeeUnavailabilities proposals. These are proposed changes to create new EmployeeUnavailability records that may be automatically approved or require manual approval depending on system configuration.
+                List all updateEmployeeUnavailabilities proposals. These are proposed changes to update existing EmployeeUnavailability records that may be automatically approved or require manual approval depending on system configuration.
 
                 **Filter Syntax:**
                 - Filters use exact match only
@@ -12087,7 +12087,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List EmployeeUnavailability creation proposals
+            summary: List EmployeeUnavailability update proposals
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
@@ -12126,7 +12126,7 @@ paths:
                 - Proposals
     /{orgID}/updateemployeeunavailabilities/{id}:
         get:
-            description: Get details of a specific EmployeeUnavailability creation proposal by ID
+            description: Get details of a specific EmployeeUnavailability update proposal by ID
             operationId: getUpdateEmployeeUnavailability
             responses:
                 "200":
@@ -12141,7 +12141,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmployeeUnavailability creation proposal
+            summary: Get EmployeeUnavailability update proposal
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
@@ -12161,7 +12161,7 @@ paths:
     /{orgID}/updateemploymentcontracts:
         get:
             description: |-
-                List all updateEmploymentContracts proposals. These are proposed changes to create new EmploymentContract records that may be automatically approved or require manual approval depending on system configuration.
+                List all updateEmploymentContracts proposals. These are proposed changes to update existing EmploymentContract records that may be automatically approved or require manual approval depending on system configuration.
 
                 **Filter Syntax:**
                 - Filters use exact match only
@@ -12206,7 +12206,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List EmploymentContract creation proposals
+            summary: List EmploymentContract update proposals
             tags:
                 - EmploymentContracts
                 - Proposals
@@ -12245,7 +12245,7 @@ paths:
                 - Proposals
     /{orgID}/updateemploymentcontracts/{id}:
         get:
-            description: Get details of a specific EmploymentContract creation proposal by ID
+            description: Get details of a specific EmploymentContract update proposal by ID
             operationId: getUpdateEmploymentContract
             responses:
                 "200":
@@ -12260,7 +12260,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmploymentContract creation proposal
+            summary: Get EmploymentContract update proposal
             tags:
                 - EmploymentContracts
                 - Proposals
@@ -12279,7 +12279,7 @@ paths:
                 type: string
     /{orgID}/updateemploymentcontracttypes:
         get:
-            description: List all updateEmploymentContractTypes proposals. These are proposed changes to create new EmploymentContractType records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all updateEmploymentContractTypes proposals. These are proposed changes to update existing EmploymentContractType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateEmploymentContractType
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -12308,7 +12308,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List EmploymentContractType creation proposals
+            summary: List EmploymentContractType update proposals
             tags:
                 - EmploymentContractTypes
                 - Proposals
@@ -12347,7 +12347,7 @@ paths:
                 - Proposals
     /{orgID}/updateemploymentcontracttypes/{id}:
         get:
-            description: Get details of a specific EmploymentContractType creation proposal by ID
+            description: Get details of a specific EmploymentContractType update proposal by ID
             operationId: getUpdateEmploymentContractType
             responses:
                 "200":
@@ -12362,7 +12362,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmploymentContractType creation proposal
+            summary: Get EmploymentContractType update proposal
             tags:
                 - EmploymentContractTypes
                 - Proposals
@@ -12382,7 +12382,7 @@ paths:
     /{orgID}/updateemploymentrelations:
         get:
             description: |-
-                List all updateEmploymentRelations proposals. These are proposed changes to create new EmploymentRelation records that may be automatically approved or require manual approval depending on system configuration.
+                List all updateEmploymentRelations proposals. These are proposed changes to update existing EmploymentRelation records that may be automatically approved or require manual approval depending on system configuration.
 
                 **Filter Syntax:**
                 - Filters use exact match only
@@ -12432,7 +12432,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List EmploymentRelation creation proposals
+            summary: List EmploymentRelation update proposals
             tags:
                 - EmploymentRelations
                 - Proposals
@@ -12471,7 +12471,7 @@ paths:
                 - Proposals
     /{orgID}/updateemploymentrelations/{id}:
         get:
-            description: Get details of a specific EmploymentRelation creation proposal by ID
+            description: Get details of a specific EmploymentRelation update proposal by ID
             operationId: getUpdateEmploymentRelation
             responses:
                 "200":
@@ -12486,7 +12486,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmploymentRelation creation proposal
+            summary: Get EmploymentRelation update proposal
             tags:
                 - EmploymentRelations
                 - Proposals
@@ -12505,7 +12505,7 @@ paths:
                 type: string
     /{orgID}/updateemploymentrelationtypes:
         get:
-            description: List all updateEmploymentRelationTypes proposals. These are proposed changes to create new EmploymentRelationType records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all updateEmploymentRelationTypes proposals. These are proposed changes to update existing EmploymentRelationType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateEmploymentRelationType
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -12534,7 +12534,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List EmploymentRelationType creation proposals
+            summary: List EmploymentRelationType update proposals
             tags:
                 - EmploymentRelationTypes
                 - Proposals
@@ -12573,7 +12573,7 @@ paths:
                 - Proposals
     /{orgID}/updateemploymentrelationtypes/{id}:
         get:
-            description: Get details of a specific EmploymentRelationType creation proposal by ID
+            description: Get details of a specific EmploymentRelationType update proposal by ID
             operationId: getUpdateEmploymentRelationType
             responses:
                 "200":
@@ -12588,7 +12588,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmploymentRelationType creation proposal
+            summary: Get EmploymentRelationType update proposal
             tags:
                 - EmploymentRelationTypes
                 - Proposals
@@ -12608,7 +12608,7 @@ paths:
     /{orgID}/updategroupings:
         get:
             description: |-
-                List all updateGroupings proposals. These are proposed changes to create new Grouping records that may be automatically approved or require manual approval depending on system configuration.
+                List all updateGroupings proposals. These are proposed changes to update existing Grouping records that may be automatically approved or require manual approval depending on system configuration.
 
                 **Filter Syntax:**
                 - Filters use exact match only
@@ -12653,7 +12653,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List Grouping creation proposals
+            summary: List Grouping update proposals
             tags:
                 - Groupings
                 - Proposals
@@ -12692,7 +12692,7 @@ paths:
                 - Proposals
     /{orgID}/updategroupings/{id}:
         get:
-            description: Get details of a specific Grouping creation proposal by ID
+            description: Get details of a specific Grouping update proposal by ID
             operationId: getUpdateGrouping
             responses:
                 "200":
@@ -12707,7 +12707,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get Grouping creation proposal
+            summary: Get Grouping update proposal
             tags:
                 - Groupings
                 - Proposals
@@ -12726,7 +12726,7 @@ paths:
                 type: string
     /{orgID}/updategroupingtypes:
         get:
-            description: List all updateGroupingTypes proposals. These are proposed changes to create new GroupingType records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all updateGroupingTypes proposals. These are proposed changes to update existing GroupingType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateGroupingType
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -12755,7 +12755,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List GroupingType creation proposals
+            summary: List GroupingType update proposals
             tags:
                 - GroupingTypes
                 - Proposals
@@ -12794,7 +12794,7 @@ paths:
                 - Proposals
     /{orgID}/updategroupingtypes/{id}:
         get:
-            description: Get details of a specific GroupingType creation proposal by ID
+            description: Get details of a specific GroupingType update proposal by ID
             operationId: getUpdateGroupingType
             responses:
                 "200":
@@ -12809,7 +12809,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get GroupingType creation proposal
+            summary: Get GroupingType update proposal
             tags:
                 - GroupingTypes
                 - Proposals
@@ -12829,7 +12829,7 @@ paths:
     /{orgID}/updatepositionassignments:
         get:
             description: |-
-                List all updatePositionAssignments proposals. These are proposed changes to create new PositionAssignment records that may be automatically approved or require manual approval depending on system configuration.
+                List all updatePositionAssignments proposals. These are proposed changes to update existing PositionAssignment records that may be automatically approved or require manual approval depending on system configuration.
 
                 **Filter Syntax:**
                 - Filters use exact match only
@@ -12869,7 +12869,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List PositionAssignment creation proposals
+            summary: List PositionAssignment update proposals
             tags:
                 - PositionAssignments
                 - Proposals
@@ -12908,7 +12908,7 @@ paths:
                 - Proposals
     /{orgID}/updatepositionassignments/{id}:
         get:
-            description: Get details of a specific PositionAssignment creation proposal by ID
+            description: Get details of a specific PositionAssignment update proposal by ID
             operationId: getUpdatePositionAssignment
             responses:
                 "200":
@@ -12923,7 +12923,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get PositionAssignment creation proposal
+            summary: Get PositionAssignment update proposal
             tags:
                 - PositionAssignments
                 - Proposals
@@ -12942,7 +12942,7 @@ paths:
                 type: string
     /{orgID}/updateratingscaleleveldescriptors:
         get:
-            description: List all updateRatingScaleLevelDescriptors proposals. These are proposed changes to create new RatingScaleLevelDescriptor records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all updateRatingScaleLevelDescriptors proposals. These are proposed changes to update existing RatingScaleLevelDescriptor records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateRatingScaleLevelDescriptor
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -12971,7 +12971,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List RatingScaleLevelDescriptor creation proposals
+            summary: List RatingScaleLevelDescriptor update proposals
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
@@ -13010,7 +13010,7 @@ paths:
                 - Proposals
     /{orgID}/updateratingscaleleveldescriptors/{id}:
         get:
-            description: Get details of a specific RatingScaleLevelDescriptor creation proposal by ID
+            description: Get details of a specific RatingScaleLevelDescriptor update proposal by ID
             operationId: getUpdateRatingScaleLevelDescriptor
             responses:
                 "200":
@@ -13025,7 +13025,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get RatingScaleLevelDescriptor creation proposal
+            summary: Get RatingScaleLevelDescriptor update proposal
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
@@ -13044,7 +13044,7 @@ paths:
                 type: string
     /{orgID}/updateratingscalelevels:
         get:
-            description: List all updateRatingScaleLevels proposals. These are proposed changes to create new RatingScaleLevel records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all updateRatingScaleLevels proposals. These are proposed changes to update existing RatingScaleLevel records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateRatingScaleLevel
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -13073,7 +13073,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List RatingScaleLevel creation proposals
+            summary: List RatingScaleLevel update proposals
             tags:
                 - RatingScaleLevels
                 - Proposals
@@ -13112,7 +13112,7 @@ paths:
                 - Proposals
     /{orgID}/updateratingscalelevels/{id}:
         get:
-            description: Get details of a specific RatingScaleLevel creation proposal by ID
+            description: Get details of a specific RatingScaleLevel update proposal by ID
             operationId: getUpdateRatingScaleLevel
             responses:
                 "200":
@@ -13127,7 +13127,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get RatingScaleLevel creation proposal
+            summary: Get RatingScaleLevel update proposal
             tags:
                 - RatingScaleLevels
                 - Proposals
@@ -13146,7 +13146,7 @@ paths:
                 type: string
     /{orgID}/updateratingscales:
         get:
-            description: List all updateRatingScales proposals. These are proposed changes to create new RatingScale records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all updateRatingScales proposals. These are proposed changes to update existing RatingScale records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateRatingScale
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -13175,7 +13175,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List RatingScale creation proposals
+            summary: List RatingScale update proposals
             tags:
                 - RatingScales
                 - Proposals
@@ -13214,7 +13214,7 @@ paths:
                 - Proposals
     /{orgID}/updateratingscales/{id}:
         get:
-            description: Get details of a specific RatingScale creation proposal by ID
+            description: Get details of a specific RatingScale update proposal by ID
             operationId: getUpdateRatingScale
             responses:
                 "200":
@@ -13229,7 +13229,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get RatingScale creation proposal
+            summary: Get RatingScale update proposal
             tags:
                 - RatingScales
                 - Proposals
@@ -13249,7 +13249,7 @@ paths:
     /{orgID}/updateskilldefinitions:
         get:
             description: |-
-                List all updateSkillDefinitions proposals. These are proposed changes to create new SkillDefinition records that may be automatically approved or require manual approval depending on system configuration.
+                List all updateSkillDefinitions proposals. These are proposed changes to update existing SkillDefinition records that may be automatically approved or require manual approval depending on system configuration.
 
                 **Filter Syntax:**
                 - Filters use exact match only
@@ -13294,7 +13294,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List SkillDefinition creation proposals
+            summary: List SkillDefinition update proposals
             tags:
                 - SkillDefinitions
                 - Proposals
@@ -13333,7 +13333,7 @@ paths:
                 - Proposals
     /{orgID}/updateskilldefinitions/{id}:
         get:
-            description: Get details of a specific SkillDefinition creation proposal by ID
+            description: Get details of a specific SkillDefinition update proposal by ID
             operationId: getUpdateSkillDefinition
             responses:
                 "200":
@@ -13348,7 +13348,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get SkillDefinition creation proposal
+            summary: Get SkillDefinition update proposal
             tags:
                 - SkillDefinitions
                 - Proposals
@@ -13367,7 +13367,7 @@ paths:
                 type: string
     /{orgID}/updateskilldefinitiontypes:
         get:
-            description: List all updateSkillDefinitionTypes proposals. These are proposed changes to create new SkillDefinitionType records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all updateSkillDefinitionTypes proposals. These are proposed changes to update existing SkillDefinitionType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateSkillDefinitionType
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -13396,7 +13396,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List SkillDefinitionType creation proposals
+            summary: List SkillDefinitionType update proposals
             tags:
                 - SkillDefinitionTypes
                 - Proposals
@@ -13435,7 +13435,7 @@ paths:
                 - Proposals
     /{orgID}/updateskilldefinitiontypes/{id}:
         get:
-            description: Get details of a specific SkillDefinitionType creation proposal by ID
+            description: Get details of a specific SkillDefinitionType update proposal by ID
             operationId: getUpdateSkillDefinitionType
             responses:
                 "200":
@@ -13450,7 +13450,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get SkillDefinitionType creation proposal
+            summary: Get SkillDefinitionType update proposal
             tags:
                 - SkillDefinitionTypes
                 - Proposals
@@ -13469,7 +13469,7 @@ paths:
                 type: string
     /{orgID}/updateskillplannings:
         get:
-            description: List all updateSkillPlannings proposals. These are proposed changes to create new SkillPlanning records that may be automatically approved or require manual approval depending on system configuration.
+            description: List all updateSkillPlannings proposals. These are proposed changes to update existing SkillPlanning records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateSkillPlanning
             parameters:
                 - description: Maximum number of items to return (1-1000)
@@ -13498,7 +13498,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List SkillPlanning creation proposals
+            summary: List SkillPlanning update proposals
             tags:
                 - SkillPlannings
                 - Proposals
@@ -13537,7 +13537,7 @@ paths:
                 - Proposals
     /{orgID}/updateskillplannings/{id}:
         get:
-            description: Get details of a specific SkillPlanning creation proposal by ID
+            description: Get details of a specific SkillPlanning update proposal by ID
             operationId: getUpdateSkillPlanning
             responses:
                 "200":
@@ -13552,7 +13552,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get SkillPlanning creation proposal
+            summary: Get SkillPlanning update proposal
             tags:
                 - SkillPlannings
                 - Proposals
@@ -13572,7 +13572,7 @@ paths:
     /{orgID}/updateskillresults:
         get:
             description: |-
-                List all updateSkillResults proposals. These are proposed changes to create new SkillResult records that may be automatically approved or require manual approval depending on system configuration.
+                List all updateSkillResults proposals. These are proposed changes to update existing SkillResult records that may be automatically approved or require manual approval depending on system configuration.
 
                 **Filter Syntax:**
                 - Filters use exact match only
@@ -13617,7 +13617,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List SkillResult creation proposals
+            summary: List SkillResult update proposals
             tags:
                 - SkillResults
                 - Proposals
@@ -13656,7 +13656,7 @@ paths:
                 - Proposals
     /{orgID}/updateskillresults/{id}:
         get:
-            description: Get details of a specific SkillResult creation proposal by ID
+            description: Get details of a specific SkillResult update proposal by ID
             operationId: getUpdateSkillResult
             responses:
                 "200":
@@ -13671,7 +13671,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get SkillResult creation proposal
+            summary: Get SkillResult update proposal
             tags:
                 - SkillResults
                 - Proposals
@@ -13691,7 +13691,7 @@ paths:
     /{orgID}/updatetypesofproof:
         get:
             description: |-
-                List all updateTypesOfProof proposals. These are proposed changes to create new TypesOfProof records that may be automatically approved or require manual approval depending on system configuration.
+                List all updateTypesOfProof proposals. These are proposed changes to update existing TypesOfProof records that may be automatically approved or require manual approval depending on system configuration.
 
                 **Filter Syntax:**
                 - Filters use exact match only
@@ -13731,7 +13731,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List TypesOfProof creation proposals
+            summary: List TypesOfProof update proposals
             tags:
                 - TypesOfProof
                 - Proposals
@@ -13770,7 +13770,7 @@ paths:
                 - Proposals
     /{orgID}/updatetypesofproof/{id}:
         get:
-            description: Get details of a specific TypesOfProof creation proposal by ID
+            description: Get details of a specific TypesOfProof update proposal by ID
             operationId: getUpdateTypesOfProof
             responses:
                 "200":
@@ -13785,7 +13785,7 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get TypesOfProof creation proposal
+            summary: Get TypesOfProof update proposal
             tags:
                 - TypesOfProof
                 - Proposals
