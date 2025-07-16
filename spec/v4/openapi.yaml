@@ -13808,8 +13808,8 @@ servers:
     - description: Production server
       url: https://api.ag5.com/api/orgkeep/v4
 tags:
-    - description: API metadata operations
-      name: Meta
+    - description: Operations for Querying
+      name: Querying
     - description: Operations for CustomFieldDefinitions
       name: CustomFieldDefinitions
     - description: Operations for EmployeeUnavailabilities
@@ -13832,8 +13832,6 @@ tags:
       name: Groupings
     - description: Operations for PositionAssignments
       name: PositionAssignments
-    - description: Operations for Querying
-      name: Querying
     - description: Operations for RatingScaleLevelDescriptors
       name: RatingScaleLevelDescriptors
     - description: Operations for RatingScaleLevels
@@ -13852,6 +13850,8 @@ tags:
       name: SkillResults
     - description: Operations for TypesOfProof
       name: TypesOfProof
+    - description: API metadata operations
+      name: Meta
 x-webhooks:
     proposalStatusChanged:
         post:
