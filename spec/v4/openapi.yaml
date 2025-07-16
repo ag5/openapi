@@ -13808,8 +13808,50 @@ servers:
     - description: Production server
       url: https://api.ag5.com/api/orgkeep/v4
 tags:
-    - description: Operations for proposal-based changes
-      name: Proposals
+    - description: API metadata operations
+      name: Meta
+    - description: Operations for CustomFieldDefinitions
+      name: CustomFieldDefinitions
+    - description: Operations for EmployeeUnavailabilities
+      name: EmployeeUnavailabilities
+    - description: Operations for Employees
+      name: Employees
+    - description: Operations for EmploymentContractTypes
+      name: EmploymentContractTypes
+    - description: Operations for EmploymentContracts
+      name: EmploymentContracts
+    - description: Operations for EmploymentRelationTypes
+      name: EmploymentRelationTypes
+    - description: Operations for EmploymentRelations
+      name: EmploymentRelations
+    - description: Operations for EntityDefinitions
+      name: EntityDefinitions
+    - description: Operations for GroupingTypes
+      name: GroupingTypes
+    - description: Operations for Groupings
+      name: Groupings
+    - description: Operations for PositionAssignments
+      name: PositionAssignments
+    - description: Operations for Querying
+      name: Querying
+    - description: Operations for RatingScaleLevelDescriptors
+      name: RatingScaleLevelDescriptors
+    - description: Operations for RatingScaleLevels
+      name: RatingScaleLevels
+    - description: Operations for RatingScales
+      name: RatingScales
+    - description: Operations for Repositories
+      name: Repositories
+    - description: Operations for SkillDefinitionTypes
+      name: SkillDefinitionTypes
+    - description: Operations for SkillDefinitions
+      name: SkillDefinitions
+    - description: Operations for SkillPlannings
+      name: SkillPlannings
+    - description: Operations for SkillResults
+      name: SkillResults
+    - description: Operations for TypesOfProof
+      name: TypesOfProof
 x-webhooks:
     proposalStatusChanged:
         post:
