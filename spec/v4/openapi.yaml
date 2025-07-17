@@ -126,11 +126,7 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
             required:
-                - subject_id
                 - repository_id
                 - code
                 - name
@@ -156,13 +152,9 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
                 surname:
                     type: string
             required:
-                - subject_id
                 - repository_id
                 - surname
                 - customValues
@@ -181,11 +173,7 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
             required:
-                - subject_id
                 - repository_id
                 - activePeriod
                 - employee_id
@@ -205,11 +193,7 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
             required:
-                - subject_id
                 - repository_id
                 - activePeriod
                 - employee_id
@@ -223,11 +207,7 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
             required:
-                - subject_id
                 - repository_id
                 - code
                 - name
@@ -247,14 +227,10 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
                 toEmployee_id:
                     format: uuid
                     type: string
             required:
-                - subject_id
                 - repository_id
                 - activePeriod
                 - toEmployee_id
@@ -270,11 +246,7 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
             required:
-                - subject_id
                 - repository_id
                 - code
                 - name
@@ -299,14 +271,10 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
                 type_id:
                     format: uuid
                     type: string
             required:
-                - subject_id
                 - repository_id
                 - code
                 - name
@@ -328,11 +296,7 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
             required:
-                - subject_id
                 - repository_id
                 - code
                 - name
@@ -353,16 +317,12 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
                 tag_ids:
                     items:
                         format: uuid
                         type: string
                     type: array
             required:
-                - subject_id
                 - repository_id
                 - employee_id
                 - activePeriod
@@ -381,11 +341,7 @@ components:
                 skillDefinition_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
             required:
-                - subject_id
                 - repository_id
                 - ratingScaleLevel_id
                 - skillDefinition_id
@@ -410,11 +366,7 @@ components:
                 scoreOrder:
                     format: int32
                     type: integer
-                subject_id:
-                    format: uuid
-                    type: string
             required:
-                - subject_id
                 - repository_id
                 - ratingScale_id
                 - scoreOrder
@@ -433,11 +385,7 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
             required:
-                - subject_id
                 - repository_id
                 - code
                 - name
@@ -463,14 +411,10 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
                 type_id:
                     format: uuid
                     type: string
             required:
-                - subject_id
                 - repository_id
                 - name
                 - ratingScale_id
@@ -488,11 +432,7 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
             required:
-                - subject_id
                 - repository_id
                 - code
                 - name
@@ -522,14 +462,10 @@ components:
                 skillDefinition_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
                 typeOfProof_id:
                     format: uuid
                     type: string
             required:
-                - subject_id
                 - repository_id
                 - employee_id
                 - typeOfProof_id
@@ -558,14 +494,10 @@ components:
                 score_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
                 typeOfProof_id:
                     format: uuid
                     type: string
             required:
-                - subject_id
                 - repository_id
                 - employee_id
                 - issueDate
@@ -592,11 +524,7 @@ components:
                 skillDefinition_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
             required:
-                - subject_id
                 - repository_id
                 - name
                 - skillDefinition_id
@@ -607,19 +535,32 @@ components:
             properties:
                 code:
                     type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - code
@@ -879,21 +820,32 @@ components:
                     type: string
                 initials:
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 remark:
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
                 surname:
                     type: string
             required:
-                - proposal_id
+                - request_id
                 - subject_id
                 - repository_id
                 - surname
@@ -944,19 +896,32 @@ components:
                 employee_id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 reason:
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - activePeriod
@@ -1001,17 +966,30 @@ components:
                 employee_id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - activePeriod
@@ -1049,19 +1027,32 @@ components:
             properties:
                 code:
                     type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - code
@@ -1098,8 +1089,14 @@ components:
                 fromEmployee_id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 relationType_id:
                     format: uuid
@@ -1107,14 +1104,21 @@ components:
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
                 toEmployee_id:
                     format: uuid
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - activePeriod
@@ -1159,19 +1163,32 @@ components:
             properties:
                 code:
                     type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - code
@@ -1224,22 +1241,35 @@ components:
                     type: string
                 description:
                     type: object
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
                 type_id:
                     format: uuid
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - code
@@ -1295,19 +1325,32 @@ components:
                     type: string
                 customValues:
                     type: object
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - code
@@ -1354,16 +1397,27 @@ components:
                 employee_id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 remark:
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
                 tag_ids:
                     items:
@@ -1371,7 +1425,9 @@ components:
                         type: string
                     type: array
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - employee_id
@@ -1417,19 +1473,32 @@ components:
                     type: string
                 customValues:
                     type: object
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - code
@@ -1444,10 +1513,16 @@ components:
                     type: object
                 description:
                     type: object
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 ratingScale_id:
                     format: uuid
@@ -1455,14 +1530,21 @@ components:
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 scoreOrder:
                     format: int32
                     type: integer
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - ratingScale_id
@@ -1475,8 +1557,14 @@ components:
             properties:
                 description:
                     type: object
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 ratingScaleLevel_id:
                     format: uuid
@@ -1484,14 +1572,21 @@ components:
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 skillDefinition_id:
                     format: uuid
                     type: string
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - ratingScaleLevel_id
@@ -1604,10 +1699,16 @@ components:
                     type: object
                 description:
                     type: object
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 ratingScale_id:
                     format: uuid
@@ -1615,14 +1716,21 @@ components:
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
                 type_id:
                     format: uuid
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - name
@@ -1674,19 +1782,32 @@ components:
                     type: string
                 customValues:
                     type: object
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - code
@@ -1734,25 +1855,38 @@ components:
                 fromDate:
                     format: date
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 remark:
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 skillDefinition_id:
                     format: uuid
                     type: string
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
                 typeOfProof_id:
                     format: uuid
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - employee_id
@@ -1814,28 +1948,41 @@ components:
                 expirationDate:
                     format: date
                     type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 issueDate:
                     format: date
                     type: string
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 remark:
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 score_id:
                     format: uuid
                     type: string
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
                 typeOfProof_id:
                     format: uuid
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - employee_id
@@ -1894,22 +2041,35 @@ components:
                     type: object
                 description:
                     type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
+                    type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
                     type: string
                 skillDefinition_id:
                     format: uuid
                     type: string
                 subject_id:
                     format: uuid
+                    readOnly: true
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - name
@@ -2453,14 +2613,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -2469,14 +2641,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -2485,14 +2669,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -2501,14 +2697,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -2517,14 +2725,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -2533,14 +2753,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -2549,14 +2781,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -2565,14 +2809,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -2581,14 +2837,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -2597,14 +2865,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -2613,14 +2893,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -2629,14 +2921,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -2645,14 +2949,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -2661,14 +2977,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -2677,14 +3005,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -2693,14 +3033,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -2709,14 +3061,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -2725,14 +3089,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
             type: object
@@ -4388,9 +4764,6 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
             type: object
         UpdateCreateEmployeeRequest:
             properties:
@@ -4413,9 +4786,6 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
                 surname:
                     type: string
             type: object
@@ -4431,9 +4801,6 @@ components:
                 reason:
                     type: string
                 repository_id:
-                    format: uuid
-                    type: string
-                subject_id:
                     format: uuid
                     type: string
             type: object
@@ -4452,9 +4819,6 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
             type: object
         UpdateCreateEmploymentContractTypeRequest:
             properties:
@@ -4463,9 +4827,6 @@ components:
                 name:
                     type: object
                 repository_id:
-                    format: uuid
-                    type: string
-                subject_id:
                     format: uuid
                     type: string
             type: object
@@ -4484,9 +4845,6 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
                 toEmployee_id:
                     format: uuid
                     type: string
@@ -4498,9 +4856,6 @@ components:
                 name:
                     type: object
                 repository_id:
-                    format: uuid
-                    type: string
-                subject_id:
                     format: uuid
                     type: string
             type: object
@@ -4524,9 +4879,6 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
                 type_id:
                     format: uuid
                     type: string
@@ -4546,9 +4898,6 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
             type: object
         UpdateCreatePositionAssignmentRequest:
             properties:
@@ -4562,9 +4911,6 @@ components:
                 remark:
                     type: string
                 repository_id:
-                    format: uuid
-                    type: string
-                subject_id:
                     format: uuid
                     type: string
                 tag_ids:
@@ -4584,9 +4930,6 @@ components:
                     format: uuid
                     type: string
                 skillDefinition_id:
-                    format: uuid
-                    type: string
-                subject_id:
                     format: uuid
                     type: string
             type: object
@@ -4609,9 +4952,6 @@ components:
                 scoreOrder:
                     format: int32
                     type: integer
-                subject_id:
-                    format: uuid
-                    type: string
             type: object
         UpdateCreateRatingScaleRequest:
             properties:
@@ -4622,9 +4962,6 @@ components:
                 name:
                     type: object
                 repository_id:
-                    format: uuid
-                    type: string
-                subject_id:
                     format: uuid
                     type: string
             type: object
@@ -4648,9 +4985,6 @@ components:
                 repository_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
                 type_id:
                     format: uuid
                     type: string
@@ -4664,9 +4998,6 @@ components:
                 name:
                     type: object
                 repository_id:
-                    format: uuid
-                    type: string
-                subject_id:
                     format: uuid
                     type: string
             type: object
@@ -4694,9 +5025,6 @@ components:
                 skillDefinition_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
                 typeOfProof_id:
                     format: uuid
                     type: string
@@ -4720,9 +5048,6 @@ components:
                     format: uuid
                     type: string
                 score_id:
-                    format: uuid
-                    type: string
-                subject_id:
                     format: uuid
                     type: string
                 typeOfProof_id:
@@ -4749,9 +5074,6 @@ components:
                 skillDefinition_id:
                     format: uuid
                     type: string
-                subject_id:
-                    format: uuid
-                    type: string
             type: object
         UpdateCustomFieldDefinition:
             properties:
@@ -4760,16 +5082,28 @@ components:
                 id:
                     format: uuid
                     type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - code
@@ -4972,18 +5306,30 @@ components:
                     type: string
                 initials:
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 remark:
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 surname:
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - surname
@@ -5031,16 +5377,28 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 reason:
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - activePeriod
@@ -5082,14 +5440,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - activePeriod
@@ -5124,16 +5494,28 @@ components:
                 id:
                     format: uuid
                     type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - code
@@ -5167,8 +5549,14 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 relationType_id:
                     format: uuid
@@ -5176,11 +5564,17 @@ components:
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 toEmployee_id:
                     format: uuid
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - activePeriod
@@ -5220,16 +5614,28 @@ components:
                 id:
                     format: uuid
                     type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - code
@@ -5276,19 +5682,31 @@ components:
                 id:
                     format: uuid
                     type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
+                    type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
                     type: string
                 type_id:
                     format: uuid
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - code
@@ -5339,16 +5757,28 @@ components:
                 id:
                     format: uuid
                     type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - code
@@ -5390,13 +5820,23 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 remark:
                     type: string
                 repository_id:
                     format: uuid
+                    type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
                     type: string
                 tag_ids:
                     items:
@@ -5404,7 +5844,9 @@ components:
                         type: string
                     type: array
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - employee_id
@@ -5446,16 +5888,28 @@ components:
                 id:
                     format: uuid
                     type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - code
@@ -5473,16 +5927,28 @@ components:
                 id:
                     format: uuid
                     type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - code
@@ -5496,14 +5962,26 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - description
@@ -5592,10 +6070,16 @@ components:
                 id:
                     format: uuid
                     type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 ratingScale_id:
                     format: uuid
@@ -5603,11 +6087,17 @@ components:
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
                 type_id:
                     format: uuid
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - name
@@ -5654,16 +6144,28 @@ components:
                 id:
                     format: uuid
                     type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
                     type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - code
@@ -5707,13 +6209,23 @@ components:
                 id:
                     format: uuid
                     type: string
-                proposal_id:
-                    format: uuid
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 remark:
                     type: string
                 repository_id:
                     format: uuid
+                    type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
                     type: string
                 skillDefinition_id:
                     format: uuid
@@ -5722,7 +6234,9 @@ components:
                     format: uuid
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - employee_id
@@ -5778,16 +6292,26 @@ components:
                 id:
                     format: uuid
                     type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 issueDate:
                     format: date
                     type: string
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 remark:
                     type: string
                 repository_id:
                     format: uuid
+                    type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
                     type: string
                 score_id:
                     format: uuid
@@ -5796,7 +6320,9 @@ components:
                     format: uuid
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - employee_id
@@ -5850,19 +6376,31 @@ components:
                 id:
                     format: uuid
                     type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
                 name:
                     type: object
-                proposal_id:
-                    format: uuid
+                proposalExecutionErrorText:
+                    readOnly: true
                     type: string
                 repository_id:
                     format: uuid
+                    type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
                     type: string
                 skillDefinition_id:
                     format: uuid
                     type: string
             required:
-                - proposal_id
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - id
                 - repository_id
                 - name
