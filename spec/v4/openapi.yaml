@@ -121,19 +121,19 @@ components:
             properties:
                 code:
                     type: string
-                entityDefinition_id:
+                entityDefinitionID:
                     format: uuid
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
-                - repository_id
+                - repositoryID
                 - code
                 - name
-                - entityDefinition_id
+                - entityDefinitionID
             type: object
         CreateCreateEmployeeRequest:
             properties:
@@ -153,13 +153,13 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 surname:
                     type: string
             required:
-                - repository_id
+                - repositoryID
                 - surname
             type: object
         CreateCreateEmployeeUnavailabilityRequest:
@@ -168,18 +168,18 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 reason:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
-                - repository_id
+                - repositoryID
                 - activePeriod
-                - employee_id
+                - employeeID
             type: object
         CreateCreateEmploymentContractRequest:
             properties:
@@ -187,19 +187,19 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                contractType_id:
+                contractTypeID:
                     format: uuid
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
-                - repository_id
+                - repositoryID
                 - activePeriod
-                - employee_id
+                - employeeID
             type: object
         CreateCreateEmploymentContractTypeRequest:
             properties:
@@ -207,11 +207,11 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -221,24 +221,24 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                fromEmployee_id:
+                fromEmployeeID:
                     format: uuid
                     type: string
-                relationType_id:
+                relationTypeID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                toEmployee_id:
+                toEmployeeID:
                     format: uuid
                     type: string
             required:
-                - repository_id
+                - repositoryID
                 - activePeriod
-                - toEmployee_id
-                - fromEmployee_id
-                - relationType_id
+                - toEmployeeID
+                - fromEmployeeID
+                - relationTypeID
             type: object
         CreateCreateEmploymentRelationTypeRequest:
             properties:
@@ -246,11 +246,11 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -264,21 +264,21 @@ components:
                     type: string
                 customValues:
                     type: object
-                definedInGrouping_id:
+                definedInGroupingID:
                     format: uuid
                     type: string
                 description:
                     type: object
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                type_id:
+                typeID:
                     format: uuid
                     type: string
             required:
-                - repository_id
+                - repositoryID
                 - code
                 - name
                 - activePeriod
@@ -295,11 +295,11 @@ components:
                     type: object
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
-                - repository_id
+                - repositoryID
                 - code
                 - name
                 - activePeriod
@@ -311,14 +311,14 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 requestedAt:
                     format: date-time
                     type: string
             required:
-                - repository_id
+                - repositoryID
             type: object
         CreateCreatePositionAssignmentRequest:
             properties:
@@ -326,42 +326,42 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                tag_ids:
+                tagIDs:
                     items:
                         format: uuid
                         type: string
                     type: array
             required:
-                - repository_id
-                - employee_id
+                - repositoryID
+                - employeeID
                 - activePeriod
-                - tag_ids
+                - tagIDs
             type: object
         CreateCreateRatingScaleLevelDescriptorRequest:
             properties:
                 description:
                     type: object
-                ratingScaleLevel_id:
+                ratingScaleLevelID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
             required:
-                - repository_id
-                - ratingScaleLevel_id
-                - skillDefinition_id
+                - repositoryID
+                - ratingScaleLevelID
+                - skillDefinitionID
                 - description
             type: object
         CreateCreateRatingScaleLevelRequest:
@@ -374,18 +374,18 @@ components:
                     type: object
                 name:
                     type: object
-                ratingScale_id:
+                ratingScaleID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 scoreOrder:
                     format: int32
                     type: integer
             required:
-                - repository_id
-                - ratingScale_id
+                - repositoryID
+                - ratingScaleID
                 - scoreOrder
                 - code
                 - name
@@ -398,11 +398,11 @@ components:
                     type: object
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -420,19 +420,19 @@ components:
                     type: object
                 name:
                     type: object
-                ratingScale_id:
+                ratingScaleID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                type_id:
+                typeID:
                     format: uuid
                     type: string
             required:
-                - repository_id
+                - repositoryID
                 - name
-                - ratingScale_id
+                - ratingScaleID
                 - activePeriod
             type: object
         CreateCreateSkillDefinitionTypeRequest:
@@ -443,11 +443,11 @@ components:
                     type: object
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -461,7 +461,7 @@ components:
                 deadlineDate:
                     format: date
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 fromDate:
@@ -469,27 +469,27 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
-                typeOfProof_id:
+                typeOfProofID:
                     format: uuid
                     type: string
             required:
-                - repository_id
-                - employee_id
-                - typeOfProof_id
+                - repositoryID
+                - employeeID
+                - typeOfProofID
                 - fromDate
-                - skillDefinition_id
+                - skillDefinitionID
             type: object
         CreateCreateSkillResultRequest:
             properties:
                 customValues:
                     type: object
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 expirationDate:
@@ -500,20 +500,20 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                score_id:
+                scoreID:
                     format: uuid
                     type: string
-                typeOfProof_id:
+                typeOfProofID:
                     format: uuid
                     type: string
             required:
-                - repository_id
-                - employee_id
+                - repositoryID
+                - employeeID
                 - issueDate
-                - typeOfProof_id
+                - typeOfProofID
             type: object
         CreateCreateTypesOfProofRequest:
             properties:
@@ -529,23 +529,23 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
             required:
-                - repository_id
+                - repositoryID
                 - name
-                - skillDefinition_id
+                - skillDefinitionID
                 - activePeriod
             type: object
         CreateCustomFieldDefinition:
             properties:
                 code:
                     type: string
-                entityDefinition_id:
+                entityDefinitionID:
                     format: uuid
                     type: string
                 isProposalExecutionFailed:
@@ -559,26 +559,26 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                subject_id:
+                subjectID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
+                - subjectID
+                - repositoryID
                 - code
                 - name
-                - entityDefinition_id
+                - entityDefinitionID
             type: object
         CreateCustomFieldDefinitionRequest:
             properties:
@@ -587,7 +587,7 @@ components:
                 createdAt:
                     format: date-time
                     type: string
-                entityDefinition_id:
+                entityDefinitionID:
                     format: uuid
                     type: string
                 lastModifiedAt:
@@ -595,244 +595,244 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - code
                 - name
-                - entityDefinition_id
+                - entityDefinitionID
             type: object
         CreateDeleteCustomFieldDefinitionRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeleteEmployeeRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeleteEmployeeUnavailabilityRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeleteEmploymentContractRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeleteEmploymentContractTypeRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeleteEmploymentRelationRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeleteEmploymentRelationTypeRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeleteGroupingRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeleteGroupingTypeRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeleteMonitoringTraceRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeletePositionAssignmentRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeleteRatingScaleLevelDescriptorRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeleteRatingScaleLevelRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeleteRatingScaleRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeleteSkillDefinitionRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeleteSkillDefinitionTypeRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeleteSkillPlanningRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeleteSkillResultRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateDeleteTypesOfProofRequest:
             properties:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateEmployee:
             properties:
@@ -861,25 +861,25 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                subject_id:
+                subjectID:
                     format: uuid
                     readOnly: true
                     type: string
                 surname:
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
+                - subjectID
+                - repositoryID
                 - surname
             type: object
         CreateEmployeeRequest:
@@ -906,7 +906,7 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 surname:
@@ -914,7 +914,7 @@ components:
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - surname
             type: object
         CreateEmployeeUnavailability:
@@ -923,7 +923,7 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 isProposalExecutionFailed:
@@ -937,25 +937,25 @@ components:
                     type: string
                 reason:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                subject_id:
+                subjectID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
+                - subjectID
+                - repositoryID
                 - activePeriod
-                - employee_id
+                - employeeID
             type: object
         CreateEmployeeUnavailabilityRequest:
             properties:
@@ -966,7 +966,7 @@ components:
                 createdAt:
                     format: date-time
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 lastModifiedAt:
@@ -974,15 +974,15 @@ components:
                     type: string
                 reason:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - activePeriod
-                - employee_id
+                - employeeID
             type: object
         CreateEmploymentContract:
             properties:
@@ -990,10 +990,10 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                contractType_id:
+                contractTypeID:
                     format: uuid
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 isProposalExecutionFailed:
@@ -1005,25 +1005,25 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                subject_id:
+                subjectID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
+                - subjectID
+                - repositoryID
                 - activePeriod
-                - employee_id
+                - employeeID
             type: object
         CreateEmploymentContractRequest:
             properties:
@@ -1031,27 +1031,27 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                contractType_id:
+                contractTypeID:
                     format: uuid
                     type: string
                 createdAt:
                     format: date-time
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 lastModifiedAt:
                     format: date-time
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - activePeriod
-                - employee_id
+                - employeeID
             type: object
         CreateEmploymentContractType:
             properties:
@@ -1068,23 +1068,23 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                subject_id:
+                subjectID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
+                - subjectID
+                - repositoryID
                 - code
                 - name
             type: object
@@ -1100,13 +1100,13 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -1116,7 +1116,7 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                fromEmployee_id:
+                fromEmployeeID:
                     format: uuid
                     type: string
                 isProposalExecutionFailed:
@@ -1128,33 +1128,33 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                relationType_id:
+                relationTypeID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
-                    format: uuid
-                    readOnly: true
-                    type: string
-                subject_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                toEmployee_id:
+                subjectID:
+                    format: uuid
+                    readOnly: true
+                    type: string
+                toEmployeeID:
                     format: uuid
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
+                - subjectID
+                - repositoryID
                 - activePeriod
-                - toEmployee_id
-                - fromEmployee_id
-                - relationType_id
+                - toEmployeeID
+                - fromEmployeeID
+                - relationTypeID
             type: object
         CreateEmploymentRelationRequest:
             properties:
@@ -1165,29 +1165,29 @@ components:
                 createdAt:
                     format: date-time
                     type: string
-                fromEmployee_id:
+                fromEmployeeID:
                     format: uuid
                     type: string
                 lastModifiedAt:
                     format: date-time
                     type: string
-                relationType_id:
+                relationTypeID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                toEmployee_id:
+                toEmployeeID:
                     format: uuid
                     type: string
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - activePeriod
-                - toEmployee_id
-                - fromEmployee_id
-                - relationType_id
+                - toEmployeeID
+                - fromEmployeeID
+                - relationTypeID
             type: object
         CreateEmploymentRelationType:
             properties:
@@ -1204,23 +1204,23 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                subject_id:
+                subjectID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
+                - subjectID
+                - repositoryID
                 - code
                 - name
             type: object
@@ -1236,13 +1236,13 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -1266,7 +1266,7 @@ components:
                     type: string
                 customValues:
                     type: object
-                definedInGrouping_id:
+                definedInGroupingID:
                     format: uuid
                     type: string
                 description:
@@ -1282,26 +1282,26 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
-                    format: uuid
-                    readOnly: true
-                    type: string
-                subject_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                type_id:
+                subjectID:
+                    format: uuid
+                    readOnly: true
+                    type: string
+                typeID:
                     format: uuid
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
+                - subjectID
+                - repositoryID
                 - code
                 - name
                 - activePeriod
@@ -1319,7 +1319,7 @@ components:
                     type: string
                 customValues:
                     type: object
-                definedInGrouping_id:
+                definedInGroupingID:
                     format: uuid
                     type: string
                 description:
@@ -1329,16 +1329,16 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                type_id:
+                typeID:
                     format: uuid
                     type: string
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - code
                 - name
                 - activePeriod
@@ -1364,23 +1364,23 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                subject_id:
+                subjectID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
+                - subjectID
+                - repositoryID
                 - code
                 - name
                 - activePeriod
@@ -1403,13 +1403,13 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - code
                 - name
                 - activePeriod
@@ -1430,26 +1430,26 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
                 requestedAt:
                     format: date-time
                     type: string
-                subject_id:
+                subjectID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
+                - subjectID
+                - repositoryID
             type: object
         CreateMonitoringTraceRequest:
             properties:
@@ -1464,7 +1464,7 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 requestedAt:
@@ -1473,7 +1473,7 @@ components:
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
             type: object
         CreatePositionAssignment:
             properties:
@@ -1481,7 +1481,7 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 isProposalExecutionFailed:
@@ -1495,31 +1495,31 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
-                    format: uuid
-                    readOnly: true
-                    type: string
-                subject_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                tag_ids:
+                subjectID:
+                    format: uuid
+                    readOnly: true
+                    type: string
+                tagIDs:
                     items:
                         format: uuid
                         type: string
                     type: array
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
-                - employee_id
+                - subjectID
+                - repositoryID
+                - employeeID
                 - activePeriod
-                - tag_ids
+                - tagIDs
             type: object
         CreatePositionAssignmentRequest:
             properties:
@@ -1530,7 +1530,7 @@ components:
                 createdAt:
                     format: date-time
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 lastModifiedAt:
@@ -1538,10 +1538,10 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                tag_ids:
+                tagIDs:
                     items:
                         format: uuid
                         type: string
@@ -1549,10 +1549,10 @@ components:
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
-                - employee_id
+                - repositoryID
+                - employeeID
                 - activePeriod
-                - tag_ids
+                - tagIDs
             type: object
         CreateRatingScale:
             properties:
@@ -1571,23 +1571,23 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                subject_id:
+                subjectID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
+                - subjectID
+                - repositoryID
                 - code
                 - name
             type: object
@@ -1610,30 +1610,30 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                ratingScale_id:
+                ratingScaleID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
                 scoreOrder:
                     format: int32
                     type: integer
-                subject_id:
+                subjectID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
-                - ratingScale_id
+                - subjectID
+                - repositoryID
+                - ratingScaleID
                 - scoreOrder
                 - code
                 - name
@@ -1651,31 +1651,31 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                ratingScaleLevel_id:
+                ratingScaleLevelID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
-                subject_id:
+                subjectID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
-                - ratingScaleLevel_id
-                - skillDefinition_id
+                - subjectID
+                - repositoryID
+                - ratingScaleLevelID
+                - skillDefinitionID
                 - description
             type: object
         CreateRatingScaleLevelDescriptorRequest:
@@ -1688,21 +1688,21 @@ components:
                 lastModifiedAt:
                     format: date-time
                     type: string
-                ratingScaleLevel_id:
+                ratingScaleLevelID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
-                - ratingScaleLevel_id
-                - skillDefinition_id
+                - repositoryID
+                - ratingScaleLevelID
+                - skillDefinitionID
                 - description
             type: object
         CreateRatingScaleLevelRequest:
@@ -1721,10 +1721,10 @@ components:
                     type: string
                 name:
                     type: object
-                ratingScale_id:
+                ratingScaleID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 scoreOrder:
@@ -1733,8 +1733,8 @@ components:
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
-                - ratingScale_id
+                - repositoryID
+                - ratingScaleID
                 - scoreOrder
                 - code
                 - name
@@ -1753,13 +1753,13 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -1793,31 +1793,31 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                ratingScale_id:
+                ratingScaleID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
-                    format: uuid
-                    readOnly: true
-                    type: string
-                subject_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                type_id:
+                subjectID:
+                    format: uuid
+                    readOnly: true
+                    type: string
+                typeID:
                     format: uuid
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
+                - subjectID
+                - repositoryID
                 - name
-                - ratingScale_id
+                - ratingScaleID
                 - activePeriod
             type: object
         CreateSkillDefinitionRequest:
@@ -1840,21 +1840,21 @@ components:
                     type: string
                 name:
                     type: object
-                ratingScale_id:
+                ratingScaleID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                type_id:
+                typeID:
                     format: uuid
                     type: string
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - name
-                - ratingScale_id
+                - ratingScaleID
                 - activePeriod
             type: object
         CreateSkillDefinitionType:
@@ -1874,23 +1874,23 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                subject_id:
+                subjectID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
+                - subjectID
+                - repositoryID
                 - code
                 - name
             type: object
@@ -1908,13 +1908,13 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -1928,7 +1928,7 @@ components:
                 deadlineDate:
                     format: date
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 fromDate:
@@ -1945,33 +1945,33 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
-                    format: uuid
-                    readOnly: true
-                    type: string
-                skillDefinition_id:
-                    format: uuid
-                    type: string
-                subject_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                typeOfProof_id:
+                skillDefinitionID:
+                    format: uuid
+                    type: string
+                subjectID:
+                    format: uuid
+                    readOnly: true
+                    type: string
+                typeOfProofID:
                     format: uuid
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
-                - employee_id
-                - typeOfProof_id
+                - subjectID
+                - repositoryID
+                - employeeID
+                - typeOfProofID
                 - fromDate
-                - skillDefinition_id
+                - skillDefinitionID
             type: object
         CreateSkillPlanningRequest:
             properties:
@@ -1986,7 +1986,7 @@ components:
                 deadlineDate:
                     format: date
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 fromDate:
@@ -1997,29 +1997,29 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
-                typeOfProof_id:
+                typeOfProofID:
                     format: uuid
                     type: string
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
-                - employee_id
-                - typeOfProof_id
+                - repositoryID
+                - employeeID
+                - typeOfProofID
                 - fromDate
-                - skillDefinition_id
+                - skillDefinitionID
             type: object
         CreateSkillResult:
             properties:
                 customValues:
                     type: object
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 expirationDate:
@@ -2039,32 +2039,32 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
-                    format: uuid
-                    readOnly: true
-                    type: string
-                score_id:
-                    format: uuid
-                    type: string
-                subject_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                typeOfProof_id:
+                scoreID:
+                    format: uuid
+                    type: string
+                subjectID:
+                    format: uuid
+                    readOnly: true
+                    type: string
+                typeOfProofID:
                     format: uuid
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
-                - employee_id
+                - subjectID
+                - repositoryID
+                - employeeID
                 - issueDate
-                - typeOfProof_id
+                - typeOfProofID
             type: object
         CreateSkillResultRequest:
             properties:
@@ -2073,7 +2073,7 @@ components:
                     type: string
                 customValues:
                     type: object
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 expirationDate:
@@ -2087,22 +2087,22 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                score_id:
+                scoreID:
                     format: uuid
                     type: string
-                typeOfProof_id:
+                typeOfProofID:
                     format: uuid
                     type: string
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
-                - employee_id
+                - repositoryID
+                - employeeID
                 - issueDate
-                - typeOfProof_id
+                - typeOfProofID
             type: object
         CreateTypesOfProof:
             properties:
@@ -2127,28 +2127,28 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
-                subject_id:
+                subjectID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
-                - subject_id
-                - repository_id
+                - subjectID
+                - repositoryID
                 - name
-                - skillDefinition_id
+                - skillDefinitionID
                 - activePeriod
             type: object
         CreateTypesOfProofRequest:
@@ -2171,25 +2171,25 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
             required:
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - name
-                - skillDefinition_id
+                - skillDefinitionID
                 - activePeriod
             type: object
         CreateUpdateCustomFieldDefinitionRequest:
             properties:
                 code:
                     type: string
-                entityDefinition_id:
+                entityDefinitionID:
                     format: uuid
                     type: string
                 id:
@@ -2197,15 +2197,15 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
                 - code
                 - name
-                - entityDefinition_id
+                - entityDefinitionID
             type: object
         CreateUpdateEmployeeRequest:
             properties:
@@ -2228,14 +2228,14 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 surname:
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
                 - surname
             type: object
         CreateUpdateEmployeeUnavailabilityRequest:
@@ -2244,7 +2244,7 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 id:
@@ -2252,14 +2252,14 @@ components:
                     type: string
                 reason:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
                 - activePeriod
-                - employee_id
+                - employeeID
             type: object
         CreateUpdateEmploymentContractRequest:
             properties:
@@ -2267,23 +2267,23 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                contractType_id:
+                contractTypeID:
                     format: uuid
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
                 - activePeriod
-                - employee_id
+                - employeeID
             type: object
         CreateUpdateEmploymentContractTypeRequest:
             properties:
@@ -2294,12 +2294,12 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -2309,28 +2309,28 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                fromEmployee_id:
+                fromEmployeeID:
                     format: uuid
                     type: string
                 id:
                     format: uuid
                     type: string
-                relationType_id:
+                relationTypeID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                toEmployee_id:
+                toEmployeeID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
                 - activePeriod
-                - toEmployee_id
-                - fromEmployee_id
-                - relationType_id
+                - toEmployeeID
+                - fromEmployeeID
+                - relationTypeID
             type: object
         CreateUpdateEmploymentRelationTypeRequest:
             properties:
@@ -2341,12 +2341,12 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -2360,7 +2360,7 @@ components:
                     type: string
                 customValues:
                     type: object
-                definedInGrouping_id:
+                definedInGroupingID:
                     format: uuid
                     type: string
                 description:
@@ -2370,15 +2370,15 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                type_id:
+                typeID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
                 - code
                 - name
                 - activePeriod
@@ -2398,12 +2398,12 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
                 - code
                 - name
                 - activePeriod
@@ -2418,7 +2418,7 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 requestedAt:
@@ -2426,7 +2426,7 @@ components:
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
             type: object
         CreateUpdatePositionAssignmentRequest:
             properties:
@@ -2434,7 +2434,7 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 id:
@@ -2442,20 +2442,20 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                tag_ids:
+                tagIDs:
                     items:
                         format: uuid
                         type: string
                     type: array
             required:
                 - id
-                - repository_id
-                - employee_id
+                - repositoryID
+                - employeeID
                 - activePeriod
-                - tag_ids
+                - tagIDs
             type: object
         CreateUpdateRatingScaleLevelDescriptorRequest:
             properties:
@@ -2464,12 +2464,12 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
                 - description
             type: object
         CreateUpdateRatingScaleLevelRequest:
@@ -2485,12 +2485,12 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -2505,12 +2505,12 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -2531,20 +2531,20 @@ components:
                     type: string
                 name:
                     type: object
-                ratingScale_id:
+                ratingScaleID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                type_id:
+                typeID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
                 - name
-                - ratingScale_id
+                - ratingScaleID
                 - activePeriod
             type: object
         CreateUpdateSkillDefinitionTypeRequest:
@@ -2558,12 +2558,12 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -2577,7 +2577,7 @@ components:
                 deadlineDate:
                     format: date
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 fromDate:
@@ -2588,28 +2588,28 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
-                typeOfProof_id:
+                typeOfProofID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
-                - employee_id
-                - typeOfProof_id
+                - repositoryID
+                - employeeID
+                - typeOfProofID
                 - fromDate
-                - skillDefinition_id
+                - skillDefinitionID
             type: object
         CreateUpdateSkillResultRequest:
             properties:
                 customValues:
                     type: object
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 expirationDate:
@@ -2623,21 +2623,21 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                score_id:
+                scoreID:
                     format: uuid
                     type: string
-                typeOfProof_id:
+                typeOfProofID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
-                - employee_id
+                - repositoryID
+                - employeeID
                 - issueDate
-                - typeOfProof_id
+                - typeOfProofID
             type: object
         CreateUpdateTypesOfProofRequest:
             properties:
@@ -2656,17 +2656,17 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
             required:
                 - id
-                - repository_id
+                - repositoryID
                 - name
-                - skillDefinition_id
+                - skillDefinitionID
                 - activePeriod
             type: object
         CustomFieldDefinition:
@@ -2676,7 +2676,7 @@ components:
                 createdAt:
                     format: date-time
                     type: string
-                entityDefinition_id:
+                entityDefinitionID:
                     format: uuid
                     type: string
                 id:
@@ -2687,17 +2687,17 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - code
                 - name
-                - entityDefinition_id
+                - entityDefinitionID
             type: object
         DeleteCustomFieldDefinition:
             properties:
@@ -2713,19 +2713,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeleteEmployee:
             properties:
@@ -2741,19 +2741,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeleteEmployeeUnavailability:
             properties:
@@ -2769,19 +2769,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeleteEmploymentContract:
             properties:
@@ -2797,19 +2797,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeleteEmploymentContractType:
             properties:
@@ -2825,19 +2825,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeleteEmploymentRelation:
             properties:
@@ -2853,19 +2853,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeleteEmploymentRelationType:
             properties:
@@ -2881,19 +2881,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeleteGrouping:
             properties:
@@ -2909,19 +2909,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeleteGroupingType:
             properties:
@@ -2937,19 +2937,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeleteMonitoringTrace:
             properties:
@@ -2965,19 +2965,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeletePositionAssignment:
             properties:
@@ -2993,19 +2993,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeleteRatingScale:
             properties:
@@ -3021,19 +3021,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeleteRatingScaleLevel:
             properties:
@@ -3049,19 +3049,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeleteRatingScaleLevelDescriptor:
             properties:
@@ -3077,19 +3077,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeleteSkillDefinition:
             properties:
@@ -3105,19 +3105,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeleteSkillDefinitionType:
             properties:
@@ -3133,19 +3133,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeleteSkillPlanning:
             properties:
@@ -3161,19 +3161,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeleteSkillResult:
             properties:
@@ -3189,19 +3189,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         DeleteTypesOfProof:
             properties:
@@ -3217,19 +3217,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         Employee:
             properties:
@@ -3258,7 +3258,7 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 surname:
@@ -3267,7 +3267,7 @@ components:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - surname
             type: object
         EmployeeUnavailability:
@@ -3279,7 +3279,7 @@ components:
                 createdAt:
                     format: date-time
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 id:
@@ -3290,16 +3290,16 @@ components:
                     type: string
                 reason:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - activePeriod
-                - employee_id
+                - employeeID
             type: object
         EmploymentContract:
             properties:
@@ -3307,13 +3307,13 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                contractType_id:
+                contractTypeID:
                     format: uuid
                     type: string
                 createdAt:
                     format: date-time
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 id:
@@ -3322,16 +3322,16 @@ components:
                 lastModifiedAt:
                     format: date-time
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - activePeriod
-                - employee_id
+                - employeeID
             type: object
         EmploymentContractType:
             properties:
@@ -3348,14 +3348,14 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -3368,7 +3368,7 @@ components:
                 createdAt:
                     format: date-time
                     type: string
-                fromEmployee_id:
+                fromEmployeeID:
                     format: uuid
                     type: string
                 id:
@@ -3377,24 +3377,24 @@ components:
                 lastModifiedAt:
                     format: date-time
                     type: string
-                relationType_id:
+                relationTypeID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                toEmployee_id:
+                toEmployeeID:
                     format: uuid
                     type: string
             required:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - activePeriod
-                - toEmployee_id
-                - fromEmployee_id
-                - relationType_id
+                - toEmployeeID
+                - fromEmployeeID
+                - relationTypeID
             type: object
         EmploymentRelationType:
             properties:
@@ -3411,14 +3411,14 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -3477,7 +3477,7 @@ components:
                     type: string
                 customValues:
                     type: object
-                definedInGrouping_id:
+                definedInGroupingID:
                     format: uuid
                     type: string
                 description:
@@ -3490,17 +3490,17 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                type_id:
+                typeID:
                     format: uuid
                     type: string
             required:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - code
                 - name
                 - activePeriod
@@ -3526,14 +3526,14 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - code
                 - name
                 - activePeriod
@@ -4568,7 +4568,7 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 requestedAt:
@@ -4578,7 +4578,7 @@ components:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
             type: object
         PaginationInfo:
             properties:
@@ -4613,7 +4613,7 @@ components:
                 createdAt:
                     format: date-time
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 id:
@@ -4624,10 +4624,10 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                tag_ids:
+                tagIDs:
                     items:
                         format: uuid
                         type: string
@@ -4636,10 +4636,10 @@ components:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
-                - employee_id
+                - repositoryID
+                - employeeID
                 - activePeriod
-                - tag_ids
+                - tagIDs
             type: object
         RatingScale:
             properties:
@@ -4658,14 +4658,14 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -4688,10 +4688,10 @@ components:
                     type: string
                 name:
                     type: object
-                ratingScale_id:
+                ratingScaleID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 scoreOrder:
@@ -4701,8 +4701,8 @@ components:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
-                - ratingScale_id
+                - repositoryID
+                - ratingScaleID
                 - scoreOrder
                 - code
                 - name
@@ -4720,22 +4720,22 @@ components:
                 lastModifiedAt:
                     format: date-time
                     type: string
-                ratingScaleLevel_id:
+                ratingScaleLevelID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
             required:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
-                - ratingScaleLevel_id
-                - skillDefinition_id
+                - repositoryID
+                - ratingScaleLevelID
+                - skillDefinitionID
                 - description
             type: object
         Repository:
@@ -4772,22 +4772,22 @@ components:
                     type: string
                 name:
                     type: object
-                ratingScale_id:
+                ratingScaleID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                type_id:
+                typeID:
                     format: uuid
                     type: string
             required:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - name
-                - ratingScale_id
+                - ratingScaleID
                 - activePeriod
             type: object
         SkillDefinitionType:
@@ -4807,14 +4807,14 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             required:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -4831,7 +4831,7 @@ components:
                 deadlineDate:
                     format: date
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 fromDate:
@@ -4845,24 +4845,24 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
-                typeOfProof_id:
+                typeOfProofID:
                     format: uuid
                     type: string
             required:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
-                - employee_id
-                - typeOfProof_id
+                - repositoryID
+                - employeeID
+                - typeOfProofID
                 - fromDate
-                - skillDefinition_id
+                - skillDefinitionID
             type: object
         SkillResult:
             properties:
@@ -4871,7 +4871,7 @@ components:
                     type: string
                 customValues:
                     type: object
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 expirationDate:
@@ -4888,23 +4888,23 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                score_id:
+                scoreID:
                     format: uuid
                     type: string
-                typeOfProof_id:
+                typeOfProofID:
                     format: uuid
                     type: string
             required:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
-                - employee_id
+                - repositoryID
+                - employeeID
                 - issueDate
-                - typeOfProof_id
+                - typeOfProofID
             type: object
         TypesOfProof:
             properties:
@@ -4929,31 +4929,31 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
             required:
                 - id
                 - createdAt
                 - lastModifiedAt
-                - repository_id
+                - repositoryID
                 - name
-                - skillDefinition_id
+                - skillDefinitionID
                 - activePeriod
             type: object
         UpdateCreateCustomFieldDefinitionRequest:
             properties:
                 code:
                     type: string
-                entityDefinition_id:
+                entityDefinitionID:
                     format: uuid
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -4975,7 +4975,7 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 surname:
@@ -4987,12 +4987,12 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 reason:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5002,13 +5002,13 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                contractType_id:
+                contractTypeID:
                     format: uuid
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5018,7 +5018,7 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5028,16 +5028,16 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                fromEmployee_id:
+                fromEmployeeID:
                     format: uuid
                     type: string
-                relationType_id:
+                relationTypeID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                toEmployee_id:
+                toEmployeeID:
                     format: uuid
                     type: string
             type: object
@@ -5047,7 +5047,7 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5061,17 +5061,17 @@ components:
                     type: string
                 customValues:
                     type: object
-                definedInGrouping_id:
+                definedInGroupingID:
                     format: uuid
                     type: string
                 description:
                     type: object
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                type_id:
+                typeID:
                     format: uuid
                     type: string
             type: object
@@ -5087,7 +5087,7 @@ components:
                     type: object
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5098,7 +5098,7 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 requestedAt:
@@ -5111,15 +5111,15 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                tag_ids:
+                tagIDs:
                     items:
                         format: uuid
                         type: string
@@ -5129,13 +5129,13 @@ components:
             properties:
                 description:
                     type: object
-                ratingScaleLevel_id:
+                ratingScaleLevelID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
             type: object
@@ -5149,10 +5149,10 @@ components:
                     type: object
                 name:
                     type: object
-                ratingScale_id:
+                ratingScaleID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 scoreOrder:
@@ -5167,7 +5167,7 @@ components:
                     type: object
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5185,13 +5185,13 @@ components:
                     type: object
                 name:
                     type: object
-                ratingScale_id:
+                ratingScaleID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                type_id:
+                typeID:
                     format: uuid
                     type: string
             type: object
@@ -5203,7 +5203,7 @@ components:
                     type: object
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5217,7 +5217,7 @@ components:
                 deadlineDate:
                     format: date
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 fromDate:
@@ -5225,13 +5225,13 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
-                typeOfProof_id:
+                typeOfProofID:
                     format: uuid
                     type: string
             type: object
@@ -5239,7 +5239,7 @@ components:
             properties:
                 customValues:
                     type: object
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 expirationDate:
@@ -5250,13 +5250,13 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                score_id:
+                scoreID:
                     format: uuid
                     type: string
-                typeOfProof_id:
+                typeOfProofID:
                     format: uuid
                     type: string
             type: object
@@ -5274,10 +5274,10 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
             type: object
@@ -5285,7 +5285,7 @@ components:
             properties:
                 code:
                     type: string
-                entityDefinition_id:
+                entityDefinitionID:
                     format: uuid
                     type: string
                 id:
@@ -5302,22 +5302,22 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
                 - code
                 - name
-                - entityDefinition_id
+                - entityDefinitionID
             type: object
         UpdateCustomFieldDefinitionRequest:
             properties:
@@ -5326,7 +5326,7 @@ components:
                 createdAt:
                     format: date-time
                     type: string
-                entityDefinition_id:
+                entityDefinitionID:
                     format: uuid
                     type: string
                 lastModifiedAt:
@@ -5334,7 +5334,7 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5343,7 +5343,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5352,7 +5352,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5361,7 +5361,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5370,7 +5370,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5379,7 +5379,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5388,7 +5388,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5397,7 +5397,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5406,7 +5406,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5415,7 +5415,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5424,7 +5424,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5433,7 +5433,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5442,7 +5442,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5451,7 +5451,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5460,7 +5460,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5469,7 +5469,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5478,7 +5478,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5487,7 +5487,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5496,7 +5496,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5505,7 +5505,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5539,21 +5539,21 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
                 surname:
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
                 - surname
             type: object
         UpdateEmployeeRequest:
@@ -5580,7 +5580,7 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 surname:
@@ -5592,7 +5592,7 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 id:
@@ -5609,21 +5609,21 @@ components:
                     type: string
                 reason:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
                 - activePeriod
-                - employee_id
+                - employeeID
             type: object
         UpdateEmployeeUnavailabilityRequest:
             properties:
@@ -5634,7 +5634,7 @@ components:
                 createdAt:
                     format: date-time
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 lastModifiedAt:
@@ -5642,7 +5642,7 @@ components:
                     type: string
                 reason:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5652,10 +5652,10 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                contractType_id:
+                contractTypeID:
                     format: uuid
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 id:
@@ -5670,21 +5670,21 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
                 - activePeriod
-                - employee_id
+                - employeeID
             type: object
         UpdateEmploymentContractRequest:
             properties:
@@ -5692,19 +5692,19 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                contractType_id:
+                contractTypeID:
                     format: uuid
                     type: string
                 createdAt:
                     format: date-time
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 lastModifiedAt:
                     format: date-time
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5726,19 +5726,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -5754,7 +5754,7 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5764,7 +5764,7 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                fromEmployee_id:
+                fromEmployeeID:
                     format: uuid
                     type: string
                 id:
@@ -5779,29 +5779,29 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                relationType_id:
+                relationTypeID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                toEmployee_id:
+                toEmployeeID:
                     format: uuid
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
                 - activePeriod
-                - toEmployee_id
-                - fromEmployee_id
-                - relationType_id
+                - toEmployeeID
+                - fromEmployeeID
+                - relationTypeID
             type: object
         UpdateEmploymentRelationRequest:
             properties:
@@ -5812,19 +5812,19 @@ components:
                 createdAt:
                     format: date-time
                     type: string
-                fromEmployee_id:
+                fromEmployeeID:
                     format: uuid
                     type: string
                 lastModifiedAt:
                     format: date-time
                     type: string
-                relationType_id:
+                relationTypeID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                toEmployee_id:
+                toEmployeeID:
                     format: uuid
                     type: string
             type: object
@@ -5846,19 +5846,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -5874,7 +5874,7 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -5895,7 +5895,7 @@ components:
                     type: string
                 customValues:
                     type: object
-                definedInGrouping_id:
+                definedInGroupingID:
                     format: uuid
                     type: string
                 description:
@@ -5914,22 +5914,22 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                type_id:
+                typeID:
                     format: uuid
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
                 - code
                 - name
                 - activePeriod
@@ -5947,7 +5947,7 @@ components:
                     type: string
                 customValues:
                     type: object
-                definedInGrouping_id:
+                definedInGroupingID:
                     format: uuid
                     type: string
                 description:
@@ -5957,10 +5957,10 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                type_id:
+                typeID:
                     format: uuid
                     type: string
             type: object
@@ -5988,19 +5988,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
                 - code
                 - name
                 - activePeriod
@@ -6023,7 +6023,7 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -6046,10 +6046,10 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
@@ -6057,11 +6057,11 @@ components:
                     format: date-time
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
             type: object
         UpdateMonitoringTraceRequest:
             properties:
@@ -6076,7 +6076,7 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 requestedAt:
@@ -6089,7 +6089,7 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 id:
@@ -6106,27 +6106,27 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                tag_ids:
+                tagIDs:
                     items:
                         format: uuid
                         type: string
                     type: array
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
-                - employee_id
+                - repositoryID
+                - employeeID
                 - activePeriod
-                - tag_ids
+                - tagIDs
             type: object
         UpdatePositionAssignmentRequest:
             properties:
@@ -6137,7 +6137,7 @@ components:
                 createdAt:
                     format: date-time
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 lastModifiedAt:
@@ -6145,10 +6145,10 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                tag_ids:
+                tagIDs:
                     items:
                         format: uuid
                         type: string
@@ -6174,19 +6174,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -6212,19 +6212,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -6244,19 +6244,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
                 - description
             type: object
         UpdateRatingScaleLevelDescriptorRequest:
@@ -6269,13 +6269,13 @@ components:
                 lastModifiedAt:
                     format: date-time
                     type: string
-                ratingScaleLevel_id:
+                ratingScaleLevelID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
             type: object
@@ -6295,10 +6295,10 @@ components:
                     type: string
                 name:
                     type: object
-                ratingScale_id:
+                ratingScaleID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 scoreOrder:
@@ -6319,7 +6319,7 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -6354,27 +6354,27 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                ratingScale_id:
+                ratingScaleID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                type_id:
+                typeID:
                     format: uuid
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
                 - name
-                - ratingScale_id
+                - ratingScaleID
                 - activePeriod
             type: object
         UpdateSkillDefinitionRequest:
@@ -6397,13 +6397,13 @@ components:
                     type: string
                 name:
                     type: object
-                ratingScale_id:
+                ratingScaleID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                type_id:
+                typeID:
                     format: uuid
                     type: string
             type: object
@@ -6427,19 +6427,19 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
                 - code
                 - name
             type: object
@@ -6457,7 +6457,7 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -6471,7 +6471,7 @@ components:
                 deadlineDate:
                     format: date
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 fromDate:
@@ -6491,29 +6491,29 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
-                typeOfProof_id:
+                typeOfProofID:
                     format: uuid
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
-                - employee_id
-                - typeOfProof_id
+                - repositoryID
+                - employeeID
+                - typeOfProofID
                 - fromDate
-                - skillDefinition_id
+                - skillDefinitionID
             type: object
         UpdateSkillPlanningRequest:
             properties:
@@ -6528,7 +6528,7 @@ components:
                 deadlineDate:
                     format: date
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 fromDate:
@@ -6539,13 +6539,13 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
-                typeOfProof_id:
+                typeOfProofID:
                     format: uuid
                     type: string
             type: object
@@ -6553,7 +6553,7 @@ components:
             properties:
                 customValues:
                     type: object
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 expirationDate:
@@ -6576,28 +6576,28 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                score_id:
+                scoreID:
                     format: uuid
                     type: string
-                typeOfProof_id:
+                typeOfProofID:
                     format: uuid
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
-                - employee_id
+                - repositoryID
+                - employeeID
                 - issueDate
-                - typeOfProof_id
+                - typeOfProofID
             type: object
         UpdateSkillResultRequest:
             properties:
@@ -6606,7 +6606,7 @@ components:
                     type: string
                 customValues:
                     type: object
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 expirationDate:
@@ -6620,13 +6620,13 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                score_id:
+                scoreID:
                     format: uuid
                     type: string
-                typeOfProof_id:
+                typeOfProofID:
                     format: uuid
                     type: string
             type: object
@@ -6656,24 +6656,24 @@ components:
                 proposalExecutionErrorText:
                     readOnly: true
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                request_id:
+                requestID:
                     format: uuid
                     readOnly: true
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
             required:
-                - request_id
+                - requestID
                 - isProposalResolved
                 - isProposalExecutionFailed
                 - id
-                - repository_id
+                - repositoryID
                 - name
-                - skillDefinition_id
+                - skillDefinitionID
                 - activePeriod
             type: object
         UpdateTypesOfProofRequest:
@@ -6696,10 +6696,10 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
             type: object
@@ -6707,7 +6707,7 @@ components:
             properties:
                 code:
                     type: string
-                entityDefinition_id:
+                entityDefinitionID:
                     format: uuid
                     type: string
                 id:
@@ -6715,7 +6715,7 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -6740,7 +6740,7 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 surname:
@@ -6752,7 +6752,7 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 id:
@@ -6760,7 +6760,7 @@ components:
                     type: string
                 reason:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -6770,16 +6770,16 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                contractType_id:
+                contractTypeID:
                     format: uuid
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -6792,7 +6792,7 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -6802,19 +6802,19 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                fromEmployee_id:
+                fromEmployeeID:
                     format: uuid
                     type: string
                 id:
                     format: uuid
                     type: string
-                relationType_id:
+                relationTypeID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                toEmployee_id:
+                toEmployeeID:
                     format: uuid
                     type: string
             type: object
@@ -6827,7 +6827,7 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -6841,7 +6841,7 @@ components:
                     type: string
                 customValues:
                     type: object
-                definedInGrouping_id:
+                definedInGroupingID:
                     format: uuid
                     type: string
                 description:
@@ -6851,10 +6851,10 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                type_id:
+                typeID:
                     format: uuid
                     type: string
             type: object
@@ -6873,7 +6873,7 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -6887,7 +6887,7 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
                 requestedAt:
@@ -6900,7 +6900,7 @@ components:
                     description: Date range in PostgreSQL format [start,end)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 id:
@@ -6908,10 +6908,10 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                tag_ids:
+                tagIDs:
                     items:
                         format: uuid
                         type: string
@@ -6924,7 +6924,7 @@ components:
                 id:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -6941,7 +6941,7 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -6956,7 +6956,7 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -6977,13 +6977,13 @@ components:
                     type: string
                 name:
                     type: object
-                ratingScale_id:
+                ratingScaleID:
                     format: uuid
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                type_id:
+                typeID:
                     format: uuid
                     type: string
             type: object
@@ -6998,7 +6998,7 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
             type: object
@@ -7012,7 +7012,7 @@ components:
                 deadlineDate:
                     format: date
                     type: string
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 fromDate:
@@ -7023,13 +7023,13 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
-                typeOfProof_id:
+                typeOfProofID:
                     format: uuid
                     type: string
             type: object
@@ -7037,7 +7037,7 @@ components:
             properties:
                 customValues:
                     type: object
-                employee_id:
+                employeeID:
                     format: uuid
                     type: string
                 expirationDate:
@@ -7051,13 +7051,13 @@ components:
                     type: string
                 remark:
                     type: string
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                score_id:
+                scoreID:
                     format: uuid
                     type: string
-                typeOfProof_id:
+                typeOfProofID:
                     format: uuid
                     type: string
             type: object
@@ -7078,10 +7078,10 @@ components:
                     type: string
                 name:
                     type: object
-                repository_id:
+                repositoryID:
                     format: uuid
                     type: string
-                skillDefinition_id:
+                skillDefinitionID:
                     format: uuid
                     type: string
             type: object
@@ -7115,13 +7115,13 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: entityDefinition_id
+                - Filterable fields: entityDefinitionID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listCreateCustomFieldDefinition
             parameters:
-                - description: Filter by entityDefinition_id (exact match)
+                - description: Filter by entityDefinitionID (exact match)
                   in: query
-                  name: entityDefinition_id
+                  name: entityDefinitionID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -7331,13 +7331,13 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: employee_id
+                - Filterable fields: employeeID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listCreateEmployeeUnavailability
             parameters:
-                - description: Filter by employee_id (exact match)
+                - description: Filter by employeeID (exact match)
                   in: query
-                  name: employee_id
+                  name: employeeID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -7445,18 +7445,18 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: contractType_id, employee_id
+                - Filterable fields: contractTypeID, employeeID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listCreateEmploymentContract
             parameters:
-                - description: Filter by contractType_id (exact match)
+                - description: Filter by contractTypeID (exact match)
                   in: query
-                  name: contractType_id
+                  name: contractTypeID
                   schema:
                     type: string
-                - description: Filter by employee_id (exact match)
+                - description: Filter by employeeID (exact match)
                   in: query
-                  name: employee_id
+                  name: employeeID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -7666,23 +7666,23 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: toEmployee_id, fromEmployee_id, relationType_id
+                - Filterable fields: toEmployeeID, fromEmployeeID, relationTypeID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listCreateEmploymentRelation
             parameters:
-                - description: Filter by toEmployee_id (exact match)
+                - description: Filter by toEmployeeID (exact match)
                   in: query
-                  name: toEmployee_id
+                  name: toEmployeeID
                   schema:
                     type: string
-                - description: Filter by fromEmployee_id (exact match)
+                - description: Filter by fromEmployeeID (exact match)
                   in: query
-                  name: fromEmployee_id
+                  name: fromEmployeeID
                   schema:
                     type: string
-                - description: Filter by relationType_id (exact match)
+                - description: Filter by relationTypeID (exact match)
                   in: query
-                  name: relationType_id
+                  name: relationTypeID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -7892,18 +7892,18 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: type_id, definedInGrouping_id
+                - Filterable fields: typeID, definedInGroupingID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listCreateGrouping
             parameters:
-                - description: Filter by type_id (exact match)
+                - description: Filter by typeID (exact match)
                   in: query
-                  name: type_id
+                  name: typeID
                   schema:
                     type: string
-                - description: Filter by definedInGrouping_id (exact match)
+                - description: Filter by definedInGroupingID (exact match)
                   in: query
-                  name: definedInGrouping_id
+                  name: definedInGroupingID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -8215,13 +8215,13 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: employee_id
+                - Filterable fields: employeeID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listCreatePositionAssignment
             parameters:
-                - description: Filter by employee_id (exact match)
+                - description: Filter by employeeID (exact match)
                   in: query
-                  name: employee_id
+                  name: employeeID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -8329,18 +8329,18 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: ratingScaleLevel_id, skillDefinition_id
+                - Filterable fields: ratingScaleLevelID, skillDefinitionID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listCreateRatingScaleLevelDescriptor
             parameters:
-                - description: Filter by ratingScaleLevel_id (exact match)
+                - description: Filter by ratingScaleLevelID (exact match)
                   in: query
-                  name: ratingScaleLevel_id
+                  name: ratingScaleLevelID
                   schema:
                     type: string
-                - description: Filter by skillDefinition_id (exact match)
+                - description: Filter by skillDefinitionID (exact match)
                   in: query
-                  name: skillDefinition_id
+                  name: skillDefinitionID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -8448,13 +8448,13 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: ratingScale_id
+                - Filterable fields: ratingScaleID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listCreateRatingScaleLevel
             parameters:
-                - description: Filter by ratingScale_id (exact match)
+                - description: Filter by ratingScaleID (exact match)
                   in: query
-                  name: ratingScale_id
+                  name: ratingScaleID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -8664,18 +8664,18 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: ratingScale_id, type_id
+                - Filterable fields: ratingScaleID, typeID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listCreateSkillDefinition
             parameters:
-                - description: Filter by ratingScale_id (exact match)
+                - description: Filter by ratingScaleID (exact match)
                   in: query
-                  name: ratingScale_id
+                  name: ratingScaleID
                   schema:
                     type: string
-                - description: Filter by type_id (exact match)
+                - description: Filter by typeID (exact match)
                   in: query
-                  name: type_id
+                  name: typeID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -8987,18 +8987,18 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: typeOfProof_id, score_id
+                - Filterable fields: typeOfProofID, scoreID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listCreateSkillResult
             parameters:
-                - description: Filter by typeOfProof_id (exact match)
+                - description: Filter by typeOfProofID (exact match)
                   in: query
-                  name: typeOfProof_id
+                  name: typeOfProofID
                   schema:
                     type: string
-                - description: Filter by score_id (exact match)
+                - description: Filter by scoreID (exact match)
                   in: query
-                  name: score_id
+                  name: scoreID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -9106,13 +9106,13 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: skillDefinition_id
+                - Filterable fields: skillDefinitionID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listCreateTypesOfProof
             parameters:
-                - description: Filter by skillDefinition_id (exact match)
+                - description: Filter by skillDefinitionID (exact match)
                   in: query
-                  name: skillDefinition_id
+                  name: skillDefinitionID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -9220,13 +9220,13 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: entityDefinition_id
+                - Filterable fields: entityDefinitionID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listCustomFieldDefinition
             parameters:
-                - description: Filter by entityDefinition_id (exact match)
+                - description: Filter by entityDefinitionID (exact match)
                   in: query
-                  name: entityDefinition_id
+                  name: entityDefinitionID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -11322,13 +11322,13 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: employee_id
+                - Filterable fields: employeeID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listEmployeeUnavailability
             parameters:
-                - description: Filter by employee_id (exact match)
+                - description: Filter by employeeID (exact match)
                   in: query
-                  name: employee_id
+                  name: employeeID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -11410,18 +11410,18 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: contractType_id, employee_id
+                - Filterable fields: contractTypeID, employeeID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listEmploymentContract
             parameters:
-                - description: Filter by contractType_id (exact match)
+                - description: Filter by contractTypeID (exact match)
                   in: query
-                  name: contractType_id
+                  name: contractTypeID
                   schema:
                     type: string
-                - description: Filter by employee_id (exact match)
+                - description: Filter by employeeID (exact match)
                   in: query
-                  name: employee_id
+                  name: employeeID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -11579,23 +11579,23 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: toEmployee_id, fromEmployee_id, relationType_id
+                - Filterable fields: toEmployeeID, fromEmployeeID, relationTypeID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listEmploymentRelation
             parameters:
-                - description: Filter by toEmployee_id (exact match)
+                - description: Filter by toEmployeeID (exact match)
                   in: query
-                  name: toEmployee_id
+                  name: toEmployeeID
                   schema:
                     type: string
-                - description: Filter by fromEmployee_id (exact match)
+                - description: Filter by fromEmployeeID (exact match)
                   in: query
-                  name: fromEmployee_id
+                  name: fromEmployeeID
                   schema:
                     type: string
-                - description: Filter by relationType_id (exact match)
+                - description: Filter by relationTypeID (exact match)
                   in: query
-                  name: relationType_id
+                  name: relationTypeID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -11829,18 +11829,18 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: type_id, definedInGrouping_id
+                - Filterable fields: typeID, definedInGroupingID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listGrouping
             parameters:
-                - description: Filter by type_id (exact match)
+                - description: Filter by typeID (exact match)
                   in: query
-                  name: type_id
+                  name: typeID
                   schema:
                     type: string
-                - description: Filter by definedInGrouping_id (exact match)
+                - description: Filter by definedInGroupingID (exact match)
                   in: query
-                  name: definedInGrouping_id
+                  name: definedInGroupingID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -12131,13 +12131,13 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: employee_id
+                - Filterable fields: employeeID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listPositionAssignment
             parameters:
-                - description: Filter by employee_id (exact match)
+                - description: Filter by employeeID (exact match)
                   in: query
-                  name: employee_id
+                  name: employeeID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -12219,18 +12219,18 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: ratingScaleLevel_id, skillDefinition_id
+                - Filterable fields: ratingScaleLevelID, skillDefinitionID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listRatingScaleLevelDescriptor
             parameters:
-                - description: Filter by ratingScaleLevel_id (exact match)
+                - description: Filter by ratingScaleLevelID (exact match)
                   in: query
-                  name: ratingScaleLevel_id
+                  name: ratingScaleLevelID
                   schema:
                     type: string
-                - description: Filter by skillDefinition_id (exact match)
+                - description: Filter by skillDefinitionID (exact match)
                   in: query
-                  name: skillDefinition_id
+                  name: skillDefinitionID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -12312,13 +12312,13 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: ratingScale_id
+                - Filterable fields: ratingScaleID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listRatingScaleLevel
             parameters:
-                - description: Filter by ratingScale_id (exact match)
+                - description: Filter by ratingScaleID (exact match)
                   in: query
-                  name: ratingScale_id
+                  name: ratingScaleID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -12552,18 +12552,18 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: ratingScale_id, type_id
+                - Filterable fields: ratingScaleID, typeID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listSkillDefinition
             parameters:
-                - description: Filter by ratingScale_id (exact match)
+                - description: Filter by ratingScaleID (exact match)
                   in: query
-                  name: ratingScale_id
+                  name: ratingScaleID
                   schema:
                     type: string
-                - description: Filter by type_id (exact match)
+                - description: Filter by typeID (exact match)
                   in: query
-                  name: type_id
+                  name: typeID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -12797,18 +12797,18 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: typeOfProof_id, score_id
+                - Filterable fields: typeOfProofID, scoreID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listSkillResult
             parameters:
-                - description: Filter by typeOfProof_id (exact match)
+                - description: Filter by typeOfProofID (exact match)
                   in: query
-                  name: typeOfProof_id
+                  name: typeOfProofID
                   schema:
                     type: string
-                - description: Filter by score_id (exact match)
+                - description: Filter by scoreID (exact match)
                   in: query
-                  name: score_id
+                  name: scoreID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -12890,13 +12890,13 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: skillDefinition_id
+                - Filterable fields: skillDefinitionID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listTypesOfProof
             parameters:
-                - description: Filter by skillDefinition_id (exact match)
+                - description: Filter by skillDefinitionID (exact match)
                   in: query
-                  name: skillDefinition_id
+                  name: skillDefinitionID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -12978,13 +12978,13 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: entityDefinition_id
+                - Filterable fields: entityDefinitionID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listUpdateCustomFieldDefinition
             parameters:
-                - description: Filter by entityDefinition_id (exact match)
+                - description: Filter by entityDefinitionID (exact match)
                   in: query
-                  name: entityDefinition_id
+                  name: entityDefinitionID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -13194,13 +13194,13 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: employee_id
+                - Filterable fields: employeeID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listUpdateEmployeeUnavailability
             parameters:
-                - description: Filter by employee_id (exact match)
+                - description: Filter by employeeID (exact match)
                   in: query
-                  name: employee_id
+                  name: employeeID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -13308,18 +13308,18 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: contractType_id, employee_id
+                - Filterable fields: contractTypeID, employeeID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listUpdateEmploymentContract
             parameters:
-                - description: Filter by contractType_id (exact match)
+                - description: Filter by contractTypeID (exact match)
                   in: query
-                  name: contractType_id
+                  name: contractTypeID
                   schema:
                     type: string
-                - description: Filter by employee_id (exact match)
+                - description: Filter by employeeID (exact match)
                   in: query
-                  name: employee_id
+                  name: employeeID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -13529,23 +13529,23 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: toEmployee_id, fromEmployee_id, relationType_id
+                - Filterable fields: toEmployeeID, fromEmployeeID, relationTypeID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listUpdateEmploymentRelation
             parameters:
-                - description: Filter by toEmployee_id (exact match)
+                - description: Filter by toEmployeeID (exact match)
                   in: query
-                  name: toEmployee_id
+                  name: toEmployeeID
                   schema:
                     type: string
-                - description: Filter by fromEmployee_id (exact match)
+                - description: Filter by fromEmployeeID (exact match)
                   in: query
-                  name: fromEmployee_id
+                  name: fromEmployeeID
                   schema:
                     type: string
-                - description: Filter by relationType_id (exact match)
+                - description: Filter by relationTypeID (exact match)
                   in: query
-                  name: relationType_id
+                  name: relationTypeID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -13755,18 +13755,18 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: type_id, definedInGrouping_id
+                - Filterable fields: typeID, definedInGroupingID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listUpdateGrouping
             parameters:
-                - description: Filter by type_id (exact match)
+                - description: Filter by typeID (exact match)
                   in: query
-                  name: type_id
+                  name: typeID
                   schema:
                     type: string
-                - description: Filter by definedInGrouping_id (exact match)
+                - description: Filter by definedInGroupingID (exact match)
                   in: query
-                  name: definedInGrouping_id
+                  name: definedInGroupingID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -14078,13 +14078,13 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: employee_id
+                - Filterable fields: employeeID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listUpdatePositionAssignment
             parameters:
-                - description: Filter by employee_id (exact match)
+                - description: Filter by employeeID (exact match)
                   in: query
-                  name: employee_id
+                  name: employeeID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -14498,18 +14498,18 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: ratingScale_id, type_id
+                - Filterable fields: ratingScaleID, typeID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listUpdateSkillDefinition
             parameters:
-                - description: Filter by ratingScale_id (exact match)
+                - description: Filter by ratingScaleID (exact match)
                   in: query
-                  name: ratingScale_id
+                  name: ratingScaleID
                   schema:
                     type: string
-                - description: Filter by type_id (exact match)
+                - description: Filter by typeID (exact match)
                   in: query
-                  name: type_id
+                  name: typeID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -14821,18 +14821,18 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: typeOfProof_id, score_id
+                - Filterable fields: typeOfProofID, scoreID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listUpdateSkillResult
             parameters:
-                - description: Filter by typeOfProof_id (exact match)
+                - description: Filter by typeOfProofID (exact match)
                   in: query
-                  name: typeOfProof_id
+                  name: typeOfProofID
                   schema:
                     type: string
-                - description: Filter by score_id (exact match)
+                - description: Filter by scoreID (exact match)
                   in: query
-                  name: score_id
+                  name: scoreID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
@@ -14940,13 +14940,13 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: skillDefinition_id
+                - Filterable fields: skillDefinitionID
                 - Example: `?employee_id=abc-123&status=active`
             operationId: listUpdateTypesOfProof
             parameters:
-                - description: Filter by skillDefinition_id (exact match)
+                - description: Filter by skillDefinitionID (exact match)
                   in: query
-                  name: skillDefinition_id
+                  name: skillDefinitionID
                   schema:
                     type: string
                 - description: Maximum number of items to return (1-1000)
