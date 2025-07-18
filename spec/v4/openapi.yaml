@@ -18,7 +18,7 @@ components:
                 maximum: 1000
                 minimum: 1
                 type: integer
-        orgID:
+        orgkeepID:
             description: |
                 Organization:
                 - OrgKeep UUID (e.g., `123e4567-e89b-12d3-a456-426614174000`)
@@ -27,7 +27,7 @@ components:
                     summary: Organization UUID
                     value: 123e4567-e89b-12d3-a456-426614174000
             in: path
-            name: orgID
+            name: orgkeepID
             required: true
             schema:
                 type: string
@@ -7107,7 +7107,7 @@ info:
         url: https://www.ag5.com/wp-content/themes/ag5/assets/images/ag5-logo.png
 openapi: 3.0.3
 paths:
-    /{orgID}/createCustomFieldDefinitions:
+    /{orgkeepID}/createCustomFieldDefinitions:
         get:
             description: |-
                 List all createCustomFieldDefinitions proposals. These are proposed changes to create new CustomFieldDefinition records that may be automatically approved or require manual approval depending on system configuration.
@@ -7157,7 +7157,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -7187,7 +7187,7 @@ paths:
             tags:
                 - CustomFieldDefinitions
                 - Proposals
-    /{orgID}/createCustomFieldDefinitions/{id}:
+    /{orgkeepID}/createCustomFieldDefinitions/{id}:
         get:
             description: Get details of a specific CustomFieldDefinition creation proposal by ID
             operationId: getCreateCustomFieldDefinition
@@ -7211,7 +7211,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -7221,7 +7221,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createEmployeeUnavailabilities:
+    /{orgkeepID}/createEmployeeUnavailabilities:
         get:
             description: |-
                 List all createEmployeeUnavailabilities proposals. These are proposed changes to create new EmployeeUnavailability records that may be automatically approved or require manual approval depending on system configuration.
@@ -7271,7 +7271,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -7301,7 +7301,7 @@ paths:
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
-    /{orgID}/createEmployeeUnavailabilities/{id}:
+    /{orgkeepID}/createEmployeeUnavailabilities/{id}:
         get:
             description: Get details of a specific EmployeeUnavailability creation proposal by ID
             operationId: getCreateEmployeeUnavailability
@@ -7325,7 +7325,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -7335,7 +7335,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createEmployees:
+    /{orgkeepID}/createEmployees:
         get:
             description: List all createEmployees proposals. These are proposed changes to create new Employee records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateEmployee
@@ -7373,7 +7373,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -7403,7 +7403,7 @@ paths:
             tags:
                 - Employees
                 - Proposals
-    /{orgID}/createEmployees/{id}:
+    /{orgkeepID}/createEmployees/{id}:
         get:
             description: Get details of a specific Employee creation proposal by ID
             operationId: getCreateEmployee
@@ -7427,7 +7427,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -7437,7 +7437,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createEmploymentContractTypes:
+    /{orgkeepID}/createEmploymentContractTypes:
         get:
             description: List all createEmploymentContractTypes proposals. These are proposed changes to create new EmploymentContractType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateEmploymentContractType
@@ -7475,7 +7475,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -7505,7 +7505,7 @@ paths:
             tags:
                 - EmploymentContractTypes
                 - Proposals
-    /{orgID}/createEmploymentContractTypes/{id}:
+    /{orgkeepID}/createEmploymentContractTypes/{id}:
         get:
             description: Get details of a specific EmploymentContractType creation proposal by ID
             operationId: getCreateEmploymentContractType
@@ -7529,7 +7529,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -7539,7 +7539,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createEmploymentContracts:
+    /{orgkeepID}/createEmploymentContracts:
         get:
             description: |-
                 List all createEmploymentContracts proposals. These are proposed changes to create new EmploymentContract records that may be automatically approved or require manual approval depending on system configuration.
@@ -7594,7 +7594,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -7624,7 +7624,7 @@ paths:
             tags:
                 - EmploymentContracts
                 - Proposals
-    /{orgID}/createEmploymentContracts/{id}:
+    /{orgkeepID}/createEmploymentContracts/{id}:
         get:
             description: Get details of a specific EmploymentContract creation proposal by ID
             operationId: getCreateEmploymentContract
@@ -7648,7 +7648,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -7658,7 +7658,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createEmploymentRelationTypes:
+    /{orgkeepID}/createEmploymentRelationTypes:
         get:
             description: List all createEmploymentRelationTypes proposals. These are proposed changes to create new EmploymentRelationType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateEmploymentRelationType
@@ -7696,7 +7696,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -7726,7 +7726,7 @@ paths:
             tags:
                 - EmploymentRelationTypes
                 - Proposals
-    /{orgID}/createEmploymentRelationTypes/{id}:
+    /{orgkeepID}/createEmploymentRelationTypes/{id}:
         get:
             description: Get details of a specific EmploymentRelationType creation proposal by ID
             operationId: getCreateEmploymentRelationType
@@ -7750,7 +7750,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -7760,7 +7760,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createEmploymentRelations:
+    /{orgkeepID}/createEmploymentRelations:
         get:
             description: |-
                 List all createEmploymentRelations proposals. These are proposed changes to create new EmploymentRelation records that may be automatically approved or require manual approval depending on system configuration.
@@ -7820,7 +7820,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -7850,7 +7850,7 @@ paths:
             tags:
                 - EmploymentRelations
                 - Proposals
-    /{orgID}/createEmploymentRelations/{id}:
+    /{orgkeepID}/createEmploymentRelations/{id}:
         get:
             description: Get details of a specific EmploymentRelation creation proposal by ID
             operationId: getCreateEmploymentRelation
@@ -7874,7 +7874,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -7884,7 +7884,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createGroupingTypes:
+    /{orgkeepID}/createGroupingTypes:
         get:
             description: List all createGroupingTypes proposals. These are proposed changes to create new GroupingType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateGroupingType
@@ -7922,7 +7922,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -7952,7 +7952,7 @@ paths:
             tags:
                 - GroupingTypes
                 - Proposals
-    /{orgID}/createGroupingTypes/{id}:
+    /{orgkeepID}/createGroupingTypes/{id}:
         get:
             description: Get details of a specific GroupingType creation proposal by ID
             operationId: getCreateGroupingType
@@ -7976,7 +7976,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -7986,7 +7986,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createGroupings:
+    /{orgkeepID}/createGroupings:
         get:
             description: |-
                 List all createGroupings proposals. These are proposed changes to create new Grouping records that may be automatically approved or require manual approval depending on system configuration.
@@ -8041,7 +8041,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8071,7 +8071,7 @@ paths:
             tags:
                 - Groupings
                 - Proposals
-    /{orgID}/createGroupings/{id}:
+    /{orgkeepID}/createGroupings/{id}:
         get:
             description: Get details of a specific Grouping creation proposal by ID
             operationId: getCreateGrouping
@@ -8095,7 +8095,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8105,7 +8105,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createMonitoringTraces:
+    /{orgkeepID}/createMonitoringTraces:
         get:
             description: List all createMonitoringTraces proposals. These are proposed changes to create new MonitoringTrace records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateMonitoringTrace
@@ -8143,7 +8143,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8173,7 +8173,7 @@ paths:
             tags:
                 - MonitoringTraces
                 - Proposals
-    /{orgID}/createMonitoringTraces/{id}:
+    /{orgkeepID}/createMonitoringTraces/{id}:
         get:
             description: Get details of a specific MonitoringTrace creation proposal by ID
             operationId: getCreateMonitoringTrace
@@ -8197,7 +8197,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8207,7 +8207,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createPositionAssignments:
+    /{orgkeepID}/createPositionAssignments:
         get:
             description: |-
                 List all createPositionAssignments proposals. These are proposed changes to create new PositionAssignment records that may be automatically approved or require manual approval depending on system configuration.
@@ -8257,7 +8257,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8287,7 +8287,7 @@ paths:
             tags:
                 - PositionAssignments
                 - Proposals
-    /{orgID}/createPositionAssignments/{id}:
+    /{orgkeepID}/createPositionAssignments/{id}:
         get:
             description: Get details of a specific PositionAssignment creation proposal by ID
             operationId: getCreatePositionAssignment
@@ -8311,7 +8311,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8321,7 +8321,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createRatingScaleLevelDescriptors:
+    /{orgkeepID}/createRatingScaleLevelDescriptors:
         get:
             description: |-
                 List all createRatingScaleLevelDescriptors proposals. These are proposed changes to create new RatingScaleLevelDescriptor records that may be automatically approved or require manual approval depending on system configuration.
@@ -8376,7 +8376,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8406,7 +8406,7 @@ paths:
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
-    /{orgID}/createRatingScaleLevelDescriptors/{id}:
+    /{orgkeepID}/createRatingScaleLevelDescriptors/{id}:
         get:
             description: Get details of a specific RatingScaleLevelDescriptor creation proposal by ID
             operationId: getCreateRatingScaleLevelDescriptor
@@ -8430,7 +8430,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8440,7 +8440,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createRatingScaleLevels:
+    /{orgkeepID}/createRatingScaleLevels:
         get:
             description: |-
                 List all createRatingScaleLevels proposals. These are proposed changes to create new RatingScaleLevel records that may be automatically approved or require manual approval depending on system configuration.
@@ -8490,7 +8490,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8520,7 +8520,7 @@ paths:
             tags:
                 - RatingScaleLevels
                 - Proposals
-    /{orgID}/createRatingScaleLevels/{id}:
+    /{orgkeepID}/createRatingScaleLevels/{id}:
         get:
             description: Get details of a specific RatingScaleLevel creation proposal by ID
             operationId: getCreateRatingScaleLevel
@@ -8544,7 +8544,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8554,7 +8554,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createRatingScales:
+    /{orgkeepID}/createRatingScales:
         get:
             description: List all createRatingScales proposals. These are proposed changes to create new RatingScale records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateRatingScale
@@ -8592,7 +8592,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8622,7 +8622,7 @@ paths:
             tags:
                 - RatingScales
                 - Proposals
-    /{orgID}/createRatingScales/{id}:
+    /{orgkeepID}/createRatingScales/{id}:
         get:
             description: Get details of a specific RatingScale creation proposal by ID
             operationId: getCreateRatingScale
@@ -8646,7 +8646,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8656,7 +8656,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createSkillDefinitionTypes:
+    /{orgkeepID}/createSkillDefinitionTypes:
         get:
             description: List all createSkillDefinitionTypes proposals. These are proposed changes to create new SkillDefinitionType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateSkillDefinitionType
@@ -8694,7 +8694,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8724,7 +8724,7 @@ paths:
             tags:
                 - SkillDefinitionTypes
                 - Proposals
-    /{orgID}/createSkillDefinitionTypes/{id}:
+    /{orgkeepID}/createSkillDefinitionTypes/{id}:
         get:
             description: Get details of a specific SkillDefinitionType creation proposal by ID
             operationId: getCreateSkillDefinitionType
@@ -8748,7 +8748,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8758,7 +8758,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createSkillDefinitions:
+    /{orgkeepID}/createSkillDefinitions:
         get:
             description: |-
                 List all createSkillDefinitions proposals. These are proposed changes to create new SkillDefinition records that may be automatically approved or require manual approval depending on system configuration.
@@ -8813,7 +8813,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8843,7 +8843,7 @@ paths:
             tags:
                 - SkillDefinitions
                 - Proposals
-    /{orgID}/createSkillDefinitions/{id}:
+    /{orgkeepID}/createSkillDefinitions/{id}:
         get:
             description: Get details of a specific SkillDefinition creation proposal by ID
             operationId: getCreateSkillDefinition
@@ -8867,7 +8867,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8877,7 +8877,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createSkillPlannings:
+    /{orgkeepID}/createSkillPlannings:
         get:
             description: List all createSkillPlannings proposals. These are proposed changes to create new SkillPlanning records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateSkillPlanning
@@ -8915,7 +8915,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8945,7 +8945,7 @@ paths:
             tags:
                 - SkillPlannings
                 - Proposals
-    /{orgID}/createSkillPlannings/{id}:
+    /{orgkeepID}/createSkillPlannings/{id}:
         get:
             description: Get details of a specific SkillPlanning creation proposal by ID
             operationId: getCreateSkillPlanning
@@ -8969,7 +8969,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -8979,7 +8979,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createSkillResults:
+    /{orgkeepID}/createSkillResults:
         get:
             description: |-
                 List all createSkillResults proposals. These are proposed changes to create new SkillResult records that may be automatically approved or require manual approval depending on system configuration.
@@ -9034,7 +9034,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9064,7 +9064,7 @@ paths:
             tags:
                 - SkillResults
                 - Proposals
-    /{orgID}/createSkillResults/{id}:
+    /{orgkeepID}/createSkillResults/{id}:
         get:
             description: Get details of a specific SkillResult creation proposal by ID
             operationId: getCreateSkillResult
@@ -9088,7 +9088,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9098,7 +9098,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createTypesOfProof:
+    /{orgkeepID}/createTypesOfProof:
         get:
             description: |-
                 List all createTypesOfProof proposals. These are proposed changes to create new TypesOfProof records that may be automatically approved or require manual approval depending on system configuration.
@@ -9148,7 +9148,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9178,7 +9178,7 @@ paths:
             tags:
                 - TypesOfProof
                 - Proposals
-    /{orgID}/createTypesOfProof/{id}:
+    /{orgkeepID}/createTypesOfProof/{id}:
         get:
             description: Get details of a specific TypesOfProof creation proposal by ID
             operationId: getCreateTypesOfProof
@@ -9202,7 +9202,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9212,7 +9212,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/customFieldDefinitions:
+    /{orgkeepID}/customFieldDefinitions:
         get:
             description: |-
                 List customFieldDefinitions
@@ -9262,11 +9262,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/customFieldDefinitions/{id}:
+    /{orgkeepID}/customFieldDefinitions/{id}:
         get:
             description: Get a single customFieldDefinition by ID
             operationId: getCustomFieldDefinition
@@ -9290,7 +9290,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9300,7 +9300,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteCustomFieldDefinitions:
+    /{orgkeepID}/deleteCustomFieldDefinitions:
         get:
             description: List all deleteCustomFieldDefinitions proposals. These are proposed changes to delete CustomFieldDefinition records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteCustomFieldDefinition
@@ -9338,7 +9338,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9368,7 +9368,7 @@ paths:
             tags:
                 - CustomFieldDefinitions
                 - Proposals
-    /{orgID}/deleteCustomFieldDefinitions/{id}:
+    /{orgkeepID}/deleteCustomFieldDefinitions/{id}:
         get:
             description: Get details of a specific CustomFieldDefinition deletion proposal by ID
             operationId: getDeleteCustomFieldDefinition
@@ -9392,7 +9392,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9402,7 +9402,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteEmployeeUnavailabilities:
+    /{orgkeepID}/deleteEmployeeUnavailabilities:
         get:
             description: List all deleteEmployeeUnavailabilities proposals. These are proposed changes to delete EmployeeUnavailability records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmployeeUnavailability
@@ -9440,7 +9440,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9470,7 +9470,7 @@ paths:
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
-    /{orgID}/deleteEmployeeUnavailabilities/{id}:
+    /{orgkeepID}/deleteEmployeeUnavailabilities/{id}:
         get:
             description: Get details of a specific EmployeeUnavailability deletion proposal by ID
             operationId: getDeleteEmployeeUnavailability
@@ -9494,7 +9494,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9504,7 +9504,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteEmployees:
+    /{orgkeepID}/deleteEmployees:
         get:
             description: List all deleteEmployees proposals. These are proposed changes to delete Employee records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmployee
@@ -9542,7 +9542,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9572,7 +9572,7 @@ paths:
             tags:
                 - Employees
                 - Proposals
-    /{orgID}/deleteEmployees/{id}:
+    /{orgkeepID}/deleteEmployees/{id}:
         get:
             description: Get details of a specific Employee deletion proposal by ID
             operationId: getDeleteEmployee
@@ -9596,7 +9596,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9606,7 +9606,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteEmploymentContractTypes:
+    /{orgkeepID}/deleteEmploymentContractTypes:
         get:
             description: List all deleteEmploymentContractTypes proposals. These are proposed changes to delete EmploymentContractType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmploymentContractType
@@ -9644,7 +9644,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9674,7 +9674,7 @@ paths:
             tags:
                 - EmploymentContractTypes
                 - Proposals
-    /{orgID}/deleteEmploymentContractTypes/{id}:
+    /{orgkeepID}/deleteEmploymentContractTypes/{id}:
         get:
             description: Get details of a specific EmploymentContractType deletion proposal by ID
             operationId: getDeleteEmploymentContractType
@@ -9698,7 +9698,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9708,7 +9708,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteEmploymentContracts:
+    /{orgkeepID}/deleteEmploymentContracts:
         get:
             description: List all deleteEmploymentContracts proposals. These are proposed changes to delete EmploymentContract records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmploymentContract
@@ -9746,7 +9746,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9776,7 +9776,7 @@ paths:
             tags:
                 - EmploymentContracts
                 - Proposals
-    /{orgID}/deleteEmploymentContracts/{id}:
+    /{orgkeepID}/deleteEmploymentContracts/{id}:
         get:
             description: Get details of a specific EmploymentContract deletion proposal by ID
             operationId: getDeleteEmploymentContract
@@ -9800,7 +9800,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9810,7 +9810,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteEmploymentRelationTypes:
+    /{orgkeepID}/deleteEmploymentRelationTypes:
         get:
             description: List all deleteEmploymentRelationTypes proposals. These are proposed changes to delete EmploymentRelationType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmploymentRelationType
@@ -9848,7 +9848,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9878,7 +9878,7 @@ paths:
             tags:
                 - EmploymentRelationTypes
                 - Proposals
-    /{orgID}/deleteEmploymentRelationTypes/{id}:
+    /{orgkeepID}/deleteEmploymentRelationTypes/{id}:
         get:
             description: Get details of a specific EmploymentRelationType deletion proposal by ID
             operationId: getDeleteEmploymentRelationType
@@ -9902,7 +9902,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9912,7 +9912,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteEmploymentRelations:
+    /{orgkeepID}/deleteEmploymentRelations:
         get:
             description: List all deleteEmploymentRelations proposals. These are proposed changes to delete EmploymentRelation records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmploymentRelation
@@ -9950,7 +9950,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -9980,7 +9980,7 @@ paths:
             tags:
                 - EmploymentRelations
                 - Proposals
-    /{orgID}/deleteEmploymentRelations/{id}:
+    /{orgkeepID}/deleteEmploymentRelations/{id}:
         get:
             description: Get details of a specific EmploymentRelation deletion proposal by ID
             operationId: getDeleteEmploymentRelation
@@ -10004,7 +10004,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10014,7 +10014,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteGroupingTypes:
+    /{orgkeepID}/deleteGroupingTypes:
         get:
             description: List all deleteGroupingTypes proposals. These are proposed changes to delete GroupingType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteGroupingType
@@ -10052,7 +10052,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10082,7 +10082,7 @@ paths:
             tags:
                 - GroupingTypes
                 - Proposals
-    /{orgID}/deleteGroupingTypes/{id}:
+    /{orgkeepID}/deleteGroupingTypes/{id}:
         get:
             description: Get details of a specific GroupingType deletion proposal by ID
             operationId: getDeleteGroupingType
@@ -10106,7 +10106,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10116,7 +10116,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteGroupings:
+    /{orgkeepID}/deleteGroupings:
         get:
             description: List all deleteGroupings proposals. These are proposed changes to delete Grouping records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteGrouping
@@ -10154,7 +10154,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10184,7 +10184,7 @@ paths:
             tags:
                 - Groupings
                 - Proposals
-    /{orgID}/deleteGroupings/{id}:
+    /{orgkeepID}/deleteGroupings/{id}:
         get:
             description: Get details of a specific Grouping deletion proposal by ID
             operationId: getDeleteGrouping
@@ -10208,7 +10208,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10218,7 +10218,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteMonitoringTraces:
+    /{orgkeepID}/deleteMonitoringTraces:
         get:
             description: List all deleteMonitoringTraces proposals. These are proposed changes to delete MonitoringTrace records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteMonitoringTrace
@@ -10256,7 +10256,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10286,7 +10286,7 @@ paths:
             tags:
                 - MonitoringTraces
                 - Proposals
-    /{orgID}/deleteMonitoringTraces/{id}:
+    /{orgkeepID}/deleteMonitoringTraces/{id}:
         get:
             description: Get details of a specific MonitoringTrace deletion proposal by ID
             operationId: getDeleteMonitoringTrace
@@ -10310,7 +10310,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10320,7 +10320,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deletePositionAssignments:
+    /{orgkeepID}/deletePositionAssignments:
         get:
             description: List all deletePositionAssignments proposals. These are proposed changes to delete PositionAssignment records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeletePositionAssignment
@@ -10358,7 +10358,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10388,7 +10388,7 @@ paths:
             tags:
                 - PositionAssignments
                 - Proposals
-    /{orgID}/deletePositionAssignments/{id}:
+    /{orgkeepID}/deletePositionAssignments/{id}:
         get:
             description: Get details of a specific PositionAssignment deletion proposal by ID
             operationId: getDeletePositionAssignment
@@ -10412,7 +10412,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10422,7 +10422,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteRatingScaleLevelDescriptors:
+    /{orgkeepID}/deleteRatingScaleLevelDescriptors:
         get:
             description: List all deleteRatingScaleLevelDescriptors proposals. These are proposed changes to delete RatingScaleLevelDescriptor records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteRatingScaleLevelDescriptor
@@ -10460,7 +10460,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10490,7 +10490,7 @@ paths:
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
-    /{orgID}/deleteRatingScaleLevelDescriptors/{id}:
+    /{orgkeepID}/deleteRatingScaleLevelDescriptors/{id}:
         get:
             description: Get details of a specific RatingScaleLevelDescriptor deletion proposal by ID
             operationId: getDeleteRatingScaleLevelDescriptor
@@ -10514,7 +10514,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10524,7 +10524,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteRatingScaleLevels:
+    /{orgkeepID}/deleteRatingScaleLevels:
         get:
             description: List all deleteRatingScaleLevels proposals. These are proposed changes to delete RatingScaleLevel records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteRatingScaleLevel
@@ -10562,7 +10562,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10592,7 +10592,7 @@ paths:
             tags:
                 - RatingScaleLevels
                 - Proposals
-    /{orgID}/deleteRatingScaleLevels/{id}:
+    /{orgkeepID}/deleteRatingScaleLevels/{id}:
         get:
             description: Get details of a specific RatingScaleLevel deletion proposal by ID
             operationId: getDeleteRatingScaleLevel
@@ -10616,7 +10616,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10626,7 +10626,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteRatingScales:
+    /{orgkeepID}/deleteRatingScales:
         get:
             description: List all deleteRatingScales proposals. These are proposed changes to delete RatingScale records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteRatingScale
@@ -10664,7 +10664,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10694,7 +10694,7 @@ paths:
             tags:
                 - RatingScales
                 - Proposals
-    /{orgID}/deleteRatingScales/{id}:
+    /{orgkeepID}/deleteRatingScales/{id}:
         get:
             description: Get details of a specific RatingScale deletion proposal by ID
             operationId: getDeleteRatingScale
@@ -10718,7 +10718,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10728,7 +10728,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteSkillDefinitionTypes:
+    /{orgkeepID}/deleteSkillDefinitionTypes:
         get:
             description: List all deleteSkillDefinitionTypes proposals. These are proposed changes to delete SkillDefinitionType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteSkillDefinitionType
@@ -10766,7 +10766,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10796,7 +10796,7 @@ paths:
             tags:
                 - SkillDefinitionTypes
                 - Proposals
-    /{orgID}/deleteSkillDefinitionTypes/{id}:
+    /{orgkeepID}/deleteSkillDefinitionTypes/{id}:
         get:
             description: Get details of a specific SkillDefinitionType deletion proposal by ID
             operationId: getDeleteSkillDefinitionType
@@ -10820,7 +10820,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10830,7 +10830,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteSkillDefinitions:
+    /{orgkeepID}/deleteSkillDefinitions:
         get:
             description: List all deleteSkillDefinitions proposals. These are proposed changes to delete SkillDefinition records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteSkillDefinition
@@ -10868,7 +10868,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10898,7 +10898,7 @@ paths:
             tags:
                 - SkillDefinitions
                 - Proposals
-    /{orgID}/deleteSkillDefinitions/{id}:
+    /{orgkeepID}/deleteSkillDefinitions/{id}:
         get:
             description: Get details of a specific SkillDefinition deletion proposal by ID
             operationId: getDeleteSkillDefinition
@@ -10922,7 +10922,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -10932,7 +10932,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteSkillPlannings:
+    /{orgkeepID}/deleteSkillPlannings:
         get:
             description: List all deleteSkillPlannings proposals. These are proposed changes to delete SkillPlanning records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteSkillPlanning
@@ -10970,7 +10970,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -11000,7 +11000,7 @@ paths:
             tags:
                 - SkillPlannings
                 - Proposals
-    /{orgID}/deleteSkillPlannings/{id}:
+    /{orgkeepID}/deleteSkillPlannings/{id}:
         get:
             description: Get details of a specific SkillPlanning deletion proposal by ID
             operationId: getDeleteSkillPlanning
@@ -11024,7 +11024,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -11034,7 +11034,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteSkillResults:
+    /{orgkeepID}/deleteSkillResults:
         get:
             description: List all deleteSkillResults proposals. These are proposed changes to delete SkillResult records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteSkillResult
@@ -11072,7 +11072,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -11102,7 +11102,7 @@ paths:
             tags:
                 - SkillResults
                 - Proposals
-    /{orgID}/deleteSkillResults/{id}:
+    /{orgkeepID}/deleteSkillResults/{id}:
         get:
             description: Get details of a specific SkillResult deletion proposal by ID
             operationId: getDeleteSkillResult
@@ -11126,7 +11126,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -11136,7 +11136,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteTypesOfProof:
+    /{orgkeepID}/deleteTypesOfProof:
         get:
             description: List all deleteTypesOfProof proposals. These are proposed changes to delete TypesOfProof records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteTypesOfProof
@@ -11174,7 +11174,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -11204,7 +11204,7 @@ paths:
             tags:
                 - TypesOfProof
                 - Proposals
-    /{orgID}/deleteTypesOfProof/{id}:
+    /{orgkeepID}/deleteTypesOfProof/{id}:
         get:
             description: Get details of a specific TypesOfProof deletion proposal by ID
             operationId: getDeleteTypesOfProof
@@ -11228,7 +11228,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -11238,7 +11238,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/employeeUnavailabilities:
+    /{orgkeepID}/employeeUnavailabilities:
         get:
             description: |-
                 List employeeUnavailabilities
@@ -11288,11 +11288,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/employeeUnavailabilities/{id}:
+    /{orgkeepID}/employeeUnavailabilities/{id}:
         get:
             description: Get a single employeeUnavailability by ID
             operationId: getEmployeeUnavailability
@@ -11316,7 +11316,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -11326,7 +11326,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/employees:
+    /{orgkeepID}/employees:
         get:
             description: List employees
             operationId: listEmployee
@@ -11364,11 +11364,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/employees/{id}:
+    /{orgkeepID}/employees/{id}:
         get:
             description: Get a single employee by ID
             operationId: getEmployee
@@ -11392,7 +11392,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -11402,7 +11402,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/employmentContractTypes:
+    /{orgkeepID}/employmentContractTypes:
         get:
             description: List employmentContractTypes
             operationId: listEmploymentContractType
@@ -11440,11 +11440,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/employmentContractTypes/{id}:
+    /{orgkeepID}/employmentContractTypes/{id}:
         get:
             description: Get a single employmentContractType by ID
             operationId: getEmploymentContractType
@@ -11468,7 +11468,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -11478,7 +11478,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/employmentContracts:
+    /{orgkeepID}/employmentContracts:
         get:
             description: |-
                 List employmentContracts
@@ -11533,11 +11533,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/employmentContracts/{id}:
+    /{orgkeepID}/employmentContracts/{id}:
         get:
             description: Get a single employmentContract by ID
             operationId: getEmploymentContract
@@ -11561,7 +11561,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -11571,7 +11571,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/employmentRelationTypes:
+    /{orgkeepID}/employmentRelationTypes:
         get:
             description: List employmentRelationTypes
             operationId: listEmploymentRelationType
@@ -11609,11 +11609,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/employmentRelationTypes/{id}:
+    /{orgkeepID}/employmentRelationTypes/{id}:
         get:
             description: Get a single employmentRelationType by ID
             operationId: getEmploymentRelationType
@@ -11637,7 +11637,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -11647,7 +11647,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/employmentRelations:
+    /{orgkeepID}/employmentRelations:
         get:
             description: |-
                 List employmentRelations
@@ -11707,11 +11707,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/employmentRelations/{id}:
+    /{orgkeepID}/employmentRelations/{id}:
         get:
             description: Get a single employmentRelation by ID
             operationId: getEmploymentRelation
@@ -11735,7 +11735,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -11745,7 +11745,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/entityDefinitions:
+    /{orgkeepID}/entityDefinitions:
         get:
             description: List entityDefinitions
             operationId: listEntityDefinition
@@ -11783,11 +11783,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/entityDefinitions/{id}:
+    /{orgkeepID}/entityDefinitions/{id}:
         get:
             description: Get a single entityDefinition by ID
             operationId: getEntityDefinition
@@ -11811,7 +11811,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -11821,7 +11821,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/groupingTypes:
+    /{orgkeepID}/groupingTypes:
         get:
             description: List groupingTypes
             operationId: listGroupingType
@@ -11859,11 +11859,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/groupingTypes/{id}:
+    /{orgkeepID}/groupingTypes/{id}:
         get:
             description: Get a single groupingType by ID
             operationId: getGroupingType
@@ -11887,7 +11887,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -11897,7 +11897,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/groupings:
+    /{orgkeepID}/groupings:
         get:
             description: |-
                 List groupings
@@ -11952,11 +11952,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/groupings/{id}:
+    /{orgkeepID}/groupings/{id}:
         get:
             description: Get a single grouping by ID
             operationId: getGrouping
@@ -11980,7 +11980,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -11990,7 +11990,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/meta:
+    /{orgkeepID}/meta:
         get:
             description: Returns metadata about available API resources and their operations
             operationId: getMeta
@@ -12043,11 +12043,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/monitoringTraces:
+    /{orgkeepID}/monitoringTraces:
         get:
             description: List monitoringTraces
             operationId: listMonitoringTrace
@@ -12085,11 +12085,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/monitoringTraces/{id}:
+    /{orgkeepID}/monitoringTraces/{id}:
         get:
             description: Get a single monitoringTrace by ID
             operationId: getMonitoringTrace
@@ -12113,7 +12113,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -12123,7 +12123,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/positionAssignments:
+    /{orgkeepID}/positionAssignments:
         get:
             description: |-
                 List positionAssignments
@@ -12173,11 +12173,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/positionAssignments/{id}:
+    /{orgkeepID}/positionAssignments/{id}:
         get:
             description: Get a single positionAssignment by ID
             operationId: getPositionAssignment
@@ -12201,7 +12201,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -12211,7 +12211,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/ratingScaleLevelDescriptors:
+    /{orgkeepID}/ratingScaleLevelDescriptors:
         get:
             description: |-
                 List ratingScaleLevelDescriptors
@@ -12266,11 +12266,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/ratingScaleLevelDescriptors/{id}:
+    /{orgkeepID}/ratingScaleLevelDescriptors/{id}:
         get:
             description: Get a single ratingScaleLevelDescriptor by ID
             operationId: getRatingScaleLevelDescriptor
@@ -12294,7 +12294,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -12304,7 +12304,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/ratingScaleLevels:
+    /{orgkeepID}/ratingScaleLevels:
         get:
             description: |-
                 List ratingScaleLevels
@@ -12354,11 +12354,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/ratingScaleLevels/{id}:
+    /{orgkeepID}/ratingScaleLevels/{id}:
         get:
             description: Get a single ratingScaleLevel by ID
             operationId: getRatingScaleLevel
@@ -12382,7 +12382,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -12392,7 +12392,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/ratingScales:
+    /{orgkeepID}/ratingScales:
         get:
             description: List ratingScales
             operationId: listRatingScale
@@ -12430,11 +12430,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/ratingScales/{id}:
+    /{orgkeepID}/ratingScales/{id}:
         get:
             description: Get a single ratingScale by ID
             operationId: getRatingScale
@@ -12458,7 +12458,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -12468,7 +12468,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/repositories:
+    /{orgkeepID}/repositories:
         get:
             description: List repositories
             operationId: listRepository
@@ -12506,11 +12506,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/repositories/{id}:
+    /{orgkeepID}/repositories/{id}:
         get:
             description: Get a single repository by ID
             operationId: getRepository
@@ -12534,7 +12534,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -12544,7 +12544,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/skillDefinitionTypes:
+    /{orgkeepID}/skillDefinitionTypes:
         get:
             description: List skillDefinitionTypes
             operationId: listSkillDefinitionType
@@ -12582,11 +12582,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/skillDefinitionTypes/{id}:
+    /{orgkeepID}/skillDefinitionTypes/{id}:
         get:
             description: Get a single skillDefinitionType by ID
             operationId: getSkillDefinitionType
@@ -12610,7 +12610,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -12620,7 +12620,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/skillDefinitions:
+    /{orgkeepID}/skillDefinitions:
         get:
             description: |-
                 List skillDefinitions
@@ -12675,11 +12675,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/skillDefinitions/{id}:
+    /{orgkeepID}/skillDefinitions/{id}:
         get:
             description: Get a single skillDefinition by ID
             operationId: getSkillDefinition
@@ -12703,7 +12703,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -12713,7 +12713,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/skillPlannings:
+    /{orgkeepID}/skillPlannings:
         get:
             description: List skillPlannings
             operationId: listSkillPlanning
@@ -12751,11 +12751,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/skillPlannings/{id}:
+    /{orgkeepID}/skillPlannings/{id}:
         get:
             description: Get a single skillPlanning by ID
             operationId: getSkillPlanning
@@ -12779,7 +12779,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -12789,7 +12789,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/skillResults:
+    /{orgkeepID}/skillResults:
         get:
             description: |-
                 List skillResults
@@ -12844,11 +12844,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/skillResults/{id}:
+    /{orgkeepID}/skillResults/{id}:
         get:
             description: Get a single skillResult by ID
             operationId: getSkillResult
@@ -12872,7 +12872,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -12882,7 +12882,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/typesOfProof:
+    /{orgkeepID}/typesOfProof:
         get:
             description: |-
                 List typesOfProof
@@ -12932,11 +12932,11 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
-    /{orgID}/typesOfProof/{id}:
+    /{orgkeepID}/typesOfProof/{id}:
         get:
             description: Get a single typesOfProof by ID
             operationId: getTypesOfProof
@@ -12960,7 +12960,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -12970,7 +12970,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateCustomFieldDefinitions:
+    /{orgkeepID}/updateCustomFieldDefinitions:
         get:
             description: |-
                 List all updateCustomFieldDefinitions proposals. These are proposed changes to update existing CustomFieldDefinition records that may be automatically approved or require manual approval depending on system configuration.
@@ -13020,7 +13020,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13050,7 +13050,7 @@ paths:
             tags:
                 - CustomFieldDefinitions
                 - Proposals
-    /{orgID}/updateCustomFieldDefinitions/{id}:
+    /{orgkeepID}/updateCustomFieldDefinitions/{id}:
         get:
             description: Get details of a specific CustomFieldDefinition update proposal by ID
             operationId: getUpdateCustomFieldDefinition
@@ -13074,7 +13074,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13084,7 +13084,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateEmployeeUnavailabilities:
+    /{orgkeepID}/updateEmployeeUnavailabilities:
         get:
             description: |-
                 List all updateEmployeeUnavailabilities proposals. These are proposed changes to update existing EmployeeUnavailability records that may be automatically approved or require manual approval depending on system configuration.
@@ -13134,7 +13134,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13164,7 +13164,7 @@ paths:
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
-    /{orgID}/updateEmployeeUnavailabilities/{id}:
+    /{orgkeepID}/updateEmployeeUnavailabilities/{id}:
         get:
             description: Get details of a specific EmployeeUnavailability update proposal by ID
             operationId: getUpdateEmployeeUnavailability
@@ -13188,7 +13188,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13198,7 +13198,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateEmployees:
+    /{orgkeepID}/updateEmployees:
         get:
             description: List all updateEmployees proposals. These are proposed changes to update existing Employee records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateEmployee
@@ -13236,7 +13236,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13266,7 +13266,7 @@ paths:
             tags:
                 - Employees
                 - Proposals
-    /{orgID}/updateEmployees/{id}:
+    /{orgkeepID}/updateEmployees/{id}:
         get:
             description: Get details of a specific Employee update proposal by ID
             operationId: getUpdateEmployee
@@ -13290,7 +13290,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13300,7 +13300,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateEmploymentContractTypes:
+    /{orgkeepID}/updateEmploymentContractTypes:
         get:
             description: List all updateEmploymentContractTypes proposals. These are proposed changes to update existing EmploymentContractType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateEmploymentContractType
@@ -13338,7 +13338,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13368,7 +13368,7 @@ paths:
             tags:
                 - EmploymentContractTypes
                 - Proposals
-    /{orgID}/updateEmploymentContractTypes/{id}:
+    /{orgkeepID}/updateEmploymentContractTypes/{id}:
         get:
             description: Get details of a specific EmploymentContractType update proposal by ID
             operationId: getUpdateEmploymentContractType
@@ -13392,7 +13392,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13402,7 +13402,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateEmploymentContracts:
+    /{orgkeepID}/updateEmploymentContracts:
         get:
             description: |-
                 List all updateEmploymentContracts proposals. These are proposed changes to update existing EmploymentContract records that may be automatically approved or require manual approval depending on system configuration.
@@ -13457,7 +13457,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13487,7 +13487,7 @@ paths:
             tags:
                 - EmploymentContracts
                 - Proposals
-    /{orgID}/updateEmploymentContracts/{id}:
+    /{orgkeepID}/updateEmploymentContracts/{id}:
         get:
             description: Get details of a specific EmploymentContract update proposal by ID
             operationId: getUpdateEmploymentContract
@@ -13511,7 +13511,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13521,7 +13521,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateEmploymentRelationTypes:
+    /{orgkeepID}/updateEmploymentRelationTypes:
         get:
             description: List all updateEmploymentRelationTypes proposals. These are proposed changes to update existing EmploymentRelationType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateEmploymentRelationType
@@ -13559,7 +13559,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13589,7 +13589,7 @@ paths:
             tags:
                 - EmploymentRelationTypes
                 - Proposals
-    /{orgID}/updateEmploymentRelationTypes/{id}:
+    /{orgkeepID}/updateEmploymentRelationTypes/{id}:
         get:
             description: Get details of a specific EmploymentRelationType update proposal by ID
             operationId: getUpdateEmploymentRelationType
@@ -13613,7 +13613,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13623,7 +13623,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateEmploymentRelations:
+    /{orgkeepID}/updateEmploymentRelations:
         get:
             description: |-
                 List all updateEmploymentRelations proposals. These are proposed changes to update existing EmploymentRelation records that may be automatically approved or require manual approval depending on system configuration.
@@ -13683,7 +13683,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13713,7 +13713,7 @@ paths:
             tags:
                 - EmploymentRelations
                 - Proposals
-    /{orgID}/updateEmploymentRelations/{id}:
+    /{orgkeepID}/updateEmploymentRelations/{id}:
         get:
             description: Get details of a specific EmploymentRelation update proposal by ID
             operationId: getUpdateEmploymentRelation
@@ -13737,7 +13737,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13747,7 +13747,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateGroupingTypes:
+    /{orgkeepID}/updateGroupingTypes:
         get:
             description: List all updateGroupingTypes proposals. These are proposed changes to update existing GroupingType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateGroupingType
@@ -13785,7 +13785,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13815,7 +13815,7 @@ paths:
             tags:
                 - GroupingTypes
                 - Proposals
-    /{orgID}/updateGroupingTypes/{id}:
+    /{orgkeepID}/updateGroupingTypes/{id}:
         get:
             description: Get details of a specific GroupingType update proposal by ID
             operationId: getUpdateGroupingType
@@ -13839,7 +13839,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13849,7 +13849,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateGroupings:
+    /{orgkeepID}/updateGroupings:
         get:
             description: |-
                 List all updateGroupings proposals. These are proposed changes to update existing Grouping records that may be automatically approved or require manual approval depending on system configuration.
@@ -13904,7 +13904,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13934,7 +13934,7 @@ paths:
             tags:
                 - Groupings
                 - Proposals
-    /{orgID}/updateGroupings/{id}:
+    /{orgkeepID}/updateGroupings/{id}:
         get:
             description: Get details of a specific Grouping update proposal by ID
             operationId: getUpdateGrouping
@@ -13958,7 +13958,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -13968,7 +13968,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateMonitoringTraces:
+    /{orgkeepID}/updateMonitoringTraces:
         get:
             description: List all updateMonitoringTraces proposals. These are proposed changes to update existing MonitoringTrace records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateMonitoringTrace
@@ -14006,7 +14006,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14036,7 +14036,7 @@ paths:
             tags:
                 - MonitoringTraces
                 - Proposals
-    /{orgID}/updateMonitoringTraces/{id}:
+    /{orgkeepID}/updateMonitoringTraces/{id}:
         get:
             description: Get details of a specific MonitoringTrace update proposal by ID
             operationId: getUpdateMonitoringTrace
@@ -14060,7 +14060,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14070,7 +14070,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updatePositionAssignments:
+    /{orgkeepID}/updatePositionAssignments:
         get:
             description: |-
                 List all updatePositionAssignments proposals. These are proposed changes to update existing PositionAssignment records that may be automatically approved or require manual approval depending on system configuration.
@@ -14120,7 +14120,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14150,7 +14150,7 @@ paths:
             tags:
                 - PositionAssignments
                 - Proposals
-    /{orgID}/updatePositionAssignments/{id}:
+    /{orgkeepID}/updatePositionAssignments/{id}:
         get:
             description: Get details of a specific PositionAssignment update proposal by ID
             operationId: getUpdatePositionAssignment
@@ -14174,7 +14174,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14184,7 +14184,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateRatingScaleLevelDescriptors:
+    /{orgkeepID}/updateRatingScaleLevelDescriptors:
         get:
             description: List all updateRatingScaleLevelDescriptors proposals. These are proposed changes to update existing RatingScaleLevelDescriptor records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateRatingScaleLevelDescriptor
@@ -14222,7 +14222,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14252,7 +14252,7 @@ paths:
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
-    /{orgID}/updateRatingScaleLevelDescriptors/{id}:
+    /{orgkeepID}/updateRatingScaleLevelDescriptors/{id}:
         get:
             description: Get details of a specific RatingScaleLevelDescriptor update proposal by ID
             operationId: getUpdateRatingScaleLevelDescriptor
@@ -14276,7 +14276,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14286,7 +14286,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateRatingScaleLevels:
+    /{orgkeepID}/updateRatingScaleLevels:
         get:
             description: List all updateRatingScaleLevels proposals. These are proposed changes to update existing RatingScaleLevel records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateRatingScaleLevel
@@ -14324,7 +14324,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14354,7 +14354,7 @@ paths:
             tags:
                 - RatingScaleLevels
                 - Proposals
-    /{orgID}/updateRatingScaleLevels/{id}:
+    /{orgkeepID}/updateRatingScaleLevels/{id}:
         get:
             description: Get details of a specific RatingScaleLevel update proposal by ID
             operationId: getUpdateRatingScaleLevel
@@ -14378,7 +14378,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14388,7 +14388,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateRatingScales:
+    /{orgkeepID}/updateRatingScales:
         get:
             description: List all updateRatingScales proposals. These are proposed changes to update existing RatingScale records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateRatingScale
@@ -14426,7 +14426,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14456,7 +14456,7 @@ paths:
             tags:
                 - RatingScales
                 - Proposals
-    /{orgID}/updateRatingScales/{id}:
+    /{orgkeepID}/updateRatingScales/{id}:
         get:
             description: Get details of a specific RatingScale update proposal by ID
             operationId: getUpdateRatingScale
@@ -14480,7 +14480,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14490,7 +14490,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateSkillDefinitionTypes:
+    /{orgkeepID}/updateSkillDefinitionTypes:
         get:
             description: List all updateSkillDefinitionTypes proposals. These are proposed changes to update existing SkillDefinitionType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateSkillDefinitionType
@@ -14528,7 +14528,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14558,7 +14558,7 @@ paths:
             tags:
                 - SkillDefinitionTypes
                 - Proposals
-    /{orgID}/updateSkillDefinitionTypes/{id}:
+    /{orgkeepID}/updateSkillDefinitionTypes/{id}:
         get:
             description: Get details of a specific SkillDefinitionType update proposal by ID
             operationId: getUpdateSkillDefinitionType
@@ -14582,7 +14582,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14592,7 +14592,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateSkillDefinitions:
+    /{orgkeepID}/updateSkillDefinitions:
         get:
             description: |-
                 List all updateSkillDefinitions proposals. These are proposed changes to update existing SkillDefinition records that may be automatically approved or require manual approval depending on system configuration.
@@ -14647,7 +14647,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14677,7 +14677,7 @@ paths:
             tags:
                 - SkillDefinitions
                 - Proposals
-    /{orgID}/updateSkillDefinitions/{id}:
+    /{orgkeepID}/updateSkillDefinitions/{id}:
         get:
             description: Get details of a specific SkillDefinition update proposal by ID
             operationId: getUpdateSkillDefinition
@@ -14701,7 +14701,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14711,7 +14711,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateSkillPlannings:
+    /{orgkeepID}/updateSkillPlannings:
         get:
             description: List all updateSkillPlannings proposals. These are proposed changes to update existing SkillPlanning records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateSkillPlanning
@@ -14749,7 +14749,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14779,7 +14779,7 @@ paths:
             tags:
                 - SkillPlannings
                 - Proposals
-    /{orgID}/updateSkillPlannings/{id}:
+    /{orgkeepID}/updateSkillPlannings/{id}:
         get:
             description: Get details of a specific SkillPlanning update proposal by ID
             operationId: getUpdateSkillPlanning
@@ -14803,7 +14803,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14813,7 +14813,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateSkillResults:
+    /{orgkeepID}/updateSkillResults:
         get:
             description: |-
                 List all updateSkillResults proposals. These are proposed changes to update existing SkillResult records that may be automatically approved or require manual approval depending on system configuration.
@@ -14868,7 +14868,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14898,7 +14898,7 @@ paths:
             tags:
                 - SkillResults
                 - Proposals
-    /{orgID}/updateSkillResults/{id}:
+    /{orgkeepID}/updateSkillResults/{id}:
         get:
             description: Get details of a specific SkillResult update proposal by ID
             operationId: getUpdateSkillResult
@@ -14922,7 +14922,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -14932,7 +14932,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateTypesOfProof:
+    /{orgkeepID}/updateTypesOfProof:
         get:
             description: |-
                 List all updateTypesOfProof proposals. These are proposed changes to update existing TypesOfProof records that may be automatically approved or require manual approval depending on system configuration.
@@ -14982,7 +14982,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
@@ -15012,7 +15012,7 @@ paths:
             tags:
                 - TypesOfProof
                 - Proposals
-    /{orgID}/updateTypesOfProof/{id}:
+    /{orgkeepID}/updateTypesOfProof/{id}:
         get:
             description: Get details of a specific TypesOfProof update proposal by ID
             operationId: getUpdateTypesOfProof
@@ -15036,7 +15036,7 @@ paths:
         parameters:
             - description: Organization identifier
               in: path
-              name: orgID
+              name: orgkeepID
               required: true
               schema:
                 type: string
