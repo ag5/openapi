@@ -121,6 +121,9 @@ components:
             properties:
                 code:
                     type: string
+                entityDefinition_id:
+                    format: uuid
+                    type: string
                 name:
                     type: object
                 repository_id:
@@ -130,6 +133,7 @@ components:
                 - repository_id
                 - code
                 - name
+                - entityDefinition_id
             type: object
         CreateCreateEmployeeRequest:
             properties:
@@ -157,7 +161,6 @@ components:
             required:
                 - repository_id
                 - surname
-                - customValues
             type: object
         CreateCreateEmployeeUnavailabilityRequest:
             properties:
@@ -279,7 +282,6 @@ components:
                 - code
                 - name
                 - activePeriod
-                - customValues
             type: object
         CreateCreateGroupingTypeRequest:
             properties:
@@ -301,7 +303,22 @@ components:
                 - code
                 - name
                 - activePeriod
-                - customValues
+            type: object
+        CreateCreateMonitoringTraceRequest:
+            properties:
+                executedAt:
+                    format: date-time
+                    type: string
+                remark:
+                    type: string
+                repository_id:
+                    format: uuid
+                    type: string
+                requestedAt:
+                    format: date-time
+                    type: string
+            required:
+                - repository_id
             type: object
         CreateCreatePositionAssignmentRequest:
             properties:
@@ -372,7 +389,6 @@ components:
                 - scoreOrder
                 - code
                 - name
-                - customValues
             type: object
         CreateCreateRatingScaleRequest:
             properties:
@@ -389,7 +405,6 @@ components:
                 - repository_id
                 - code
                 - name
-                - customValues
             type: object
         CreateCreateSkillDefinitionRequest:
             properties:
@@ -418,7 +433,6 @@ components:
                 - repository_id
                 - name
                 - ratingScale_id
-                - customValues
                 - activePeriod
             type: object
         CreateCreateSkillDefinitionTypeRequest:
@@ -436,7 +450,6 @@ components:
                 - repository_id
                 - code
                 - name
-                - customValues
             type: object
         CreateCreateSkillPlanningRequest:
             properties:
@@ -471,7 +484,6 @@ components:
                 - typeOfProof_id
                 - fromDate
                 - skillDefinition_id
-                - customValues
             type: object
         CreateCreateSkillResultRequest:
             properties:
@@ -502,7 +514,6 @@ components:
                 - employee_id
                 - issueDate
                 - typeOfProof_id
-                - customValues
             type: object
         CreateCreateTypesOfProofRequest:
             properties:
@@ -528,12 +539,14 @@ components:
                 - repository_id
                 - name
                 - skillDefinition_id
-                - customValues
                 - activePeriod
             type: object
         CreateCustomFieldDefinition:
             properties:
                 code:
+                    type: string
+                entityDefinition_id:
+                    format: uuid
                     type: string
                 isProposalExecutionFailed:
                     readOnly: true
@@ -565,6 +578,7 @@ components:
                 - repository_id
                 - code
                 - name
+                - entityDefinition_id
             type: object
         CreateCustomFieldDefinitionRequest:
             properties:
@@ -572,6 +586,9 @@ components:
                     type: string
                 createdAt:
                     format: date-time
+                    type: string
+                entityDefinition_id:
+                    format: uuid
                     type: string
                 lastModifiedAt:
                     format: date-time
@@ -587,6 +604,7 @@ components:
                 - repository_id
                 - code
                 - name
+                - entityDefinition_id
             type: object
         CreateDeleteCustomFieldDefinitionRequest:
             properties:
@@ -685,6 +703,18 @@ components:
                 - repository_id
             type: object
         CreateDeleteGroupingTypeRequest:
+            properties:
+                id:
+                    format: uuid
+                    type: string
+                repository_id:
+                    format: uuid
+                    type: string
+            required:
+                - id
+                - repository_id
+            type: object
+        CreateDeleteMonitoringTraceRequest:
             properties:
                 id:
                     format: uuid
@@ -846,10 +876,11 @@ components:
                     type: string
             required:
                 - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
                 - subject_id
                 - repository_id
                 - surname
-                - customValues
             type: object
         CreateEmployeeRequest:
             properties:
@@ -885,7 +916,6 @@ components:
                 - lastModifiedAt
                 - repository_id
                 - surname
-                - customValues
             type: object
         CreateEmployeeUnavailability:
             properties:
@@ -1275,7 +1305,6 @@ components:
                 - code
                 - name
                 - activePeriod
-                - customValues
             type: object
         CreateGroupingRequest:
             properties:
@@ -1313,7 +1342,6 @@ components:
                 - code
                 - name
                 - activePeriod
-                - customValues
             type: object
         CreateGroupingType:
             properties:
@@ -1356,7 +1384,6 @@ components:
                 - code
                 - name
                 - activePeriod
-                - customValues
             type: object
         CreateGroupingTypeRequest:
             properties:
@@ -1386,7 +1413,67 @@ components:
                 - code
                 - name
                 - activePeriod
-                - customValues
+            type: object
+        CreateMonitoringTrace:
+            properties:
+                executedAt:
+                    format: date-time
+                    type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
+                    type: string
+                remark:
+                    type: string
+                repository_id:
+                    format: uuid
+                    type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
+                requestedAt:
+                    format: date-time
+                    type: string
+                subject_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
+            required:
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
+                - subject_id
+                - repository_id
+            type: object
+        CreateMonitoringTraceRequest:
+            properties:
+                createdAt:
+                    format: date-time
+                    type: string
+                executedAt:
+                    format: date-time
+                    type: string
+                lastModifiedAt:
+                    format: date-time
+                    type: string
+                remark:
+                    type: string
+                repository_id:
+                    format: uuid
+                    type: string
+                requestedAt:
+                    format: date-time
+                    type: string
+            required:
+                - createdAt
+                - lastModifiedAt
+                - repository_id
             type: object
         CreatePositionAssignment:
             properties:
@@ -1503,7 +1590,6 @@ components:
                 - repository_id
                 - code
                 - name
-                - customValues
             type: object
         CreateRatingScaleLevel:
             properties:
@@ -1551,7 +1637,6 @@ components:
                 - scoreOrder
                 - code
                 - name
-                - customValues
             type: object
         CreateRatingScaleLevelDescriptor:
             properties:
@@ -1653,7 +1738,6 @@ components:
                 - scoreOrder
                 - code
                 - name
-                - customValues
             type: object
         CreateRatingScaleRequest:
             properties:
@@ -1678,7 +1762,6 @@ components:
                 - repository_id
                 - code
                 - name
-                - customValues
             type: object
         CreateRepositoryRequest:
             properties:
@@ -1735,7 +1818,6 @@ components:
                 - repository_id
                 - name
                 - ratingScale_id
-                - customValues
                 - activePeriod
             type: object
         CreateSkillDefinitionRequest:
@@ -1773,7 +1855,6 @@ components:
                 - repository_id
                 - name
                 - ratingScale_id
-                - customValues
                 - activePeriod
             type: object
         CreateSkillDefinitionType:
@@ -1812,7 +1893,6 @@ components:
                 - repository_id
                 - code
                 - name
-                - customValues
             type: object
         CreateSkillDefinitionTypeRequest:
             properties:
@@ -1837,7 +1917,6 @@ components:
                 - repository_id
                 - code
                 - name
-                - customValues
             type: object
         CreateSkillPlanning:
             properties:
@@ -1893,7 +1972,6 @@ components:
                 - typeOfProof_id
                 - fromDate
                 - skillDefinition_id
-                - customValues
             type: object
         CreateSkillPlanningRequest:
             properties:
@@ -1936,7 +2014,6 @@ components:
                 - typeOfProof_id
                 - fromDate
                 - skillDefinition_id
-                - customValues
             type: object
         CreateSkillResult:
             properties:
@@ -1988,7 +2065,6 @@ components:
                 - employee_id
                 - issueDate
                 - typeOfProof_id
-                - customValues
             type: object
         CreateSkillResultRequest:
             properties:
@@ -2027,7 +2103,6 @@ components:
                 - employee_id
                 - issueDate
                 - typeOfProof_id
-                - customValues
             type: object
         CreateTypesOfProof:
             properties:
@@ -2074,7 +2149,6 @@ components:
                 - repository_id
                 - name
                 - skillDefinition_id
-                - customValues
                 - activePeriod
             type: object
         CreateTypesOfProofRequest:
@@ -2109,12 +2183,14 @@ components:
                 - repository_id
                 - name
                 - skillDefinition_id
-                - customValues
                 - activePeriod
             type: object
         CreateUpdateCustomFieldDefinitionRequest:
             properties:
                 code:
+                    type: string
+                entityDefinition_id:
+                    format: uuid
                     type: string
                 id:
                     format: uuid
@@ -2129,6 +2205,7 @@ components:
                 - repository_id
                 - code
                 - name
+                - entityDefinition_id
             type: object
         CreateUpdateEmployeeRequest:
             properties:
@@ -2160,7 +2237,6 @@ components:
                 - id
                 - repository_id
                 - surname
-                - customValues
             type: object
         CreateUpdateEmployeeUnavailabilityRequest:
             properties:
@@ -2306,7 +2382,6 @@ components:
                 - code
                 - name
                 - activePeriod
-                - customValues
             type: object
         CreateUpdateGroupingTypeRequest:
             properties:
@@ -2332,7 +2407,26 @@ components:
                 - code
                 - name
                 - activePeriod
-                - customValues
+            type: object
+        CreateUpdateMonitoringTraceRequest:
+            properties:
+                executedAt:
+                    format: date-time
+                    type: string
+                id:
+                    format: uuid
+                    type: string
+                remark:
+                    type: string
+                repository_id:
+                    format: uuid
+                    type: string
+                requestedAt:
+                    format: date-time
+                    type: string
+            required:
+                - id
+                - repository_id
             type: object
         CreateUpdatePositionAssignmentRequest:
             properties:
@@ -2399,7 +2493,6 @@ components:
                 - repository_id
                 - code
                 - name
-                - customValues
             type: object
         CreateUpdateRatingScaleRequest:
             properties:
@@ -2420,7 +2513,6 @@ components:
                 - repository_id
                 - code
                 - name
-                - customValues
             type: object
         CreateUpdateSkillDefinitionRequest:
             properties:
@@ -2453,7 +2545,6 @@ components:
                 - repository_id
                 - name
                 - ratingScale_id
-                - customValues
                 - activePeriod
             type: object
         CreateUpdateSkillDefinitionTypeRequest:
@@ -2475,7 +2566,6 @@ components:
                 - repository_id
                 - code
                 - name
-                - customValues
             type: object
         CreateUpdateSkillPlanningRequest:
             properties:
@@ -2514,7 +2604,6 @@ components:
                 - typeOfProof_id
                 - fromDate
                 - skillDefinition_id
-                - customValues
             type: object
         CreateUpdateSkillResultRequest:
             properties:
@@ -2549,7 +2638,6 @@ components:
                 - employee_id
                 - issueDate
                 - typeOfProof_id
-                - customValues
             type: object
         CreateUpdateTypesOfProofRequest:
             properties:
@@ -2579,7 +2667,6 @@ components:
                 - repository_id
                 - name
                 - skillDefinition_id
-                - customValues
                 - activePeriod
             type: object
         CustomFieldDefinition:
@@ -2588,6 +2675,9 @@ components:
                     type: string
                 createdAt:
                     format: date-time
+                    type: string
+                entityDefinition_id:
+                    format: uuid
                     type: string
                 id:
                     format: uuid
@@ -2607,6 +2697,7 @@ components:
                 - repository_id
                 - code
                 - name
+                - entityDefinition_id
             type: object
         DeleteCustomFieldDefinition:
             properties:
@@ -2833,6 +2924,34 @@ components:
                 - repository_id
             type: object
         DeleteGroupingType:
+            properties:
+                id:
+                    format: uuid
+                    type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
+                    type: string
+                repository_id:
+                    format: uuid
+                    type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
+            required:
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
+                - id
+                - repository_id
+            type: object
+        DeleteMonitoringTrace:
             properties:
                 id:
                     format: uuid
@@ -3150,7 +3269,6 @@ components:
                 - lastModifiedAt
                 - repository_id
                 - surname
-                - customValues
             type: object
         EmployeeUnavailability:
             properties:
@@ -3386,7 +3504,6 @@ components:
                 - code
                 - name
                 - activePeriod
-                - customValues
             type: object
         GroupingType:
             properties:
@@ -3420,7 +3537,6 @@ components:
                 - code
                 - name
                 - activePeriod
-                - customValues
             type: object
         ListCreateCustomFieldDefinitionResponse:
             properties:
@@ -3531,6 +3647,19 @@ components:
                 data:
                     items:
                         $ref: '#/components/schemas/CreateGroupingType'
+                    type: array
+                total:
+                    description: Total number of items
+                    type: integer
+            required:
+                - data
+                - total
+            type: object
+        ListCreateMonitoringTraceResponse:
+            properties:
+                data:
+                    items:
+                        $ref: '#/components/schemas/CreateMonitoringTrace'
                     type: array
                 total:
                     description: Total number of items
@@ -3786,6 +3915,19 @@ components:
                 - data
                 - total
             type: object
+        ListDeleteMonitoringTraceResponse:
+            properties:
+                data:
+                    items:
+                        $ref: '#/components/schemas/DeleteMonitoringTrace'
+                    type: array
+                total:
+                    description: Total number of items
+                    type: integer
+            required:
+                - data
+                - total
+            type: object
         ListDeletePositionAssignmentResponse:
             properties:
                 data:
@@ -4012,6 +4154,19 @@ components:
                 data:
                     items:
                         $ref: '#/components/schemas/GroupingType'
+                    type: array
+                total:
+                    description: Total number of items
+                    type: integer
+            required:
+                - data
+                - total
+            type: object
+        ListMonitoringTraceResponse:
+            properties:
+                data:
+                    items:
+                        $ref: '#/components/schemas/MonitoringTrace'
                     type: array
                 total:
                     description: Total number of items
@@ -4267,6 +4422,19 @@ components:
                 - data
                 - total
             type: object
+        ListUpdateMonitoringTraceResponse:
+            properties:
+                data:
+                    items:
+                        $ref: '#/components/schemas/UpdateMonitoringTrace'
+                    type: array
+                total:
+                    description: Total number of items
+                    type: integer
+            required:
+                - data
+                - total
+            type: object
         ListUpdatePositionAssignmentResponse:
             properties:
                 data:
@@ -4384,6 +4552,34 @@ components:
                 - data
                 - total
             type: object
+        MonitoringTrace:
+            properties:
+                createdAt:
+                    format: date-time
+                    type: string
+                executedAt:
+                    format: date-time
+                    type: string
+                id:
+                    format: uuid
+                    type: string
+                lastModifiedAt:
+                    format: date-time
+                    type: string
+                remark:
+                    type: string
+                repository_id:
+                    format: uuid
+                    type: string
+                requestedAt:
+                    format: date-time
+                    type: string
+            required:
+                - id
+                - createdAt
+                - lastModifiedAt
+                - repository_id
+            type: object
         PaginationInfo:
             properties:
                 cursor:
@@ -4472,7 +4668,6 @@ components:
                 - repository_id
                 - code
                 - name
-                - customValues
             type: object
         RatingScaleLevel:
             properties:
@@ -4511,7 +4706,6 @@ components:
                 - scoreOrder
                 - code
                 - name
-                - customValues
             type: object
         RatingScaleLevelDescriptor:
             properties:
@@ -4594,7 +4788,6 @@ components:
                 - repository_id
                 - name
                 - ratingScale_id
-                - customValues
                 - activePeriod
             type: object
         SkillDefinitionType:
@@ -4624,7 +4817,6 @@ components:
                 - repository_id
                 - code
                 - name
-                - customValues
             type: object
         SkillPlanning:
             properties:
@@ -4671,7 +4863,6 @@ components:
                 - typeOfProof_id
                 - fromDate
                 - skillDefinition_id
-                - customValues
             type: object
         SkillResult:
             properties:
@@ -4714,7 +4905,6 @@ components:
                 - employee_id
                 - issueDate
                 - typeOfProof_id
-                - customValues
             type: object
         TypesOfProof:
             properties:
@@ -4752,12 +4942,14 @@ components:
                 - repository_id
                 - name
                 - skillDefinition_id
-                - customValues
                 - activePeriod
             type: object
         UpdateCreateCustomFieldDefinitionRequest:
             properties:
                 code:
+                    type: string
+                entityDefinition_id:
+                    format: uuid
                     type: string
                 name:
                     type: object
@@ -4897,6 +5089,20 @@ components:
                     type: object
                 repository_id:
                     format: uuid
+                    type: string
+            type: object
+        UpdateCreateMonitoringTraceRequest:
+            properties:
+                executedAt:
+                    format: date-time
+                    type: string
+                remark:
+                    type: string
+                repository_id:
+                    format: uuid
+                    type: string
+                requestedAt:
+                    format: date-time
                     type: string
             type: object
         UpdateCreatePositionAssignmentRequest:
@@ -5079,6 +5285,9 @@ components:
             properties:
                 code:
                     type: string
+                entityDefinition_id:
+                    format: uuid
+                    type: string
                 id:
                     format: uuid
                     type: string
@@ -5108,6 +5317,7 @@ components:
                 - repository_id
                 - code
                 - name
+                - entityDefinition_id
             type: object
         UpdateCustomFieldDefinitionRequest:
             properties:
@@ -5115,6 +5325,9 @@ components:
                     type: string
                 createdAt:
                     format: date-time
+                    type: string
+                entityDefinition_id:
+                    format: uuid
                     type: string
                 lastModifiedAt:
                     format: date-time
@@ -5198,6 +5411,15 @@ components:
                     type: string
             type: object
         UpdateDeleteGroupingTypeRequest:
+            properties:
+                id:
+                    format: uuid
+                    type: string
+                repository_id:
+                    format: uuid
+                    type: string
+            type: object
+        UpdateDeleteMonitoringTraceRequest:
             properties:
                 id:
                     format: uuid
@@ -5333,7 +5555,6 @@ components:
                 - id
                 - repository_id
                 - surname
-                - customValues
             type: object
         UpdateEmployeeRequest:
             properties:
@@ -5712,7 +5933,6 @@ components:
                 - code
                 - name
                 - activePeriod
-                - customValues
             type: object
         UpdateGroupingRequest:
             properties:
@@ -5784,7 +6004,6 @@ components:
                 - code
                 - name
                 - activePeriod
-                - customValues
             type: object
         UpdateGroupingTypeRequest:
             properties:
@@ -5806,6 +6025,62 @@ components:
                     type: object
                 repository_id:
                     format: uuid
+                    type: string
+            type: object
+        UpdateMonitoringTrace:
+            properties:
+                executedAt:
+                    format: date-time
+                    type: string
+                id:
+                    format: uuid
+                    type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
+                    type: string
+                remark:
+                    type: string
+                repository_id:
+                    format: uuid
+                    type: string
+                request_id:
+                    format: uuid
+                    readOnly: true
+                    type: string
+                requestedAt:
+                    format: date-time
+                    type: string
+            required:
+                - request_id
+                - isProposalResolved
+                - isProposalExecutionFailed
+                - id
+                - repository_id
+            type: object
+        UpdateMonitoringTraceRequest:
+            properties:
+                createdAt:
+                    format: date-time
+                    type: string
+                executedAt:
+                    format: date-time
+                    type: string
+                lastModifiedAt:
+                    format: date-time
+                    type: string
+                remark:
+                    type: string
+                repository_id:
+                    format: uuid
+                    type: string
+                requestedAt:
+                    format: date-time
                     type: string
             type: object
         UpdatePositionAssignment:
@@ -5914,7 +6189,6 @@ components:
                 - repository_id
                 - code
                 - name
-                - customValues
             type: object
         UpdateRatingScaleLevel:
             properties:
@@ -5953,7 +6227,6 @@ components:
                 - repository_id
                 - code
                 - name
-                - customValues
             type: object
         UpdateRatingScaleLevelDescriptor:
             properties:
@@ -6102,7 +6375,6 @@ components:
                 - repository_id
                 - name
                 - ratingScale_id
-                - customValues
                 - activePeriod
             type: object
         UpdateSkillDefinitionRequest:
@@ -6170,7 +6442,6 @@ components:
                 - repository_id
                 - code
                 - name
-                - customValues
             type: object
         UpdateSkillDefinitionTypeRequest:
             properties:
@@ -6243,7 +6514,6 @@ components:
                 - typeOfProof_id
                 - fromDate
                 - skillDefinition_id
-                - customValues
             type: object
         UpdateSkillPlanningRequest:
             properties:
@@ -6328,7 +6598,6 @@ components:
                 - employee_id
                 - issueDate
                 - typeOfProof_id
-                - customValues
             type: object
         UpdateSkillResultRequest:
             properties:
@@ -6405,7 +6674,6 @@ components:
                 - repository_id
                 - name
                 - skillDefinition_id
-                - customValues
                 - activePeriod
             type: object
         UpdateTypesOfProofRequest:
@@ -6438,6 +6706,9 @@ components:
         UpdateUpdateCustomFieldDefinitionRequest:
             properties:
                 code:
+                    type: string
+                entityDefinition_id:
+                    format: uuid
                     type: string
                 id:
                     format: uuid
@@ -6604,6 +6875,23 @@ components:
                     type: object
                 repository_id:
                     format: uuid
+                    type: string
+            type: object
+        UpdateUpdateMonitoringTraceRequest:
+            properties:
+                executedAt:
+                    format: date-time
+                    type: string
+                id:
+                    format: uuid
+                    type: string
+                remark:
+                    type: string
+                repository_id:
+                    format: uuid
+                    type: string
+                requestedAt:
+                    format: date-time
                     type: string
             type: object
         UpdateUpdatePositionAssignmentRequest:
@@ -6821,9 +7109,21 @@ openapi: 3.0.3
 paths:
     /{orgID}/createcustomfielddefinitions:
         get:
-            description: List all createCustomFieldDefinitions proposals. These are proposed changes to create new CustomFieldDefinition records that may be automatically approved or require manual approval depending on system configuration.
+            description: |-
+                List all createCustomFieldDefinitions proposals. These are proposed changes to create new CustomFieldDefinition records that may be automatically approved or require manual approval depending on system configuration.
+
+                **Filter Syntax:**
+                - Filters use exact match only
+                - Multiple filters are combined with AND logic
+                - Filterable fields: entityDefinition_id
+                - Example: `?employee_id=abc-123&status=active`
             operationId: listCreateCustomFieldDefinition
             parameters:
+                - description: Filter by entityDefinition_id (exact match)
+                  in: query
+                  name: entityDefinition_id
+                  schema:
+                    type: string
                 - description: Maximum number of items to return (1-1000)
                   in: query
                   name: limit
@@ -7800,6 +8100,108 @@ paths:
               schema:
                 type: string
             - description: CreateGroupingType ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+    /{orgID}/createmonitoringtraces:
+        get:
+            description: List all createMonitoringTraces proposals. These are proposed changes to create new MonitoringTrace records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listCreateMonitoringTrace
+            parameters:
+                - description: Maximum number of items to return (1-1000)
+                  in: query
+                  name: limit
+                  schema:
+                    default: 10
+                    maximum: 1000
+                    minimum: 1
+                    type: integer
+                - description: Cursor for pagination (base64 encoded)
+                  in: query
+                  name: cursor
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ListCreateMonitoringTraceResponse'
+                    description: Successful response
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List MonitoringTrace creation proposals
+            tags:
+                - MonitoringTraces
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+        post:
+            description: Create a new proposal to add a MonitoringTrace record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createCreateMonitoringTrace
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/CreateCreateMonitoringTraceRequest'
+                required: true
+            responses:
+                "201":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/CreateMonitoringTrace'
+                    description: Created successfully
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Propose creation of MonitoringTrace
+            tags:
+                - MonitoringTraces
+                - Proposals
+    /{orgID}/createmonitoringtraces/{id}:
+        get:
+            description: Get details of a specific MonitoringTrace creation proposal by ID
+            operationId: getCreateMonitoringTrace
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/CreateMonitoringTrace'
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "404":
+                    $ref: '#/components/responses/NotFound'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Get MonitoringTrace creation proposal
+            tags:
+                - MonitoringTraces
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+            - description: CreateMonitoringTrace ID
               in: path
               name: id
               required: true
@@ -8812,9 +9214,21 @@ paths:
                 type: string
     /{orgID}/customfielddefinitions:
         get:
-            description: List customFieldDefinitions
+            description: |-
+                List customFieldDefinitions
+
+                **Filter Syntax:**
+                - Filters use exact match only
+                - Multiple filters are combined with AND logic
+                - Filterable fields: entityDefinition_id
+                - Example: `?employee_id=abc-123&status=active`
             operationId: listCustomFieldDefinition
             parameters:
+                - description: Filter by entityDefinition_id (exact match)
+                  in: query
+                  name: entityDefinition_id
+                  schema:
+                    type: string
                 - description: Maximum number of items to return (1-1000)
                   in: query
                   name: limit
@@ -9799,6 +10213,108 @@ paths:
               schema:
                 type: string
             - description: DeleteGroupingType ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+    /{orgID}/deletemonitoringtraces:
+        get:
+            description: List all deleteMonitoringTraces proposals. These are proposed changes to delete MonitoringTrace records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listDeleteMonitoringTrace
+            parameters:
+                - description: Maximum number of items to return (1-1000)
+                  in: query
+                  name: limit
+                  schema:
+                    default: 10
+                    maximum: 1000
+                    minimum: 1
+                    type: integer
+                - description: Cursor for pagination (base64 encoded)
+                  in: query
+                  name: cursor
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ListDeleteMonitoringTraceResponse'
+                    description: Successful response
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List MonitoringTrace deletion proposals
+            tags:
+                - MonitoringTraces
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+        post:
+            description: Create a new proposal to add a MonitoringTrace record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createDeleteMonitoringTrace
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/CreateDeleteMonitoringTraceRequest'
+                required: true
+            responses:
+                "201":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/DeleteMonitoringTrace'
+                    description: Created successfully
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Propose creation of MonitoringTrace
+            tags:
+                - MonitoringTraces
+                - Proposals
+    /{orgID}/deletemonitoringtraces/{id}:
+        get:
+            description: Get details of a specific MonitoringTrace deletion proposal by ID
+            operationId: getDeleteMonitoringTrace
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/DeleteMonitoringTrace'
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "404":
+                    $ref: '#/components/responses/NotFound'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Get MonitoringTrace deletion proposal
+            tags:
+                - MonitoringTraces
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+            - description: DeleteMonitoringTrace ID
               in: path
               name: id
               required: true
@@ -11531,6 +12047,82 @@ paths:
               required: true
               schema:
                 type: string
+    /{orgID}/monitoringtraces:
+        get:
+            description: List monitoringTraces
+            operationId: listMonitoringTrace
+            parameters:
+                - description: Maximum number of items to return (1-1000)
+                  in: query
+                  name: limit
+                  schema:
+                    default: 10
+                    maximum: 1000
+                    minimum: 1
+                    type: integer
+                - description: Cursor for pagination (base64 encoded)
+                  in: query
+                  name: cursor
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ListMonitoringTraceResponse'
+                    description: Successful response
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List monitoringTraces
+            tags:
+                - MonitoringTraces
+                - Querying
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+    /{orgID}/monitoringtraces/{id}:
+        get:
+            description: Get a single monitoringTrace by ID
+            operationId: getMonitoringTrace
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/MonitoringTrace'
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "404":
+                    $ref: '#/components/responses/NotFound'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Get MonitoringTrace
+            tags:
+                - MonitoringTraces
+                - Querying
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+            - description: MonitoringTrace ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
     /{orgID}/positionassignments:
         get:
             description: |-
@@ -12380,9 +12972,21 @@ paths:
                 type: string
     /{orgID}/updatecustomfielddefinitions:
         get:
-            description: List all updateCustomFieldDefinitions proposals. These are proposed changes to update existing CustomFieldDefinition records that may be automatically approved or require manual approval depending on system configuration.
+            description: |-
+                List all updateCustomFieldDefinitions proposals. These are proposed changes to update existing CustomFieldDefinition records that may be automatically approved or require manual approval depending on system configuration.
+
+                **Filter Syntax:**
+                - Filters use exact match only
+                - Multiple filters are combined with AND logic
+                - Filterable fields: entityDefinition_id
+                - Example: `?employee_id=abc-123&status=active`
             operationId: listUpdateCustomFieldDefinition
             parameters:
+                - description: Filter by entityDefinition_id (exact match)
+                  in: query
+                  name: entityDefinition_id
+                  schema:
+                    type: string
                 - description: Maximum number of items to return (1-1000)
                   in: query
                   name: limit
@@ -13359,6 +13963,108 @@ paths:
               schema:
                 type: string
             - description: UpdateGroupingType ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+    /{orgID}/updatemonitoringtraces:
+        get:
+            description: List all updateMonitoringTraces proposals. These are proposed changes to update existing MonitoringTrace records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listUpdateMonitoringTrace
+            parameters:
+                - description: Maximum number of items to return (1-1000)
+                  in: query
+                  name: limit
+                  schema:
+                    default: 10
+                    maximum: 1000
+                    minimum: 1
+                    type: integer
+                - description: Cursor for pagination (base64 encoded)
+                  in: query
+                  name: cursor
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ListUpdateMonitoringTraceResponse'
+                    description: Successful response
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List MonitoringTrace update proposals
+            tags:
+                - MonitoringTraces
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+        post:
+            description: Create a new proposal to add a MonitoringTrace record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createUpdateMonitoringTrace
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/CreateUpdateMonitoringTraceRequest'
+                required: true
+            responses:
+                "201":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/UpdateMonitoringTrace'
+                    description: Created successfully
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Propose creation of MonitoringTrace
+            tags:
+                - MonitoringTraces
+                - Proposals
+    /{orgID}/updatemonitoringtraces/{id}:
+        get:
+            description: Get details of a specific MonitoringTrace update proposal by ID
+            operationId: getUpdateMonitoringTrace
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/UpdateMonitoringTrace'
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "404":
+                    $ref: '#/components/responses/NotFound'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Get MonitoringTrace update proposal
+            tags:
+                - MonitoringTraces
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+            - description: UpdateMonitoringTrace ID
               in: path
               name: id
               required: true
@@ -14368,6 +15074,8 @@ tags:
       name: GroupingTypes
     - description: Operations for Groupings
       name: Groupings
+    - description: Operations for MonitoringTraces
+      name: MonitoringTraces
     - description: Operations for PositionAssignments
       name: PositionAssignments
     - description: Operations for RatingScaleLevelDescriptors
