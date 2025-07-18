@@ -146,8 +146,13 @@ components:
                     format: date
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 email:
                     format: email
@@ -282,8 +287,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 definedInGroupingID:
                     format: uuid
@@ -325,8 +335,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 name:
                     additionalProperties:
@@ -416,8 +431,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -456,8 +476,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 name:
                     additionalProperties:
@@ -484,8 +509,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -523,8 +553,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 name:
                     additionalProperties:
@@ -548,8 +583,13 @@ components:
                     format: date
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 deadlineDate:
                     format: date
@@ -581,8 +621,13 @@ components:
         CreateCreateSkillResultRequest:
             properties:
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 employeeID:
                     format: uuid
@@ -619,8 +664,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     type: string
@@ -955,8 +1005,13 @@ components:
                     format: date
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 email:
                     format: email
@@ -1008,8 +1063,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 email:
                     format: email
@@ -1414,8 +1474,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 definedInGroupingID:
                     format: uuid
@@ -1481,8 +1546,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 definedInGroupingID:
                     format: uuid
@@ -1529,8 +1599,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 isProposalExecutionFailed:
                     readOnly: true
@@ -1582,8 +1657,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 lastModifiedAt:
                     format: date-time
@@ -1752,8 +1832,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 isProposalExecutionFailed:
                     readOnly: true
@@ -1797,8 +1882,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -1940,8 +2030,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -1988,8 +2083,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 lastModifiedAt:
                     format: date-time
@@ -2028,8 +2128,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -2095,8 +2200,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -2139,8 +2249,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 isProposalExecutionFailed:
                     readOnly: true
@@ -2187,8 +2302,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 lastModifiedAt:
                     format: date-time
@@ -2217,8 +2337,13 @@ components:
                     format: date
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 deadlineDate:
                     format: date
@@ -2277,8 +2402,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 deadlineDate:
                     format: date
@@ -2315,8 +2445,13 @@ components:
         CreateSkillResult:
             properties:
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 employeeID:
                     format: uuid
@@ -2371,8 +2506,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 employeeID:
                     format: uuid
@@ -2414,8 +2554,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     type: string
@@ -2472,8 +2617,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     type: string
@@ -2536,8 +2686,13 @@ components:
                     format: date
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 email:
                     format: email
@@ -2696,8 +2851,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 definedInGroupingID:
                     format: uuid
@@ -2743,8 +2903,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 id:
                     format: uuid
@@ -2842,8 +3007,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -2878,8 +3048,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 id:
                     format: uuid
@@ -2910,8 +3085,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -2953,8 +3133,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 id:
                     format: uuid
@@ -2982,8 +3167,13 @@ components:
                     format: date
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 deadlineDate:
                     format: date
@@ -3019,8 +3209,13 @@ components:
         CreateUpdateSkillResultRequest:
             properties:
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 employeeID:
                     format: uuid
@@ -3061,8 +3256,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     type: string
@@ -3667,8 +3867,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 email:
                     format: email
@@ -3923,8 +4128,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 definedInGroupingID:
                     format: uuid
@@ -3978,8 +4188,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 id:
                     format: uuid
@@ -6522,8 +6737,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 id:
                     format: uuid
@@ -6558,8 +6778,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -6662,8 +6887,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -6713,8 +6943,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 id:
                     format: uuid
@@ -6750,8 +6985,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 deadlineDate:
                     format: date
@@ -6795,8 +7035,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 employeeID:
                     format: uuid
@@ -6845,8 +7090,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     type: string
@@ -6904,8 +7154,13 @@ components:
                     format: date
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 email:
                     format: email
@@ -7015,8 +7270,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 definedInGroupingID:
                     format: uuid
@@ -7053,8 +7313,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 name:
                     additionalProperties:
@@ -7127,8 +7392,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -7161,8 +7431,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 name:
                     additionalProperties:
@@ -7185,8 +7460,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -7219,8 +7499,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 name:
                     additionalProperties:
@@ -7240,8 +7525,13 @@ components:
                     format: date
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 deadlineDate:
                     format: date
@@ -7267,8 +7557,13 @@ components:
         UpdateCreateSkillResultRequest:
             properties:
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 employeeID:
                     format: uuid
@@ -7300,8 +7595,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     type: string
@@ -7566,8 +7866,13 @@ components:
                     format: date
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 email:
                     format: email
@@ -7618,8 +7923,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 email:
                     format: email
@@ -7979,8 +8289,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 definedInGroupingID:
                     format: uuid
@@ -8045,8 +8360,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 definedInGroupingID:
                     format: uuid
@@ -8086,8 +8406,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 id:
                     format: uuid
@@ -8138,8 +8463,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 lastModifiedAt:
                     format: date-time
@@ -8288,8 +8618,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 id:
                     format: uuid
@@ -8332,8 +8667,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -8450,8 +8790,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -8490,8 +8835,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 lastModifiedAt:
                     format: date-time
@@ -8522,8 +8872,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -8588,8 +8943,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -8625,8 +8985,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 id:
                     format: uuid
@@ -8672,8 +9037,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 lastModifiedAt:
                     format: date-time
@@ -8696,8 +9066,13 @@ components:
                     format: date
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 deadlineDate:
                     format: date
@@ -8755,8 +9130,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 deadlineDate:
                     format: date
@@ -8785,8 +9165,13 @@ components:
         UpdateSkillResult:
             properties:
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 employeeID:
                     format: uuid
@@ -8840,8 +9225,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 employeeID:
                     format: uuid
@@ -8876,8 +9266,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     type: string
@@ -8933,8 +9328,13 @@ components:
                     format: date-time
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     type: string
@@ -8984,8 +9384,13 @@ components:
                     format: date
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 email:
                     format: email
@@ -9113,8 +9518,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 definedInGroupingID:
                     format: uuid
@@ -9154,8 +9564,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 id:
                     format: uuid
@@ -9234,8 +9649,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -9265,8 +9685,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 id:
                     format: uuid
@@ -9292,8 +9717,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     additionalProperties:
@@ -9329,8 +9759,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 id:
                     format: uuid
@@ -9353,8 +9788,13 @@ components:
                     format: date
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 deadlineDate:
                     format: date
@@ -9383,8 +9823,13 @@ components:
         UpdateUpdateSkillResultRequest:
             properties:
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 employeeID:
                     format: uuid
@@ -9419,8 +9864,13 @@ components:
                 code:
                     type: string
                 customValues:
-                    additionalProperties: true
-                    description: Custom field values - flexible object structure
+                    additionalProperties:
+                        type: string
+                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    example:
+                        department: Engineering
+                        employeeId: EMP-12345
+                        location: Amsterdam
                     type: object
                 description:
                     type: string
