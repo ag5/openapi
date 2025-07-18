@@ -8070,7 +8070,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: entityDefinitionID
-                - Example: `?entityDefinitionID=value`
+                - Example: `?entityDefinitionID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listCreateCustomFieldDefinition
             parameters:
                 - description: Filter by entityDefinitionID (exact match)
@@ -8184,7 +8184,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: employeeID
-                - Example: `?employeeID=value`
+                - Example: `?employeeID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listCreateEmployeeUnavailability
             parameters:
                 - description: Filter by employeeID (exact match)
@@ -8502,7 +8502,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: contractTypeID, employeeID
-                - Example: `?employeeID=abc-123&contractTypeID=active`
+                - Example: `?contractTypeID=123e4567-e89b-12d3-a456-426614174000&employeeID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listCreateEmploymentContract
             parameters:
                 - description: Filter by contractTypeID (exact match)
@@ -8723,7 +8723,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: toEmployeeID, fromEmployeeID, relationTypeID
-                - Example: `?toEmployeeID=abc-123&fromEmployeeID=active`
+                - Example: `?toEmployeeID=123e4567-e89b-12d3-a456-426614174000&fromEmployeeID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listCreateEmploymentRelation
             parameters:
                 - description: Filter by toEmployeeID (exact match)
@@ -8949,7 +8949,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: typeID, definedInGroupingID
-                - Example: `?typeID=abc-123&definedInGroupingID=active`
+                - Example: `?typeID=123e4567-e89b-12d3-a456-426614174000&definedInGroupingID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listCreateGrouping
             parameters:
                 - description: Filter by typeID (exact match)
@@ -9170,7 +9170,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: employeeID
-                - Example: `?employeeID=value`
+                - Example: `?employeeID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listCreatePositionAssignment
             parameters:
                 - description: Filter by employeeID (exact match)
@@ -9284,7 +9284,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: ratingScaleLevelID, skillDefinitionID
-                - Example: `?ratingScaleLevelID=abc-123&skillDefinitionID=active`
+                - Example: `?ratingScaleLevelID=123e4567-e89b-12d3-a456-426614174000&skillDefinitionID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listCreateRatingScaleLevelDescriptor
             parameters:
                 - description: Filter by ratingScaleLevelID (exact match)
@@ -9403,7 +9403,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: ratingScaleID
-                - Example: `?ratingScaleID=value`
+                - Example: `?ratingScaleID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listCreateRatingScaleLevel
             parameters:
                 - description: Filter by ratingScaleID (exact match)
@@ -9721,7 +9721,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: ratingScaleID, typeID
-                - Example: `?ratingScaleID=abc-123&typeID=active`
+                - Example: `?ratingScaleID=123e4567-e89b-12d3-a456-426614174000&typeID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listCreateSkillDefinition
             parameters:
                 - description: Filter by ratingScaleID (exact match)
@@ -9942,7 +9942,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: typeOfProofID, scoreID
-                - Example: `?typeOfProofID=abc-123&scoreID=active`
+                - Example: `?typeOfProofID=123e4567-e89b-12d3-a456-426614174000&scoreID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listCreateSkillResult
             parameters:
                 - description: Filter by typeOfProofID (exact match)
@@ -10061,7 +10061,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: skillDefinitionID
-                - Example: `?skillDefinitionID=value`
+                - Example: `?skillDefinitionID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listCreateTypesOfProof
             parameters:
                 - description: Filter by skillDefinitionID (exact match)
@@ -10175,7 +10175,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: entityDefinitionID
-                - Example: `?entityDefinitionID=value`
+                - Example: `?entityDefinitionID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listCustomFieldDefinition
             parameters:
                 - description: Filter by entityDefinitionID (exact match)
@@ -12201,7 +12201,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: employeeID
-                - Example: `?employeeID=value`
+                - Example: `?employeeID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listEmployeeUnavailability
             parameters:
                 - description: Filter by employeeID (exact match)
@@ -12441,7 +12441,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: contractTypeID, employeeID
-                - Example: `?employeeID=abc-123&contractTypeID=active`
+                - Example: `?contractTypeID=123e4567-e89b-12d3-a456-426614174000&employeeID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listEmploymentContract
             parameters:
                 - description: Filter by contractTypeID (exact match)
@@ -12610,7 +12610,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: toEmployeeID, fromEmployeeID, relationTypeID
-                - Example: `?toEmployeeID=abc-123&fromEmployeeID=active`
+                - Example: `?toEmployeeID=123e4567-e89b-12d3-a456-426614174000&fromEmployeeID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listEmploymentRelation
             parameters:
                 - description: Filter by toEmployeeID (exact match)
@@ -12860,7 +12860,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: typeID, definedInGroupingID
-                - Example: `?typeID=abc-123&definedInGroupingID=active`
+                - Example: `?typeID=123e4567-e89b-12d3-a456-426614174000&definedInGroupingID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listGrouping
             parameters:
                 - description: Filter by typeID (exact match)
@@ -13086,7 +13086,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: employeeID
-                - Example: `?employeeID=value`
+                - Example: `?employeeID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listPositionAssignment
             parameters:
                 - description: Filter by employeeID (exact match)
@@ -13174,7 +13174,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: ratingScaleLevelID, skillDefinitionID
-                - Example: `?ratingScaleLevelID=abc-123&skillDefinitionID=active`
+                - Example: `?ratingScaleLevelID=123e4567-e89b-12d3-a456-426614174000&skillDefinitionID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listRatingScaleLevelDescriptor
             parameters:
                 - description: Filter by ratingScaleLevelID (exact match)
@@ -13267,7 +13267,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: ratingScaleID
-                - Example: `?ratingScaleID=value`
+                - Example: `?ratingScaleID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listRatingScaleLevel
             parameters:
                 - description: Filter by ratingScaleID (exact match)
@@ -13583,7 +13583,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: ratingScaleID, typeID
-                - Example: `?ratingScaleID=abc-123&typeID=active`
+                - Example: `?ratingScaleID=123e4567-e89b-12d3-a456-426614174000&typeID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listSkillDefinition
             parameters:
                 - description: Filter by ratingScaleID (exact match)
@@ -13752,7 +13752,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: typeOfProofID, scoreID
-                - Example: `?typeOfProofID=abc-123&scoreID=active`
+                - Example: `?typeOfProofID=123e4567-e89b-12d3-a456-426614174000&scoreID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listSkillResult
             parameters:
                 - description: Filter by typeOfProofID (exact match)
@@ -13845,7 +13845,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: skillDefinitionID
-                - Example: `?skillDefinitionID=value`
+                - Example: `?skillDefinitionID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listTypesOfProof
             parameters:
                 - description: Filter by skillDefinitionID (exact match)
@@ -13933,7 +13933,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: entityDefinitionID
-                - Example: `?entityDefinitionID=value`
+                - Example: `?entityDefinitionID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listUpdateCustomFieldDefinition
             parameters:
                 - description: Filter by entityDefinitionID (exact match)
@@ -14047,7 +14047,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: employeeID
-                - Example: `?employeeID=value`
+                - Example: `?employeeID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listUpdateEmployeeUnavailability
             parameters:
                 - description: Filter by employeeID (exact match)
@@ -14365,7 +14365,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: contractTypeID, employeeID
-                - Example: `?employeeID=abc-123&contractTypeID=active`
+                - Example: `?contractTypeID=123e4567-e89b-12d3-a456-426614174000&employeeID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listUpdateEmploymentContract
             parameters:
                 - description: Filter by contractTypeID (exact match)
@@ -14586,7 +14586,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: toEmployeeID, fromEmployeeID, relationTypeID
-                - Example: `?toEmployeeID=abc-123&fromEmployeeID=active`
+                - Example: `?toEmployeeID=123e4567-e89b-12d3-a456-426614174000&fromEmployeeID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listUpdateEmploymentRelation
             parameters:
                 - description: Filter by toEmployeeID (exact match)
@@ -14812,7 +14812,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: typeID, definedInGroupingID
-                - Example: `?typeID=abc-123&definedInGroupingID=active`
+                - Example: `?typeID=123e4567-e89b-12d3-a456-426614174000&definedInGroupingID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listUpdateGrouping
             parameters:
                 - description: Filter by typeID (exact match)
@@ -15033,7 +15033,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: employeeID
-                - Example: `?employeeID=value`
+                - Example: `?employeeID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listUpdatePositionAssignment
             parameters:
                 - description: Filter by employeeID (exact match)
@@ -15555,7 +15555,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: ratingScaleID, typeID
-                - Example: `?ratingScaleID=abc-123&typeID=active`
+                - Example: `?ratingScaleID=123e4567-e89b-12d3-a456-426614174000&typeID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listUpdateSkillDefinition
             parameters:
                 - description: Filter by ratingScaleID (exact match)
@@ -15776,7 +15776,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: typeOfProofID, scoreID
-                - Example: `?typeOfProofID=abc-123&scoreID=active`
+                - Example: `?typeOfProofID=123e4567-e89b-12d3-a456-426614174000&scoreID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listUpdateSkillResult
             parameters:
                 - description: Filter by typeOfProofID (exact match)
@@ -15895,7 +15895,7 @@ paths:
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
                 - Filterable fields: skillDefinitionID
-                - Example: `?skillDefinitionID=value`
+                - Example: `?skillDefinitionID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listUpdateTypesOfProof
             parameters:
                 - description: Filter by skillDefinitionID (exact match)
