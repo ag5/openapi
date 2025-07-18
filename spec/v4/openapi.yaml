@@ -9914,63 +9914,6 @@ info:
         url: https://www.ag5.com/wp-content/themes/ag5/assets/images/ag5-logo.png
 openapi: 3.0.3
 paths:
-    /{orgkeepID}/meta:
-        get:
-            description: Returns metadata about available API resources and their operations
-            operationId: getMeta
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                description: Array of resource definitions
-                                items:
-                                    properties:
-                                        dbName:
-                                            description: Database table name
-                                            type: string
-                                        fields:
-                                            description: Resource fields
-                                            items:
-                                                type: object
-                                            type: array
-                                        name:
-                                            description: Resource name
-                                            type: string
-                                        operations:
-                                            description: Supported operations
-                                            items:
-                                                enum:
-                                                    - list
-                                                    - get
-                                                    - create
-                                                    - update
-                                                    - delete
-                                                type: string
-                                            type: array
-                                        restPath:
-                                            description: REST API path
-                                            type: string
-                                        schemaName:
-                                            description: Database schema name
-                                            type: string
-                                    type: object
-                                type: array
-                    description: API metadata
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Get API metadata
-            tags:
-                - Meta
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
     /{orgkeepID}/customFieldDefinitions:
         get:
             description: |-
