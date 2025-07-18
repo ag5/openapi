@@ -7,7 +7,6 @@ components:
             in: query
             name: cursor
             schema:
-                format: byte
                 type: string
         limit:
             description: Maximum number of items to return (1-1000)
@@ -4014,12 +4013,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateCustomFieldDefinition'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreateEmployeeResponse:
             properties:
@@ -4027,12 +4044,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateEmployee'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreateEmployeeUnavailabilityResponse:
             properties:
@@ -4040,12 +4075,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateEmployeeUnavailability'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreateEmploymentContractResponse:
             properties:
@@ -4053,12 +4106,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateEmploymentContract'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreateEmploymentContractTypeResponse:
             properties:
@@ -4066,12 +4137,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateEmploymentContractType'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreateEmploymentRelationResponse:
             properties:
@@ -4079,12 +4168,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateEmploymentRelation'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreateEmploymentRelationTypeResponse:
             properties:
@@ -4092,12 +4199,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateEmploymentRelationType'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreateGroupingResponse:
             properties:
@@ -4105,12 +4230,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateGrouping'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreateGroupingTypeResponse:
             properties:
@@ -4118,12 +4261,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateGroupingType'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreateMonitoringTraceResponse:
             properties:
@@ -4131,12 +4292,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateMonitoringTrace'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreatePositionAssignmentResponse:
             properties:
@@ -4144,12 +4323,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreatePositionAssignment'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreateRatingScaleLevelDescriptorResponse:
             properties:
@@ -4157,12 +4354,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateRatingScaleLevelDescriptor'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreateRatingScaleLevelResponse:
             properties:
@@ -4170,12 +4385,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateRatingScaleLevel'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreateRatingScaleResponse:
             properties:
@@ -4183,12 +4416,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateRatingScale'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreateSkillDefinitionResponse:
             properties:
@@ -4196,12 +4447,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateSkillDefinition'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreateSkillDefinitionTypeResponse:
             properties:
@@ -4209,12 +4478,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateSkillDefinitionType'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreateSkillPlanningResponse:
             properties:
@@ -4222,12 +4509,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateSkillPlanning'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreateSkillResultResponse:
             properties:
@@ -4235,12 +4540,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateSkillResult'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCreateTypesOfProofResponse:
             properties:
@@ -4248,12 +4571,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CreateTypesOfProof'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListCustomFieldDefinitionResponse:
             properties:
@@ -4261,12 +4602,30 @@ components:
                     items:
                         $ref: '#/components/schemas/CustomFieldDefinition'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteCustomFieldDefinitionResponse:
             properties:
@@ -4274,12 +4633,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteCustomFieldDefinition'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteEmployeeResponse:
             properties:
@@ -4287,12 +4664,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteEmployee'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteEmployeeUnavailabilityResponse:
             properties:
@@ -4300,12 +4695,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteEmployeeUnavailability'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteEmploymentContractResponse:
             properties:
@@ -4313,12 +4726,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteEmploymentContract'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteEmploymentContractTypeResponse:
             properties:
@@ -4326,12 +4757,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteEmploymentContractType'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteEmploymentRelationResponse:
             properties:
@@ -4339,12 +4788,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteEmploymentRelation'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteEmploymentRelationTypeResponse:
             properties:
@@ -4352,12 +4819,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteEmploymentRelationType'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteGroupingResponse:
             properties:
@@ -4365,12 +4850,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteGrouping'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteGroupingTypeResponse:
             properties:
@@ -4378,12 +4881,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteGroupingType'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteMonitoringTraceResponse:
             properties:
@@ -4391,12 +4912,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteMonitoringTrace'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeletePositionAssignmentResponse:
             properties:
@@ -4404,12 +4943,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeletePositionAssignment'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteRatingScaleLevelDescriptorResponse:
             properties:
@@ -4417,12 +4974,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteRatingScaleLevelDescriptor'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteRatingScaleLevelResponse:
             properties:
@@ -4430,12 +5005,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteRatingScaleLevel'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteRatingScaleResponse:
             properties:
@@ -4443,12 +5036,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteRatingScale'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteSkillDefinitionResponse:
             properties:
@@ -4456,12 +5067,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteSkillDefinition'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteSkillDefinitionTypeResponse:
             properties:
@@ -4469,12 +5098,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteSkillDefinitionType'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteSkillPlanningResponse:
             properties:
@@ -4482,12 +5129,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteSkillPlanning'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteSkillResultResponse:
             properties:
@@ -4495,12 +5160,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteSkillResult'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListDeleteTypesOfProofResponse:
             properties:
@@ -4508,12 +5191,30 @@ components:
                     items:
                         $ref: '#/components/schemas/DeleteTypesOfProof'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListEmployeeResponse:
             properties:
@@ -4521,12 +5222,30 @@ components:
                     items:
                         $ref: '#/components/schemas/Employee'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListEmployeeUnavailabilityResponse:
             properties:
@@ -4534,12 +5253,30 @@ components:
                     items:
                         $ref: '#/components/schemas/EmployeeUnavailability'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListEmploymentContractResponse:
             properties:
@@ -4547,12 +5284,30 @@ components:
                     items:
                         $ref: '#/components/schemas/EmploymentContract'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListEmploymentContractTypeResponse:
             properties:
@@ -4560,12 +5315,30 @@ components:
                     items:
                         $ref: '#/components/schemas/EmploymentContractType'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListEmploymentRelationResponse:
             properties:
@@ -4573,12 +5346,30 @@ components:
                     items:
                         $ref: '#/components/schemas/EmploymentRelation'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListEmploymentRelationTypeResponse:
             properties:
@@ -4586,12 +5377,30 @@ components:
                     items:
                         $ref: '#/components/schemas/EmploymentRelationType'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListEntityDefinitionResponse:
             properties:
@@ -4599,12 +5408,30 @@ components:
                     items:
                         $ref: '#/components/schemas/EntityDefinition'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListGroupingResponse:
             properties:
@@ -4612,12 +5439,30 @@ components:
                     items:
                         $ref: '#/components/schemas/Grouping'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListGroupingTypeResponse:
             properties:
@@ -4625,12 +5470,30 @@ components:
                     items:
                         $ref: '#/components/schemas/GroupingType'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListMonitoringTraceResponse:
             properties:
@@ -4638,12 +5501,30 @@ components:
                     items:
                         $ref: '#/components/schemas/MonitoringTrace'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListPositionAssignmentResponse:
             properties:
@@ -4651,12 +5532,30 @@ components:
                     items:
                         $ref: '#/components/schemas/PositionAssignment'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListRatingScaleLevelDescriptorResponse:
             properties:
@@ -4664,12 +5563,30 @@ components:
                     items:
                         $ref: '#/components/schemas/RatingScaleLevelDescriptor'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListRatingScaleLevelResponse:
             properties:
@@ -4677,12 +5594,30 @@ components:
                     items:
                         $ref: '#/components/schemas/RatingScaleLevel'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListRatingScaleResponse:
             properties:
@@ -4690,12 +5625,30 @@ components:
                     items:
                         $ref: '#/components/schemas/RatingScale'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListRepositoryResponse:
             properties:
@@ -4703,12 +5656,30 @@ components:
                     items:
                         $ref: '#/components/schemas/Repository'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListSkillDefinitionResponse:
             properties:
@@ -4716,12 +5687,30 @@ components:
                     items:
                         $ref: '#/components/schemas/SkillDefinition'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListSkillDefinitionTypeResponse:
             properties:
@@ -4729,12 +5718,30 @@ components:
                     items:
                         $ref: '#/components/schemas/SkillDefinitionType'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListSkillPlanningResponse:
             properties:
@@ -4742,12 +5749,30 @@ components:
                     items:
                         $ref: '#/components/schemas/SkillPlanning'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListSkillResultResponse:
             properties:
@@ -4755,12 +5780,30 @@ components:
                     items:
                         $ref: '#/components/schemas/SkillResult'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListTypesOfProofResponse:
             properties:
@@ -4768,12 +5811,30 @@ components:
                     items:
                         $ref: '#/components/schemas/TypesOfProof'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateCustomFieldDefinitionResponse:
             properties:
@@ -4781,12 +5842,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateCustomFieldDefinition'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateEmployeeResponse:
             properties:
@@ -4794,12 +5873,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateEmployee'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateEmployeeUnavailabilityResponse:
             properties:
@@ -4807,12 +5904,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateEmployeeUnavailability'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateEmploymentContractResponse:
             properties:
@@ -4820,12 +5935,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateEmploymentContract'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateEmploymentContractTypeResponse:
             properties:
@@ -4833,12 +5966,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateEmploymentContractType'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateEmploymentRelationResponse:
             properties:
@@ -4846,12 +5997,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateEmploymentRelation'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateEmploymentRelationTypeResponse:
             properties:
@@ -4859,12 +6028,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateEmploymentRelationType'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateGroupingResponse:
             properties:
@@ -4872,12 +6059,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateGrouping'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateGroupingTypeResponse:
             properties:
@@ -4885,12 +6090,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateGroupingType'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateMonitoringTraceResponse:
             properties:
@@ -4898,12 +6121,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateMonitoringTrace'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdatePositionAssignmentResponse:
             properties:
@@ -4911,12 +6152,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdatePositionAssignment'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateRatingScaleLevelDescriptorResponse:
             properties:
@@ -4924,12 +6183,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateRatingScaleLevelDescriptor'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateRatingScaleLevelResponse:
             properties:
@@ -4937,12 +6214,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateRatingScaleLevel'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateRatingScaleResponse:
             properties:
@@ -4950,12 +6245,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateRatingScale'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateSkillDefinitionResponse:
             properties:
@@ -4963,12 +6276,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateSkillDefinition'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateSkillDefinitionTypeResponse:
             properties:
@@ -4976,12 +6307,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateSkillDefinitionType'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateSkillPlanningResponse:
             properties:
@@ -4989,12 +6338,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateSkillPlanning'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateSkillResultResponse:
             properties:
@@ -5002,12 +6369,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateSkillResult'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         ListUpdateTypesOfProofResponse:
             properties:
@@ -5015,12 +6400,30 @@ components:
                     items:
                         $ref: '#/components/schemas/UpdateTypesOfProof'
                     type: array
-                total:
-                    description: Total number of items
-                    type: integer
+                pagination:
+                    properties:
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items returned in this page
+                            format: int64
+                            type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - hasMore
+                    type: object
             required:
                 - data
-                - total
+                - pagination
             type: object
         MonitoringTrace:
             properties:
@@ -8086,7 +9489,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -8200,7 +9603,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -8302,7 +9705,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -8404,7 +9807,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -8523,7 +9926,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -8625,7 +10028,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -8749,7 +10152,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -8851,7 +10254,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -8970,7 +10373,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -9072,7 +10475,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -9186,7 +10589,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -9305,7 +10708,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -9419,7 +10822,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -9521,7 +10924,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -9623,7 +11026,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -9742,7 +11145,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -9844,7 +11247,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -9963,7 +11366,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -10077,7 +11480,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -10191,7 +11594,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -10267,7 +11670,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -10369,7 +11772,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -10471,7 +11874,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -10573,7 +11976,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -10675,7 +12078,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -10777,7 +12180,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -10879,7 +12282,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -10981,7 +12384,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -11083,7 +12486,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -11185,7 +12588,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -11287,7 +12690,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -11389,7 +12792,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -11491,7 +12894,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -11593,7 +12996,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -11695,7 +13098,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -11797,7 +13200,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -11899,7 +13302,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -12001,7 +13404,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -12103,7 +13506,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -12217,7 +13620,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -12293,7 +13696,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -12369,7 +13772,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -12462,7 +13865,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -12538,7 +13941,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -12636,7 +14039,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -12712,7 +14115,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -12788,7 +14191,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -12881,7 +14284,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -13014,7 +14417,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -13102,7 +14505,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -13195,7 +14598,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -13283,7 +14686,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -13359,7 +14762,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -13435,7 +14838,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -13511,7 +14914,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -13604,7 +15007,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -13680,7 +15083,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -13773,7 +15176,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -13861,7 +15264,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -13949,7 +15352,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -14063,7 +15466,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -14165,7 +15568,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -14267,7 +15670,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -14386,7 +15789,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -14488,7 +15891,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -14612,7 +16015,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -14714,7 +16117,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -14833,7 +16236,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -14935,7 +16338,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -15049,7 +16452,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -15151,7 +16554,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -15253,7 +16656,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -15355,7 +16758,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -15457,7 +16860,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -15576,7 +16979,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -15678,7 +17081,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -15797,7 +17200,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
@@ -15911,7 +17314,7 @@ paths:
                     maximum: 1000
                     minimum: 1
                     type: integer
-                - description: Cursor for pagination (base64 encoded)
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
                   in: query
                   name: cursor
                   schema:
