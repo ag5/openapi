@@ -7107,7 +7107,7 @@ info:
         url: https://www.ag5.com/wp-content/themes/ag5/assets/images/ag5-logo.png
 openapi: 3.0.3
 paths:
-    /{orgID}/createcustomfielddefinitions:
+    /{orgID}/createCustomFieldDefinitions:
         get:
             description: |-
                 List all createCustomFieldDefinitions proposals. These are proposed changes to create new CustomFieldDefinition records that may be automatically approved or require manual approval depending on system configuration.
@@ -7187,7 +7187,7 @@ paths:
             tags:
                 - CustomFieldDefinitions
                 - Proposals
-    /{orgID}/createcustomfielddefinitions/{id}:
+    /{orgID}/createCustomFieldDefinitions/{id}:
         get:
             description: Get details of a specific CustomFieldDefinition creation proposal by ID
             operationId: getCreateCustomFieldDefinition
@@ -7221,109 +7221,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createemployees:
-        get:
-            description: List all createEmployees proposals. These are proposed changes to create new Employee records that may be automatically approved or require manual approval depending on system configuration.
-            operationId: listCreateEmployee
-            parameters:
-                - description: Maximum number of items to return (1-1000)
-                  in: query
-                  name: limit
-                  schema:
-                    default: 10
-                    maximum: 1000
-                    minimum: 1
-                    type: integer
-                - description: Cursor for pagination (base64 encoded)
-                  in: query
-                  name: cursor
-                  schema:
-                    type: string
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ListCreateEmployeeResponse'
-                    description: Successful response
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: List Employee creation proposals
-            tags:
-                - Employees
-                - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-        post:
-            description: Create a new proposal to add a Employee record. The proposal may be automatically approved or require manual approval depending on system configuration.
-            operationId: createCreateEmployee
-            requestBody:
-                content:
-                    application/json:
-                        schema:
-                            $ref: '#/components/schemas/CreateCreateEmployeeRequest'
-                required: true
-            responses:
-                "201":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/CreateEmployee'
-                    description: Created successfully
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Propose creation of Employee
-            tags:
-                - Employees
-                - Proposals
-    /{orgID}/createemployees/{id}:
-        get:
-            description: Get details of a specific Employee creation proposal by ID
-            operationId: getCreateEmployee
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/CreateEmployee'
-                    description: Successful response
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "404":
-                    $ref: '#/components/responses/NotFound'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Get Employee creation proposal
-            tags:
-                - Employees
-                - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-            - description: CreateEmployee ID
-              in: path
-              name: id
-              required: true
-              schema:
-                type: string
-    /{orgID}/createemployeeunavailabilities:
+    /{orgID}/createEmployeeUnavailabilities:
         get:
             description: |-
                 List all createEmployeeUnavailabilities proposals. These are proposed changes to create new EmployeeUnavailability records that may be automatically approved or require manual approval depending on system configuration.
@@ -7403,7 +7301,7 @@ paths:
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
-    /{orgID}/createemployeeunavailabilities/{id}:
+    /{orgID}/createEmployeeUnavailabilities/{id}:
         get:
             description: Get details of a specific EmployeeUnavailability creation proposal by ID
             operationId: getCreateEmployeeUnavailability
@@ -7437,7 +7335,211 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createemploymentcontracts:
+    /{orgID}/createEmployees:
+        get:
+            description: List all createEmployees proposals. These are proposed changes to create new Employee records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listCreateEmployee
+            parameters:
+                - description: Maximum number of items to return (1-1000)
+                  in: query
+                  name: limit
+                  schema:
+                    default: 10
+                    maximum: 1000
+                    minimum: 1
+                    type: integer
+                - description: Cursor for pagination (base64 encoded)
+                  in: query
+                  name: cursor
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ListCreateEmployeeResponse'
+                    description: Successful response
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List Employee creation proposals
+            tags:
+                - Employees
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+        post:
+            description: Create a new proposal to add a Employee record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createCreateEmployee
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/CreateCreateEmployeeRequest'
+                required: true
+            responses:
+                "201":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/CreateEmployee'
+                    description: Created successfully
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Propose creation of Employee
+            tags:
+                - Employees
+                - Proposals
+    /{orgID}/createEmployees/{id}:
+        get:
+            description: Get details of a specific Employee creation proposal by ID
+            operationId: getCreateEmployee
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/CreateEmployee'
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "404":
+                    $ref: '#/components/responses/NotFound'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Get Employee creation proposal
+            tags:
+                - Employees
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+            - description: CreateEmployee ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+    /{orgID}/createEmploymentContractTypes:
+        get:
+            description: List all createEmploymentContractTypes proposals. These are proposed changes to create new EmploymentContractType records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listCreateEmploymentContractType
+            parameters:
+                - description: Maximum number of items to return (1-1000)
+                  in: query
+                  name: limit
+                  schema:
+                    default: 10
+                    maximum: 1000
+                    minimum: 1
+                    type: integer
+                - description: Cursor for pagination (base64 encoded)
+                  in: query
+                  name: cursor
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ListCreateEmploymentContractTypeResponse'
+                    description: Successful response
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List EmploymentContractType creation proposals
+            tags:
+                - EmploymentContractTypes
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+        post:
+            description: Create a new proposal to add a EmploymentContractType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createCreateEmploymentContractType
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/CreateCreateEmploymentContractTypeRequest'
+                required: true
+            responses:
+                "201":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/CreateEmploymentContractType'
+                    description: Created successfully
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Propose creation of EmploymentContractType
+            tags:
+                - EmploymentContractTypes
+                - Proposals
+    /{orgID}/createEmploymentContractTypes/{id}:
+        get:
+            description: Get details of a specific EmploymentContractType creation proposal by ID
+            operationId: getCreateEmploymentContractType
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/CreateEmploymentContractType'
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "404":
+                    $ref: '#/components/responses/NotFound'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Get EmploymentContractType creation proposal
+            tags:
+                - EmploymentContractTypes
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+            - description: CreateEmploymentContractType ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+    /{orgID}/createEmploymentContracts:
         get:
             description: |-
                 List all createEmploymentContracts proposals. These are proposed changes to create new EmploymentContract records that may be automatically approved or require manual approval depending on system configuration.
@@ -7522,7 +7624,7 @@ paths:
             tags:
                 - EmploymentContracts
                 - Proposals
-    /{orgID}/createemploymentcontracts/{id}:
+    /{orgID}/createEmploymentContracts/{id}:
         get:
             description: Get details of a specific EmploymentContract creation proposal by ID
             operationId: getCreateEmploymentContract
@@ -7556,10 +7658,10 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createemploymentcontracttypes:
+    /{orgID}/createEmploymentRelationTypes:
         get:
-            description: List all createEmploymentContractTypes proposals. These are proposed changes to create new EmploymentContractType records that may be automatically approved or require manual approval depending on system configuration.
-            operationId: listCreateEmploymentContractType
+            description: List all createEmploymentRelationTypes proposals. These are proposed changes to create new EmploymentRelationType records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listCreateEmploymentRelationType
             parameters:
                 - description: Maximum number of items to return (1-1000)
                   in: query
@@ -7579,7 +7681,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ListCreateEmploymentContractTypeResponse'
+                                $ref: '#/components/schemas/ListCreateEmploymentRelationTypeResponse'
                     description: Successful response
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -7587,9 +7689,9 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List EmploymentContractType creation proposals
+            summary: List EmploymentRelationType creation proposals
             tags:
-                - EmploymentContractTypes
+                - EmploymentRelationTypes
                 - Proposals
         parameters:
             - description: Organization identifier
@@ -7599,20 +7701,20 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentContractType record. The proposal may be automatically approved or require manual approval depending on system configuration.
-            operationId: createCreateEmploymentContractType
+            description: Create a new proposal to add a EmploymentRelationType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createCreateEmploymentRelationType
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateEmploymentContractTypeRequest'
+                            $ref: '#/components/schemas/CreateCreateEmploymentRelationTypeRequest'
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateEmploymentContractType'
+                                $ref: '#/components/schemas/CreateEmploymentRelationType'
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -7620,20 +7722,20 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentContractType
+            summary: Propose creation of EmploymentRelationType
             tags:
-                - EmploymentContractTypes
+                - EmploymentRelationTypes
                 - Proposals
-    /{orgID}/createemploymentcontracttypes/{id}:
+    /{orgID}/createEmploymentRelationTypes/{id}:
         get:
-            description: Get details of a specific EmploymentContractType creation proposal by ID
-            operationId: getCreateEmploymentContractType
+            description: Get details of a specific EmploymentRelationType creation proposal by ID
+            operationId: getCreateEmploymentRelationType
             responses:
                 "200":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateEmploymentContractType'
+                                $ref: '#/components/schemas/CreateEmploymentRelationType'
                     description: Successful response
                 "401":
                     $ref: '#/components/responses/Unauthorized'
@@ -7641,9 +7743,9 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmploymentContractType creation proposal
+            summary: Get EmploymentRelationType creation proposal
             tags:
-                - EmploymentContractTypes
+                - EmploymentRelationTypes
                 - Proposals
         parameters:
             - description: Organization identifier
@@ -7652,13 +7754,13 @@ paths:
               required: true
               schema:
                 type: string
-            - description: CreateEmploymentContractType ID
+            - description: CreateEmploymentRelationType ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgID}/createemploymentrelations:
+    /{orgID}/createEmploymentRelations:
         get:
             description: |-
                 List all createEmploymentRelations proposals. These are proposed changes to create new EmploymentRelation records that may be automatically approved or require manual approval depending on system configuration.
@@ -7748,7 +7850,7 @@ paths:
             tags:
                 - EmploymentRelations
                 - Proposals
-    /{orgID}/createemploymentrelations/{id}:
+    /{orgID}/createEmploymentRelations/{id}:
         get:
             description: Get details of a specific EmploymentRelation creation proposal by ID
             operationId: getCreateEmploymentRelation
@@ -7782,10 +7884,10 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createemploymentrelationtypes:
+    /{orgID}/createGroupingTypes:
         get:
-            description: List all createEmploymentRelationTypes proposals. These are proposed changes to create new EmploymentRelationType records that may be automatically approved or require manual approval depending on system configuration.
-            operationId: listCreateEmploymentRelationType
+            description: List all createGroupingTypes proposals. These are proposed changes to create new GroupingType records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listCreateGroupingType
             parameters:
                 - description: Maximum number of items to return (1-1000)
                   in: query
@@ -7805,7 +7907,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ListCreateEmploymentRelationTypeResponse'
+                                $ref: '#/components/schemas/ListCreateGroupingTypeResponse'
                     description: Successful response
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -7813,9 +7915,9 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List EmploymentRelationType creation proposals
+            summary: List GroupingType creation proposals
             tags:
-                - EmploymentRelationTypes
+                - GroupingTypes
                 - Proposals
         parameters:
             - description: Organization identifier
@@ -7825,20 +7927,20 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentRelationType record. The proposal may be automatically approved or require manual approval depending on system configuration.
-            operationId: createCreateEmploymentRelationType
+            description: Create a new proposal to add a GroupingType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createCreateGroupingType
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateEmploymentRelationTypeRequest'
+                            $ref: '#/components/schemas/CreateCreateGroupingTypeRequest'
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateEmploymentRelationType'
+                                $ref: '#/components/schemas/CreateGroupingType'
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -7846,20 +7948,20 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentRelationType
+            summary: Propose creation of GroupingType
             tags:
-                - EmploymentRelationTypes
+                - GroupingTypes
                 - Proposals
-    /{orgID}/createemploymentrelationtypes/{id}:
+    /{orgID}/createGroupingTypes/{id}:
         get:
-            description: Get details of a specific EmploymentRelationType creation proposal by ID
-            operationId: getCreateEmploymentRelationType
+            description: Get details of a specific GroupingType creation proposal by ID
+            operationId: getCreateGroupingType
             responses:
                 "200":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateEmploymentRelationType'
+                                $ref: '#/components/schemas/CreateGroupingType'
                     description: Successful response
                 "401":
                     $ref: '#/components/responses/Unauthorized'
@@ -7867,9 +7969,9 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmploymentRelationType creation proposal
+            summary: Get GroupingType creation proposal
             tags:
-                - EmploymentRelationTypes
+                - GroupingTypes
                 - Proposals
         parameters:
             - description: Organization identifier
@@ -7878,13 +7980,13 @@ paths:
               required: true
               schema:
                 type: string
-            - description: CreateEmploymentRelationType ID
+            - description: CreateGroupingType ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgID}/creategroupings:
+    /{orgID}/createGroupings:
         get:
             description: |-
                 List all createGroupings proposals. These are proposed changes to create new Grouping records that may be automatically approved or require manual approval depending on system configuration.
@@ -7969,7 +8071,7 @@ paths:
             tags:
                 - Groupings
                 - Proposals
-    /{orgID}/creategroupings/{id}:
+    /{orgID}/createGroupings/{id}:
         get:
             description: Get details of a specific Grouping creation proposal by ID
             operationId: getCreateGrouping
@@ -8003,109 +8105,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/creategroupingtypes:
-        get:
-            description: List all createGroupingTypes proposals. These are proposed changes to create new GroupingType records that may be automatically approved or require manual approval depending on system configuration.
-            operationId: listCreateGroupingType
-            parameters:
-                - description: Maximum number of items to return (1-1000)
-                  in: query
-                  name: limit
-                  schema:
-                    default: 10
-                    maximum: 1000
-                    minimum: 1
-                    type: integer
-                - description: Cursor for pagination (base64 encoded)
-                  in: query
-                  name: cursor
-                  schema:
-                    type: string
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ListCreateGroupingTypeResponse'
-                    description: Successful response
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: List GroupingType creation proposals
-            tags:
-                - GroupingTypes
-                - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-        post:
-            description: Create a new proposal to add a GroupingType record. The proposal may be automatically approved or require manual approval depending on system configuration.
-            operationId: createCreateGroupingType
-            requestBody:
-                content:
-                    application/json:
-                        schema:
-                            $ref: '#/components/schemas/CreateCreateGroupingTypeRequest'
-                required: true
-            responses:
-                "201":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/CreateGroupingType'
-                    description: Created successfully
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Propose creation of GroupingType
-            tags:
-                - GroupingTypes
-                - Proposals
-    /{orgID}/creategroupingtypes/{id}:
-        get:
-            description: Get details of a specific GroupingType creation proposal by ID
-            operationId: getCreateGroupingType
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/CreateGroupingType'
-                    description: Successful response
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "404":
-                    $ref: '#/components/responses/NotFound'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Get GroupingType creation proposal
-            tags:
-                - GroupingTypes
-                - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-            - description: CreateGroupingType ID
-              in: path
-              name: id
-              required: true
-              schema:
-                type: string
-    /{orgID}/createmonitoringtraces:
+    /{orgID}/createMonitoringTraces:
         get:
             description: List all createMonitoringTraces proposals. These are proposed changes to create new MonitoringTrace records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateMonitoringTrace
@@ -8173,7 +8173,7 @@ paths:
             tags:
                 - MonitoringTraces
                 - Proposals
-    /{orgID}/createmonitoringtraces/{id}:
+    /{orgID}/createMonitoringTraces/{id}:
         get:
             description: Get details of a specific MonitoringTrace creation proposal by ID
             operationId: getCreateMonitoringTrace
@@ -8207,7 +8207,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createpositionassignments:
+    /{orgID}/createPositionAssignments:
         get:
             description: |-
                 List all createPositionAssignments proposals. These are proposed changes to create new PositionAssignment records that may be automatically approved or require manual approval depending on system configuration.
@@ -8287,7 +8287,7 @@ paths:
             tags:
                 - PositionAssignments
                 - Proposals
-    /{orgID}/createpositionassignments/{id}:
+    /{orgID}/createPositionAssignments/{id}:
         get:
             description: Get details of a specific PositionAssignment creation proposal by ID
             operationId: getCreatePositionAssignment
@@ -8321,7 +8321,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createratingscaleleveldescriptors:
+    /{orgID}/createRatingScaleLevelDescriptors:
         get:
             description: |-
                 List all createRatingScaleLevelDescriptors proposals. These are proposed changes to create new RatingScaleLevelDescriptor records that may be automatically approved or require manual approval depending on system configuration.
@@ -8406,7 +8406,7 @@ paths:
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
-    /{orgID}/createratingscaleleveldescriptors/{id}:
+    /{orgID}/createRatingScaleLevelDescriptors/{id}:
         get:
             description: Get details of a specific RatingScaleLevelDescriptor creation proposal by ID
             operationId: getCreateRatingScaleLevelDescriptor
@@ -8440,7 +8440,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createratingscalelevels:
+    /{orgID}/createRatingScaleLevels:
         get:
             description: |-
                 List all createRatingScaleLevels proposals. These are proposed changes to create new RatingScaleLevel records that may be automatically approved or require manual approval depending on system configuration.
@@ -8520,7 +8520,7 @@ paths:
             tags:
                 - RatingScaleLevels
                 - Proposals
-    /{orgID}/createratingscalelevels/{id}:
+    /{orgID}/createRatingScaleLevels/{id}:
         get:
             description: Get details of a specific RatingScaleLevel creation proposal by ID
             operationId: getCreateRatingScaleLevel
@@ -8554,7 +8554,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createratingscales:
+    /{orgID}/createRatingScales:
         get:
             description: List all createRatingScales proposals. These are proposed changes to create new RatingScale records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateRatingScale
@@ -8622,7 +8622,7 @@ paths:
             tags:
                 - RatingScales
                 - Proposals
-    /{orgID}/createratingscales/{id}:
+    /{orgID}/createRatingScales/{id}:
         get:
             description: Get details of a specific RatingScale creation proposal by ID
             operationId: getCreateRatingScale
@@ -8656,7 +8656,109 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createskilldefinitions:
+    /{orgID}/createSkillDefinitionTypes:
+        get:
+            description: List all createSkillDefinitionTypes proposals. These are proposed changes to create new SkillDefinitionType records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listCreateSkillDefinitionType
+            parameters:
+                - description: Maximum number of items to return (1-1000)
+                  in: query
+                  name: limit
+                  schema:
+                    default: 10
+                    maximum: 1000
+                    minimum: 1
+                    type: integer
+                - description: Cursor for pagination (base64 encoded)
+                  in: query
+                  name: cursor
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ListCreateSkillDefinitionTypeResponse'
+                    description: Successful response
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List SkillDefinitionType creation proposals
+            tags:
+                - SkillDefinitionTypes
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+        post:
+            description: Create a new proposal to add a SkillDefinitionType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createCreateSkillDefinitionType
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/CreateCreateSkillDefinitionTypeRequest'
+                required: true
+            responses:
+                "201":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/CreateSkillDefinitionType'
+                    description: Created successfully
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Propose creation of SkillDefinitionType
+            tags:
+                - SkillDefinitionTypes
+                - Proposals
+    /{orgID}/createSkillDefinitionTypes/{id}:
+        get:
+            description: Get details of a specific SkillDefinitionType creation proposal by ID
+            operationId: getCreateSkillDefinitionType
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/CreateSkillDefinitionType'
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "404":
+                    $ref: '#/components/responses/NotFound'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Get SkillDefinitionType creation proposal
+            tags:
+                - SkillDefinitionTypes
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+            - description: CreateSkillDefinitionType ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+    /{orgID}/createSkillDefinitions:
         get:
             description: |-
                 List all createSkillDefinitions proposals. These are proposed changes to create new SkillDefinition records that may be automatically approved or require manual approval depending on system configuration.
@@ -8741,7 +8843,7 @@ paths:
             tags:
                 - SkillDefinitions
                 - Proposals
-    /{orgID}/createskilldefinitions/{id}:
+    /{orgID}/createSkillDefinitions/{id}:
         get:
             description: Get details of a specific SkillDefinition creation proposal by ID
             operationId: getCreateSkillDefinition
@@ -8775,109 +8877,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createskilldefinitiontypes:
-        get:
-            description: List all createSkillDefinitionTypes proposals. These are proposed changes to create new SkillDefinitionType records that may be automatically approved or require manual approval depending on system configuration.
-            operationId: listCreateSkillDefinitionType
-            parameters:
-                - description: Maximum number of items to return (1-1000)
-                  in: query
-                  name: limit
-                  schema:
-                    default: 10
-                    maximum: 1000
-                    minimum: 1
-                    type: integer
-                - description: Cursor for pagination (base64 encoded)
-                  in: query
-                  name: cursor
-                  schema:
-                    type: string
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ListCreateSkillDefinitionTypeResponse'
-                    description: Successful response
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: List SkillDefinitionType creation proposals
-            tags:
-                - SkillDefinitionTypes
-                - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-        post:
-            description: Create a new proposal to add a SkillDefinitionType record. The proposal may be automatically approved or require manual approval depending on system configuration.
-            operationId: createCreateSkillDefinitionType
-            requestBody:
-                content:
-                    application/json:
-                        schema:
-                            $ref: '#/components/schemas/CreateCreateSkillDefinitionTypeRequest'
-                required: true
-            responses:
-                "201":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/CreateSkillDefinitionType'
-                    description: Created successfully
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Propose creation of SkillDefinitionType
-            tags:
-                - SkillDefinitionTypes
-                - Proposals
-    /{orgID}/createskilldefinitiontypes/{id}:
-        get:
-            description: Get details of a specific SkillDefinitionType creation proposal by ID
-            operationId: getCreateSkillDefinitionType
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/CreateSkillDefinitionType'
-                    description: Successful response
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "404":
-                    $ref: '#/components/responses/NotFound'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Get SkillDefinitionType creation proposal
-            tags:
-                - SkillDefinitionTypes
-                - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-            - description: CreateSkillDefinitionType ID
-              in: path
-              name: id
-              required: true
-              schema:
-                type: string
-    /{orgID}/createskillplannings:
+    /{orgID}/createSkillPlannings:
         get:
             description: List all createSkillPlannings proposals. These are proposed changes to create new SkillPlanning records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateSkillPlanning
@@ -8945,7 +8945,7 @@ paths:
             tags:
                 - SkillPlannings
                 - Proposals
-    /{orgID}/createskillplannings/{id}:
+    /{orgID}/createSkillPlannings/{id}:
         get:
             description: Get details of a specific SkillPlanning creation proposal by ID
             operationId: getCreateSkillPlanning
@@ -8979,7 +8979,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createskillresults:
+    /{orgID}/createSkillResults:
         get:
             description: |-
                 List all createSkillResults proposals. These are proposed changes to create new SkillResult records that may be automatically approved or require manual approval depending on system configuration.
@@ -9064,7 +9064,7 @@ paths:
             tags:
                 - SkillResults
                 - Proposals
-    /{orgID}/createskillresults/{id}:
+    /{orgID}/createSkillResults/{id}:
         get:
             description: Get details of a specific SkillResult creation proposal by ID
             operationId: getCreateSkillResult
@@ -9098,7 +9098,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/createtypesofproof:
+    /{orgID}/createTypesOfProof:
         get:
             description: |-
                 List all createTypesOfProof proposals. These are proposed changes to create new TypesOfProof records that may be automatically approved or require manual approval depending on system configuration.
@@ -9178,7 +9178,7 @@ paths:
             tags:
                 - TypesOfProof
                 - Proposals
-    /{orgID}/createtypesofproof/{id}:
+    /{orgID}/createTypesOfProof/{id}:
         get:
             description: Get details of a specific TypesOfProof creation proposal by ID
             operationId: getCreateTypesOfProof
@@ -9212,7 +9212,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/customfielddefinitions:
+    /{orgID}/customFieldDefinitions:
         get:
             description: |-
                 List customFieldDefinitions
@@ -9266,7 +9266,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/customfielddefinitions/{id}:
+    /{orgID}/customFieldDefinitions/{id}:
         get:
             description: Get a single customFieldDefinition by ID
             operationId: getCustomFieldDefinition
@@ -9300,7 +9300,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deletecustomfielddefinitions:
+    /{orgID}/deleteCustomFieldDefinitions:
         get:
             description: List all deleteCustomFieldDefinitions proposals. These are proposed changes to delete CustomFieldDefinition records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteCustomFieldDefinition
@@ -9368,7 +9368,7 @@ paths:
             tags:
                 - CustomFieldDefinitions
                 - Proposals
-    /{orgID}/deletecustomfielddefinitions/{id}:
+    /{orgID}/deleteCustomFieldDefinitions/{id}:
         get:
             description: Get details of a specific CustomFieldDefinition deletion proposal by ID
             operationId: getDeleteCustomFieldDefinition
@@ -9402,109 +9402,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteemployees:
-        get:
-            description: List all deleteEmployees proposals. These are proposed changes to delete Employee records that may be automatically approved or require manual approval depending on system configuration.
-            operationId: listDeleteEmployee
-            parameters:
-                - description: Maximum number of items to return (1-1000)
-                  in: query
-                  name: limit
-                  schema:
-                    default: 10
-                    maximum: 1000
-                    minimum: 1
-                    type: integer
-                - description: Cursor for pagination (base64 encoded)
-                  in: query
-                  name: cursor
-                  schema:
-                    type: string
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ListDeleteEmployeeResponse'
-                    description: Successful response
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: List Employee deletion proposals
-            tags:
-                - Employees
-                - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-        post:
-            description: Create a new proposal to add a Employee record. The proposal may be automatically approved or require manual approval depending on system configuration.
-            operationId: createDeleteEmployee
-            requestBody:
-                content:
-                    application/json:
-                        schema:
-                            $ref: '#/components/schemas/CreateDeleteEmployeeRequest'
-                required: true
-            responses:
-                "201":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/DeleteEmployee'
-                    description: Created successfully
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Propose creation of Employee
-            tags:
-                - Employees
-                - Proposals
-    /{orgID}/deleteemployees/{id}:
-        get:
-            description: Get details of a specific Employee deletion proposal by ID
-            operationId: getDeleteEmployee
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/DeleteEmployee'
-                    description: Successful response
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "404":
-                    $ref: '#/components/responses/NotFound'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Get Employee deletion proposal
-            tags:
-                - Employees
-                - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-            - description: DeleteEmployee ID
-              in: path
-              name: id
-              required: true
-              schema:
-                type: string
-    /{orgID}/deleteemployeeunavailabilities:
+    /{orgID}/deleteEmployeeUnavailabilities:
         get:
             description: List all deleteEmployeeUnavailabilities proposals. These are proposed changes to delete EmployeeUnavailability records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmployeeUnavailability
@@ -9572,7 +9470,7 @@ paths:
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
-    /{orgID}/deleteemployeeunavailabilities/{id}:
+    /{orgID}/deleteEmployeeUnavailabilities/{id}:
         get:
             description: Get details of a specific EmployeeUnavailability deletion proposal by ID
             operationId: getDeleteEmployeeUnavailability
@@ -9606,10 +9504,10 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteemploymentcontracts:
+    /{orgID}/deleteEmployees:
         get:
-            description: List all deleteEmploymentContracts proposals. These are proposed changes to delete EmploymentContract records that may be automatically approved or require manual approval depending on system configuration.
-            operationId: listDeleteEmploymentContract
+            description: List all deleteEmployees proposals. These are proposed changes to delete Employee records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listDeleteEmployee
             parameters:
                 - description: Maximum number of items to return (1-1000)
                   in: query
@@ -9629,7 +9527,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ListDeleteEmploymentContractResponse'
+                                $ref: '#/components/schemas/ListDeleteEmployeeResponse'
                     description: Successful response
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -9637,9 +9535,9 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List EmploymentContract deletion proposals
+            summary: List Employee deletion proposals
             tags:
-                - EmploymentContracts
+                - Employees
                 - Proposals
         parameters:
             - description: Organization identifier
@@ -9649,20 +9547,20 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentContract record. The proposal may be automatically approved or require manual approval depending on system configuration.
-            operationId: createDeleteEmploymentContract
+            description: Create a new proposal to add a Employee record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createDeleteEmployee
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteEmploymentContractRequest'
+                            $ref: '#/components/schemas/CreateDeleteEmployeeRequest'
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteEmploymentContract'
+                                $ref: '#/components/schemas/DeleteEmployee'
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -9670,20 +9568,20 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentContract
+            summary: Propose creation of Employee
             tags:
-                - EmploymentContracts
+                - Employees
                 - Proposals
-    /{orgID}/deleteemploymentcontracts/{id}:
+    /{orgID}/deleteEmployees/{id}:
         get:
-            description: Get details of a specific EmploymentContract deletion proposal by ID
-            operationId: getDeleteEmploymentContract
+            description: Get details of a specific Employee deletion proposal by ID
+            operationId: getDeleteEmployee
             responses:
                 "200":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteEmploymentContract'
+                                $ref: '#/components/schemas/DeleteEmployee'
                     description: Successful response
                 "401":
                     $ref: '#/components/responses/Unauthorized'
@@ -9691,9 +9589,9 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmploymentContract deletion proposal
+            summary: Get Employee deletion proposal
             tags:
-                - EmploymentContracts
+                - Employees
                 - Proposals
         parameters:
             - description: Organization identifier
@@ -9702,13 +9600,13 @@ paths:
               required: true
               schema:
                 type: string
-            - description: DeleteEmploymentContract ID
+            - description: DeleteEmployee ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgID}/deleteemploymentcontracttypes:
+    /{orgID}/deleteEmploymentContractTypes:
         get:
             description: List all deleteEmploymentContractTypes proposals. These are proposed changes to delete EmploymentContractType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmploymentContractType
@@ -9776,7 +9674,7 @@ paths:
             tags:
                 - EmploymentContractTypes
                 - Proposals
-    /{orgID}/deleteemploymentcontracttypes/{id}:
+    /{orgID}/deleteEmploymentContractTypes/{id}:
         get:
             description: Get details of a specific EmploymentContractType deletion proposal by ID
             operationId: getDeleteEmploymentContractType
@@ -9810,10 +9708,10 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteemploymentrelations:
+    /{orgID}/deleteEmploymentContracts:
         get:
-            description: List all deleteEmploymentRelations proposals. These are proposed changes to delete EmploymentRelation records that may be automatically approved or require manual approval depending on system configuration.
-            operationId: listDeleteEmploymentRelation
+            description: List all deleteEmploymentContracts proposals. These are proposed changes to delete EmploymentContract records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listDeleteEmploymentContract
             parameters:
                 - description: Maximum number of items to return (1-1000)
                   in: query
@@ -9833,7 +9731,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ListDeleteEmploymentRelationResponse'
+                                $ref: '#/components/schemas/ListDeleteEmploymentContractResponse'
                     description: Successful response
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -9841,9 +9739,9 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List EmploymentRelation deletion proposals
+            summary: List EmploymentContract deletion proposals
             tags:
-                - EmploymentRelations
+                - EmploymentContracts
                 - Proposals
         parameters:
             - description: Organization identifier
@@ -9853,20 +9751,20 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentRelation record. The proposal may be automatically approved or require manual approval depending on system configuration.
-            operationId: createDeleteEmploymentRelation
+            description: Create a new proposal to add a EmploymentContract record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createDeleteEmploymentContract
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteEmploymentRelationRequest'
+                            $ref: '#/components/schemas/CreateDeleteEmploymentContractRequest'
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteEmploymentRelation'
+                                $ref: '#/components/schemas/DeleteEmploymentContract'
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -9874,20 +9772,20 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentRelation
+            summary: Propose creation of EmploymentContract
             tags:
-                - EmploymentRelations
+                - EmploymentContracts
                 - Proposals
-    /{orgID}/deleteemploymentrelations/{id}:
+    /{orgID}/deleteEmploymentContracts/{id}:
         get:
-            description: Get details of a specific EmploymentRelation deletion proposal by ID
-            operationId: getDeleteEmploymentRelation
+            description: Get details of a specific EmploymentContract deletion proposal by ID
+            operationId: getDeleteEmploymentContract
             responses:
                 "200":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteEmploymentRelation'
+                                $ref: '#/components/schemas/DeleteEmploymentContract'
                     description: Successful response
                 "401":
                     $ref: '#/components/responses/Unauthorized'
@@ -9895,9 +9793,9 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmploymentRelation deletion proposal
+            summary: Get EmploymentContract deletion proposal
             tags:
-                - EmploymentRelations
+                - EmploymentContracts
                 - Proposals
         parameters:
             - description: Organization identifier
@@ -9906,13 +9804,13 @@ paths:
               required: true
               schema:
                 type: string
-            - description: DeleteEmploymentRelation ID
+            - description: DeleteEmploymentContract ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgID}/deleteemploymentrelationtypes:
+    /{orgID}/deleteEmploymentRelationTypes:
         get:
             description: List all deleteEmploymentRelationTypes proposals. These are proposed changes to delete EmploymentRelationType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmploymentRelationType
@@ -9980,7 +9878,7 @@ paths:
             tags:
                 - EmploymentRelationTypes
                 - Proposals
-    /{orgID}/deleteemploymentrelationtypes/{id}:
+    /{orgID}/deleteEmploymentRelationTypes/{id}:
         get:
             description: Get details of a specific EmploymentRelationType deletion proposal by ID
             operationId: getDeleteEmploymentRelationType
@@ -10014,10 +9912,10 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deletegroupings:
+    /{orgID}/deleteEmploymentRelations:
         get:
-            description: List all deleteGroupings proposals. These are proposed changes to delete Grouping records that may be automatically approved or require manual approval depending on system configuration.
-            operationId: listDeleteGrouping
+            description: List all deleteEmploymentRelations proposals. These are proposed changes to delete EmploymentRelation records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listDeleteEmploymentRelation
             parameters:
                 - description: Maximum number of items to return (1-1000)
                   in: query
@@ -10037,7 +9935,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ListDeleteGroupingResponse'
+                                $ref: '#/components/schemas/ListDeleteEmploymentRelationResponse'
                     description: Successful response
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -10045,9 +9943,9 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List Grouping deletion proposals
+            summary: List EmploymentRelation deletion proposals
             tags:
-                - Groupings
+                - EmploymentRelations
                 - Proposals
         parameters:
             - description: Organization identifier
@@ -10057,20 +9955,20 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a Grouping record. The proposal may be automatically approved or require manual approval depending on system configuration.
-            operationId: createDeleteGrouping
+            description: Create a new proposal to add a EmploymentRelation record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createDeleteEmploymentRelation
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteGroupingRequest'
+                            $ref: '#/components/schemas/CreateDeleteEmploymentRelationRequest'
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteGrouping'
+                                $ref: '#/components/schemas/DeleteEmploymentRelation'
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -10078,20 +9976,20 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of Grouping
+            summary: Propose creation of EmploymentRelation
             tags:
-                - Groupings
+                - EmploymentRelations
                 - Proposals
-    /{orgID}/deletegroupings/{id}:
+    /{orgID}/deleteEmploymentRelations/{id}:
         get:
-            description: Get details of a specific Grouping deletion proposal by ID
-            operationId: getDeleteGrouping
+            description: Get details of a specific EmploymentRelation deletion proposal by ID
+            operationId: getDeleteEmploymentRelation
             responses:
                 "200":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteGrouping'
+                                $ref: '#/components/schemas/DeleteEmploymentRelation'
                     description: Successful response
                 "401":
                     $ref: '#/components/responses/Unauthorized'
@@ -10099,9 +9997,9 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get Grouping deletion proposal
+            summary: Get EmploymentRelation deletion proposal
             tags:
-                - Groupings
+                - EmploymentRelations
                 - Proposals
         parameters:
             - description: Organization identifier
@@ -10110,13 +10008,13 @@ paths:
               required: true
               schema:
                 type: string
-            - description: DeleteGrouping ID
+            - description: DeleteEmploymentRelation ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgID}/deletegroupingtypes:
+    /{orgID}/deleteGroupingTypes:
         get:
             description: List all deleteGroupingTypes proposals. These are proposed changes to delete GroupingType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteGroupingType
@@ -10184,7 +10082,7 @@ paths:
             tags:
                 - GroupingTypes
                 - Proposals
-    /{orgID}/deletegroupingtypes/{id}:
+    /{orgID}/deleteGroupingTypes/{id}:
         get:
             description: Get details of a specific GroupingType deletion proposal by ID
             operationId: getDeleteGroupingType
@@ -10218,7 +10116,109 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deletemonitoringtraces:
+    /{orgID}/deleteGroupings:
+        get:
+            description: List all deleteGroupings proposals. These are proposed changes to delete Grouping records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listDeleteGrouping
+            parameters:
+                - description: Maximum number of items to return (1-1000)
+                  in: query
+                  name: limit
+                  schema:
+                    default: 10
+                    maximum: 1000
+                    minimum: 1
+                    type: integer
+                - description: Cursor for pagination (base64 encoded)
+                  in: query
+                  name: cursor
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ListDeleteGroupingResponse'
+                    description: Successful response
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List Grouping deletion proposals
+            tags:
+                - Groupings
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+        post:
+            description: Create a new proposal to add a Grouping record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createDeleteGrouping
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/CreateDeleteGroupingRequest'
+                required: true
+            responses:
+                "201":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/DeleteGrouping'
+                    description: Created successfully
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Propose creation of Grouping
+            tags:
+                - Groupings
+                - Proposals
+    /{orgID}/deleteGroupings/{id}:
+        get:
+            description: Get details of a specific Grouping deletion proposal by ID
+            operationId: getDeleteGrouping
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/DeleteGrouping'
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "404":
+                    $ref: '#/components/responses/NotFound'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Get Grouping deletion proposal
+            tags:
+                - Groupings
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+            - description: DeleteGrouping ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+    /{orgID}/deleteMonitoringTraces:
         get:
             description: List all deleteMonitoringTraces proposals. These are proposed changes to delete MonitoringTrace records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteMonitoringTrace
@@ -10286,7 +10286,7 @@ paths:
             tags:
                 - MonitoringTraces
                 - Proposals
-    /{orgID}/deletemonitoringtraces/{id}:
+    /{orgID}/deleteMonitoringTraces/{id}:
         get:
             description: Get details of a specific MonitoringTrace deletion proposal by ID
             operationId: getDeleteMonitoringTrace
@@ -10320,7 +10320,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deletepositionassignments:
+    /{orgID}/deletePositionAssignments:
         get:
             description: List all deletePositionAssignments proposals. These are proposed changes to delete PositionAssignment records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeletePositionAssignment
@@ -10388,7 +10388,7 @@ paths:
             tags:
                 - PositionAssignments
                 - Proposals
-    /{orgID}/deletepositionassignments/{id}:
+    /{orgID}/deletePositionAssignments/{id}:
         get:
             description: Get details of a specific PositionAssignment deletion proposal by ID
             operationId: getDeletePositionAssignment
@@ -10422,7 +10422,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteratingscaleleveldescriptors:
+    /{orgID}/deleteRatingScaleLevelDescriptors:
         get:
             description: List all deleteRatingScaleLevelDescriptors proposals. These are proposed changes to delete RatingScaleLevelDescriptor records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteRatingScaleLevelDescriptor
@@ -10490,7 +10490,7 @@ paths:
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
-    /{orgID}/deleteratingscaleleveldescriptors/{id}:
+    /{orgID}/deleteRatingScaleLevelDescriptors/{id}:
         get:
             description: Get details of a specific RatingScaleLevelDescriptor deletion proposal by ID
             operationId: getDeleteRatingScaleLevelDescriptor
@@ -10524,7 +10524,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteratingscalelevels:
+    /{orgID}/deleteRatingScaleLevels:
         get:
             description: List all deleteRatingScaleLevels proposals. These are proposed changes to delete RatingScaleLevel records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteRatingScaleLevel
@@ -10592,7 +10592,7 @@ paths:
             tags:
                 - RatingScaleLevels
                 - Proposals
-    /{orgID}/deleteratingscalelevels/{id}:
+    /{orgID}/deleteRatingScaleLevels/{id}:
         get:
             description: Get details of a specific RatingScaleLevel deletion proposal by ID
             operationId: getDeleteRatingScaleLevel
@@ -10626,7 +10626,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteratingscales:
+    /{orgID}/deleteRatingScales:
         get:
             description: List all deleteRatingScales proposals. These are proposed changes to delete RatingScale records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteRatingScale
@@ -10694,7 +10694,7 @@ paths:
             tags:
                 - RatingScales
                 - Proposals
-    /{orgID}/deleteratingscales/{id}:
+    /{orgID}/deleteRatingScales/{id}:
         get:
             description: Get details of a specific RatingScale deletion proposal by ID
             operationId: getDeleteRatingScale
@@ -10728,109 +10728,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteskilldefinitions:
-        get:
-            description: List all deleteSkillDefinitions proposals. These are proposed changes to delete SkillDefinition records that may be automatically approved or require manual approval depending on system configuration.
-            operationId: listDeleteSkillDefinition
-            parameters:
-                - description: Maximum number of items to return (1-1000)
-                  in: query
-                  name: limit
-                  schema:
-                    default: 10
-                    maximum: 1000
-                    minimum: 1
-                    type: integer
-                - description: Cursor for pagination (base64 encoded)
-                  in: query
-                  name: cursor
-                  schema:
-                    type: string
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ListDeleteSkillDefinitionResponse'
-                    description: Successful response
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: List SkillDefinition deletion proposals
-            tags:
-                - SkillDefinitions
-                - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-        post:
-            description: Create a new proposal to add a SkillDefinition record. The proposal may be automatically approved or require manual approval depending on system configuration.
-            operationId: createDeleteSkillDefinition
-            requestBody:
-                content:
-                    application/json:
-                        schema:
-                            $ref: '#/components/schemas/CreateDeleteSkillDefinitionRequest'
-                required: true
-            responses:
-                "201":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/DeleteSkillDefinition'
-                    description: Created successfully
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Propose creation of SkillDefinition
-            tags:
-                - SkillDefinitions
-                - Proposals
-    /{orgID}/deleteskilldefinitions/{id}:
-        get:
-            description: Get details of a specific SkillDefinition deletion proposal by ID
-            operationId: getDeleteSkillDefinition
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/DeleteSkillDefinition'
-                    description: Successful response
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "404":
-                    $ref: '#/components/responses/NotFound'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Get SkillDefinition deletion proposal
-            tags:
-                - SkillDefinitions
-                - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-            - description: DeleteSkillDefinition ID
-              in: path
-              name: id
-              required: true
-              schema:
-                type: string
-    /{orgID}/deleteskilldefinitiontypes:
+    /{orgID}/deleteSkillDefinitionTypes:
         get:
             description: List all deleteSkillDefinitionTypes proposals. These are proposed changes to delete SkillDefinitionType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteSkillDefinitionType
@@ -10898,7 +10796,7 @@ paths:
             tags:
                 - SkillDefinitionTypes
                 - Proposals
-    /{orgID}/deleteskilldefinitiontypes/{id}:
+    /{orgID}/deleteSkillDefinitionTypes/{id}:
         get:
             description: Get details of a specific SkillDefinitionType deletion proposal by ID
             operationId: getDeleteSkillDefinitionType
@@ -10932,7 +10830,109 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteskillplannings:
+    /{orgID}/deleteSkillDefinitions:
+        get:
+            description: List all deleteSkillDefinitions proposals. These are proposed changes to delete SkillDefinition records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listDeleteSkillDefinition
+            parameters:
+                - description: Maximum number of items to return (1-1000)
+                  in: query
+                  name: limit
+                  schema:
+                    default: 10
+                    maximum: 1000
+                    minimum: 1
+                    type: integer
+                - description: Cursor for pagination (base64 encoded)
+                  in: query
+                  name: cursor
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ListDeleteSkillDefinitionResponse'
+                    description: Successful response
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List SkillDefinition deletion proposals
+            tags:
+                - SkillDefinitions
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+        post:
+            description: Create a new proposal to add a SkillDefinition record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createDeleteSkillDefinition
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/CreateDeleteSkillDefinitionRequest'
+                required: true
+            responses:
+                "201":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/DeleteSkillDefinition'
+                    description: Created successfully
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Propose creation of SkillDefinition
+            tags:
+                - SkillDefinitions
+                - Proposals
+    /{orgID}/deleteSkillDefinitions/{id}:
+        get:
+            description: Get details of a specific SkillDefinition deletion proposal by ID
+            operationId: getDeleteSkillDefinition
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/DeleteSkillDefinition'
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "404":
+                    $ref: '#/components/responses/NotFound'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Get SkillDefinition deletion proposal
+            tags:
+                - SkillDefinitions
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+            - description: DeleteSkillDefinition ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+    /{orgID}/deleteSkillPlannings:
         get:
             description: List all deleteSkillPlannings proposals. These are proposed changes to delete SkillPlanning records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteSkillPlanning
@@ -11000,7 +11000,7 @@ paths:
             tags:
                 - SkillPlannings
                 - Proposals
-    /{orgID}/deleteskillplannings/{id}:
+    /{orgID}/deleteSkillPlannings/{id}:
         get:
             description: Get details of a specific SkillPlanning deletion proposal by ID
             operationId: getDeleteSkillPlanning
@@ -11034,7 +11034,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deleteskillresults:
+    /{orgID}/deleteSkillResults:
         get:
             description: List all deleteSkillResults proposals. These are proposed changes to delete SkillResult records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteSkillResult
@@ -11102,7 +11102,7 @@ paths:
             tags:
                 - SkillResults
                 - Proposals
-    /{orgID}/deleteskillresults/{id}:
+    /{orgID}/deleteSkillResults/{id}:
         get:
             description: Get details of a specific SkillResult deletion proposal by ID
             operationId: getDeleteSkillResult
@@ -11136,7 +11136,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/deletetypesofproof:
+    /{orgID}/deleteTypesOfProof:
         get:
             description: List all deleteTypesOfProof proposals. These are proposed changes to delete TypesOfProof records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteTypesOfProof
@@ -11204,7 +11204,7 @@ paths:
             tags:
                 - TypesOfProof
                 - Proposals
-    /{orgID}/deletetypesofproof/{id}:
+    /{orgID}/deleteTypesOfProof/{id}:
         get:
             description: Get details of a specific TypesOfProof deletion proposal by ID
             operationId: getDeleteTypesOfProof
@@ -11233,6 +11233,94 @@ paths:
               schema:
                 type: string
             - description: DeleteTypesOfProof ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+    /{orgID}/employeeUnavailabilities:
+        get:
+            description: |-
+                List employeeUnavailabilities
+
+                **Filter Syntax:**
+                - Filters use exact match only
+                - Multiple filters are combined with AND logic
+                - Filterable fields: employeeID
+                - Example: `?employee_id=abc-123&status=active`
+            operationId: listEmployeeUnavailability
+            parameters:
+                - description: Filter by employeeID (exact match)
+                  in: query
+                  name: employeeID
+                  schema:
+                    type: string
+                - description: Maximum number of items to return (1-1000)
+                  in: query
+                  name: limit
+                  schema:
+                    default: 10
+                    maximum: 1000
+                    minimum: 1
+                    type: integer
+                - description: Cursor for pagination (base64 encoded)
+                  in: query
+                  name: cursor
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ListEmployeeUnavailabilityResponse'
+                    description: Successful response
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List employeeUnavailabilities
+            tags:
+                - EmployeeUnavailabilities
+                - Querying
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+    /{orgID}/employeeUnavailabilities/{id}:
+        get:
+            description: Get a single employeeUnavailability by ID
+            operationId: getEmployeeUnavailability
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/EmployeeUnavailability'
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "404":
+                    $ref: '#/components/responses/NotFound'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Get EmployeeUnavailability
+            tags:
+                - EmployeeUnavailabilities
+                - Querying
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+            - description: EmployeeUnavailability ID
               in: path
               name: id
               required: true
@@ -11314,23 +11402,11 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/employeeunavailabilities:
+    /{orgID}/employmentContractTypes:
         get:
-            description: |-
-                List employeeUnavailabilities
-
-                **Filter Syntax:**
-                - Filters use exact match only
-                - Multiple filters are combined with AND logic
-                - Filterable fields: employeeID
-                - Example: `?employee_id=abc-123&status=active`
-            operationId: listEmployeeUnavailability
+            description: List employmentContractTypes
+            operationId: listEmploymentContractType
             parameters:
-                - description: Filter by employeeID (exact match)
-                  in: query
-                  name: employeeID
-                  schema:
-                    type: string
                 - description: Maximum number of items to return (1-1000)
                   in: query
                   name: limit
@@ -11349,7 +11425,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ListEmployeeUnavailabilityResponse'
+                                $ref: '#/components/schemas/ListEmploymentContractTypeResponse'
                     description: Successful response
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -11357,9 +11433,9 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List employeeUnavailabilities
+            summary: List employmentContractTypes
             tags:
-                - EmployeeUnavailabilities
+                - EmploymentContractTypes
                 - Querying
         parameters:
             - description: Organization identifier
@@ -11368,16 +11444,16 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/employeeunavailabilities/{id}:
+    /{orgID}/employmentContractTypes/{id}:
         get:
-            description: Get a single employeeUnavailability by ID
-            operationId: getEmployeeUnavailability
+            description: Get a single employmentContractType by ID
+            operationId: getEmploymentContractType
             responses:
                 "200":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/EmployeeUnavailability'
+                                $ref: '#/components/schemas/EmploymentContractType'
                     description: Successful response
                 "401":
                     $ref: '#/components/responses/Unauthorized'
@@ -11385,9 +11461,9 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmployeeUnavailability
+            summary: Get EmploymentContractType
             tags:
-                - EmployeeUnavailabilities
+                - EmploymentContractTypes
                 - Querying
         parameters:
             - description: Organization identifier
@@ -11396,13 +11472,13 @@ paths:
               required: true
               schema:
                 type: string
-            - description: EmployeeUnavailability ID
+            - description: EmploymentContractType ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgID}/employmentcontracts:
+    /{orgID}/employmentContracts:
         get:
             description: |-
                 List employmentContracts
@@ -11461,7 +11537,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/employmentcontracts/{id}:
+    /{orgID}/employmentContracts/{id}:
         get:
             description: Get a single employmentContract by ID
             operationId: getEmploymentContract
@@ -11495,10 +11571,10 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/employmentcontracttypes:
+    /{orgID}/employmentRelationTypes:
         get:
-            description: List employmentContractTypes
-            operationId: listEmploymentContractType
+            description: List employmentRelationTypes
+            operationId: listEmploymentRelationType
             parameters:
                 - description: Maximum number of items to return (1-1000)
                   in: query
@@ -11518,7 +11594,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ListEmploymentContractTypeResponse'
+                                $ref: '#/components/schemas/ListEmploymentRelationTypeResponse'
                     description: Successful response
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -11526,9 +11602,9 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List employmentContractTypes
+            summary: List employmentRelationTypes
             tags:
-                - EmploymentContractTypes
+                - EmploymentRelationTypes
                 - Querying
         parameters:
             - description: Organization identifier
@@ -11537,16 +11613,16 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/employmentcontracttypes/{id}:
+    /{orgID}/employmentRelationTypes/{id}:
         get:
-            description: Get a single employmentContractType by ID
-            operationId: getEmploymentContractType
+            description: Get a single employmentRelationType by ID
+            operationId: getEmploymentRelationType
             responses:
                 "200":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/EmploymentContractType'
+                                $ref: '#/components/schemas/EmploymentRelationType'
                     description: Successful response
                 "401":
                     $ref: '#/components/responses/Unauthorized'
@@ -11554,9 +11630,9 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmploymentContractType
+            summary: Get EmploymentRelationType
             tags:
-                - EmploymentContractTypes
+                - EmploymentRelationTypes
                 - Querying
         parameters:
             - description: Organization identifier
@@ -11565,13 +11641,13 @@ paths:
               required: true
               schema:
                 type: string
-            - description: EmploymentContractType ID
+            - description: EmploymentRelationType ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgID}/employmentrelations:
+    /{orgID}/employmentRelations:
         get:
             description: |-
                 List employmentRelations
@@ -11635,7 +11711,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/employmentrelations/{id}:
+    /{orgID}/employmentRelations/{id}:
         get:
             description: Get a single employmentRelation by ID
             operationId: getEmploymentRelation
@@ -11669,83 +11745,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/employmentrelationtypes:
-        get:
-            description: List employmentRelationTypes
-            operationId: listEmploymentRelationType
-            parameters:
-                - description: Maximum number of items to return (1-1000)
-                  in: query
-                  name: limit
-                  schema:
-                    default: 10
-                    maximum: 1000
-                    minimum: 1
-                    type: integer
-                - description: Cursor for pagination (base64 encoded)
-                  in: query
-                  name: cursor
-                  schema:
-                    type: string
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ListEmploymentRelationTypeResponse'
-                    description: Successful response
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: List employmentRelationTypes
-            tags:
-                - EmploymentRelationTypes
-                - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-    /{orgID}/employmentrelationtypes/{id}:
-        get:
-            description: Get a single employmentRelationType by ID
-            operationId: getEmploymentRelationType
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/EmploymentRelationType'
-                    description: Successful response
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "404":
-                    $ref: '#/components/responses/NotFound'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Get EmploymentRelationType
-            tags:
-                - EmploymentRelationTypes
-                - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-            - description: EmploymentRelationType ID
-              in: path
-              name: id
-              required: true
-              schema:
-                type: string
-    /{orgID}/entitydefinitions:
+    /{orgID}/entityDefinitions:
         get:
             description: List entityDefinitions
             operationId: listEntityDefinition
@@ -11787,7 +11787,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/entitydefinitions/{id}:
+    /{orgID}/entityDefinitions/{id}:
         get:
             description: Get a single entityDefinition by ID
             operationId: getEntityDefinition
@@ -11816,6 +11816,82 @@ paths:
               schema:
                 type: string
             - description: EntityDefinition ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+    /{orgID}/groupingTypes:
+        get:
+            description: List groupingTypes
+            operationId: listGroupingType
+            parameters:
+                - description: Maximum number of items to return (1-1000)
+                  in: query
+                  name: limit
+                  schema:
+                    default: 10
+                    maximum: 1000
+                    minimum: 1
+                    type: integer
+                - description: Cursor for pagination (base64 encoded)
+                  in: query
+                  name: cursor
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ListGroupingTypeResponse'
+                    description: Successful response
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List groupingTypes
+            tags:
+                - GroupingTypes
+                - Querying
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+    /{orgID}/groupingTypes/{id}:
+        get:
+            description: Get a single groupingType by ID
+            operationId: getGroupingType
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/GroupingType'
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "404":
+                    $ref: '#/components/responses/NotFound'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Get GroupingType
+            tags:
+                - GroupingTypes
+                - Querying
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+            - description: GroupingType ID
               in: path
               name: id
               required: true
@@ -11914,82 +11990,6 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/groupingtypes:
-        get:
-            description: List groupingTypes
-            operationId: listGroupingType
-            parameters:
-                - description: Maximum number of items to return (1-1000)
-                  in: query
-                  name: limit
-                  schema:
-                    default: 10
-                    maximum: 1000
-                    minimum: 1
-                    type: integer
-                - description: Cursor for pagination (base64 encoded)
-                  in: query
-                  name: cursor
-                  schema:
-                    type: string
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ListGroupingTypeResponse'
-                    description: Successful response
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: List groupingTypes
-            tags:
-                - GroupingTypes
-                - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-    /{orgID}/groupingtypes/{id}:
-        get:
-            description: Get a single groupingType by ID
-            operationId: getGroupingType
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/GroupingType'
-                    description: Successful response
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "404":
-                    $ref: '#/components/responses/NotFound'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Get GroupingType
-            tags:
-                - GroupingTypes
-                - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-            - description: GroupingType ID
-              in: path
-              name: id
-              required: true
-              schema:
-                type: string
     /{orgID}/meta:
         get:
             description: Returns metadata about available API resources and their operations
@@ -12047,7 +12047,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/monitoringtraces:
+    /{orgID}/monitoringTraces:
         get:
             description: List monitoringTraces
             operationId: listMonitoringTrace
@@ -12089,7 +12089,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/monitoringtraces/{id}:
+    /{orgID}/monitoringTraces/{id}:
         get:
             description: Get a single monitoringTrace by ID
             operationId: getMonitoringTrace
@@ -12123,7 +12123,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/positionassignments:
+    /{orgID}/positionAssignments:
         get:
             description: |-
                 List positionAssignments
@@ -12177,7 +12177,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/positionassignments/{id}:
+    /{orgID}/positionAssignments/{id}:
         get:
             description: Get a single positionAssignment by ID
             operationId: getPositionAssignment
@@ -12211,7 +12211,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/ratingscaleleveldescriptors:
+    /{orgID}/ratingScaleLevelDescriptors:
         get:
             description: |-
                 List ratingScaleLevelDescriptors
@@ -12270,7 +12270,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/ratingscaleleveldescriptors/{id}:
+    /{orgID}/ratingScaleLevelDescriptors/{id}:
         get:
             description: Get a single ratingScaleLevelDescriptor by ID
             operationId: getRatingScaleLevelDescriptor
@@ -12304,7 +12304,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/ratingscalelevels:
+    /{orgID}/ratingScaleLevels:
         get:
             description: |-
                 List ratingScaleLevels
@@ -12358,7 +12358,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/ratingscalelevels/{id}:
+    /{orgID}/ratingScaleLevels/{id}:
         get:
             description: Get a single ratingScaleLevel by ID
             operationId: getRatingScaleLevel
@@ -12392,7 +12392,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/ratingscales:
+    /{orgID}/ratingScales:
         get:
             description: List ratingScales
             operationId: listRatingScale
@@ -12434,7 +12434,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/ratingscales/{id}:
+    /{orgID}/ratingScales/{id}:
         get:
             description: Get a single ratingScale by ID
             operationId: getRatingScale
@@ -12544,7 +12544,83 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/skilldefinitions:
+    /{orgID}/skillDefinitionTypes:
+        get:
+            description: List skillDefinitionTypes
+            operationId: listSkillDefinitionType
+            parameters:
+                - description: Maximum number of items to return (1-1000)
+                  in: query
+                  name: limit
+                  schema:
+                    default: 10
+                    maximum: 1000
+                    minimum: 1
+                    type: integer
+                - description: Cursor for pagination (base64 encoded)
+                  in: query
+                  name: cursor
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ListSkillDefinitionTypeResponse'
+                    description: Successful response
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List skillDefinitionTypes
+            tags:
+                - SkillDefinitionTypes
+                - Querying
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+    /{orgID}/skillDefinitionTypes/{id}:
+        get:
+            description: Get a single skillDefinitionType by ID
+            operationId: getSkillDefinitionType
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/SkillDefinitionType'
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "404":
+                    $ref: '#/components/responses/NotFound'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Get SkillDefinitionType
+            tags:
+                - SkillDefinitionTypes
+                - Querying
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+            - description: SkillDefinitionType ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+    /{orgID}/skillDefinitions:
         get:
             description: |-
                 List skillDefinitions
@@ -12603,7 +12679,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/skilldefinitions/{id}:
+    /{orgID}/skillDefinitions/{id}:
         get:
             description: Get a single skillDefinition by ID
             operationId: getSkillDefinition
@@ -12637,83 +12713,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/skilldefinitiontypes:
-        get:
-            description: List skillDefinitionTypes
-            operationId: listSkillDefinitionType
-            parameters:
-                - description: Maximum number of items to return (1-1000)
-                  in: query
-                  name: limit
-                  schema:
-                    default: 10
-                    maximum: 1000
-                    minimum: 1
-                    type: integer
-                - description: Cursor for pagination (base64 encoded)
-                  in: query
-                  name: cursor
-                  schema:
-                    type: string
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ListSkillDefinitionTypeResponse'
-                    description: Successful response
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: List skillDefinitionTypes
-            tags:
-                - SkillDefinitionTypes
-                - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-    /{orgID}/skilldefinitiontypes/{id}:
-        get:
-            description: Get a single skillDefinitionType by ID
-            operationId: getSkillDefinitionType
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/SkillDefinitionType'
-                    description: Successful response
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "404":
-                    $ref: '#/components/responses/NotFound'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Get SkillDefinitionType
-            tags:
-                - SkillDefinitionTypes
-                - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-            - description: SkillDefinitionType ID
-              in: path
-              name: id
-              required: true
-              schema:
-                type: string
-    /{orgID}/skillplannings:
+    /{orgID}/skillPlannings:
         get:
             description: List skillPlannings
             operationId: listSkillPlanning
@@ -12755,7 +12755,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/skillplannings/{id}:
+    /{orgID}/skillPlannings/{id}:
         get:
             description: Get a single skillPlanning by ID
             operationId: getSkillPlanning
@@ -12789,7 +12789,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/skillresults:
+    /{orgID}/skillResults:
         get:
             description: |-
                 List skillResults
@@ -12848,7 +12848,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/skillresults/{id}:
+    /{orgID}/skillResults/{id}:
         get:
             description: Get a single skillResult by ID
             operationId: getSkillResult
@@ -12882,7 +12882,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/typesofproof:
+    /{orgID}/typesOfProof:
         get:
             description: |-
                 List typesOfProof
@@ -12936,7 +12936,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/typesofproof/{id}:
+    /{orgID}/typesOfProof/{id}:
         get:
             description: Get a single typesOfProof by ID
             operationId: getTypesOfProof
@@ -12970,7 +12970,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updatecustomfielddefinitions:
+    /{orgID}/updateCustomFieldDefinitions:
         get:
             description: |-
                 List all updateCustomFieldDefinitions proposals. These are proposed changes to update existing CustomFieldDefinition records that may be automatically approved or require manual approval depending on system configuration.
@@ -13050,7 +13050,7 @@ paths:
             tags:
                 - CustomFieldDefinitions
                 - Proposals
-    /{orgID}/updatecustomfielddefinitions/{id}:
+    /{orgID}/updateCustomFieldDefinitions/{id}:
         get:
             description: Get details of a specific CustomFieldDefinition update proposal by ID
             operationId: getUpdateCustomFieldDefinition
@@ -13084,109 +13084,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateemployees:
-        get:
-            description: List all updateEmployees proposals. These are proposed changes to update existing Employee records that may be automatically approved or require manual approval depending on system configuration.
-            operationId: listUpdateEmployee
-            parameters:
-                - description: Maximum number of items to return (1-1000)
-                  in: query
-                  name: limit
-                  schema:
-                    default: 10
-                    maximum: 1000
-                    minimum: 1
-                    type: integer
-                - description: Cursor for pagination (base64 encoded)
-                  in: query
-                  name: cursor
-                  schema:
-                    type: string
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ListUpdateEmployeeResponse'
-                    description: Successful response
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: List Employee update proposals
-            tags:
-                - Employees
-                - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-        post:
-            description: Create a new proposal to add a Employee record. The proposal may be automatically approved or require manual approval depending on system configuration.
-            operationId: createUpdateEmployee
-            requestBody:
-                content:
-                    application/json:
-                        schema:
-                            $ref: '#/components/schemas/CreateUpdateEmployeeRequest'
-                required: true
-            responses:
-                "201":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/UpdateEmployee'
-                    description: Created successfully
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Propose creation of Employee
-            tags:
-                - Employees
-                - Proposals
-    /{orgID}/updateemployees/{id}:
-        get:
-            description: Get details of a specific Employee update proposal by ID
-            operationId: getUpdateEmployee
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/UpdateEmployee'
-                    description: Successful response
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "404":
-                    $ref: '#/components/responses/NotFound'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Get Employee update proposal
-            tags:
-                - Employees
-                - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-            - description: UpdateEmployee ID
-              in: path
-              name: id
-              required: true
-              schema:
-                type: string
-    /{orgID}/updateemployeeunavailabilities:
+    /{orgID}/updateEmployeeUnavailabilities:
         get:
             description: |-
                 List all updateEmployeeUnavailabilities proposals. These are proposed changes to update existing EmployeeUnavailability records that may be automatically approved or require manual approval depending on system configuration.
@@ -13266,7 +13164,7 @@ paths:
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
-    /{orgID}/updateemployeeunavailabilities/{id}:
+    /{orgID}/updateEmployeeUnavailabilities/{id}:
         get:
             description: Get details of a specific EmployeeUnavailability update proposal by ID
             operationId: getUpdateEmployeeUnavailability
@@ -13300,7 +13198,211 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateemploymentcontracts:
+    /{orgID}/updateEmployees:
+        get:
+            description: List all updateEmployees proposals. These are proposed changes to update existing Employee records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listUpdateEmployee
+            parameters:
+                - description: Maximum number of items to return (1-1000)
+                  in: query
+                  name: limit
+                  schema:
+                    default: 10
+                    maximum: 1000
+                    minimum: 1
+                    type: integer
+                - description: Cursor for pagination (base64 encoded)
+                  in: query
+                  name: cursor
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ListUpdateEmployeeResponse'
+                    description: Successful response
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List Employee update proposals
+            tags:
+                - Employees
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+        post:
+            description: Create a new proposal to add a Employee record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createUpdateEmployee
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/CreateUpdateEmployeeRequest'
+                required: true
+            responses:
+                "201":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/UpdateEmployee'
+                    description: Created successfully
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Propose creation of Employee
+            tags:
+                - Employees
+                - Proposals
+    /{orgID}/updateEmployees/{id}:
+        get:
+            description: Get details of a specific Employee update proposal by ID
+            operationId: getUpdateEmployee
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/UpdateEmployee'
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "404":
+                    $ref: '#/components/responses/NotFound'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Get Employee update proposal
+            tags:
+                - Employees
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+            - description: UpdateEmployee ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+    /{orgID}/updateEmploymentContractTypes:
+        get:
+            description: List all updateEmploymentContractTypes proposals. These are proposed changes to update existing EmploymentContractType records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listUpdateEmploymentContractType
+            parameters:
+                - description: Maximum number of items to return (1-1000)
+                  in: query
+                  name: limit
+                  schema:
+                    default: 10
+                    maximum: 1000
+                    minimum: 1
+                    type: integer
+                - description: Cursor for pagination (base64 encoded)
+                  in: query
+                  name: cursor
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ListUpdateEmploymentContractTypeResponse'
+                    description: Successful response
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List EmploymentContractType update proposals
+            tags:
+                - EmploymentContractTypes
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+        post:
+            description: Create a new proposal to add a EmploymentContractType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createUpdateEmploymentContractType
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/CreateUpdateEmploymentContractTypeRequest'
+                required: true
+            responses:
+                "201":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/UpdateEmploymentContractType'
+                    description: Created successfully
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Propose creation of EmploymentContractType
+            tags:
+                - EmploymentContractTypes
+                - Proposals
+    /{orgID}/updateEmploymentContractTypes/{id}:
+        get:
+            description: Get details of a specific EmploymentContractType update proposal by ID
+            operationId: getUpdateEmploymentContractType
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/UpdateEmploymentContractType'
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "404":
+                    $ref: '#/components/responses/NotFound'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Get EmploymentContractType update proposal
+            tags:
+                - EmploymentContractTypes
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+            - description: UpdateEmploymentContractType ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+    /{orgID}/updateEmploymentContracts:
         get:
             description: |-
                 List all updateEmploymentContracts proposals. These are proposed changes to update existing EmploymentContract records that may be automatically approved or require manual approval depending on system configuration.
@@ -13385,7 +13487,7 @@ paths:
             tags:
                 - EmploymentContracts
                 - Proposals
-    /{orgID}/updateemploymentcontracts/{id}:
+    /{orgID}/updateEmploymentContracts/{id}:
         get:
             description: Get details of a specific EmploymentContract update proposal by ID
             operationId: getUpdateEmploymentContract
@@ -13419,10 +13521,10 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateemploymentcontracttypes:
+    /{orgID}/updateEmploymentRelationTypes:
         get:
-            description: List all updateEmploymentContractTypes proposals. These are proposed changes to update existing EmploymentContractType records that may be automatically approved or require manual approval depending on system configuration.
-            operationId: listUpdateEmploymentContractType
+            description: List all updateEmploymentRelationTypes proposals. These are proposed changes to update existing EmploymentRelationType records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listUpdateEmploymentRelationType
             parameters:
                 - description: Maximum number of items to return (1-1000)
                   in: query
@@ -13442,7 +13544,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ListUpdateEmploymentContractTypeResponse'
+                                $ref: '#/components/schemas/ListUpdateEmploymentRelationTypeResponse'
                     description: Successful response
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -13450,9 +13552,9 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List EmploymentContractType update proposals
+            summary: List EmploymentRelationType update proposals
             tags:
-                - EmploymentContractTypes
+                - EmploymentRelationTypes
                 - Proposals
         parameters:
             - description: Organization identifier
@@ -13462,20 +13564,20 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentContractType record. The proposal may be automatically approved or require manual approval depending on system configuration.
-            operationId: createUpdateEmploymentContractType
+            description: Create a new proposal to add a EmploymentRelationType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createUpdateEmploymentRelationType
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateEmploymentContractTypeRequest'
+                            $ref: '#/components/schemas/CreateUpdateEmploymentRelationTypeRequest'
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateEmploymentContractType'
+                                $ref: '#/components/schemas/UpdateEmploymentRelationType'
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -13483,20 +13585,20 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentContractType
+            summary: Propose creation of EmploymentRelationType
             tags:
-                - EmploymentContractTypes
+                - EmploymentRelationTypes
                 - Proposals
-    /{orgID}/updateemploymentcontracttypes/{id}:
+    /{orgID}/updateEmploymentRelationTypes/{id}:
         get:
-            description: Get details of a specific EmploymentContractType update proposal by ID
-            operationId: getUpdateEmploymentContractType
+            description: Get details of a specific EmploymentRelationType update proposal by ID
+            operationId: getUpdateEmploymentRelationType
             responses:
                 "200":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateEmploymentContractType'
+                                $ref: '#/components/schemas/UpdateEmploymentRelationType'
                     description: Successful response
                 "401":
                     $ref: '#/components/responses/Unauthorized'
@@ -13504,9 +13606,9 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmploymentContractType update proposal
+            summary: Get EmploymentRelationType update proposal
             tags:
-                - EmploymentContractTypes
+                - EmploymentRelationTypes
                 - Proposals
         parameters:
             - description: Organization identifier
@@ -13515,13 +13617,13 @@ paths:
               required: true
               schema:
                 type: string
-            - description: UpdateEmploymentContractType ID
+            - description: UpdateEmploymentRelationType ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgID}/updateemploymentrelations:
+    /{orgID}/updateEmploymentRelations:
         get:
             description: |-
                 List all updateEmploymentRelations proposals. These are proposed changes to update existing EmploymentRelation records that may be automatically approved or require manual approval depending on system configuration.
@@ -13611,7 +13713,7 @@ paths:
             tags:
                 - EmploymentRelations
                 - Proposals
-    /{orgID}/updateemploymentrelations/{id}:
+    /{orgID}/updateEmploymentRelations/{id}:
         get:
             description: Get details of a specific EmploymentRelation update proposal by ID
             operationId: getUpdateEmploymentRelation
@@ -13645,10 +13747,10 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateemploymentrelationtypes:
+    /{orgID}/updateGroupingTypes:
         get:
-            description: List all updateEmploymentRelationTypes proposals. These are proposed changes to update existing EmploymentRelationType records that may be automatically approved or require manual approval depending on system configuration.
-            operationId: listUpdateEmploymentRelationType
+            description: List all updateGroupingTypes proposals. These are proposed changes to update existing GroupingType records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listUpdateGroupingType
             parameters:
                 - description: Maximum number of items to return (1-1000)
                   in: query
@@ -13668,7 +13770,7 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/ListUpdateEmploymentRelationTypeResponse'
+                                $ref: '#/components/schemas/ListUpdateGroupingTypeResponse'
                     description: Successful response
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -13676,9 +13778,9 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: List EmploymentRelationType update proposals
+            summary: List GroupingType update proposals
             tags:
-                - EmploymentRelationTypes
+                - GroupingTypes
                 - Proposals
         parameters:
             - description: Organization identifier
@@ -13688,20 +13790,20 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentRelationType record. The proposal may be automatically approved or require manual approval depending on system configuration.
-            operationId: createUpdateEmploymentRelationType
+            description: Create a new proposal to add a GroupingType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createUpdateGroupingType
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateEmploymentRelationTypeRequest'
+                            $ref: '#/components/schemas/CreateUpdateGroupingTypeRequest'
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateEmploymentRelationType'
+                                $ref: '#/components/schemas/UpdateGroupingType'
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -13709,20 +13811,20 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentRelationType
+            summary: Propose creation of GroupingType
             tags:
-                - EmploymentRelationTypes
+                - GroupingTypes
                 - Proposals
-    /{orgID}/updateemploymentrelationtypes/{id}:
+    /{orgID}/updateGroupingTypes/{id}:
         get:
-            description: Get details of a specific EmploymentRelationType update proposal by ID
-            operationId: getUpdateEmploymentRelationType
+            description: Get details of a specific GroupingType update proposal by ID
+            operationId: getUpdateGroupingType
             responses:
                 "200":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateEmploymentRelationType'
+                                $ref: '#/components/schemas/UpdateGroupingType'
                     description: Successful response
                 "401":
                     $ref: '#/components/responses/Unauthorized'
@@ -13730,9 +13832,9 @@ paths:
                     $ref: '#/components/responses/NotFound'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Get EmploymentRelationType update proposal
+            summary: Get GroupingType update proposal
             tags:
-                - EmploymentRelationTypes
+                - GroupingTypes
                 - Proposals
         parameters:
             - description: Organization identifier
@@ -13741,13 +13843,13 @@ paths:
               required: true
               schema:
                 type: string
-            - description: UpdateEmploymentRelationType ID
+            - description: UpdateGroupingType ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgID}/updategroupings:
+    /{orgID}/updateGroupings:
         get:
             description: |-
                 List all updateGroupings proposals. These are proposed changes to update existing Grouping records that may be automatically approved or require manual approval depending on system configuration.
@@ -13832,7 +13934,7 @@ paths:
             tags:
                 - Groupings
                 - Proposals
-    /{orgID}/updategroupings/{id}:
+    /{orgID}/updateGroupings/{id}:
         get:
             description: Get details of a specific Grouping update proposal by ID
             operationId: getUpdateGrouping
@@ -13866,109 +13968,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updategroupingtypes:
-        get:
-            description: List all updateGroupingTypes proposals. These are proposed changes to update existing GroupingType records that may be automatically approved or require manual approval depending on system configuration.
-            operationId: listUpdateGroupingType
-            parameters:
-                - description: Maximum number of items to return (1-1000)
-                  in: query
-                  name: limit
-                  schema:
-                    default: 10
-                    maximum: 1000
-                    minimum: 1
-                    type: integer
-                - description: Cursor for pagination (base64 encoded)
-                  in: query
-                  name: cursor
-                  schema:
-                    type: string
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ListUpdateGroupingTypeResponse'
-                    description: Successful response
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: List GroupingType update proposals
-            tags:
-                - GroupingTypes
-                - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-        post:
-            description: Create a new proposal to add a GroupingType record. The proposal may be automatically approved or require manual approval depending on system configuration.
-            operationId: createUpdateGroupingType
-            requestBody:
-                content:
-                    application/json:
-                        schema:
-                            $ref: '#/components/schemas/CreateUpdateGroupingTypeRequest'
-                required: true
-            responses:
-                "201":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/UpdateGroupingType'
-                    description: Created successfully
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Propose creation of GroupingType
-            tags:
-                - GroupingTypes
-                - Proposals
-    /{orgID}/updategroupingtypes/{id}:
-        get:
-            description: Get details of a specific GroupingType update proposal by ID
-            operationId: getUpdateGroupingType
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/UpdateGroupingType'
-                    description: Successful response
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "404":
-                    $ref: '#/components/responses/NotFound'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Get GroupingType update proposal
-            tags:
-                - GroupingTypes
-                - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-            - description: UpdateGroupingType ID
-              in: path
-              name: id
-              required: true
-              schema:
-                type: string
-    /{orgID}/updatemonitoringtraces:
+    /{orgID}/updateMonitoringTraces:
         get:
             description: List all updateMonitoringTraces proposals. These are proposed changes to update existing MonitoringTrace records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateMonitoringTrace
@@ -14036,7 +14036,7 @@ paths:
             tags:
                 - MonitoringTraces
                 - Proposals
-    /{orgID}/updatemonitoringtraces/{id}:
+    /{orgID}/updateMonitoringTraces/{id}:
         get:
             description: Get details of a specific MonitoringTrace update proposal by ID
             operationId: getUpdateMonitoringTrace
@@ -14070,7 +14070,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updatepositionassignments:
+    /{orgID}/updatePositionAssignments:
         get:
             description: |-
                 List all updatePositionAssignments proposals. These are proposed changes to update existing PositionAssignment records that may be automatically approved or require manual approval depending on system configuration.
@@ -14150,7 +14150,7 @@ paths:
             tags:
                 - PositionAssignments
                 - Proposals
-    /{orgID}/updatepositionassignments/{id}:
+    /{orgID}/updatePositionAssignments/{id}:
         get:
             description: Get details of a specific PositionAssignment update proposal by ID
             operationId: getUpdatePositionAssignment
@@ -14184,7 +14184,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateratingscaleleveldescriptors:
+    /{orgID}/updateRatingScaleLevelDescriptors:
         get:
             description: List all updateRatingScaleLevelDescriptors proposals. These are proposed changes to update existing RatingScaleLevelDescriptor records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateRatingScaleLevelDescriptor
@@ -14252,7 +14252,7 @@ paths:
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
-    /{orgID}/updateratingscaleleveldescriptors/{id}:
+    /{orgID}/updateRatingScaleLevelDescriptors/{id}:
         get:
             description: Get details of a specific RatingScaleLevelDescriptor update proposal by ID
             operationId: getUpdateRatingScaleLevelDescriptor
@@ -14286,7 +14286,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateratingscalelevels:
+    /{orgID}/updateRatingScaleLevels:
         get:
             description: List all updateRatingScaleLevels proposals. These are proposed changes to update existing RatingScaleLevel records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateRatingScaleLevel
@@ -14354,7 +14354,7 @@ paths:
             tags:
                 - RatingScaleLevels
                 - Proposals
-    /{orgID}/updateratingscalelevels/{id}:
+    /{orgID}/updateRatingScaleLevels/{id}:
         get:
             description: Get details of a specific RatingScaleLevel update proposal by ID
             operationId: getUpdateRatingScaleLevel
@@ -14388,7 +14388,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateratingscales:
+    /{orgID}/updateRatingScales:
         get:
             description: List all updateRatingScales proposals. These are proposed changes to update existing RatingScale records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateRatingScale
@@ -14456,7 +14456,7 @@ paths:
             tags:
                 - RatingScales
                 - Proposals
-    /{orgID}/updateratingscales/{id}:
+    /{orgID}/updateRatingScales/{id}:
         get:
             description: Get details of a specific RatingScale update proposal by ID
             operationId: getUpdateRatingScale
@@ -14490,7 +14490,109 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateskilldefinitions:
+    /{orgID}/updateSkillDefinitionTypes:
+        get:
+            description: List all updateSkillDefinitionTypes proposals. These are proposed changes to update existing SkillDefinitionType records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listUpdateSkillDefinitionType
+            parameters:
+                - description: Maximum number of items to return (1-1000)
+                  in: query
+                  name: limit
+                  schema:
+                    default: 10
+                    maximum: 1000
+                    minimum: 1
+                    type: integer
+                - description: Cursor for pagination (base64 encoded)
+                  in: query
+                  name: cursor
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ListUpdateSkillDefinitionTypeResponse'
+                    description: Successful response
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List SkillDefinitionType update proposals
+            tags:
+                - SkillDefinitionTypes
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+        post:
+            description: Create a new proposal to add a SkillDefinitionType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            operationId: createUpdateSkillDefinitionType
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/CreateUpdateSkillDefinitionTypeRequest'
+                required: true
+            responses:
+                "201":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/UpdateSkillDefinitionType'
+                    description: Created successfully
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Propose creation of SkillDefinitionType
+            tags:
+                - SkillDefinitionTypes
+                - Proposals
+    /{orgID}/updateSkillDefinitionTypes/{id}:
+        get:
+            description: Get details of a specific SkillDefinitionType update proposal by ID
+            operationId: getUpdateSkillDefinitionType
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/UpdateSkillDefinitionType'
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "404":
+                    $ref: '#/components/responses/NotFound'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Get SkillDefinitionType update proposal
+            tags:
+                - SkillDefinitionTypes
+                - Proposals
+        parameters:
+            - description: Organization identifier
+              in: path
+              name: orgID
+              required: true
+              schema:
+                type: string
+            - description: UpdateSkillDefinitionType ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+    /{orgID}/updateSkillDefinitions:
         get:
             description: |-
                 List all updateSkillDefinitions proposals. These are proposed changes to update existing SkillDefinition records that may be automatically approved or require manual approval depending on system configuration.
@@ -14575,7 +14677,7 @@ paths:
             tags:
                 - SkillDefinitions
                 - Proposals
-    /{orgID}/updateskilldefinitions/{id}:
+    /{orgID}/updateSkillDefinitions/{id}:
         get:
             description: Get details of a specific SkillDefinition update proposal by ID
             operationId: getUpdateSkillDefinition
@@ -14609,109 +14711,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateskilldefinitiontypes:
-        get:
-            description: List all updateSkillDefinitionTypes proposals. These are proposed changes to update existing SkillDefinitionType records that may be automatically approved or require manual approval depending on system configuration.
-            operationId: listUpdateSkillDefinitionType
-            parameters:
-                - description: Maximum number of items to return (1-1000)
-                  in: query
-                  name: limit
-                  schema:
-                    default: 10
-                    maximum: 1000
-                    minimum: 1
-                    type: integer
-                - description: Cursor for pagination (base64 encoded)
-                  in: query
-                  name: cursor
-                  schema:
-                    type: string
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/ListUpdateSkillDefinitionTypeResponse'
-                    description: Successful response
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: List SkillDefinitionType update proposals
-            tags:
-                - SkillDefinitionTypes
-                - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-        post:
-            description: Create a new proposal to add a SkillDefinitionType record. The proposal may be automatically approved or require manual approval depending on system configuration.
-            operationId: createUpdateSkillDefinitionType
-            requestBody:
-                content:
-                    application/json:
-                        schema:
-                            $ref: '#/components/schemas/CreateUpdateSkillDefinitionTypeRequest'
-                required: true
-            responses:
-                "201":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/UpdateSkillDefinitionType'
-                    description: Created successfully
-                "400":
-                    $ref: '#/components/responses/BadRequest'
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Propose creation of SkillDefinitionType
-            tags:
-                - SkillDefinitionTypes
-                - Proposals
-    /{orgID}/updateskilldefinitiontypes/{id}:
-        get:
-            description: Get details of a specific SkillDefinitionType update proposal by ID
-            operationId: getUpdateSkillDefinitionType
-            responses:
-                "200":
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/UpdateSkillDefinitionType'
-                    description: Successful response
-                "401":
-                    $ref: '#/components/responses/Unauthorized'
-                "404":
-                    $ref: '#/components/responses/NotFound'
-                "500":
-                    $ref: '#/components/responses/InternalError'
-            summary: Get SkillDefinitionType update proposal
-            tags:
-                - SkillDefinitionTypes
-                - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgID
-              required: true
-              schema:
-                type: string
-            - description: UpdateSkillDefinitionType ID
-              in: path
-              name: id
-              required: true
-              schema:
-                type: string
-    /{orgID}/updateskillplannings:
+    /{orgID}/updateSkillPlannings:
         get:
             description: List all updateSkillPlannings proposals. These are proposed changes to update existing SkillPlanning records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateSkillPlanning
@@ -14779,7 +14779,7 @@ paths:
             tags:
                 - SkillPlannings
                 - Proposals
-    /{orgID}/updateskillplannings/{id}:
+    /{orgID}/updateSkillPlannings/{id}:
         get:
             description: Get details of a specific SkillPlanning update proposal by ID
             operationId: getUpdateSkillPlanning
@@ -14813,7 +14813,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updateskillresults:
+    /{orgID}/updateSkillResults:
         get:
             description: |-
                 List all updateSkillResults proposals. These are proposed changes to update existing SkillResult records that may be automatically approved or require manual approval depending on system configuration.
@@ -14898,7 +14898,7 @@ paths:
             tags:
                 - SkillResults
                 - Proposals
-    /{orgID}/updateskillresults/{id}:
+    /{orgID}/updateSkillResults/{id}:
         get:
             description: Get details of a specific SkillResult update proposal by ID
             operationId: getUpdateSkillResult
@@ -14932,7 +14932,7 @@ paths:
               required: true
               schema:
                 type: string
-    /{orgID}/updatetypesofproof:
+    /{orgID}/updateTypesOfProof:
         get:
             description: |-
                 List all updateTypesOfProof proposals. These are proposed changes to update existing TypesOfProof records that may be automatically approved or require manual approval depending on system configuration.
@@ -15012,7 +15012,7 @@ paths:
             tags:
                 - TypesOfProof
                 - Proposals
-    /{orgID}/updatetypesofproof/{id}:
+    /{orgID}/updateTypesOfProof/{id}:
         get:
             description: Get details of a specific TypesOfProof update proposal by ID
             operationId: getUpdateTypesOfProof
