@@ -10084,7 +10084,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of CustomFieldDefinition
+            summary: Propose creation of CustomFieldDefinitions
             tags:
                 - CustomFieldDefinitions
                 - Proposals
@@ -10165,7 +10165,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add CustomFieldDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete CustomFieldDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteCustomFieldDefinition
             requestBody:
                 content:
@@ -10192,7 +10192,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of CustomFieldDefinition
+            summary: Propose deletion of CustomFieldDefinitions
             tags:
                 - CustomFieldDefinitions
                 - Proposals
@@ -10285,7 +10285,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add CustomFieldDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update CustomFieldDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateCustomFieldDefinition
             requestBody:
                 content:
@@ -10312,7 +10312,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of CustomFieldDefinition
+            summary: Propose update of CustomFieldDefinitions
             tags:
                 - CustomFieldDefinitions
                 - Proposals
@@ -10520,7 +10520,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmployeeUnavailability
+            summary: Propose creation of EmployeeUnavailabilities
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
@@ -10601,7 +10601,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add EmployeeUnavailability records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete EmployeeUnavailability records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmployeeUnavailability
             requestBody:
                 content:
@@ -10628,7 +10628,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmployeeUnavailability
+            summary: Propose deletion of EmployeeUnavailabilities
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
@@ -10721,7 +10721,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add EmployeeUnavailability records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update EmployeeUnavailability records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmployeeUnavailability
             requestBody:
                 content:
@@ -10748,7 +10748,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmployeeUnavailability
+            summary: Propose update of EmployeeUnavailabilities
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
@@ -10932,7 +10932,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of Employee
+            summary: Propose creation of Employees
             tags:
                 - Employees
                 - Proposals
@@ -11013,7 +11013,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add Employee records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete Employee records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmployee
             requestBody:
                 content:
@@ -11040,7 +11040,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of Employee
+            summary: Propose deletion of Employees
             tags:
                 - Employees
                 - Proposals
@@ -11121,7 +11121,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add Employee records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update Employee records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmployee
             requestBody:
                 content:
@@ -11148,7 +11148,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of Employee
+            summary: Propose update of Employees
             tags:
                 - Employees
                 - Proposals
@@ -11332,7 +11332,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentContractType
+            summary: Propose creation of EmploymentContractTypes
             tags:
                 - EmploymentContractTypes
                 - Proposals
@@ -11413,7 +11413,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add EmploymentContractType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete EmploymentContractType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmploymentContractType
             requestBody:
                 content:
@@ -11440,7 +11440,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentContractType
+            summary: Propose deletion of EmploymentContractTypes
             tags:
                 - EmploymentContractTypes
                 - Proposals
@@ -11521,7 +11521,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add EmploymentContractType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update EmploymentContractType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmploymentContractType
             requestBody:
                 content:
@@ -11548,7 +11548,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentContractType
+            summary: Propose update of EmploymentContractTypes
             tags:
                 - EmploymentContractTypes
                 - Proposals
@@ -11766,7 +11766,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentContract
+            summary: Propose creation of EmploymentContracts
             tags:
                 - EmploymentContracts
                 - Proposals
@@ -11847,7 +11847,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add EmploymentContract records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete EmploymentContract records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmploymentContract
             requestBody:
                 content:
@@ -11874,7 +11874,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentContract
+            summary: Propose deletion of EmploymentContracts
             tags:
                 - EmploymentContracts
                 - Proposals
@@ -11972,7 +11972,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add EmploymentContract records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update EmploymentContract records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmploymentContract
             requestBody:
                 content:
@@ -11999,7 +11999,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentContract
+            summary: Propose update of EmploymentContracts
             tags:
                 - EmploymentContracts
                 - Proposals
@@ -12183,7 +12183,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentRelationType
+            summary: Propose creation of EmploymentRelationTypes
             tags:
                 - EmploymentRelationTypes
                 - Proposals
@@ -12264,7 +12264,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add EmploymentRelationType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete EmploymentRelationType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmploymentRelationType
             requestBody:
                 content:
@@ -12291,7 +12291,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentRelationType
+            summary: Propose deletion of EmploymentRelationTypes
             tags:
                 - EmploymentRelationTypes
                 - Proposals
@@ -12372,7 +12372,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add EmploymentRelationType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update EmploymentRelationType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmploymentRelationType
             requestBody:
                 content:
@@ -12399,7 +12399,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentRelationType
+            summary: Propose update of EmploymentRelationTypes
             tags:
                 - EmploymentRelationTypes
                 - Proposals
@@ -12627,7 +12627,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentRelation
+            summary: Propose creation of EmploymentRelations
             tags:
                 - EmploymentRelations
                 - Proposals
@@ -12708,7 +12708,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add EmploymentRelation records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete EmploymentRelation records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmploymentRelation
             requestBody:
                 content:
@@ -12735,7 +12735,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentRelation
+            summary: Propose deletion of EmploymentRelations
             tags:
                 - EmploymentRelations
                 - Proposals
@@ -12838,7 +12838,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add EmploymentRelation records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update EmploymentRelation records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmploymentRelation
             requestBody:
                 content:
@@ -12865,7 +12865,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of EmploymentRelation
+            summary: Propose update of EmploymentRelations
             tags:
                 - EmploymentRelations
                 - Proposals
@@ -13125,7 +13125,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of GroupingType
+            summary: Propose creation of GroupingTypes
             tags:
                 - GroupingTypes
                 - Proposals
@@ -13206,7 +13206,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add GroupingType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete GroupingType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteGroupingType
             requestBody:
                 content:
@@ -13233,7 +13233,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of GroupingType
+            summary: Propose deletion of GroupingTypes
             tags:
                 - GroupingTypes
                 - Proposals
@@ -13314,7 +13314,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add GroupingType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update GroupingType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateGroupingType
             requestBody:
                 content:
@@ -13341,7 +13341,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of GroupingType
+            summary: Propose update of GroupingTypes
             tags:
                 - GroupingTypes
                 - Proposals
@@ -13559,7 +13559,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of Grouping
+            summary: Propose creation of Groupings
             tags:
                 - Groupings
                 - Proposals
@@ -13640,7 +13640,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add Grouping records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete Grouping records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteGrouping
             requestBody:
                 content:
@@ -13667,7 +13667,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of Grouping
+            summary: Propose deletion of Groupings
             tags:
                 - Groupings
                 - Proposals
@@ -13765,7 +13765,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add Grouping records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update Grouping records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateGrouping
             requestBody:
                 content:
@@ -13792,7 +13792,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of Grouping
+            summary: Propose update of Groupings
             tags:
                 - Groupings
                 - Proposals
@@ -13976,7 +13976,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of MonitoringTrace
+            summary: Propose creation of MonitoringTraces
             tags:
                 - MonitoringTraces
                 - Proposals
@@ -14057,7 +14057,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add MonitoringTrace records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete MonitoringTrace records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteMonitoringTrace
             requestBody:
                 content:
@@ -14084,7 +14084,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of MonitoringTrace
+            summary: Propose deletion of MonitoringTraces
             tags:
                 - MonitoringTraces
                 - Proposals
@@ -14165,7 +14165,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add MonitoringTrace records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update MonitoringTrace records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateMonitoringTrace
             requestBody:
                 content:
@@ -14192,7 +14192,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of MonitoringTrace
+            summary: Propose update of MonitoringTraces
             tags:
                 - MonitoringTraces
                 - Proposals
@@ -14400,7 +14400,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of PositionAssignment
+            summary: Propose creation of PositionAssignments
             tags:
                 - PositionAssignments
                 - Proposals
@@ -14481,7 +14481,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add PositionAssignment records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete PositionAssignment records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeletePositionAssignment
             requestBody:
                 content:
@@ -14508,7 +14508,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of PositionAssignment
+            summary: Propose deletion of PositionAssignments
             tags:
                 - PositionAssignments
                 - Proposals
@@ -14601,7 +14601,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add PositionAssignment records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update PositionAssignment records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdatePositionAssignment
             requestBody:
                 content:
@@ -14628,7 +14628,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of PositionAssignment
+            summary: Propose update of PositionAssignments
             tags:
                 - PositionAssignments
                 - Proposals
@@ -14846,7 +14846,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of RatingScaleLevelDescriptor
+            summary: Propose creation of RatingScaleLevelDescriptors
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
@@ -14927,7 +14927,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add RatingScaleLevelDescriptor records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete RatingScaleLevelDescriptor records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteRatingScaleLevelDescriptor
             requestBody:
                 content:
@@ -14954,7 +14954,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of RatingScaleLevelDescriptor
+            summary: Propose deletion of RatingScaleLevelDescriptors
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
@@ -15035,7 +15035,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add RatingScaleLevelDescriptor records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update RatingScaleLevelDescriptor records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateRatingScaleLevelDescriptor
             requestBody:
                 content:
@@ -15062,7 +15062,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of RatingScaleLevelDescriptor
+            summary: Propose update of RatingScaleLevelDescriptors
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
@@ -15270,7 +15270,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of RatingScaleLevel
+            summary: Propose creation of RatingScaleLevels
             tags:
                 - RatingScaleLevels
                 - Proposals
@@ -15351,7 +15351,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add RatingScaleLevel records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete RatingScaleLevel records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteRatingScaleLevel
             requestBody:
                 content:
@@ -15378,7 +15378,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of RatingScaleLevel
+            summary: Propose deletion of RatingScaleLevels
             tags:
                 - RatingScaleLevels
                 - Proposals
@@ -15459,7 +15459,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add RatingScaleLevel records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update RatingScaleLevel records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateRatingScaleLevel
             requestBody:
                 content:
@@ -15486,7 +15486,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of RatingScaleLevel
+            summary: Propose update of RatingScaleLevels
             tags:
                 - RatingScaleLevels
                 - Proposals
@@ -15670,7 +15670,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of RatingScale
+            summary: Propose creation of RatingScales
             tags:
                 - RatingScales
                 - Proposals
@@ -15751,7 +15751,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add RatingScale records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete RatingScale records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteRatingScale
             requestBody:
                 content:
@@ -15778,7 +15778,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of RatingScale
+            summary: Propose deletion of RatingScales
             tags:
                 - RatingScales
                 - Proposals
@@ -15859,7 +15859,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add RatingScale records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update RatingScale records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateRatingScale
             requestBody:
                 content:
@@ -15886,7 +15886,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of RatingScale
+            summary: Propose update of RatingScales
             tags:
                 - RatingScales
                 - Proposals
@@ -16146,7 +16146,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of SkillDefinitionType
+            summary: Propose creation of SkillDefinitionTypes
             tags:
                 - SkillDefinitionTypes
                 - Proposals
@@ -16227,7 +16227,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add SkillDefinitionType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete SkillDefinitionType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteSkillDefinitionType
             requestBody:
                 content:
@@ -16254,7 +16254,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of SkillDefinitionType
+            summary: Propose deletion of SkillDefinitionTypes
             tags:
                 - SkillDefinitionTypes
                 - Proposals
@@ -16335,7 +16335,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add SkillDefinitionType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update SkillDefinitionType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateSkillDefinitionType
             requestBody:
                 content:
@@ -16362,7 +16362,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of SkillDefinitionType
+            summary: Propose update of SkillDefinitionTypes
             tags:
                 - SkillDefinitionTypes
                 - Proposals
@@ -16580,7 +16580,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of SkillDefinition
+            summary: Propose creation of SkillDefinitions
             tags:
                 - SkillDefinitions
                 - Proposals
@@ -16661,7 +16661,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add SkillDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete SkillDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteSkillDefinition
             requestBody:
                 content:
@@ -16688,7 +16688,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of SkillDefinition
+            summary: Propose deletion of SkillDefinitions
             tags:
                 - SkillDefinitions
                 - Proposals
@@ -16786,7 +16786,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add SkillDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update SkillDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateSkillDefinition
             requestBody:
                 content:
@@ -16813,7 +16813,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of SkillDefinition
+            summary: Propose update of SkillDefinitions
             tags:
                 - SkillDefinitions
                 - Proposals
@@ -16997,7 +16997,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of SkillPlanning
+            summary: Propose creation of SkillPlannings
             tags:
                 - SkillPlannings
                 - Proposals
@@ -17078,7 +17078,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add SkillPlanning records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete SkillPlanning records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteSkillPlanning
             requestBody:
                 content:
@@ -17105,7 +17105,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of SkillPlanning
+            summary: Propose deletion of SkillPlannings
             tags:
                 - SkillPlannings
                 - Proposals
@@ -17186,7 +17186,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add SkillPlanning records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update SkillPlanning records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateSkillPlanning
             requestBody:
                 content:
@@ -17213,7 +17213,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of SkillPlanning
+            summary: Propose update of SkillPlannings
             tags:
                 - SkillPlannings
                 - Proposals
@@ -17431,7 +17431,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of SkillResult
+            summary: Propose creation of SkillResults
             tags:
                 - SkillResults
                 - Proposals
@@ -17512,7 +17512,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add SkillResult records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete SkillResult records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteSkillResult
             requestBody:
                 content:
@@ -17539,7 +17539,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of SkillResult
+            summary: Propose deletion of SkillResults
             tags:
                 - SkillResults
                 - Proposals
@@ -17637,7 +17637,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add SkillResult records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update SkillResult records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateSkillResult
             requestBody:
                 content:
@@ -17664,7 +17664,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of SkillResult
+            summary: Propose update of SkillResults
             tags:
                 - SkillResults
                 - Proposals
@@ -17872,7 +17872,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of TypesOfProof
+            summary: Propose creation of TypesOfProofs
             tags:
                 - TypesOfProof
                 - Proposals
@@ -17953,7 +17953,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add TypesOfProof records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to delete TypesOfProof records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteTypesOfProof
             requestBody:
                 content:
@@ -17980,7 +17980,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of TypesOfProof
+            summary: Propose deletion of TypesOfProofs
             tags:
                 - TypesOfProof
                 - Proposals
@@ -18073,7 +18073,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to add TypesOfProof records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update TypesOfProof records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateTypesOfProof
             requestBody:
                 content:
@@ -18100,7 +18100,7 @@ paths:
                     $ref: '#/components/responses/Unauthorized'
                 "500":
                     $ref: '#/components/responses/InternalError'
-            summary: Propose creation of TypesOfProof
+            summary: Propose update of TypesOfProofs
             tags:
                 - TypesOfProof
                 - Proposals
