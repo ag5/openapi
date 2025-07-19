@@ -7130,161 +7130,196 @@ components:
                 - activePeriod
             type: object
         UpdateCreateCustomFieldDefinitionRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 entityDefinitionID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateCreateEmployeeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 birthDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 email:
+                    description: Omit this field to keep current value
                     format: email
                     type: string
                 employeeNumber:
+                    description: Omit this field to keep current value
                     type: string
                 firstName:
+                    description: Omit this field to keep current value
                     type: string
                 initials:
+                    description: Omit this field to keep current value
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 surname:
+                    description: Omit this field to keep current value
                     type: string
             type: object
         UpdateCreateEmployeeUnavailabilityRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 reason:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateCreateEmploymentContractRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 contractTypeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateCreateEmploymentContractTypeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateCreateEmploymentRelationRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 fromEmployeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 relationTypeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 toEmployeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateCreateEmploymentRelationTypeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateCreateGroupingRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 definedInGroupingID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 description:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
@@ -7292,30 +7327,34 @@ components:
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 typeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateCreateGroupingTypeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
@@ -7324,77 +7363,94 @@ components:
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateCreateMonitoringTraceRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 executedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 requestedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
             type: object
         UpdateCreatePositionAssignmentRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 tagIDs:
+                    description: Omit this field to keep current value
                     items:
                         format: uuid
                         type: string
                     type: array
             type: object
         UpdateCreateRatingScaleLevelDescriptorRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 description:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 ratingScaleLevelID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 skillDefinitionID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateCreateRatingScaleLevelRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
@@ -7403,7 +7459,7 @@ components:
                 description:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
@@ -7411,29 +7467,34 @@ components:
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 ratingScaleID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 scoreOrder:
+                    description: Omit this field to keep current value
                     format: int32
                     type: integer
             type: object
         UpdateCreateRatingScaleRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
@@ -7442,27 +7503,30 @@ components:
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateCreateSkillDefinitionRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
@@ -7471,7 +7535,7 @@ components:
                 description:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
@@ -7479,29 +7543,34 @@ components:
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 ratingScaleID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 typeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateCreateSkillDefinitionTypeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
@@ -7510,113 +7579,136 @@ components:
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateCreateSkillPlanningRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 closeDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 deadlineDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 fromDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 skillDefinitionID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 typeOfProofID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateCreateSkillResultRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 expirationDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 issueDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 scoreID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 typeOfProofID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateCreateTypesOfProofRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 description:
+                    description: Omit this field to keep current value
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 skillDefinitionID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
@@ -7665,198 +7757,261 @@ components:
                 - entityDefinitionID
             type: object
         UpdateCustomFieldDefinitionRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 entityDefinitionID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteCustomFieldDefinitionRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteEmployeeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteEmployeeUnavailabilityRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteEmploymentContractRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteEmploymentContractTypeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteEmploymentRelationRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteEmploymentRelationTypeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteGroupingRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteGroupingTypeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteMonitoringTraceRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeletePositionAssignmentRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteRatingScaleLevelDescriptorRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteRatingScaleLevelRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteRatingScaleRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteSkillDefinitionRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteSkillDefinitionTypeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteSkillPlanningRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteSkillResultRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateDeleteTypesOfProofRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
@@ -7915,40 +8070,51 @@ components:
                 - surname
             type: object
         UpdateEmployeeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 birthDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 email:
+                    description: Omit this field to keep current value
                     format: email
                     type: string
                 employeeNumber:
+                    description: Omit this field to keep current value
                     type: string
                 firstName:
+                    description: Omit this field to keep current value
                     type: string
                 initials:
+                    description: Omit this field to keep current value
                     type: string
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 surname:
+                    description: Omit this field to keep current value
                     type: string
             type: object
         UpdateEmployeeUnavailability:
@@ -7991,23 +8157,29 @@ components:
                 - employeeID
             type: object
         UpdateEmployeeUnavailabilityRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 reason:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
@@ -8052,24 +8224,30 @@ components:
                 - employeeID
             type: object
         UpdateEmploymentContractRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 contractTypeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
@@ -8114,24 +8292,29 @@ components:
                 - name
             type: object
         UpdateEmploymentContractTypeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
@@ -8181,27 +8364,34 @@ components:
                 - relationTypeID
             type: object
         UpdateEmploymentRelationRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 fromEmployeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 relationTypeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 toEmployeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
@@ -8246,35 +8436,42 @@ components:
                 - name
             type: object
         UpdateEmploymentRelationTypeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateEntityDefinitionRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
@@ -8349,51 +8546,58 @@ components:
                 - activePeriod
             type: object
         UpdateGroupingRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 definedInGroupingID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 description:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 typeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
@@ -8452,37 +8656,42 @@ components:
                 - activePeriod
             type: object
         UpdateGroupingTypeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
@@ -8523,22 +8732,29 @@ components:
                 - repositoryID
             type: object
         UpdateMonitoringTraceRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 executedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 requestedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
             type: object
@@ -8588,26 +8804,33 @@ components:
                 - tagIDs
             type: object
         UpdatePositionAssignmentRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 tagIDs:
+                    description: Omit this field to keep current value
                     items:
                         format: uuid
                         type: string
@@ -8757,42 +8980,51 @@ components:
                 - description
             type: object
         UpdateRatingScaleLevelDescriptorRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 description:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 ratingScaleLevelID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 skillDefinitionID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateRatingScaleLevelRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
@@ -8801,66 +9033,77 @@ components:
                 description:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 ratingScaleID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 scoreOrder:
+                    description: Omit this field to keep current value
                     format: int32
                     type: integer
             type: object
         UpdateRatingScaleRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateRepositoryRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
             type: object
         UpdateSkillDefinition:
@@ -8932,20 +9175,23 @@ components:
                 - activePeriod
             type: object
         UpdateSkillDefinitionRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
@@ -8954,29 +9200,33 @@ components:
                 description:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 ratingScaleID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 typeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
@@ -9030,33 +9280,38 @@ components:
                 - name
             type: object
         UpdateSkillDefinitionTypeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
@@ -9122,43 +9377,54 @@ components:
                 - skillDefinitionID
             type: object
         UpdateSkillPlanningRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 closeDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 deadlineDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 fromDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 skillDefinitionID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 typeOfProofID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
@@ -9220,40 +9486,50 @@ components:
                 - typeOfProofID
             type: object
         UpdateSkillResultRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 expirationDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 issueDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 scoreID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 typeOfProofID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
@@ -9317,341 +9593,414 @@ components:
                 - activePeriod
             type: object
         UpdateTypesOfProofRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 createdAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 description:
+                    description: Omit this field to keep current value
                     type: string
                 lastModifiedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 skillDefinitionID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateUpdateCustomFieldDefinitionRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 entityDefinitionID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateUpdateEmployeeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 birthDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 email:
+                    description: Omit this field to keep current value
                     format: email
                     type: string
                 employeeNumber:
+                    description: Omit this field to keep current value
                     type: string
                 firstName:
+                    description: Omit this field to keep current value
                     type: string
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 initials:
+                    description: Omit this field to keep current value
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 surname:
+                    description: Omit this field to keep current value
                     type: string
             type: object
         UpdateUpdateEmployeeUnavailabilityRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 reason:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateUpdateEmploymentContractRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 contractTypeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateUpdateEmploymentContractTypeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateUpdateEmploymentRelationRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 fromEmployeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 relationTypeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 toEmployeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateUpdateEmploymentRelationTypeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateUpdateGroupingRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 definedInGroupingID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 description:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 typeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateUpdateGroupingTypeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateUpdateMonitoringTraceRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 executedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 requestedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
             type: object
         UpdateUpdatePositionAssignmentRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 tagIDs:
+                    description: Omit this field to keep current value
                     items:
                         format: uuid
                         type: string
                     type: array
             type: object
         UpdateUpdateRatingScaleLevelDescriptorRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 description:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateUpdateRatingScaleLevelRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
@@ -9660,66 +10009,74 @@ components:
                 description:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateUpdateRatingScaleRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateUpdateSkillDefinitionRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
@@ -9728,167 +10085,200 @@ components:
                 description:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 ratingScaleID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 typeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateUpdateSkillDefinitionTypeRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateUpdateSkillPlanningRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 closeDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 deadlineDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 fromDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 skillDefinitionID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 typeOfProofID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateUpdateSkillResultRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 expirationDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 issueDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 scoreID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 typeOfProofID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
         UpdateUpdateTypesOfProofRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 description:
+                    description: Omit this field to keep current value
                     type: string
                 id:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 skillDefinitionID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             type: object
@@ -10285,7 +10675,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update CustomFieldDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update CustomFieldDefinition records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateCustomFieldDefinition
             requestBody:
                 content:
@@ -10721,7 +11111,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update EmployeeUnavailability records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update EmployeeUnavailability records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmployeeUnavailability
             requestBody:
                 content:
@@ -11121,7 +11511,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update Employee records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update Employee records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmployee
             requestBody:
                 content:
@@ -11521,7 +11911,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update EmploymentContractType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update EmploymentContractType records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmploymentContractType
             requestBody:
                 content:
@@ -11972,7 +12362,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update EmploymentContract records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update EmploymentContract records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmploymentContract
             requestBody:
                 content:
@@ -12372,7 +12762,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update EmploymentRelationType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update EmploymentRelationType records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmploymentRelationType
             requestBody:
                 content:
@@ -12838,7 +13228,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update EmploymentRelation records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update EmploymentRelation records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmploymentRelation
             requestBody:
                 content:
@@ -13314,7 +13704,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update GroupingType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update GroupingType records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateGroupingType
             requestBody:
                 content:
@@ -13765,7 +14155,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update Grouping records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update Grouping records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateGrouping
             requestBody:
                 content:
@@ -14165,7 +14555,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update MonitoringTrace records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update MonitoringTrace records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateMonitoringTrace
             requestBody:
                 content:
@@ -14601,7 +14991,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update PositionAssignment records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update PositionAssignment records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdatePositionAssignment
             requestBody:
                 content:
@@ -15035,7 +15425,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update RatingScaleLevelDescriptor records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update RatingScaleLevelDescriptor records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateRatingScaleLevelDescriptor
             requestBody:
                 content:
@@ -15459,7 +15849,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update RatingScaleLevel records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update RatingScaleLevel records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateRatingScaleLevel
             requestBody:
                 content:
@@ -15859,7 +16249,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update RatingScale records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update RatingScale records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateRatingScale
             requestBody:
                 content:
@@ -16335,7 +16725,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update SkillDefinitionType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update SkillDefinitionType records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateSkillDefinitionType
             requestBody:
                 content:
@@ -16786,7 +17176,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update SkillDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update SkillDefinition records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateSkillDefinition
             requestBody:
                 content:
@@ -17186,7 +17576,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update SkillPlanning records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update SkillPlanning records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateSkillPlanning
             requestBody:
                 content:
@@ -17637,7 +18027,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update SkillResult records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update SkillResult records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateSkillResult
             requestBody:
                 content:
@@ -18073,7 +18463,7 @@ paths:
               schema:
                 type: string
         post:
-            description: Create new proposals to update TypesOfProof records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
+            description: Create new proposals to update TypesOfProof records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateTypesOfProof
             requestBody:
                 content:
