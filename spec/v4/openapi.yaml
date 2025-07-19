@@ -2655,8 +2655,10 @@ components:
         CreateUpdateCustomFieldDefinitionRequest:
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 entityDefinitionID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 id:
@@ -2665,7 +2667,7 @@ components:
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
@@ -2676,61 +2678,66 @@ components:
             required:
                 - id
                 - repositoryID
-                - code
-                - name
-                - entityDefinitionID
             type: object
         CreateUpdateEmployeeRequest:
             properties:
                 birthDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 email:
+                    description: Omit this field to keep current value
                     format: email
                     type: string
                 employeeNumber:
+                    description: Omit this field to keep current value
                     type: string
                 firstName:
+                    description: Omit this field to keep current value
                     type: string
                 id:
                     format: uuid
                     type: string
                 initials:
+                    description: Omit this field to keep current value
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
                     format: uuid
                     type: string
                 surname:
+                    description: Omit this field to keep current value
                     type: string
             required:
                 - id
                 - repositoryID
-                - surname
             type: object
         CreateUpdateEmployeeUnavailabilityRequest:
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 id:
                     format: uuid
                     type: string
                 reason:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
                     format: uuid
@@ -2738,19 +2745,19 @@ components:
             required:
                 - id
                 - repositoryID
-                - activePeriod
-                - employeeID
             type: object
         CreateUpdateEmploymentContractRequest:
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 contractTypeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 id:
@@ -2762,12 +2769,11 @@ components:
             required:
                 - id
                 - repositoryID
-                - activePeriod
-                - employeeID
             type: object
         CreateUpdateEmploymentContractTypeRequest:
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 id:
                     format: uuid
@@ -2775,7 +2781,7 @@ components:
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
@@ -2786,41 +2792,39 @@ components:
             required:
                 - id
                 - repositoryID
-                - code
-                - name
             type: object
         CreateUpdateEmploymentRelationRequest:
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 fromEmployeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 id:
                     format: uuid
                     type: string
                 relationTypeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
                     format: uuid
                     type: string
                 toEmployeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             required:
                 - id
                 - repositoryID
-                - activePeriod
-                - toEmployeeID
-                - fromEmployeeID
-                - relationTypeID
             type: object
         CreateUpdateEmploymentRelationTypeRequest:
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 id:
                     format: uuid
@@ -2828,7 +2832,7 @@ components:
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
@@ -2839,33 +2843,33 @@ components:
             required:
                 - id
                 - repositoryID
-                - code
-                - name
             type: object
         CreateUpdateGroupingRequest:
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 definedInGroupingID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 description:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
@@ -2876,7 +2880,7 @@ components:
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
@@ -2885,27 +2889,26 @@ components:
                     format: uuid
                     type: string
                 typeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             required:
                 - id
                 - repositoryID
-                - code
-                - name
-                - activePeriod
             type: object
         CreateUpdateGroupingTypeRequest:
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
@@ -2917,7 +2920,7 @@ components:
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
@@ -2928,24 +2931,24 @@ components:
             required:
                 - id
                 - repositoryID
-                - code
-                - name
-                - activePeriod
             type: object
         CreateUpdateMonitoringTraceRequest:
             properties:
                 executedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
                 id:
                     format: uuid
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
                     format: uuid
                     type: string
                 requestedAt:
+                    description: Omit this field to keep current value
                     format: date-time
                     type: string
             required:
@@ -2955,21 +2958,24 @@ components:
         CreateUpdatePositionAssignmentRequest:
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 id:
                     format: uuid
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
                     format: uuid
                     type: string
                 tagIDs:
+                    description: Omit this field to keep current value
                     items:
                         format: uuid
                         type: string
@@ -2977,16 +2983,13 @@ components:
             required:
                 - id
                 - repositoryID
-                - employeeID
-                - activePeriod
-                - tagIDs
             type: object
         CreateUpdateRatingScaleLevelDescriptorRequest:
             properties:
                 description:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
@@ -3000,16 +3003,16 @@ components:
             required:
                 - id
                 - repositoryID
-                - description
             type: object
         CreateUpdateRatingScaleLevelRequest:
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
@@ -3018,7 +3021,7 @@ components:
                 description:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
@@ -3029,7 +3032,7 @@ components:
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
@@ -3040,17 +3043,16 @@ components:
             required:
                 - id
                 - repositoryID
-                - code
-                - name
             type: object
         CreateUpdateRatingScaleRequest:
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
@@ -3062,7 +3064,7 @@ components:
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
@@ -3073,21 +3075,20 @@ components:
             required:
                 - id
                 - repositoryID
-                - code
-                - name
             type: object
         CreateUpdateSkillDefinitionRequest:
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
@@ -3096,7 +3097,7 @@ components:
                 description:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
@@ -3107,35 +3108,35 @@ components:
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
                     type: object
                 ratingScaleID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 repositoryID:
                     format: uuid
                     type: string
                 typeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             required:
                 - id
                 - repositoryID
-                - name
-                - ratingScaleID
-                - activePeriod
             type: object
         CreateUpdateSkillDefinitionTypeRequest:
             properties:
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
@@ -3147,7 +3148,7 @@ components:
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
@@ -3158,113 +3159,119 @@ components:
             required:
                 - id
                 - repositoryID
-                - code
-                - name
             type: object
         CreateUpdateSkillPlanningRequest:
             properties:
                 closeDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 deadlineDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 fromDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 id:
                     format: uuid
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
                     format: uuid
                     type: string
                 skillDefinitionID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 typeOfProofID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             required:
                 - id
                 - repositoryID
-                - employeeID
-                - typeOfProofID
-                - fromDate
-                - skillDefinitionID
             type: object
         CreateUpdateSkillResultRequest:
             properties:
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 employeeID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 expirationDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 id:
                     format: uuid
                     type: string
                 issueDate:
+                    description: Omit this field to keep current value
                     format: date
                     type: string
                 remark:
+                    description: Omit this field to keep current value
                     type: string
                 repositoryID:
                     format: uuid
                     type: string
                 scoreID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
                 typeOfProofID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             required:
                 - id
                 - repositoryID
-                - employeeID
-                - issueDate
-                - typeOfProofID
             type: object
         CreateUpdateTypesOfProofRequest:
             properties:
                 activePeriod:
-                    description: Date range in PostgreSQL format [start,end)
+                    description: Date range in PostgreSQL format [start,end) (omit to keep current value)
                     example: '[2023-01-01,2023-12-31)'
                     type: string
                 code:
+                    description: Omit this field to keep current value
                     type: string
                 customValues:
                     additionalProperties:
                         type: string
-                    description: Custom field values - only declared custom fields for this entity type are allowed
+                    description: Custom field values - only declared custom fields for this entity type are allowed (omit to keep current value)
                     example:
                         department: Engineering
                         employeeId: EMP-12345
                         location: Amsterdam
                     type: object
                 description:
+                    description: Omit this field to keep current value
                     type: string
                 id:
                     format: uuid
@@ -3272,7 +3279,7 @@ components:
                 name:
                     additionalProperties:
                         type: string
-                    description: Internationalized string (IString) - object with language codes as keys
+                    description: Internationalized string (IString) - object with language codes as keys (omit to keep current value)
                     example:
                         en: English text
                         nl: Nederlandse tekst
@@ -3281,14 +3288,12 @@ components:
                     format: uuid
                     type: string
                 skillDefinitionID:
+                    description: Omit this field to keep current value
                     format: uuid
                     type: string
             required:
                 - id
                 - repositoryID
-                - name
-                - skillDefinitionID
-                - activePeriod
             type: object
         CustomFieldDefinition:
             properties:
@@ -7752,9 +7757,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - code
-                - name
-                - entityDefinitionID
             type: object
         UpdateCustomFieldDefinitionRequest:
             description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
@@ -8067,7 +8069,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - surname
             type: object
         UpdateEmployeeRequest:
             description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
@@ -8153,8 +8154,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - activePeriod
-                - employeeID
             type: object
         UpdateEmployeeUnavailabilityRequest:
             description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
@@ -8220,8 +8219,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - activePeriod
-                - employeeID
             type: object
         UpdateEmploymentContractRequest:
             description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
@@ -8288,8 +8285,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - code
-                - name
             type: object
         UpdateEmploymentContractTypeRequest:
             description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
@@ -8358,10 +8353,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - activePeriod
-                - toEmployeeID
-                - fromEmployeeID
-                - relationTypeID
             type: object
         UpdateEmploymentRelationRequest:
             description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
@@ -8432,8 +8423,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - code
-                - name
             type: object
         UpdateEmploymentRelationTypeRequest:
             description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
@@ -8541,9 +8530,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - code
-                - name
-                - activePeriod
             type: object
         UpdateGroupingRequest:
             description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
@@ -8651,9 +8637,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - code
-                - name
-                - activePeriod
             type: object
         UpdateGroupingTypeRequest:
             description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
@@ -8799,9 +8782,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - employeeID
-                - activePeriod
-                - tagIDs
             type: object
         UpdatePositionAssignmentRequest:
             description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
@@ -8882,8 +8862,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - code
-                - name
             type: object
         UpdateRatingScaleLevel:
             properties:
@@ -8939,8 +8917,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - code
-                - name
             type: object
         UpdateRatingScaleLevelDescriptor:
             properties:
@@ -8977,7 +8953,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - description
             type: object
         UpdateRatingScaleLevelDescriptorRequest:
             description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
@@ -9170,9 +9145,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - name
-                - ratingScaleID
-                - activePeriod
             type: object
         UpdateSkillDefinitionRequest:
             description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
@@ -9276,8 +9248,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - code
-                - name
             type: object
         UpdateSkillDefinitionTypeRequest:
             description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
@@ -9371,10 +9341,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - employeeID
-                - typeOfProofID
-                - fromDate
-                - skillDefinitionID
             type: object
         UpdateSkillPlanningRequest:
             description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
@@ -9481,9 +9447,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - employeeID
-                - issueDate
-                - typeOfProofID
             type: object
         UpdateSkillResultRequest:
             description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
@@ -9588,9 +9551,6 @@ components:
                 - isProposalExecutionFailed
                 - id
                 - repositoryID
-                - name
-                - skillDefinitionID
-                - activePeriod
             type: object
         UpdateTypesOfProofRequest:
             description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
