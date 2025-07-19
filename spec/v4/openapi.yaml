@@ -10057,20 +10057,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a CustomFieldDefinition record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add CustomFieldDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateCustomFieldDefinition
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateCustomFieldDefinitionRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateCustomFieldDefinitionRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateCustomFieldDefinition'
+                                items:
+                                    $ref: '#/components/schemas/CreateCustomFieldDefinition'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -10159,20 +10165,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a CustomFieldDefinition record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add CustomFieldDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteCustomFieldDefinition
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteCustomFieldDefinitionRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteCustomFieldDefinitionRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteCustomFieldDefinition'
+                                items:
+                                    $ref: '#/components/schemas/DeleteCustomFieldDefinition'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -10273,20 +10285,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a CustomFieldDefinition record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add CustomFieldDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateCustomFieldDefinition
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateCustomFieldDefinitionRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateCustomFieldDefinitionRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateCustomFieldDefinition'
+                                items:
+                                    $ref: '#/components/schemas/UpdateCustomFieldDefinition'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -10475,20 +10493,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmployeeUnavailability record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add EmployeeUnavailability records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateEmployeeUnavailability
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateEmployeeUnavailabilityRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateEmployeeUnavailabilityRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateEmployeeUnavailability'
+                                items:
+                                    $ref: '#/components/schemas/CreateEmployeeUnavailability'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -10577,20 +10601,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmployeeUnavailability record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add EmployeeUnavailability records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmployeeUnavailability
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteEmployeeUnavailabilityRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteEmployeeUnavailabilityRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteEmployeeUnavailability'
+                                items:
+                                    $ref: '#/components/schemas/DeleteEmployeeUnavailability'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -10691,20 +10721,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmployeeUnavailability record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add EmployeeUnavailability records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmployeeUnavailability
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateEmployeeUnavailabilityRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateEmployeeUnavailabilityRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateEmployeeUnavailability'
+                                items:
+                                    $ref: '#/components/schemas/UpdateEmployeeUnavailability'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -10869,20 +10905,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a Employee record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add Employee records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateEmployee
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateEmployeeRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateEmployeeRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateEmployee'
+                                items:
+                                    $ref: '#/components/schemas/CreateEmployee'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -10971,20 +11013,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a Employee record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add Employee records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmployee
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteEmployeeRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteEmployeeRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteEmployee'
+                                items:
+                                    $ref: '#/components/schemas/DeleteEmployee'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -11073,20 +11121,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a Employee record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add Employee records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmployee
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateEmployeeRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateEmployeeRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateEmployee'
+                                items:
+                                    $ref: '#/components/schemas/UpdateEmployee'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -11251,20 +11305,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentContractType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add EmploymentContractType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateEmploymentContractType
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateEmploymentContractTypeRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateEmploymentContractTypeRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateEmploymentContractType'
+                                items:
+                                    $ref: '#/components/schemas/CreateEmploymentContractType'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -11353,20 +11413,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentContractType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add EmploymentContractType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmploymentContractType
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteEmploymentContractTypeRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteEmploymentContractTypeRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteEmploymentContractType'
+                                items:
+                                    $ref: '#/components/schemas/DeleteEmploymentContractType'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -11455,20 +11521,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentContractType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add EmploymentContractType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmploymentContractType
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateEmploymentContractTypeRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateEmploymentContractTypeRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateEmploymentContractType'
+                                items:
+                                    $ref: '#/components/schemas/UpdateEmploymentContractType'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -11667,20 +11739,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentContract record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add EmploymentContract records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateEmploymentContract
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateEmploymentContractRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateEmploymentContractRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateEmploymentContract'
+                                items:
+                                    $ref: '#/components/schemas/CreateEmploymentContract'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -11769,20 +11847,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentContract record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add EmploymentContract records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmploymentContract
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteEmploymentContractRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteEmploymentContractRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteEmploymentContract'
+                                items:
+                                    $ref: '#/components/schemas/DeleteEmploymentContract'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -11888,20 +11972,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentContract record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add EmploymentContract records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmploymentContract
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateEmploymentContractRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateEmploymentContractRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateEmploymentContract'
+                                items:
+                                    $ref: '#/components/schemas/UpdateEmploymentContract'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -12066,20 +12156,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentRelationType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add EmploymentRelationType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateEmploymentRelationType
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateEmploymentRelationTypeRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateEmploymentRelationTypeRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateEmploymentRelationType'
+                                items:
+                                    $ref: '#/components/schemas/CreateEmploymentRelationType'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -12168,20 +12264,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentRelationType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add EmploymentRelationType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmploymentRelationType
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteEmploymentRelationTypeRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteEmploymentRelationTypeRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteEmploymentRelationType'
+                                items:
+                                    $ref: '#/components/schemas/DeleteEmploymentRelationType'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -12270,20 +12372,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentRelationType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add EmploymentRelationType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmploymentRelationType
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateEmploymentRelationTypeRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateEmploymentRelationTypeRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateEmploymentRelationType'
+                                items:
+                                    $ref: '#/components/schemas/UpdateEmploymentRelationType'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -12492,20 +12600,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentRelation record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add EmploymentRelation records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateEmploymentRelation
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateEmploymentRelationRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateEmploymentRelationRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateEmploymentRelation'
+                                items:
+                                    $ref: '#/components/schemas/CreateEmploymentRelation'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -12594,20 +12708,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentRelation record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add EmploymentRelation records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmploymentRelation
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteEmploymentRelationRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteEmploymentRelationRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteEmploymentRelation'
+                                items:
+                                    $ref: '#/components/schemas/DeleteEmploymentRelation'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -12718,20 +12838,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a EmploymentRelation record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add EmploymentRelation records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmploymentRelation
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateEmploymentRelationRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateEmploymentRelationRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateEmploymentRelation'
+                                items:
+                                    $ref: '#/components/schemas/UpdateEmploymentRelation'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -12972,20 +13098,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a GroupingType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add GroupingType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateGroupingType
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateGroupingTypeRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateGroupingTypeRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateGroupingType'
+                                items:
+                                    $ref: '#/components/schemas/CreateGroupingType'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -13074,20 +13206,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a GroupingType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add GroupingType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteGroupingType
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteGroupingTypeRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteGroupingTypeRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteGroupingType'
+                                items:
+                                    $ref: '#/components/schemas/DeleteGroupingType'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -13176,20 +13314,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a GroupingType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add GroupingType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateGroupingType
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateGroupingTypeRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateGroupingTypeRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateGroupingType'
+                                items:
+                                    $ref: '#/components/schemas/UpdateGroupingType'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -13388,20 +13532,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a Grouping record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add Grouping records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateGrouping
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateGroupingRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateGroupingRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateGrouping'
+                                items:
+                                    $ref: '#/components/schemas/CreateGrouping'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -13490,20 +13640,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a Grouping record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add Grouping records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteGrouping
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteGroupingRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteGroupingRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteGrouping'
+                                items:
+                                    $ref: '#/components/schemas/DeleteGrouping'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -13609,20 +13765,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a Grouping record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add Grouping records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateGrouping
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateGroupingRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateGroupingRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateGrouping'
+                                items:
+                                    $ref: '#/components/schemas/UpdateGrouping'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -13787,20 +13949,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a MonitoringTrace record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add MonitoringTrace records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateMonitoringTrace
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateMonitoringTraceRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateMonitoringTraceRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateMonitoringTrace'
+                                items:
+                                    $ref: '#/components/schemas/CreateMonitoringTrace'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -13889,20 +14057,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a MonitoringTrace record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add MonitoringTrace records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteMonitoringTrace
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteMonitoringTraceRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteMonitoringTraceRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteMonitoringTrace'
+                                items:
+                                    $ref: '#/components/schemas/DeleteMonitoringTrace'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -13991,20 +14165,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a MonitoringTrace record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add MonitoringTrace records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateMonitoringTrace
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateMonitoringTraceRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateMonitoringTraceRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateMonitoringTrace'
+                                items:
+                                    $ref: '#/components/schemas/UpdateMonitoringTrace'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -14193,20 +14373,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a PositionAssignment record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add PositionAssignment records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreatePositionAssignment
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreatePositionAssignmentRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreatePositionAssignmentRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreatePositionAssignment'
+                                items:
+                                    $ref: '#/components/schemas/CreatePositionAssignment'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -14295,20 +14481,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a PositionAssignment record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add PositionAssignment records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeletePositionAssignment
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeletePositionAssignmentRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeletePositionAssignmentRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeletePositionAssignment'
+                                items:
+                                    $ref: '#/components/schemas/DeletePositionAssignment'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -14409,20 +14601,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a PositionAssignment record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add PositionAssignment records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdatePositionAssignment
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdatePositionAssignmentRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdatePositionAssignmentRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdatePositionAssignment'
+                                items:
+                                    $ref: '#/components/schemas/UpdatePositionAssignment'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -14621,20 +14819,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a RatingScaleLevelDescriptor record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add RatingScaleLevelDescriptor records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateRatingScaleLevelDescriptor
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateRatingScaleLevelDescriptorRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateRatingScaleLevelDescriptorRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateRatingScaleLevelDescriptor'
+                                items:
+                                    $ref: '#/components/schemas/CreateRatingScaleLevelDescriptor'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -14723,20 +14927,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a RatingScaleLevelDescriptor record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add RatingScaleLevelDescriptor records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteRatingScaleLevelDescriptor
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteRatingScaleLevelDescriptorRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteRatingScaleLevelDescriptorRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteRatingScaleLevelDescriptor'
+                                items:
+                                    $ref: '#/components/schemas/DeleteRatingScaleLevelDescriptor'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -14825,20 +15035,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a RatingScaleLevelDescriptor record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add RatingScaleLevelDescriptor records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateRatingScaleLevelDescriptor
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateRatingScaleLevelDescriptorRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateRatingScaleLevelDescriptorRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateRatingScaleLevelDescriptor'
+                                items:
+                                    $ref: '#/components/schemas/UpdateRatingScaleLevelDescriptor'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -15027,20 +15243,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a RatingScaleLevel record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add RatingScaleLevel records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateRatingScaleLevel
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateRatingScaleLevelRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateRatingScaleLevelRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateRatingScaleLevel'
+                                items:
+                                    $ref: '#/components/schemas/CreateRatingScaleLevel'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -15129,20 +15351,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a RatingScaleLevel record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add RatingScaleLevel records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteRatingScaleLevel
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteRatingScaleLevelRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteRatingScaleLevelRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteRatingScaleLevel'
+                                items:
+                                    $ref: '#/components/schemas/DeleteRatingScaleLevel'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -15231,20 +15459,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a RatingScaleLevel record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add RatingScaleLevel records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateRatingScaleLevel
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateRatingScaleLevelRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateRatingScaleLevelRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateRatingScaleLevel'
+                                items:
+                                    $ref: '#/components/schemas/UpdateRatingScaleLevel'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -15409,20 +15643,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a RatingScale record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add RatingScale records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateRatingScale
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateRatingScaleRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateRatingScaleRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateRatingScale'
+                                items:
+                                    $ref: '#/components/schemas/CreateRatingScale'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -15511,20 +15751,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a RatingScale record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add RatingScale records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteRatingScale
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteRatingScaleRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteRatingScaleRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteRatingScale'
+                                items:
+                                    $ref: '#/components/schemas/DeleteRatingScale'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -15613,20 +15859,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a RatingScale record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add RatingScale records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateRatingScale
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateRatingScaleRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateRatingScaleRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateRatingScale'
+                                items:
+                                    $ref: '#/components/schemas/UpdateRatingScale'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -15867,20 +16119,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a SkillDefinitionType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add SkillDefinitionType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateSkillDefinitionType
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateSkillDefinitionTypeRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateSkillDefinitionTypeRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateSkillDefinitionType'
+                                items:
+                                    $ref: '#/components/schemas/CreateSkillDefinitionType'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -15969,20 +16227,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a SkillDefinitionType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add SkillDefinitionType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteSkillDefinitionType
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteSkillDefinitionTypeRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteSkillDefinitionTypeRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteSkillDefinitionType'
+                                items:
+                                    $ref: '#/components/schemas/DeleteSkillDefinitionType'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -16071,20 +16335,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a SkillDefinitionType record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add SkillDefinitionType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateSkillDefinitionType
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateSkillDefinitionTypeRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateSkillDefinitionTypeRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateSkillDefinitionType'
+                                items:
+                                    $ref: '#/components/schemas/UpdateSkillDefinitionType'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -16283,20 +16553,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a SkillDefinition record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add SkillDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateSkillDefinition
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateSkillDefinitionRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateSkillDefinitionRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateSkillDefinition'
+                                items:
+                                    $ref: '#/components/schemas/CreateSkillDefinition'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -16385,20 +16661,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a SkillDefinition record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add SkillDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteSkillDefinition
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteSkillDefinitionRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteSkillDefinitionRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteSkillDefinition'
+                                items:
+                                    $ref: '#/components/schemas/DeleteSkillDefinition'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -16504,20 +16786,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a SkillDefinition record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add SkillDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateSkillDefinition
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateSkillDefinitionRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateSkillDefinitionRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateSkillDefinition'
+                                items:
+                                    $ref: '#/components/schemas/UpdateSkillDefinition'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -16682,20 +16970,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a SkillPlanning record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add SkillPlanning records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateSkillPlanning
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateSkillPlanningRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateSkillPlanningRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateSkillPlanning'
+                                items:
+                                    $ref: '#/components/schemas/CreateSkillPlanning'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -16784,20 +17078,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a SkillPlanning record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add SkillPlanning records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteSkillPlanning
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteSkillPlanningRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteSkillPlanningRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteSkillPlanning'
+                                items:
+                                    $ref: '#/components/schemas/DeleteSkillPlanning'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -16886,20 +17186,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a SkillPlanning record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add SkillPlanning records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateSkillPlanning
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateSkillPlanningRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateSkillPlanningRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateSkillPlanning'
+                                items:
+                                    $ref: '#/components/schemas/UpdateSkillPlanning'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -17098,20 +17404,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a SkillResult record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add SkillResult records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateSkillResult
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateSkillResultRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateSkillResultRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateSkillResult'
+                                items:
+                                    $ref: '#/components/schemas/CreateSkillResult'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -17200,20 +17512,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a SkillResult record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add SkillResult records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteSkillResult
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteSkillResultRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteSkillResultRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteSkillResult'
+                                items:
+                                    $ref: '#/components/schemas/DeleteSkillResult'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -17319,20 +17637,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a SkillResult record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add SkillResult records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateSkillResult
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateSkillResultRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateSkillResultRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateSkillResult'
+                                items:
+                                    $ref: '#/components/schemas/UpdateSkillResult'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -17521,20 +17845,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a TypesOfProof record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add TypesOfProof records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateTypesOfProof
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateCreateTypesOfProofRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateCreateTypesOfProofRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/CreateTypesOfProof'
+                                items:
+                                    $ref: '#/components/schemas/CreateTypesOfProof'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -17623,20 +17953,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a TypesOfProof record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add TypesOfProof records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteTypesOfProof
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateDeleteTypesOfProofRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateDeleteTypesOfProofRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/DeleteTypesOfProof'
+                                items:
+                                    $ref: '#/components/schemas/DeleteTypesOfProof'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
@@ -17737,20 +18073,26 @@ paths:
               schema:
                 type: string
         post:
-            description: Create a new proposal to add a TypesOfProof record. The proposal may be automatically approved or require manual approval depending on system configuration.
+            description: Create new proposals to add TypesOfProof records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateTypesOfProof
             requestBody:
                 content:
                     application/json:
                         schema:
-                            $ref: '#/components/schemas/CreateUpdateTypesOfProofRequest'
+                            items:
+                                $ref: '#/components/schemas/CreateUpdateTypesOfProofRequest'
+                            maxItems: 100
+                            minItems: 1
+                            type: array
                 required: true
             responses:
                 "201":
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/UpdateTypesOfProof'
+                                items:
+                                    $ref: '#/components/schemas/UpdateTypesOfProof'
+                                type: array
                     description: Created successfully
                 "400":
                     $ref: '#/components/responses/BadRequest'
