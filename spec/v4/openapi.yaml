@@ -10688,7 +10688,7 @@ info:
         url: https://www.ag5.com/wp-content/themes/ag5/assets/images/ag5-logo.png
 openapi: 3.0.3
 paths:
-    /{orgkeepID}/customFieldDefinitions:
+    /customFieldDefinitions:
         get:
             description: |-
                 List customFieldDefinitions
@@ -10735,14 +10735,8 @@ paths:
             tags:
                 - CustomFieldDefinitions
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/customFieldDefinitions/{id}:
+        parameters: []
+    /customFieldDefinitions/{id}:
         get:
             description: Get a single CustomFieldDefinition by ID
             operationId: getCustomFieldDefinition
@@ -10764,19 +10758,13 @@ paths:
                 - CustomFieldDefinitions
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CustomFieldDefinition ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createCustomFieldDefinitions:
+    /createCustomFieldDefinitions:
         get:
             description: |-
                 List all createCustomFieldDefinitions proposals. These are proposed changes to create new CustomFieldDefinition records that may be automatically approved or require manual approval depending on system configuration.
@@ -10823,13 +10811,7 @@ paths:
             tags:
                 - CustomFieldDefinitions
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add CustomFieldDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateCustomFieldDefinitionProposal
@@ -10862,7 +10844,7 @@ paths:
             tags:
                 - CustomFieldDefinitions
                 - Proposals
-    /{orgkeepID}/createCustomFieldDefinitions/{id}:
+    /createCustomFieldDefinitions/{id}:
         get:
             description: Get details of a specific CustomFieldDefinition creation proposal by ID
             operationId: getCreateCustomFieldDefinitionProposal
@@ -10884,19 +10866,13 @@ paths:
                 - CustomFieldDefinitions
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateCustomFieldDefinitionProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteCustomFieldDefinitions:
+    /deleteCustomFieldDefinitions:
         get:
             description: List all deleteCustomFieldDefinitions proposals. These are proposed changes to delete CustomFieldDefinition records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteCustomFieldDefinitionProposal
@@ -10931,13 +10907,7 @@ paths:
             tags:
                 - CustomFieldDefinitions
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete CustomFieldDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteCustomFieldDefinitionProposal
@@ -10970,7 +10940,7 @@ paths:
             tags:
                 - CustomFieldDefinitions
                 - Proposals
-    /{orgkeepID}/deleteCustomFieldDefinitions/{id}:
+    /deleteCustomFieldDefinitions/{id}:
         get:
             description: Get details of a specific CustomFieldDefinition deletion proposal by ID
             operationId: getDeleteCustomFieldDefinitionProposal
@@ -10992,19 +10962,13 @@ paths:
                 - CustomFieldDefinitions
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteCustomFieldDefinitionProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateCustomFieldDefinitions:
+    /updateCustomFieldDefinitions:
         get:
             description: |-
                 List all updateCustomFieldDefinitions proposals. These are proposed changes to update existing CustomFieldDefinition records that may be automatically approved or require manual approval depending on system configuration.
@@ -11051,13 +11015,7 @@ paths:
             tags:
                 - CustomFieldDefinitions
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update CustomFieldDefinition records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateCustomFieldDefinitionProposal
@@ -11090,7 +11048,7 @@ paths:
             tags:
                 - CustomFieldDefinitions
                 - Proposals
-    /{orgkeepID}/updateCustomFieldDefinitions/{id}:
+    /updateCustomFieldDefinitions/{id}:
         get:
             description: Get details of a specific CustomFieldDefinition update proposal by ID
             operationId: getUpdateCustomFieldDefinitionProposal
@@ -11112,19 +11070,13 @@ paths:
                 - CustomFieldDefinitions
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateCustomFieldDefinitionProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/employeeUnavailabilities:
+    /employeeUnavailabilities:
         get:
             description: |-
                 List employeeUnavailabilities
@@ -11171,14 +11123,8 @@ paths:
             tags:
                 - EmployeeUnavailabilities
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/employeeUnavailabilities/{id}:
+        parameters: []
+    /employeeUnavailabilities/{id}:
         get:
             description: Get a single EmployeeUnavailability by ID
             operationId: getEmployeeUnavailability
@@ -11200,19 +11146,13 @@ paths:
                 - EmployeeUnavailabilities
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: EmployeeUnavailability ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createEmployeeUnavailabilities:
+    /createEmployeeUnavailabilities:
         get:
             description: |-
                 List all createEmployeeUnavailabilities proposals. These are proposed changes to create new EmployeeUnavailability records that may be automatically approved or require manual approval depending on system configuration.
@@ -11259,13 +11199,7 @@ paths:
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add EmployeeUnavailability records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateEmployeeUnavailabilityProposal
@@ -11298,7 +11232,7 @@ paths:
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
-    /{orgkeepID}/createEmployeeUnavailabilities/{id}:
+    /createEmployeeUnavailabilities/{id}:
         get:
             description: Get details of a specific EmployeeUnavailability creation proposal by ID
             operationId: getCreateEmployeeUnavailabilityProposal
@@ -11320,19 +11254,13 @@ paths:
                 - EmployeeUnavailabilities
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateEmployeeUnavailabilityProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteEmployeeUnavailabilities:
+    /deleteEmployeeUnavailabilities:
         get:
             description: List all deleteEmployeeUnavailabilities proposals. These are proposed changes to delete EmployeeUnavailability records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmployeeUnavailabilityProposal
@@ -11367,13 +11295,7 @@ paths:
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete EmployeeUnavailability records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmployeeUnavailabilityProposal
@@ -11406,7 +11328,7 @@ paths:
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
-    /{orgkeepID}/deleteEmployeeUnavailabilities/{id}:
+    /deleteEmployeeUnavailabilities/{id}:
         get:
             description: Get details of a specific EmployeeUnavailability deletion proposal by ID
             operationId: getDeleteEmployeeUnavailabilityProposal
@@ -11428,19 +11350,13 @@ paths:
                 - EmployeeUnavailabilities
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteEmployeeUnavailabilityProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateEmployeeUnavailabilities:
+    /updateEmployeeUnavailabilities:
         get:
             description: |-
                 List all updateEmployeeUnavailabilities proposals. These are proposed changes to update existing EmployeeUnavailability records that may be automatically approved or require manual approval depending on system configuration.
@@ -11487,13 +11403,7 @@ paths:
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update EmployeeUnavailability records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmployeeUnavailabilityProposal
@@ -11526,7 +11436,7 @@ paths:
             tags:
                 - EmployeeUnavailabilities
                 - Proposals
-    /{orgkeepID}/updateEmployeeUnavailabilities/{id}:
+    /updateEmployeeUnavailabilities/{id}:
         get:
             description: Get details of a specific EmployeeUnavailability update proposal by ID
             operationId: getUpdateEmployeeUnavailabilityProposal
@@ -11548,19 +11458,13 @@ paths:
                 - EmployeeUnavailabilities
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateEmployeeUnavailabilityProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/employees:
+    /employees:
         get:
             description: List employees
             operationId: listEmployee
@@ -11595,14 +11499,8 @@ paths:
             tags:
                 - Employees
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/employees/{id}:
+        parameters: []
+    /employees/{id}:
         get:
             description: Get a single Employee by ID
             operationId: getEmployee
@@ -11624,19 +11522,13 @@ paths:
                 - Employees
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: Employee ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createEmployees:
+    /createEmployees:
         get:
             description: List all createEmployees proposals. These are proposed changes to create new Employee records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateEmployeeProposal
@@ -11671,13 +11563,7 @@ paths:
             tags:
                 - Employees
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add Employee records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateEmployeeProposal
@@ -11710,7 +11596,7 @@ paths:
             tags:
                 - Employees
                 - Proposals
-    /{orgkeepID}/createEmployees/{id}:
+    /createEmployees/{id}:
         get:
             description: Get details of a specific Employee creation proposal by ID
             operationId: getCreateEmployeeProposal
@@ -11732,19 +11618,13 @@ paths:
                 - Employees
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateEmployeeProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteEmployees:
+    /deleteEmployees:
         get:
             description: List all deleteEmployees proposals. These are proposed changes to delete Employee records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmployeeProposal
@@ -11779,13 +11659,7 @@ paths:
             tags:
                 - Employees
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete Employee records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmployeeProposal
@@ -11818,7 +11692,7 @@ paths:
             tags:
                 - Employees
                 - Proposals
-    /{orgkeepID}/deleteEmployees/{id}:
+    /deleteEmployees/{id}:
         get:
             description: Get details of a specific Employee deletion proposal by ID
             operationId: getDeleteEmployeeProposal
@@ -11840,19 +11714,13 @@ paths:
                 - Employees
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteEmployeeProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateEmployees:
+    /updateEmployees:
         get:
             description: List all updateEmployees proposals. These are proposed changes to update existing Employee records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateEmployeeProposal
@@ -11887,13 +11755,7 @@ paths:
             tags:
                 - Employees
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update Employee records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmployeeProposal
@@ -11926,7 +11788,7 @@ paths:
             tags:
                 - Employees
                 - Proposals
-    /{orgkeepID}/updateEmployees/{id}:
+    /updateEmployees/{id}:
         get:
             description: Get details of a specific Employee update proposal by ID
             operationId: getUpdateEmployeeProposal
@@ -11948,19 +11810,13 @@ paths:
                 - Employees
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateEmployeeProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/employmentContractTypes:
+    /employmentContractTypes:
         get:
             description: List employmentContractTypes
             operationId: listEmploymentContractType
@@ -11995,14 +11851,8 @@ paths:
             tags:
                 - EmploymentContractTypes
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/employmentContractTypes/{id}:
+        parameters: []
+    /employmentContractTypes/{id}:
         get:
             description: Get a single EmploymentContractType by ID
             operationId: getEmploymentContractType
@@ -12024,19 +11874,13 @@ paths:
                 - EmploymentContractTypes
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: EmploymentContractType ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createEmploymentContractTypes:
+    /createEmploymentContractTypes:
         get:
             description: List all createEmploymentContractTypes proposals. These are proposed changes to create new EmploymentContractType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateEmploymentContractTypeProposal
@@ -12071,13 +11915,7 @@ paths:
             tags:
                 - EmploymentContractTypes
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add EmploymentContractType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateEmploymentContractTypeProposal
@@ -12110,7 +11948,7 @@ paths:
             tags:
                 - EmploymentContractTypes
                 - Proposals
-    /{orgkeepID}/createEmploymentContractTypes/{id}:
+    /createEmploymentContractTypes/{id}:
         get:
             description: Get details of a specific EmploymentContractType creation proposal by ID
             operationId: getCreateEmploymentContractTypeProposal
@@ -12132,19 +11970,13 @@ paths:
                 - EmploymentContractTypes
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateEmploymentContractTypeProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteEmploymentContractTypes:
+    /deleteEmploymentContractTypes:
         get:
             description: List all deleteEmploymentContractTypes proposals. These are proposed changes to delete EmploymentContractType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmploymentContractTypeProposal
@@ -12179,13 +12011,7 @@ paths:
             tags:
                 - EmploymentContractTypes
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete EmploymentContractType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmploymentContractTypeProposal
@@ -12218,7 +12044,7 @@ paths:
             tags:
                 - EmploymentContractTypes
                 - Proposals
-    /{orgkeepID}/deleteEmploymentContractTypes/{id}:
+    /deleteEmploymentContractTypes/{id}:
         get:
             description: Get details of a specific EmploymentContractType deletion proposal by ID
             operationId: getDeleteEmploymentContractTypeProposal
@@ -12240,19 +12066,13 @@ paths:
                 - EmploymentContractTypes
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteEmploymentContractTypeProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateEmploymentContractTypes:
+    /updateEmploymentContractTypes:
         get:
             description: List all updateEmploymentContractTypes proposals. These are proposed changes to update existing EmploymentContractType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateEmploymentContractTypeProposal
@@ -12287,13 +12107,7 @@ paths:
             tags:
                 - EmploymentContractTypes
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update EmploymentContractType records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmploymentContractTypeProposal
@@ -12326,7 +12140,7 @@ paths:
             tags:
                 - EmploymentContractTypes
                 - Proposals
-    /{orgkeepID}/updateEmploymentContractTypes/{id}:
+    /updateEmploymentContractTypes/{id}:
         get:
             description: Get details of a specific EmploymentContractType update proposal by ID
             operationId: getUpdateEmploymentContractTypeProposal
@@ -12348,19 +12162,13 @@ paths:
                 - EmploymentContractTypes
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateEmploymentContractTypeProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/employmentContracts:
+    /employmentContracts:
         get:
             description: |-
                 List employmentContracts
@@ -12412,14 +12220,8 @@ paths:
             tags:
                 - EmploymentContracts
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/employmentContracts/{id}:
+        parameters: []
+    /employmentContracts/{id}:
         get:
             description: Get a single EmploymentContract by ID
             operationId: getEmploymentContract
@@ -12441,19 +12243,13 @@ paths:
                 - EmploymentContracts
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: EmploymentContract ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createEmploymentContracts:
+    /createEmploymentContracts:
         get:
             description: |-
                 List all createEmploymentContracts proposals. These are proposed changes to create new EmploymentContract records that may be automatically approved or require manual approval depending on system configuration.
@@ -12505,13 +12301,7 @@ paths:
             tags:
                 - EmploymentContracts
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add EmploymentContract records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateEmploymentContractProposal
@@ -12544,7 +12334,7 @@ paths:
             tags:
                 - EmploymentContracts
                 - Proposals
-    /{orgkeepID}/createEmploymentContracts/{id}:
+    /createEmploymentContracts/{id}:
         get:
             description: Get details of a specific EmploymentContract creation proposal by ID
             operationId: getCreateEmploymentContractProposal
@@ -12566,19 +12356,13 @@ paths:
                 - EmploymentContracts
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateEmploymentContractProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteEmploymentContracts:
+    /deleteEmploymentContracts:
         get:
             description: List all deleteEmploymentContracts proposals. These are proposed changes to delete EmploymentContract records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmploymentContractProposal
@@ -12613,13 +12397,7 @@ paths:
             tags:
                 - EmploymentContracts
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete EmploymentContract records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmploymentContractProposal
@@ -12652,7 +12430,7 @@ paths:
             tags:
                 - EmploymentContracts
                 - Proposals
-    /{orgkeepID}/deleteEmploymentContracts/{id}:
+    /deleteEmploymentContracts/{id}:
         get:
             description: Get details of a specific EmploymentContract deletion proposal by ID
             operationId: getDeleteEmploymentContractProposal
@@ -12674,19 +12452,13 @@ paths:
                 - EmploymentContracts
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteEmploymentContractProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateEmploymentContracts:
+    /updateEmploymentContracts:
         get:
             description: |-
                 List all updateEmploymentContracts proposals. These are proposed changes to update existing EmploymentContract records that may be automatically approved or require manual approval depending on system configuration.
@@ -12738,13 +12510,7 @@ paths:
             tags:
                 - EmploymentContracts
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update EmploymentContract records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmploymentContractProposal
@@ -12777,7 +12543,7 @@ paths:
             tags:
                 - EmploymentContracts
                 - Proposals
-    /{orgkeepID}/updateEmploymentContracts/{id}:
+    /updateEmploymentContracts/{id}:
         get:
             description: Get details of a specific EmploymentContract update proposal by ID
             operationId: getUpdateEmploymentContractProposal
@@ -12799,19 +12565,13 @@ paths:
                 - EmploymentContracts
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateEmploymentContractProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/employmentRelationTypes:
+    /employmentRelationTypes:
         get:
             description: List employmentRelationTypes
             operationId: listEmploymentRelationType
@@ -12846,14 +12606,8 @@ paths:
             tags:
                 - EmploymentRelationTypes
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/employmentRelationTypes/{id}:
+        parameters: []
+    /employmentRelationTypes/{id}:
         get:
             description: Get a single EmploymentRelationType by ID
             operationId: getEmploymentRelationType
@@ -12875,19 +12629,13 @@ paths:
                 - EmploymentRelationTypes
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: EmploymentRelationType ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createEmploymentRelationTypes:
+    /createEmploymentRelationTypes:
         get:
             description: List all createEmploymentRelationTypes proposals. These are proposed changes to create new EmploymentRelationType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateEmploymentRelationTypeProposal
@@ -12922,13 +12670,7 @@ paths:
             tags:
                 - EmploymentRelationTypes
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add EmploymentRelationType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateEmploymentRelationTypeProposal
@@ -12961,7 +12703,7 @@ paths:
             tags:
                 - EmploymentRelationTypes
                 - Proposals
-    /{orgkeepID}/createEmploymentRelationTypes/{id}:
+    /createEmploymentRelationTypes/{id}:
         get:
             description: Get details of a specific EmploymentRelationType creation proposal by ID
             operationId: getCreateEmploymentRelationTypeProposal
@@ -12983,19 +12725,13 @@ paths:
                 - EmploymentRelationTypes
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateEmploymentRelationTypeProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteEmploymentRelationTypes:
+    /deleteEmploymentRelationTypes:
         get:
             description: List all deleteEmploymentRelationTypes proposals. These are proposed changes to delete EmploymentRelationType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmploymentRelationTypeProposal
@@ -13030,13 +12766,7 @@ paths:
             tags:
                 - EmploymentRelationTypes
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete EmploymentRelationType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmploymentRelationTypeProposal
@@ -13069,7 +12799,7 @@ paths:
             tags:
                 - EmploymentRelationTypes
                 - Proposals
-    /{orgkeepID}/deleteEmploymentRelationTypes/{id}:
+    /deleteEmploymentRelationTypes/{id}:
         get:
             description: Get details of a specific EmploymentRelationType deletion proposal by ID
             operationId: getDeleteEmploymentRelationTypeProposal
@@ -13091,19 +12821,13 @@ paths:
                 - EmploymentRelationTypes
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteEmploymentRelationTypeProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateEmploymentRelationTypes:
+    /updateEmploymentRelationTypes:
         get:
             description: List all updateEmploymentRelationTypes proposals. These are proposed changes to update existing EmploymentRelationType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateEmploymentRelationTypeProposal
@@ -13138,13 +12862,7 @@ paths:
             tags:
                 - EmploymentRelationTypes
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update EmploymentRelationType records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmploymentRelationTypeProposal
@@ -13177,7 +12895,7 @@ paths:
             tags:
                 - EmploymentRelationTypes
                 - Proposals
-    /{orgkeepID}/updateEmploymentRelationTypes/{id}:
+    /updateEmploymentRelationTypes/{id}:
         get:
             description: Get details of a specific EmploymentRelationType update proposal by ID
             operationId: getUpdateEmploymentRelationTypeProposal
@@ -13199,19 +12917,13 @@ paths:
                 - EmploymentRelationTypes
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateEmploymentRelationTypeProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/employmentRelations:
+    /employmentRelations:
         get:
             description: |-
                 List employmentRelations
@@ -13268,14 +12980,8 @@ paths:
             tags:
                 - EmploymentRelations
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/employmentRelations/{id}:
+        parameters: []
+    /employmentRelations/{id}:
         get:
             description: Get a single EmploymentRelation by ID
             operationId: getEmploymentRelation
@@ -13297,19 +13003,13 @@ paths:
                 - EmploymentRelations
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: EmploymentRelation ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createEmploymentRelations:
+    /createEmploymentRelations:
         get:
             description: |-
                 List all createEmploymentRelations proposals. These are proposed changes to create new EmploymentRelation records that may be automatically approved or require manual approval depending on system configuration.
@@ -13366,13 +13066,7 @@ paths:
             tags:
                 - EmploymentRelations
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add EmploymentRelation records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateEmploymentRelationProposal
@@ -13405,7 +13099,7 @@ paths:
             tags:
                 - EmploymentRelations
                 - Proposals
-    /{orgkeepID}/createEmploymentRelations/{id}:
+    /createEmploymentRelations/{id}:
         get:
             description: Get details of a specific EmploymentRelation creation proposal by ID
             operationId: getCreateEmploymentRelationProposal
@@ -13427,19 +13121,13 @@ paths:
                 - EmploymentRelations
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateEmploymentRelationProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteEmploymentRelations:
+    /deleteEmploymentRelations:
         get:
             description: List all deleteEmploymentRelations proposals. These are proposed changes to delete EmploymentRelation records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteEmploymentRelationProposal
@@ -13474,13 +13162,7 @@ paths:
             tags:
                 - EmploymentRelations
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete EmploymentRelation records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteEmploymentRelationProposal
@@ -13513,7 +13195,7 @@ paths:
             tags:
                 - EmploymentRelations
                 - Proposals
-    /{orgkeepID}/deleteEmploymentRelations/{id}:
+    /deleteEmploymentRelations/{id}:
         get:
             description: Get details of a specific EmploymentRelation deletion proposal by ID
             operationId: getDeleteEmploymentRelationProposal
@@ -13535,19 +13217,13 @@ paths:
                 - EmploymentRelations
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteEmploymentRelationProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateEmploymentRelations:
+    /updateEmploymentRelations:
         get:
             description: |-
                 List all updateEmploymentRelations proposals. These are proposed changes to update existing EmploymentRelation records that may be automatically approved or require manual approval depending on system configuration.
@@ -13604,13 +13280,7 @@ paths:
             tags:
                 - EmploymentRelations
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update EmploymentRelation records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateEmploymentRelationProposal
@@ -13643,7 +13313,7 @@ paths:
             tags:
                 - EmploymentRelations
                 - Proposals
-    /{orgkeepID}/updateEmploymentRelations/{id}:
+    /updateEmploymentRelations/{id}:
         get:
             description: Get details of a specific EmploymentRelation update proposal by ID
             operationId: getUpdateEmploymentRelationProposal
@@ -13665,19 +13335,13 @@ paths:
                 - EmploymentRelations
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateEmploymentRelationProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/entityDefinitions:
+    /entityDefinitions:
         get:
             description: List entityDefinitions
             operationId: listEntityDefinition
@@ -13712,14 +13376,8 @@ paths:
             tags:
                 - EntityDefinitions
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/entityDefinitions/{id}:
+        parameters: []
+    /entityDefinitions/{id}:
         get:
             description: Get a single EntityDefinition by ID
             operationId: getEntityDefinition
@@ -13741,19 +13399,13 @@ paths:
                 - EntityDefinitions
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: EntityDefinition ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/groupingTypes:
+    /groupingTypes:
         get:
             description: List groupingTypes
             operationId: listGroupingType
@@ -13788,14 +13440,8 @@ paths:
             tags:
                 - GroupingTypes
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/groupingTypes/{id}:
+        parameters: []
+    /groupingTypes/{id}:
         get:
             description: Get a single GroupingType by ID
             operationId: getGroupingType
@@ -13817,19 +13463,13 @@ paths:
                 - GroupingTypes
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: GroupingType ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createGroupingTypes:
+    /createGroupingTypes:
         get:
             description: List all createGroupingTypes proposals. These are proposed changes to create new GroupingType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateGroupingTypeProposal
@@ -13864,13 +13504,7 @@ paths:
             tags:
                 - GroupingTypes
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add GroupingType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateGroupingTypeProposal
@@ -13903,7 +13537,7 @@ paths:
             tags:
                 - GroupingTypes
                 - Proposals
-    /{orgkeepID}/createGroupingTypes/{id}:
+    /createGroupingTypes/{id}:
         get:
             description: Get details of a specific GroupingType creation proposal by ID
             operationId: getCreateGroupingTypeProposal
@@ -13925,19 +13559,13 @@ paths:
                 - GroupingTypes
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateGroupingTypeProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteGroupingTypes:
+    /deleteGroupingTypes:
         get:
             description: List all deleteGroupingTypes proposals. These are proposed changes to delete GroupingType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteGroupingTypeProposal
@@ -13972,13 +13600,7 @@ paths:
             tags:
                 - GroupingTypes
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete GroupingType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteGroupingTypeProposal
@@ -14011,7 +13633,7 @@ paths:
             tags:
                 - GroupingTypes
                 - Proposals
-    /{orgkeepID}/deleteGroupingTypes/{id}:
+    /deleteGroupingTypes/{id}:
         get:
             description: Get details of a specific GroupingType deletion proposal by ID
             operationId: getDeleteGroupingTypeProposal
@@ -14033,19 +13655,13 @@ paths:
                 - GroupingTypes
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteGroupingTypeProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateGroupingTypes:
+    /updateGroupingTypes:
         get:
             description: List all updateGroupingTypes proposals. These are proposed changes to update existing GroupingType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateGroupingTypeProposal
@@ -14080,13 +13696,7 @@ paths:
             tags:
                 - GroupingTypes
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update GroupingType records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateGroupingTypeProposal
@@ -14119,7 +13729,7 @@ paths:
             tags:
                 - GroupingTypes
                 - Proposals
-    /{orgkeepID}/updateGroupingTypes/{id}:
+    /updateGroupingTypes/{id}:
         get:
             description: Get details of a specific GroupingType update proposal by ID
             operationId: getUpdateGroupingTypeProposal
@@ -14141,19 +13751,13 @@ paths:
                 - GroupingTypes
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateGroupingTypeProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/groupings:
+    /groupings:
         get:
             description: |-
                 List groupings
@@ -14205,14 +13809,8 @@ paths:
             tags:
                 - Groupings
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/groupings/{id}:
+        parameters: []
+    /groupings/{id}:
         get:
             description: Get a single Grouping by ID
             operationId: getGrouping
@@ -14234,19 +13832,13 @@ paths:
                 - Groupings
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: Grouping ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createGroupings:
+    /createGroupings:
         get:
             description: |-
                 List all createGroupings proposals. These are proposed changes to create new Grouping records that may be automatically approved or require manual approval depending on system configuration.
@@ -14298,13 +13890,7 @@ paths:
             tags:
                 - Groupings
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add Grouping records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateGroupingProposal
@@ -14337,7 +13923,7 @@ paths:
             tags:
                 - Groupings
                 - Proposals
-    /{orgkeepID}/createGroupings/{id}:
+    /createGroupings/{id}:
         get:
             description: Get details of a specific Grouping creation proposal by ID
             operationId: getCreateGroupingProposal
@@ -14359,19 +13945,13 @@ paths:
                 - Groupings
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateGroupingProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteGroupings:
+    /deleteGroupings:
         get:
             description: List all deleteGroupings proposals. These are proposed changes to delete Grouping records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteGroupingProposal
@@ -14406,13 +13986,7 @@ paths:
             tags:
                 - Groupings
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete Grouping records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteGroupingProposal
@@ -14445,7 +14019,7 @@ paths:
             tags:
                 - Groupings
                 - Proposals
-    /{orgkeepID}/deleteGroupings/{id}:
+    /deleteGroupings/{id}:
         get:
             description: Get details of a specific Grouping deletion proposal by ID
             operationId: getDeleteGroupingProposal
@@ -14467,19 +14041,13 @@ paths:
                 - Groupings
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteGroupingProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateGroupings:
+    /updateGroupings:
         get:
             description: |-
                 List all updateGroupings proposals. These are proposed changes to update existing Grouping records that may be automatically approved or require manual approval depending on system configuration.
@@ -14531,13 +14099,7 @@ paths:
             tags:
                 - Groupings
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update Grouping records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateGroupingProposal
@@ -14570,7 +14132,7 @@ paths:
             tags:
                 - Groupings
                 - Proposals
-    /{orgkeepID}/updateGroupings/{id}:
+    /updateGroupings/{id}:
         get:
             description: Get details of a specific Grouping update proposal by ID
             operationId: getUpdateGroupingProposal
@@ -14592,19 +14154,13 @@ paths:
                 - Groupings
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateGroupingProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/monitoringTraces:
+    /monitoringTraces:
         get:
             description: List monitoringTraces
             operationId: listMonitoringTrace
@@ -14639,14 +14195,8 @@ paths:
             tags:
                 - MonitoringTraces
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/monitoringTraces/{id}:
+        parameters: []
+    /monitoringTraces/{id}:
         get:
             description: Get a single MonitoringTrace by ID
             operationId: getMonitoringTrace
@@ -14668,19 +14218,13 @@ paths:
                 - MonitoringTraces
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: MonitoringTrace ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createMonitoringTraces:
+    /createMonitoringTraces:
         get:
             description: List all createMonitoringTraces proposals. These are proposed changes to create new MonitoringTrace records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateMonitoringTraceProposal
@@ -14715,13 +14259,7 @@ paths:
             tags:
                 - MonitoringTraces
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add MonitoringTrace records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateMonitoringTraceProposal
@@ -14754,7 +14292,7 @@ paths:
             tags:
                 - MonitoringTraces
                 - Proposals
-    /{orgkeepID}/createMonitoringTraces/{id}:
+    /createMonitoringTraces/{id}:
         get:
             description: Get details of a specific MonitoringTrace creation proposal by ID
             operationId: getCreateMonitoringTraceProposal
@@ -14776,19 +14314,13 @@ paths:
                 - MonitoringTraces
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateMonitoringTraceProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteMonitoringTraces:
+    /deleteMonitoringTraces:
         get:
             description: List all deleteMonitoringTraces proposals. These are proposed changes to delete MonitoringTrace records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteMonitoringTraceProposal
@@ -14823,13 +14355,7 @@ paths:
             tags:
                 - MonitoringTraces
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete MonitoringTrace records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteMonitoringTraceProposal
@@ -14862,7 +14388,7 @@ paths:
             tags:
                 - MonitoringTraces
                 - Proposals
-    /{orgkeepID}/deleteMonitoringTraces/{id}:
+    /deleteMonitoringTraces/{id}:
         get:
             description: Get details of a specific MonitoringTrace deletion proposal by ID
             operationId: getDeleteMonitoringTraceProposal
@@ -14884,19 +14410,13 @@ paths:
                 - MonitoringTraces
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteMonitoringTraceProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateMonitoringTraces:
+    /updateMonitoringTraces:
         get:
             description: List all updateMonitoringTraces proposals. These are proposed changes to update existing MonitoringTrace records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateMonitoringTraceProposal
@@ -14931,13 +14451,7 @@ paths:
             tags:
                 - MonitoringTraces
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update MonitoringTrace records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateMonitoringTraceProposal
@@ -14970,7 +14484,7 @@ paths:
             tags:
                 - MonitoringTraces
                 - Proposals
-    /{orgkeepID}/updateMonitoringTraces/{id}:
+    /updateMonitoringTraces/{id}:
         get:
             description: Get details of a specific MonitoringTrace update proposal by ID
             operationId: getUpdateMonitoringTraceProposal
@@ -14992,19 +14506,13 @@ paths:
                 - MonitoringTraces
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateMonitoringTraceProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/positionAssignments:
+    /positionAssignments:
         get:
             description: |-
                 List positionAssignments
@@ -15051,14 +14559,8 @@ paths:
             tags:
                 - PositionAssignments
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/positionAssignments/{id}:
+        parameters: []
+    /positionAssignments/{id}:
         get:
             description: Get a single PositionAssignment by ID
             operationId: getPositionAssignment
@@ -15080,19 +14582,13 @@ paths:
                 - PositionAssignments
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: PositionAssignment ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createPositionAssignments:
+    /createPositionAssignments:
         get:
             description: |-
                 List all createPositionAssignments proposals. These are proposed changes to create new PositionAssignment records that may be automatically approved or require manual approval depending on system configuration.
@@ -15139,13 +14635,7 @@ paths:
             tags:
                 - PositionAssignments
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add PositionAssignment records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreatePositionAssignmentProposal
@@ -15178,7 +14668,7 @@ paths:
             tags:
                 - PositionAssignments
                 - Proposals
-    /{orgkeepID}/createPositionAssignments/{id}:
+    /createPositionAssignments/{id}:
         get:
             description: Get details of a specific PositionAssignment creation proposal by ID
             operationId: getCreatePositionAssignmentProposal
@@ -15200,19 +14690,13 @@ paths:
                 - PositionAssignments
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreatePositionAssignmentProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deletePositionAssignments:
+    /deletePositionAssignments:
         get:
             description: List all deletePositionAssignments proposals. These are proposed changes to delete PositionAssignment records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeletePositionAssignmentProposal
@@ -15247,13 +14731,7 @@ paths:
             tags:
                 - PositionAssignments
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete PositionAssignment records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeletePositionAssignmentProposal
@@ -15286,7 +14764,7 @@ paths:
             tags:
                 - PositionAssignments
                 - Proposals
-    /{orgkeepID}/deletePositionAssignments/{id}:
+    /deletePositionAssignments/{id}:
         get:
             description: Get details of a specific PositionAssignment deletion proposal by ID
             operationId: getDeletePositionAssignmentProposal
@@ -15308,19 +14786,13 @@ paths:
                 - PositionAssignments
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeletePositionAssignmentProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updatePositionAssignments:
+    /updatePositionAssignments:
         get:
             description: |-
                 List all updatePositionAssignments proposals. These are proposed changes to update existing PositionAssignment records that may be automatically approved or require manual approval depending on system configuration.
@@ -15367,13 +14839,7 @@ paths:
             tags:
                 - PositionAssignments
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update PositionAssignment records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdatePositionAssignmentProposal
@@ -15406,7 +14872,7 @@ paths:
             tags:
                 - PositionAssignments
                 - Proposals
-    /{orgkeepID}/updatePositionAssignments/{id}:
+    /updatePositionAssignments/{id}:
         get:
             description: Get details of a specific PositionAssignment update proposal by ID
             operationId: getUpdatePositionAssignmentProposal
@@ -15428,19 +14894,13 @@ paths:
                 - PositionAssignments
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdatePositionAssignmentProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/ratingScaleLevelDescriptors:
+    /ratingScaleLevelDescriptors:
         get:
             description: |-
                 List ratingScaleLevelDescriptors
@@ -15492,14 +14952,8 @@ paths:
             tags:
                 - RatingScaleLevelDescriptors
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/ratingScaleLevelDescriptors/{id}:
+        parameters: []
+    /ratingScaleLevelDescriptors/{id}:
         get:
             description: Get a single RatingScaleLevelDescriptor by ID
             operationId: getRatingScaleLevelDescriptor
@@ -15521,19 +14975,13 @@ paths:
                 - RatingScaleLevelDescriptors
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: RatingScaleLevelDescriptor ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createRatingScaleLevelDescriptors:
+    /createRatingScaleLevelDescriptors:
         get:
             description: |-
                 List all createRatingScaleLevelDescriptors proposals. These are proposed changes to create new RatingScaleLevelDescriptor records that may be automatically approved or require manual approval depending on system configuration.
@@ -15585,13 +15033,7 @@ paths:
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add RatingScaleLevelDescriptor records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateRatingScaleLevelDescriptorProposal
@@ -15624,7 +15066,7 @@ paths:
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
-    /{orgkeepID}/createRatingScaleLevelDescriptors/{id}:
+    /createRatingScaleLevelDescriptors/{id}:
         get:
             description: Get details of a specific RatingScaleLevelDescriptor creation proposal by ID
             operationId: getCreateRatingScaleLevelDescriptorProposal
@@ -15646,19 +15088,13 @@ paths:
                 - RatingScaleLevelDescriptors
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateRatingScaleLevelDescriptorProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteRatingScaleLevelDescriptors:
+    /deleteRatingScaleLevelDescriptors:
         get:
             description: List all deleteRatingScaleLevelDescriptors proposals. These are proposed changes to delete RatingScaleLevelDescriptor records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteRatingScaleLevelDescriptorProposal
@@ -15693,13 +15129,7 @@ paths:
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete RatingScaleLevelDescriptor records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteRatingScaleLevelDescriptorProposal
@@ -15732,7 +15162,7 @@ paths:
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
-    /{orgkeepID}/deleteRatingScaleLevelDescriptors/{id}:
+    /deleteRatingScaleLevelDescriptors/{id}:
         get:
             description: Get details of a specific RatingScaleLevelDescriptor deletion proposal by ID
             operationId: getDeleteRatingScaleLevelDescriptorProposal
@@ -15754,19 +15184,13 @@ paths:
                 - RatingScaleLevelDescriptors
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteRatingScaleLevelDescriptorProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateRatingScaleLevelDescriptors:
+    /updateRatingScaleLevelDescriptors:
         get:
             description: List all updateRatingScaleLevelDescriptors proposals. These are proposed changes to update existing RatingScaleLevelDescriptor records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateRatingScaleLevelDescriptorProposal
@@ -15801,13 +15225,7 @@ paths:
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update RatingScaleLevelDescriptor records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateRatingScaleLevelDescriptorProposal
@@ -15840,7 +15258,7 @@ paths:
             tags:
                 - RatingScaleLevelDescriptors
                 - Proposals
-    /{orgkeepID}/updateRatingScaleLevelDescriptors/{id}:
+    /updateRatingScaleLevelDescriptors/{id}:
         get:
             description: Get details of a specific RatingScaleLevelDescriptor update proposal by ID
             operationId: getUpdateRatingScaleLevelDescriptorProposal
@@ -15862,19 +15280,13 @@ paths:
                 - RatingScaleLevelDescriptors
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateRatingScaleLevelDescriptorProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/ratingScaleLevels:
+    /ratingScaleLevels:
         get:
             description: |-
                 List ratingScaleLevels
@@ -15921,14 +15333,8 @@ paths:
             tags:
                 - RatingScaleLevels
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/ratingScaleLevels/{id}:
+        parameters: []
+    /ratingScaleLevels/{id}:
         get:
             description: Get a single RatingScaleLevel by ID
             operationId: getRatingScaleLevel
@@ -15950,19 +15356,13 @@ paths:
                 - RatingScaleLevels
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: RatingScaleLevel ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createRatingScaleLevels:
+    /createRatingScaleLevels:
         get:
             description: |-
                 List all createRatingScaleLevels proposals. These are proposed changes to create new RatingScaleLevel records that may be automatically approved or require manual approval depending on system configuration.
@@ -16009,13 +15409,7 @@ paths:
             tags:
                 - RatingScaleLevels
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add RatingScaleLevel records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateRatingScaleLevelProposal
@@ -16048,7 +15442,7 @@ paths:
             tags:
                 - RatingScaleLevels
                 - Proposals
-    /{orgkeepID}/createRatingScaleLevels/{id}:
+    /createRatingScaleLevels/{id}:
         get:
             description: Get details of a specific RatingScaleLevel creation proposal by ID
             operationId: getCreateRatingScaleLevelProposal
@@ -16070,19 +15464,13 @@ paths:
                 - RatingScaleLevels
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateRatingScaleLevelProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteRatingScaleLevels:
+    /deleteRatingScaleLevels:
         get:
             description: List all deleteRatingScaleLevels proposals. These are proposed changes to delete RatingScaleLevel records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteRatingScaleLevelProposal
@@ -16117,13 +15505,7 @@ paths:
             tags:
                 - RatingScaleLevels
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete RatingScaleLevel records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteRatingScaleLevelProposal
@@ -16156,7 +15538,7 @@ paths:
             tags:
                 - RatingScaleLevels
                 - Proposals
-    /{orgkeepID}/deleteRatingScaleLevels/{id}:
+    /deleteRatingScaleLevels/{id}:
         get:
             description: Get details of a specific RatingScaleLevel deletion proposal by ID
             operationId: getDeleteRatingScaleLevelProposal
@@ -16178,19 +15560,13 @@ paths:
                 - RatingScaleLevels
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteRatingScaleLevelProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateRatingScaleLevels:
+    /updateRatingScaleLevels:
         get:
             description: List all updateRatingScaleLevels proposals. These are proposed changes to update existing RatingScaleLevel records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateRatingScaleLevelProposal
@@ -16225,13 +15601,7 @@ paths:
             tags:
                 - RatingScaleLevels
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update RatingScaleLevel records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateRatingScaleLevelProposal
@@ -16264,7 +15634,7 @@ paths:
             tags:
                 - RatingScaleLevels
                 - Proposals
-    /{orgkeepID}/updateRatingScaleLevels/{id}:
+    /updateRatingScaleLevels/{id}:
         get:
             description: Get details of a specific RatingScaleLevel update proposal by ID
             operationId: getUpdateRatingScaleLevelProposal
@@ -16286,19 +15656,13 @@ paths:
                 - RatingScaleLevels
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateRatingScaleLevelProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/ratingScales:
+    /ratingScales:
         get:
             description: List ratingScales
             operationId: listRatingScale
@@ -16333,14 +15697,8 @@ paths:
             tags:
                 - RatingScales
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/ratingScales/{id}:
+        parameters: []
+    /ratingScales/{id}:
         get:
             description: Get a single RatingScale by ID
             operationId: getRatingScale
@@ -16362,19 +15720,13 @@ paths:
                 - RatingScales
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: RatingScale ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createRatingScales:
+    /createRatingScales:
         get:
             description: List all createRatingScales proposals. These are proposed changes to create new RatingScale records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateRatingScaleProposal
@@ -16409,13 +15761,7 @@ paths:
             tags:
                 - RatingScales
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add RatingScale records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateRatingScaleProposal
@@ -16448,7 +15794,7 @@ paths:
             tags:
                 - RatingScales
                 - Proposals
-    /{orgkeepID}/createRatingScales/{id}:
+    /createRatingScales/{id}:
         get:
             description: Get details of a specific RatingScale creation proposal by ID
             operationId: getCreateRatingScaleProposal
@@ -16470,19 +15816,13 @@ paths:
                 - RatingScales
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateRatingScaleProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteRatingScales:
+    /deleteRatingScales:
         get:
             description: List all deleteRatingScales proposals. These are proposed changes to delete RatingScale records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteRatingScaleProposal
@@ -16517,13 +15857,7 @@ paths:
             tags:
                 - RatingScales
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete RatingScale records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteRatingScaleProposal
@@ -16556,7 +15890,7 @@ paths:
             tags:
                 - RatingScales
                 - Proposals
-    /{orgkeepID}/deleteRatingScales/{id}:
+    /deleteRatingScales/{id}:
         get:
             description: Get details of a specific RatingScale deletion proposal by ID
             operationId: getDeleteRatingScaleProposal
@@ -16578,19 +15912,13 @@ paths:
                 - RatingScales
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteRatingScaleProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateRatingScales:
+    /updateRatingScales:
         get:
             description: List all updateRatingScales proposals. These are proposed changes to update existing RatingScale records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateRatingScaleProposal
@@ -16625,13 +15953,7 @@ paths:
             tags:
                 - RatingScales
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update RatingScale records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateRatingScaleProposal
@@ -16664,7 +15986,7 @@ paths:
             tags:
                 - RatingScales
                 - Proposals
-    /{orgkeepID}/updateRatingScales/{id}:
+    /updateRatingScales/{id}:
         get:
             description: Get details of a specific RatingScale update proposal by ID
             operationId: getUpdateRatingScaleProposal
@@ -16686,19 +16008,13 @@ paths:
                 - RatingScales
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateRatingScaleProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/repositories:
+    /repositories:
         get:
             description: List repositories
             operationId: listRepository
@@ -16733,14 +16049,8 @@ paths:
             tags:
                 - Repositories
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/repositories/{id}:
+        parameters: []
+    /repositories/{id}:
         get:
             description: Get a single Repository by ID
             operationId: getRepository
@@ -16762,19 +16072,13 @@ paths:
                 - Repositories
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: Repository ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/skillDefinitionTypes:
+    /skillDefinitionTypes:
         get:
             description: List skillDefinitionTypes
             operationId: listSkillDefinitionType
@@ -16809,14 +16113,8 @@ paths:
             tags:
                 - SkillDefinitionTypes
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/skillDefinitionTypes/{id}:
+        parameters: []
+    /skillDefinitionTypes/{id}:
         get:
             description: Get a single SkillDefinitionType by ID
             operationId: getSkillDefinitionType
@@ -16838,19 +16136,13 @@ paths:
                 - SkillDefinitionTypes
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: SkillDefinitionType ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createSkillDefinitionTypes:
+    /createSkillDefinitionTypes:
         get:
             description: List all createSkillDefinitionTypes proposals. These are proposed changes to create new SkillDefinitionType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateSkillDefinitionTypeProposal
@@ -16885,13 +16177,7 @@ paths:
             tags:
                 - SkillDefinitionTypes
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add SkillDefinitionType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateSkillDefinitionTypeProposal
@@ -16924,7 +16210,7 @@ paths:
             tags:
                 - SkillDefinitionTypes
                 - Proposals
-    /{orgkeepID}/createSkillDefinitionTypes/{id}:
+    /createSkillDefinitionTypes/{id}:
         get:
             description: Get details of a specific SkillDefinitionType creation proposal by ID
             operationId: getCreateSkillDefinitionTypeProposal
@@ -16946,19 +16232,13 @@ paths:
                 - SkillDefinitionTypes
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateSkillDefinitionTypeProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteSkillDefinitionTypes:
+    /deleteSkillDefinitionTypes:
         get:
             description: List all deleteSkillDefinitionTypes proposals. These are proposed changes to delete SkillDefinitionType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteSkillDefinitionTypeProposal
@@ -16993,13 +16273,7 @@ paths:
             tags:
                 - SkillDefinitionTypes
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete SkillDefinitionType records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteSkillDefinitionTypeProposal
@@ -17032,7 +16306,7 @@ paths:
             tags:
                 - SkillDefinitionTypes
                 - Proposals
-    /{orgkeepID}/deleteSkillDefinitionTypes/{id}:
+    /deleteSkillDefinitionTypes/{id}:
         get:
             description: Get details of a specific SkillDefinitionType deletion proposal by ID
             operationId: getDeleteSkillDefinitionTypeProposal
@@ -17054,19 +16328,13 @@ paths:
                 - SkillDefinitionTypes
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteSkillDefinitionTypeProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateSkillDefinitionTypes:
+    /updateSkillDefinitionTypes:
         get:
             description: List all updateSkillDefinitionTypes proposals. These are proposed changes to update existing SkillDefinitionType records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateSkillDefinitionTypeProposal
@@ -17101,13 +16369,7 @@ paths:
             tags:
                 - SkillDefinitionTypes
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update SkillDefinitionType records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateSkillDefinitionTypeProposal
@@ -17140,7 +16402,7 @@ paths:
             tags:
                 - SkillDefinitionTypes
                 - Proposals
-    /{orgkeepID}/updateSkillDefinitionTypes/{id}:
+    /updateSkillDefinitionTypes/{id}:
         get:
             description: Get details of a specific SkillDefinitionType update proposal by ID
             operationId: getUpdateSkillDefinitionTypeProposal
@@ -17162,19 +16424,13 @@ paths:
                 - SkillDefinitionTypes
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateSkillDefinitionTypeProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/skillDefinitions:
+    /skillDefinitions:
         get:
             description: |-
                 List skillDefinitions
@@ -17226,14 +16482,8 @@ paths:
             tags:
                 - SkillDefinitions
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/skillDefinitions/{id}:
+        parameters: []
+    /skillDefinitions/{id}:
         get:
             description: Get a single SkillDefinition by ID
             operationId: getSkillDefinition
@@ -17255,19 +16505,13 @@ paths:
                 - SkillDefinitions
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: SkillDefinition ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createSkillDefinitions:
+    /createSkillDefinitions:
         get:
             description: |-
                 List all createSkillDefinitions proposals. These are proposed changes to create new SkillDefinition records that may be automatically approved or require manual approval depending on system configuration.
@@ -17319,13 +16563,7 @@ paths:
             tags:
                 - SkillDefinitions
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add SkillDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateSkillDefinitionProposal
@@ -17358,7 +16596,7 @@ paths:
             tags:
                 - SkillDefinitions
                 - Proposals
-    /{orgkeepID}/createSkillDefinitions/{id}:
+    /createSkillDefinitions/{id}:
         get:
             description: Get details of a specific SkillDefinition creation proposal by ID
             operationId: getCreateSkillDefinitionProposal
@@ -17380,19 +16618,13 @@ paths:
                 - SkillDefinitions
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateSkillDefinitionProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteSkillDefinitions:
+    /deleteSkillDefinitions:
         get:
             description: List all deleteSkillDefinitions proposals. These are proposed changes to delete SkillDefinition records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteSkillDefinitionProposal
@@ -17427,13 +16659,7 @@ paths:
             tags:
                 - SkillDefinitions
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete SkillDefinition records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteSkillDefinitionProposal
@@ -17466,7 +16692,7 @@ paths:
             tags:
                 - SkillDefinitions
                 - Proposals
-    /{orgkeepID}/deleteSkillDefinitions/{id}:
+    /deleteSkillDefinitions/{id}:
         get:
             description: Get details of a specific SkillDefinition deletion proposal by ID
             operationId: getDeleteSkillDefinitionProposal
@@ -17488,19 +16714,13 @@ paths:
                 - SkillDefinitions
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteSkillDefinitionProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateSkillDefinitions:
+    /updateSkillDefinitions:
         get:
             description: |-
                 List all updateSkillDefinitions proposals. These are proposed changes to update existing SkillDefinition records that may be automatically approved or require manual approval depending on system configuration.
@@ -17552,13 +16772,7 @@ paths:
             tags:
                 - SkillDefinitions
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update SkillDefinition records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateSkillDefinitionProposal
@@ -17591,7 +16805,7 @@ paths:
             tags:
                 - SkillDefinitions
                 - Proposals
-    /{orgkeepID}/updateSkillDefinitions/{id}:
+    /updateSkillDefinitions/{id}:
         get:
             description: Get details of a specific SkillDefinition update proposal by ID
             operationId: getUpdateSkillDefinitionProposal
@@ -17613,19 +16827,13 @@ paths:
                 - SkillDefinitions
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateSkillDefinitionProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/skillPlannings:
+    /skillPlannings:
         get:
             description: List skillPlannings
             operationId: listSkillPlanning
@@ -17660,14 +16868,8 @@ paths:
             tags:
                 - SkillPlannings
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/skillPlannings/{id}:
+        parameters: []
+    /skillPlannings/{id}:
         get:
             description: Get a single SkillPlanning by ID
             operationId: getSkillPlanning
@@ -17689,19 +16891,13 @@ paths:
                 - SkillPlannings
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: SkillPlanning ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createSkillPlannings:
+    /createSkillPlannings:
         get:
             description: List all createSkillPlannings proposals. These are proposed changes to create new SkillPlanning records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listCreateSkillPlanningProposal
@@ -17736,13 +16932,7 @@ paths:
             tags:
                 - SkillPlannings
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add SkillPlanning records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateSkillPlanningProposal
@@ -17775,7 +16965,7 @@ paths:
             tags:
                 - SkillPlannings
                 - Proposals
-    /{orgkeepID}/createSkillPlannings/{id}:
+    /createSkillPlannings/{id}:
         get:
             description: Get details of a specific SkillPlanning creation proposal by ID
             operationId: getCreateSkillPlanningProposal
@@ -17797,19 +16987,13 @@ paths:
                 - SkillPlannings
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateSkillPlanningProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteSkillPlannings:
+    /deleteSkillPlannings:
         get:
             description: List all deleteSkillPlannings proposals. These are proposed changes to delete SkillPlanning records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteSkillPlanningProposal
@@ -17844,13 +17028,7 @@ paths:
             tags:
                 - SkillPlannings
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete SkillPlanning records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteSkillPlanningProposal
@@ -17883,7 +17061,7 @@ paths:
             tags:
                 - SkillPlannings
                 - Proposals
-    /{orgkeepID}/deleteSkillPlannings/{id}:
+    /deleteSkillPlannings/{id}:
         get:
             description: Get details of a specific SkillPlanning deletion proposal by ID
             operationId: getDeleteSkillPlanningProposal
@@ -17905,19 +17083,13 @@ paths:
                 - SkillPlannings
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteSkillPlanningProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateSkillPlannings:
+    /updateSkillPlannings:
         get:
             description: List all updateSkillPlannings proposals. These are proposed changes to update existing SkillPlanning records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listUpdateSkillPlanningProposal
@@ -17952,13 +17124,7 @@ paths:
             tags:
                 - SkillPlannings
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update SkillPlanning records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateSkillPlanningProposal
@@ -17991,7 +17157,7 @@ paths:
             tags:
                 - SkillPlannings
                 - Proposals
-    /{orgkeepID}/updateSkillPlannings/{id}:
+    /updateSkillPlannings/{id}:
         get:
             description: Get details of a specific SkillPlanning update proposal by ID
             operationId: getUpdateSkillPlanningProposal
@@ -18013,19 +17179,13 @@ paths:
                 - SkillPlannings
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateSkillPlanningProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/skillResults:
+    /skillResults:
         get:
             description: |-
                 List skillResults
@@ -18077,14 +17237,8 @@ paths:
             tags:
                 - SkillResults
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/skillResults/{id}:
+        parameters: []
+    /skillResults/{id}:
         get:
             description: Get a single SkillResult by ID
             operationId: getSkillResult
@@ -18106,19 +17260,13 @@ paths:
                 - SkillResults
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: SkillResult ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createSkillResults:
+    /createSkillResults:
         get:
             description: |-
                 List all createSkillResults proposals. These are proposed changes to create new SkillResult records that may be automatically approved or require manual approval depending on system configuration.
@@ -18170,13 +17318,7 @@ paths:
             tags:
                 - SkillResults
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add SkillResult records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateSkillResultProposal
@@ -18209,7 +17351,7 @@ paths:
             tags:
                 - SkillResults
                 - Proposals
-    /{orgkeepID}/createSkillResults/{id}:
+    /createSkillResults/{id}:
         get:
             description: Get details of a specific SkillResult creation proposal by ID
             operationId: getCreateSkillResultProposal
@@ -18231,19 +17373,13 @@ paths:
                 - SkillResults
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateSkillResultProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteSkillResults:
+    /deleteSkillResults:
         get:
             description: List all deleteSkillResults proposals. These are proposed changes to delete SkillResult records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteSkillResultProposal
@@ -18278,13 +17414,7 @@ paths:
             tags:
                 - SkillResults
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete SkillResult records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteSkillResultProposal
@@ -18317,7 +17447,7 @@ paths:
             tags:
                 - SkillResults
                 - Proposals
-    /{orgkeepID}/deleteSkillResults/{id}:
+    /deleteSkillResults/{id}:
         get:
             description: Get details of a specific SkillResult deletion proposal by ID
             operationId: getDeleteSkillResultProposal
@@ -18339,19 +17469,13 @@ paths:
                 - SkillResults
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteSkillResultProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateSkillResults:
+    /updateSkillResults:
         get:
             description: |-
                 List all updateSkillResults proposals. These are proposed changes to update existing SkillResult records that may be automatically approved or require manual approval depending on system configuration.
@@ -18403,13 +17527,7 @@ paths:
             tags:
                 - SkillResults
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update SkillResult records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateSkillResultProposal
@@ -18442,7 +17560,7 @@ paths:
             tags:
                 - SkillResults
                 - Proposals
-    /{orgkeepID}/updateSkillResults/{id}:
+    /updateSkillResults/{id}:
         get:
             description: Get details of a specific SkillResult update proposal by ID
             operationId: getUpdateSkillResultProposal
@@ -18464,19 +17582,13 @@ paths:
                 - SkillResults
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateSkillResultProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/typesOfProof:
+    /typesOfProof:
         get:
             description: |-
                 List typesOfProof
@@ -18523,14 +17635,8 @@ paths:
             tags:
                 - TypesOfProof
                 - Querying
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
-    /{orgkeepID}/typesOfProof/{id}:
+        parameters: []
+    /typesOfProof/{id}:
         get:
             description: Get a single TypeOfProof by ID
             operationId: getTypeOfProof
@@ -18552,19 +17658,13 @@ paths:
                 - TypesOfProof
                 - Querying
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: TypeOfProof ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/createTypesOfProof:
+    /createTypesOfProof:
         get:
             description: |-
                 List all createTypesOfProof proposals. These are proposed changes to create new TypesOfProof records that may be automatically approved or require manual approval depending on system configuration.
@@ -18611,13 +17711,7 @@ paths:
             tags:
                 - TypesOfProof
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to add TypesOfProof records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createCreateTypeOfProofProposal
@@ -18650,7 +17744,7 @@ paths:
             tags:
                 - TypesOfProof
                 - Proposals
-    /{orgkeepID}/createTypesOfProof/{id}:
+    /createTypesOfProof/{id}:
         get:
             description: Get details of a specific TypesOfProof creation proposal by ID
             operationId: getCreateTypeOfProofProposal
@@ -18672,19 +17766,13 @@ paths:
                 - TypesOfProof
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: CreateTypeOfProofProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/deleteTypesOfProof:
+    /deleteTypesOfProof:
         get:
             description: List all deleteTypesOfProof proposals. These are proposed changes to delete TypesOfProof records that may be automatically approved or require manual approval depending on system configuration.
             operationId: listDeleteTypeOfProofProposal
@@ -18719,13 +17807,7 @@ paths:
             tags:
                 - TypesOfProof
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to delete TypesOfProof records. The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createDeleteTypeOfProofProposal
@@ -18758,7 +17840,7 @@ paths:
             tags:
                 - TypesOfProof
                 - Proposals
-    /{orgkeepID}/deleteTypesOfProof/{id}:
+    /deleteTypesOfProof/{id}:
         get:
             description: Get details of a specific TypesOfProof deletion proposal by ID
             operationId: getDeleteTypeOfProofProposal
@@ -18780,19 +17862,13 @@ paths:
                 - TypesOfProof
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: DeleteTypeOfProofProposal ID
               in: path
               name: id
               required: true
               schema:
                 type: string
-    /{orgkeepID}/updateTypesOfProof:
+    /updateTypesOfProof:
         get:
             description: |-
                 List all updateTypesOfProof proposals. These are proposed changes to update existing TypesOfProof records that may be automatically approved or require manual approval depending on system configuration.
@@ -18839,13 +17915,7 @@ paths:
             tags:
                 - TypesOfProof
                 - Proposals
-        parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
+        parameters: []
         post:
             description: Create new proposals to update TypesOfProof records. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable). The proposals may be automatically approved or require manual approval depending on system configuration. You can submit multiple proposals in a single request.
             operationId: createUpdateTypeOfProofProposal
@@ -18878,7 +17948,7 @@ paths:
             tags:
                 - TypesOfProof
                 - Proposals
-    /{orgkeepID}/updateTypesOfProof/{id}:
+    /updateTypesOfProof/{id}:
         get:
             description: Get details of a specific TypesOfProof update proposal by ID
             operationId: getUpdateTypeOfProofProposal
@@ -18900,12 +17970,6 @@ paths:
                 - TypesOfProof
                 - Proposals
         parameters:
-            - description: Organization identifier
-              in: path
-              name: orgkeepID
-              required: true
-              schema:
-                type: string
             - description: UpdateTypeOfProofProposal ID
               in: path
               name: id
