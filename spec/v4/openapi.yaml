@@ -4257,11 +4257,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4274,6 +4278,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4288,11 +4293,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4305,6 +4314,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4319,11 +4329,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4336,6 +4350,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4350,11 +4365,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4367,6 +4386,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4381,11 +4401,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4398,6 +4422,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4412,11 +4437,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4429,6 +4458,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4443,11 +4473,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4460,6 +4494,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4474,11 +4509,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4491,6 +4530,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4505,11 +4545,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4522,6 +4566,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4536,11 +4581,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4553,6 +4602,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4567,11 +4617,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4584,6 +4638,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4598,11 +4653,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4615,6 +4674,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4629,11 +4689,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4646,6 +4710,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4660,11 +4725,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4677,6 +4746,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4691,11 +4761,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4708,6 +4782,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4722,11 +4797,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4739,6 +4818,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4753,11 +4833,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4770,6 +4854,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4784,11 +4869,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4801,6 +4890,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4815,11 +4905,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4832,6 +4926,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4846,11 +4941,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4863,6 +4962,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4877,11 +4977,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4894,6 +4998,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4908,11 +5013,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4925,6 +5034,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4939,11 +5049,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4956,6 +5070,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -4970,11 +5085,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -4987,6 +5106,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5001,11 +5121,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5018,6 +5142,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5032,11 +5157,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5049,6 +5178,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5063,11 +5193,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5080,6 +5214,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5094,11 +5229,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5111,6 +5250,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5125,11 +5265,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5142,6 +5286,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5156,11 +5301,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5173,6 +5322,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5187,11 +5337,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5204,6 +5358,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5218,11 +5373,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5235,6 +5394,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5249,11 +5409,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5266,6 +5430,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5280,11 +5445,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5297,6 +5466,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5311,11 +5481,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5328,6 +5502,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5342,11 +5517,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5359,6 +5538,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5373,11 +5553,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5390,6 +5574,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5404,11 +5589,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5421,6 +5610,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5435,11 +5625,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5452,6 +5646,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5466,11 +5661,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5483,6 +5682,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5497,11 +5697,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5514,6 +5718,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5528,11 +5733,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5545,6 +5754,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5559,11 +5769,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5576,6 +5790,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5590,11 +5805,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5607,6 +5826,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5621,11 +5841,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5638,6 +5862,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5652,11 +5877,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5669,6 +5898,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5683,11 +5913,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5700,6 +5934,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5714,11 +5949,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5731,6 +5970,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5745,11 +5985,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5762,6 +6006,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5776,11 +6021,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5793,6 +6042,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5807,11 +6057,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5824,6 +6078,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5838,11 +6093,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5855,6 +6114,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5869,11 +6129,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5886,6 +6150,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5900,11 +6165,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5917,6 +6186,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5931,11 +6201,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5948,6 +6222,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5962,11 +6237,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -5979,6 +6258,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -5993,11 +6273,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6010,6 +6294,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6024,11 +6309,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6041,6 +6330,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6055,11 +6345,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6072,6 +6366,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6086,11 +6381,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6103,6 +6402,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6117,11 +6417,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6134,6 +6438,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6148,11 +6453,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6165,6 +6474,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6179,11 +6489,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6196,6 +6510,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6210,11 +6525,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6227,6 +6546,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6241,11 +6561,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6258,6 +6582,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6272,11 +6597,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6289,6 +6618,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6303,11 +6633,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6320,6 +6654,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6334,11 +6669,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6351,6 +6690,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6365,11 +6705,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6382,6 +6726,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6396,11 +6741,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6413,6 +6762,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6427,11 +6777,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6444,6 +6798,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6458,11 +6813,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6475,6 +6834,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6489,11 +6849,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6506,6 +6870,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6520,11 +6885,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6537,6 +6906,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6551,11 +6921,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6568,6 +6942,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6582,11 +6957,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6599,6 +6978,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6613,11 +6993,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6630,6 +7014,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6644,11 +7029,15 @@ components:
                     type: array
                 pagination:
                     properties:
+                        count:
+                            description: Actual number of items returned in this page
+                            format: int64
+                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
                         limit:
-                            description: Maximum number of items returned in this page
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
                         nextCursor:
@@ -6661,6 +7050,7 @@ components:
                     required:
                         - total
                         - limit
+                        - count
                         - hasMore
                     type: object
             required:
@@ -6697,14 +7087,8 @@ components:
             type: object
         PaginationInfo:
             properties:
-                cursor:
-                    description: Current cursor position
-                    type: string
-                hasNext:
+                hasMore:
                     description: Whether there are more pages
-                    type: boolean
-                hasPrevious:
-                    description: Whether there are previous pages
                     type: boolean
                 limit:
                     description: Maximum number of items returned
@@ -10293,7 +10677,7 @@ info:
         email: api-support@ag5.com
         name: AG5 API Support
         url: https://support.ag5.com
-    description: "# AG5 Skills Management API\n\n## Overview\nThe AG5 Skills Management API provides a comprehensive solution for managing employee\nskills within your organization. This API supports both direct operations and a\nproposal-based workflow for changes that require approval.\n\n## Proposal System\nMany operations in this API use a proposal-based workflow:\n- **Direct Operations**: Read-only operations (GET) directly access current data\n- **Proposal Operations**: Modifications (CREATE, UPDATE, DELETE) create proposals\n- **Automatic vs Manual Approval**: Proposals may be automatically approved based on \n  system configuration or require manual approval\n\n## Authentication\nAll API endpoints require authentication using an API key.\n\n```\nX-API-Key: <your-api-key>\n```\n\n## Rate Limiting\nAPI calls are rate-limited to ensure fair usage:\n- 1000 requests per hour per organization\n- Rate limit headers are included in all responses\n\n## Pagination\nList endpoints support cursor-based pagination:\n- Use `limit` parameter to control page size (max 1000)\n- Use `cursor` parameter with the value from previous response\n- Total count is included in all list responses\n"
+    description: "# AG5 Skills Management API\n\n## Overview\nThe AG5 Skills Management API provides a comprehensive solution for managing employee\nskills within your organization. This API supports both direct operations and a\nproposal-based workflow for changes that require approval.\n\n## Repositories\n\nThe API allows accessing all your organization's repositories through a single API account. \nWhen requesting data this means that all repositories for the API account will be combined.\nEach response item will contain a reference to the repository it lives in.\nWhen creating a new item a repository reference needs to be provided to indicate where the item should be created.\nTo find the repository references available, use the [List repositories](#get-orgkeepid-repositories) operation.\n\n## API accounts\nAn API account grants access to a number of repositories within your organization.\nEvery API account can have a number of API keys to work with.\nThe API key is used to authenticate against the API service.\nHaving multiple keys allows for easy cycling between API keys on renewal or after revocation.\n\nAn API account is bound to a single environment (aka stage).\nTypically an organization will have an API account for the acceptance environment and an additional one for the production environment.\nFor every additional environment a new API account needs to be requested.\n\n\n## Proposal System\nMany operations in this API use a proposal-based workflow:\n- **Direct Operations**: Read-only operations (GET) directly access current data\n- **Proposal Operations**: Modifications (CREATE, UPDATE, DELETE) create proposals\n- **Automatic vs Manual Approval**: Proposals may be automatically approved based on \n  system configuration or require manual approval\n\nIf a new proposal is added through the API is is not resolved instantaneously even\nif the backend is configured to automatically approve. This means that the Proposal\nwill initially be marked as not approved yet.\n\n## Authentication\nAll API endpoints require authentication using an API key.\nThe API key should be provided as a header in the request.\n\n```\nX-API-Key: <your-api-key>\n```\n\n## Rate Limiting\nAPI calls are rate-limited to ensure fair usage:\n- 1000 requests per hour per organization\n- Rate limit headers are included in all responses\n\n## Pagination\nList endpoints (a GET on a collection) use cursor-based pagination.\nPlease provide the following query parameters (both optional) to control the output:\n- `limit` to control page size (default: 10, max: 1000)\n- `cursor` to control where to start (use the `nextCursor` value from the previous response)\n\nThe following fields are present in the response for list endpoints:\n- `total` to indicate the total items available in the list\n- `count` to indicate the number of items received\n- `limit` to indicate the page size requested\n- `hasMore` to indicate more items are available in following page(s)\n- `nextCursor` to provide the starting point for the next page request\n"
     license:
         name: Commercial
         url: https://ag5.com/terms
