@@ -18025,25 +18025,3 @@ tags:
       name: TypesOfProof
     - description: API metadata operations
       name: Meta
-x-webhooks:
-    proposalStatusChanged:
-        post:
-            description: Triggered when a proposal's status changes
-            requestBody:
-                content:
-                    application/json:
-                        schema:
-                            properties:
-                                newStatus:
-                                    type: string
-                                previousStatus:
-                                    type: string
-                                proposalId:
-                                    format: uuid
-                                    type: string
-                                timestamp:
-                                    format: date-time
-                                    type: string
-                            type: object
-                required: true
-            summary: Proposal status changed
