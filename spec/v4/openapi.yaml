@@ -10682,7 +10682,7 @@ info:
         name: Commercial
         url: https://ag5.com/terms
     title: AG5 Skills Management API
-    version: 4.0.1
+    version: 4.0.2
     x-logo:
         altText: AG5 Logo
         url: https://www.ag5.com/wp-content/themes/ag5/assets/images/ag5-logo.png
