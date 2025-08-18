@@ -16835,9 +16835,31 @@ paths:
                 type: string
     /skillPlannings:
         get:
-            description: List skillPlannings
+            description: |-
+                List skillPlannings
+
+                **Filter Syntax:**
+                - Filters use exact match only
+                - Multiple filters are combined with AND logic
+                - Filterable fields: employeeID, typeOfProofID, skillDefinitionID
+                - Example: `?employeeID=123e4567-e89b-12d3-a456-426614174000&typeOfProofID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listSkillPlanning
             parameters:
+                - description: Filter by employeeID (exact match)
+                  in: query
+                  name: employeeID
+                  schema:
+                    type: string
+                - description: Filter by typeOfProofID (exact match)
+                  in: query
+                  name: typeOfProofID
+                  schema:
+                    type: string
+                - description: Filter by skillDefinitionID (exact match)
+                  in: query
+                  name: skillDefinitionID
+                  schema:
+                    type: string
                 - description: Maximum number of items to return (1-1000)
                   in: query
                   name: limit
@@ -16899,9 +16921,31 @@ paths:
                 type: string
     /createSkillPlannings:
         get:
-            description: List all createSkillPlannings proposals. These are proposed changes to create new SkillPlanning records that may be automatically approved or require manual approval depending on system configuration.
+            description: |-
+                List all createSkillPlannings proposals. These are proposed changes to create new SkillPlanning records that may be automatically approved or require manual approval depending on system configuration.
+
+                **Filter Syntax:**
+                - Filters use exact match only
+                - Multiple filters are combined with AND logic
+                - Filterable fields: employeeID, typeOfProofID, skillDefinitionID
+                - Example: `?employeeID=123e4567-e89b-12d3-a456-426614174000&typeOfProofID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listCreateSkillPlanningProposal
             parameters:
+                - description: Filter by employeeID (exact match)
+                  in: query
+                  name: employeeID
+                  schema:
+                    type: string
+                - description: Filter by typeOfProofID (exact match)
+                  in: query
+                  name: typeOfProofID
+                  schema:
+                    type: string
+                - description: Filter by skillDefinitionID (exact match)
+                  in: query
+                  name: skillDefinitionID
+                  schema:
+                    type: string
                 - description: Maximum number of items to return (1-1000)
                   in: query
                   name: limit
@@ -17091,9 +17135,31 @@ paths:
                 type: string
     /updateSkillPlannings:
         get:
-            description: List all updateSkillPlannings proposals. These are proposed changes to update existing SkillPlanning records that may be automatically approved or require manual approval depending on system configuration.
+            description: |-
+                List all updateSkillPlannings proposals. These are proposed changes to update existing SkillPlanning records that may be automatically approved or require manual approval depending on system configuration.
+
+                **Filter Syntax:**
+                - Filters use exact match only
+                - Multiple filters are combined with AND logic
+                - Filterable fields: employeeID, typeOfProofID, skillDefinitionID
+                - Example: `?employeeID=123e4567-e89b-12d3-a456-426614174000&typeOfProofID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listUpdateSkillPlanningProposal
             parameters:
+                - description: Filter by employeeID (exact match)
+                  in: query
+                  name: employeeID
+                  schema:
+                    type: string
+                - description: Filter by typeOfProofID (exact match)
+                  in: query
+                  name: typeOfProofID
+                  schema:
+                    type: string
+                - description: Filter by skillDefinitionID (exact match)
+                  in: query
+                  name: skillDefinitionID
+                  schema:
+                    type: string
                 - description: Maximum number of items to return (1-1000)
                   in: query
                   name: limit
@@ -17193,10 +17259,15 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: typeOfProofID, scoreID
-                - Example: `?typeOfProofID=123e4567-e89b-12d3-a456-426614174000&scoreID=123e4567-e89b-12d3-a456-426614174000`
+                - Filterable fields: employeeID, typeOfProofID, scoreID
+                - Example: `?employeeID=123e4567-e89b-12d3-a456-426614174000&typeOfProofID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listSkillResult
             parameters:
+                - description: Filter by employeeID (exact match)
+                  in: query
+                  name: employeeID
+                  schema:
+                    type: string
                 - description: Filter by typeOfProofID (exact match)
                   in: query
                   name: typeOfProofID
@@ -17274,10 +17345,15 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: typeOfProofID, scoreID
-                - Example: `?typeOfProofID=123e4567-e89b-12d3-a456-426614174000&scoreID=123e4567-e89b-12d3-a456-426614174000`
+                - Filterable fields: employeeID, typeOfProofID, scoreID
+                - Example: `?employeeID=123e4567-e89b-12d3-a456-426614174000&typeOfProofID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listCreateSkillResultProposal
             parameters:
+                - description: Filter by employeeID (exact match)
+                  in: query
+                  name: employeeID
+                  schema:
+                    type: string
                 - description: Filter by typeOfProofID (exact match)
                   in: query
                   name: typeOfProofID
@@ -17483,10 +17559,15 @@ paths:
                 **Filter Syntax:**
                 - Filters use exact match only
                 - Multiple filters are combined with AND logic
-                - Filterable fields: typeOfProofID, scoreID
-                - Example: `?typeOfProofID=123e4567-e89b-12d3-a456-426614174000&scoreID=123e4567-e89b-12d3-a456-426614174000`
+                - Filterable fields: employeeID, typeOfProofID, scoreID
+                - Example: `?employeeID=123e4567-e89b-12d3-a456-426614174000&typeOfProofID=123e4567-e89b-12d3-a456-426614174000`
             operationId: listUpdateSkillResultProposal
             parameters:
+                - description: Filter by employeeID (exact match)
+                  in: query
+                  name: employeeID
+                  schema:
+                    type: string
                 - description: Filter by typeOfProofID (exact match)
                   in: query
                   name: typeOfProofID
@@ -18025,3 +18106,25 @@ tags:
       name: TypesOfProof
     - description: API metadata operations
       name: Meta
+x-webhooks:
+    proposalStatusChanged:
+        post:
+            description: Triggered when a proposal's status changes
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            properties:
+                                newStatus:
+                                    type: string
+                                previousStatus:
+                                    type: string
+                                proposalId:
+                                    format: uuid
+                                    type: string
+                                timestamp:
+                                    format: date-time
+                                    type: string
+                            type: object
+                required: true
+            summary: Proposal status changed
