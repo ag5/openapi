@@ -11514,14 +11514,7 @@ paths:
                 - Employees
                 - Querying
     /employees/{id}/documents:
-        parameters:
-            - description: Employee ID
-              in: path
-              name: id
-              required: true
-              schema:
-                type: string
-        post:
+        get:
             description: List documents for the Employee resource
             operationId: listDocumentsForEmployee
             responses:
@@ -11541,6 +11534,13 @@ paths:
             tags:
                 - Employees
                 - Querying
+        parameters:
+            - description: Employee ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
     /createEmployees:
         get:
             description: List all createEmployees proposals. These are proposed changes to create new Employee records that may be automatically approved or require manual approval depending on system configuration.
@@ -16561,14 +16561,7 @@ paths:
                 - SkillDefinitions
                 - Querying
     /skillDefinitions/{id}/documents:
-        parameters:
-            - description: SkillDefinition ID
-              in: path
-              name: id
-              required: true
-              schema:
-                type: string
-        post:
+        get:
             description: List documents for the SkillDefinition resource
             operationId: listDocumentsForSkillDefinition
             responses:
@@ -16588,6 +16581,13 @@ paths:
             tags:
                 - SkillDefinitions
                 - Querying
+        parameters:
+            - description: SkillDefinition ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
     /createSkillDefinitions:
         get:
             description: |-
@@ -17451,14 +17451,7 @@ paths:
                 - SkillResults
                 - Querying
     /skillResults/{id}/documents:
-        parameters:
-            - description: SkillResult ID
-              in: path
-              name: id
-              required: true
-              schema:
-                type: string
-        post:
+        get:
             description: List documents for the SkillResult resource
             operationId: listDocumentsForSkillResult
             responses:
@@ -17478,6 +17471,13 @@ paths:
             tags:
                 - SkillResults
                 - Querying
+        parameters:
+            - description: SkillResult ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
     /createSkillResults:
         get:
             description: |-
