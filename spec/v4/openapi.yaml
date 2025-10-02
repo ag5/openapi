@@ -127,6 +127,26 @@ components:
                 - name
                 - entityDefinitionID
             type: object
+        CreateCreateDocumentProposalRequest:
+            properties:
+                contentType:
+                    type: string
+                fileSize:
+                    format: int32
+                    type: integer
+                filename:
+                    type: string
+                repositoryID:
+                    format: uuid
+                    type: string
+                subjectID:
+                    format: uuid
+                    type: string
+            required:
+                - subjectID
+                - repositoryID
+                - fileSize
+            type: object
         CreateCreateEmployeeProposalRequest:
             properties:
                 birthDate:
@@ -770,6 +790,18 @@ components:
                 - id
                 - repositoryID
             type: object
+        CreateDeleteDocumentProposalRequest:
+            properties:
+                id:
+                    format: uuid
+                    type: string
+                repositoryID:
+                    format: uuid
+                    type: string
+            required:
+                - id
+                - repositoryID
+            type: object
         CreateDeleteEmployeeProposalRequest:
             properties:
                 id:
@@ -985,6 +1017,46 @@ components:
             required:
                 - id
                 - repositoryID
+            type: object
+        CreateDocumentProposal:
+            properties:
+                contentType:
+                    type: string
+                fileID:
+                    type: string
+                fileSize:
+                    format: int32
+                    type: integer
+                filename:
+                    type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    example: false
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
+                    type: string
+                repositoryID:
+                    format: uuid
+                    type: string
+                requestID:
+                    format: uuid
+                    readOnly: true
+                    type: string
+                subjectID:
+                    format: uuid
+                    type: string
+            required:
+                - requestID
+                - isProposalResolved
+                - isProposalExecutionFailed
+                - subjectID
+                - repositoryID
+                - fileID
+                - fileSize
             type: object
         CreateEmployeeProposal:
             properties:
@@ -3363,6 +3435,35 @@ components:
                 - id
                 - repositoryID
             type: object
+        DeleteDocumentProposal:
+            properties:
+                id:
+                    format: uuid
+                    type: string
+                isProposalExecutionFailed:
+                    readOnly: true
+                    type: boolean
+                isProposalResolved:
+                    example: false
+                    readOnly: true
+                    type: boolean
+                proposalExecutionErrorText:
+                    readOnly: true
+                    type: string
+                repositoryID:
+                    format: uuid
+                    type: string
+                requestID:
+                    format: uuid
+                    readOnly: true
+                    type: string
+            required:
+                - requestID
+                - isProposalResolved
+                - isProposalExecutionFailed
+                - id
+                - repositoryID
+            type: object
         DeleteEmployeeProposal:
             properties:
                 id:
@@ -3885,6 +3986,20 @@ components:
                 - id
                 - repositoryID
             type: object
+        Document:
+            properties:
+                contentType:
+                    description: MIME type of the file
+                    type: string
+                downloadUrl:
+                    type: string
+                filename:
+                    description: Name of the file
+                    type: string
+                size:
+                    description: Size of the file in bytes
+                    type: integer
+            type: object
         Employee:
             properties:
                 birthDate:
@@ -4257,10 +4372,38 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - count
+                        - hasMore
+                    type: object
+            required:
+                - data
+                - pagination
+            type: object
+        ListCreateDocumentProposalResponse:
+            properties:
+                data:
+                    items:
+                        $ref: '#/components/schemas/CreateDocumentProposal'
+                    type: array
+                pagination:
+                    properties:
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4293,10 +4436,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4329,10 +4468,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4365,10 +4500,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4401,10 +4532,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4437,10 +4564,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4473,10 +4596,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4509,10 +4628,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4545,10 +4660,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4581,10 +4692,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4617,10 +4724,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4653,10 +4756,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4689,10 +4788,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4725,10 +4820,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4761,10 +4852,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4797,10 +4884,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4833,10 +4916,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4869,10 +4948,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4905,10 +4980,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4941,10 +5012,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -4977,10 +5044,38 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
+                        hasMore:
+                            description: Indicates if there are more items to fetch
+                            type: boolean
+                        limit:
+                            description: Maximum number of items requested for this page
                             format: int64
                             type: integer
+                        nextCursor:
+                            description: Cursor for the next page. Pass this value in the 'cursor' parameter to get the next page.
+                            type: string
+                        total:
+                            description: Total number of items matching the query
+                            format: int64
+                            type: integer
+                    required:
+                        - total
+                        - limit
+                        - count
+                        - hasMore
+                    type: object
+            required:
+                - data
+                - pagination
+            type: object
+        ListDeleteDocumentProposalResponse:
+            properties:
+                data:
+                    items:
+                        $ref: '#/components/schemas/DeleteDocumentProposal'
+                    type: array
+                pagination:
+                    properties:
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5013,10 +5108,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5049,10 +5140,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5085,10 +5172,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5121,10 +5204,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5157,10 +5236,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5193,10 +5268,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5229,10 +5300,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5265,10 +5332,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5301,10 +5364,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5337,10 +5396,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5373,10 +5428,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5409,10 +5460,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5445,10 +5492,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5481,10 +5524,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5517,10 +5556,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5553,10 +5588,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5589,10 +5620,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5625,10 +5652,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5661,10 +5684,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5697,10 +5716,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5733,10 +5748,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5769,10 +5780,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5805,10 +5812,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5841,10 +5844,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5877,10 +5876,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5913,10 +5908,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5949,10 +5940,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -5985,10 +5972,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6021,10 +6004,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6057,10 +6036,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6093,10 +6068,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6129,10 +6100,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6165,10 +6132,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6201,10 +6164,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6237,10 +6196,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6273,10 +6228,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6309,10 +6260,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6345,10 +6292,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6381,10 +6324,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6417,10 +6356,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6453,10 +6388,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6489,10 +6420,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6525,10 +6452,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6561,10 +6484,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6597,10 +6516,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6633,10 +6548,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6669,10 +6580,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6705,10 +6612,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6741,10 +6644,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6777,10 +6676,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6813,10 +6708,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6849,10 +6740,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6885,10 +6772,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6921,10 +6804,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6957,10 +6836,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -6993,10 +6868,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -7029,10 +6900,6 @@ components:
                     type: array
                 pagination:
                     properties:
-                        count:
-                            description: Actual number of items returned in this page
-                            format: int64
-                            type: integer
                         hasMore:
                             description: Indicates if there are more items to fetch
                             type: boolean
@@ -7558,6 +7425,28 @@ components:
                         nl: Nederlandse tekst
                     type: object
                 repositoryID:
+                    description: Omit this field to keep current value
+                    format: uuid
+                    type: string
+            type: object
+        UpdateCreateDocumentProposalRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
+            properties:
+                contentType:
+                    description: Omit this field to keep current value
+                    type: string
+                fileSize:
+                    description: Omit this field to keep current value
+                    format: int32
+                    type: integer
+                filename:
+                    description: Omit this field to keep current value
+                    type: string
+                repositoryID:
+                    description: Omit this field to keep current value
+                    format: uuid
+                    type: string
+                subjectID:
                     description: Omit this field to keep current value
                     format: uuid
                     type: string
@@ -8196,6 +8085,18 @@ components:
                     type: string
             type: object
         UpdateDeleteCustomFieldDefinitionProposalRequest:
+            description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
+            properties:
+                id:
+                    description: Omit this field to keep current value
+                    format: uuid
+                    type: string
+                repositoryID:
+                    description: Omit this field to keep current value
+                    format: uuid
+                    type: string
+            type: object
+        UpdateDeleteDocumentProposalRequest:
             description: Update request object. All fields are optional - omitted fields will not be changed. Only include fields you want to update. Setting a field to null will clear its value (where applicable).
             properties:
                 id:
@@ -10677,7 +10578,7 @@ info:
         email: api-support@ag5.com
         name: AG5 API Support
         url: https://support.ag5.com
-    description: "# AG5 Skills Management API\n\n## Overview\nThe AG5 Skills Management API provides a comprehensive solution for managing employee\nskills within your organization. This API supports both direct operations and a\nproposal-based workflow for changes that require approval.\n\n## Repositories\n\nThe API allows accessing all your organization's repositories through a single API account. \nWhen requesting data this means that all repositories for the API account will be combined.\nEach response item will contain a reference to the repository it lives in.\nWhen creating a new item a repository reference needs to be provided to indicate where the item should be created.\nTo find the repository references available, use the [List repositories](#get-orgkeepid-repositories) operation.\n\n## API accounts\nAn API account grants access to a number of repositories within your organization.\nEvery API account can have a number of API keys to work with.\nThe API key is used to authenticate against the API service.\nHaving multiple keys allows for easy cycling between API keys on renewal or after revocation.\n\nAn API account is bound to a single environment (aka stage).\nTypically an organization will have an API account for the acceptance environment and an additional one for the production environment.\nFor every additional environment a new API account needs to be requested.\n\n\n## Proposal System\nMany operations in this API use a proposal-based workflow:\n- **Direct Operations**: Read-only operations (GET) directly access current data\n- **Proposal Operations**: Modifications (CREATE, UPDATE, DELETE) create proposals\n- **Automatic vs Manual Approval**: Proposals may be automatically approved based on \n  system configuration or require manual approval\n\nIf a new proposal is added through the API is is not resolved instantaneously even\nif the backend is configured to automatically approve. This means that the Proposal\nwill initially be marked as not approved yet.\n\n## Authentication\nAll API endpoints require authentication using an API key.\nThe API key should be provided as a header in the request.\n\n```\nX-API-Key: <your-api-key>\n```\n\n## Rate Limiting\nAPI calls are rate-limited to ensure fair usage:\n- 1000 requests per hour per organization\n- Rate limit headers are included in all responses\n\n## Pagination\nList endpoints (a GET on a collection) use cursor-based pagination.\nPlease provide the following query parameters (both optional) to control the output:\n- `limit` to control page size (default: 10, max: 1000)\n- `cursor` to control where to start (use the `nextCursor` value from the previous response)\n\nThe following fields are present in the response for list endpoints:\n- `total` to indicate the total items available in the list\n- `count` to indicate the number of items received\n- `limit` to indicate the page size requested\n- `hasMore` to indicate more items are available in following page(s)\n- `nextCursor` to provide the starting point for the next page request\n"
+    description: "# AG5 Skills Management API\n\n## Overview\nThe AG5 Skills Management API provides a comprehensive solution for managing employee\nskills within your organization. This API supports both direct operations and a\nproposal-based workflow for changes that require approval.\n\n## Repositories\n\nThe API allows accessing all your organization's repositories through a single API account. \nWhen requesting data this means that all repositories for the API account will be combined.\nEach response item will contain a reference to the repository it lives in.\nWhen creating a new item a repository reference needs to be provided to indicate where the item should be created.\nTo find the repository references available, use the [List repositories](../repositories#get-orgkeepid-repositories) operation.\n\n## API accounts\nAn API account grants access to a number of repositories within your organization.\nEvery API account can have a number of API keys to work with.\nThe API key is used to authenticate against the API service.\nHaving multiple keys allows for easy cycling between API keys on renewal or after revocation.\n\nAn API account is bound to a single environment (aka stage).\nTypically an organization will have an API account for the acceptance environment and an additional one for the production environment.\nFor every additional environment a new API account needs to be requested.\n\n\n## Proposal System\nMany operations in this API use a proposal-based workflow:\n- **Direct Operations**: Read-only operations (GET) directly access current data\n- **Proposal Operations**: Modifications (CREATE, UPDATE, DELETE) create proposals\n- **Automatic vs Manual Approval**: Proposals may be automatically approved based on \n  system configuration or require manual approval\n\nIf a new proposal is added through the API is is not resolved instantaneously even\nif the backend is configured to automatically approve. This means that the Proposal\nwill initially be marked as not approved yet.\n\n## Endpoints/URLs\nThe URL for the endpoints of the API have the following form:\n```\nhttps://matrix{-stage}.ag5.com/api/orgkeep/{orgid}/{slug}/v4/{endpoint}\n```\nThe `stage` refers to the stage/environment the repositories live in:\n|stage|description|\n|-----|-----------|\n|&nbsp;|Production (i.e. no explicit stage named)|\n|acceptance|Acceptance/test environment|\n|prerelease|Pre-release environment|\n|dev|Development environment (mostly internal)|\n\nThe `slug` parameter will be provided when an API account is requested.\n\nAs an example, the following URL should be used to access the List employees endpoint in the acceptance environment (of some fictional company Acme Corporation):\n```\nhttps://matrix-acceptance.ag5.com/api/orgkeep/acme/orgkeep/v4/employees\n```\n\n## Authentication\nAll API endpoints require authentication using an API key.\nThe API key should be provided as a header in the request.\n\n```\nX-API-Key: <your-api-key>\n```\n\n## Rate Limiting\nAPI calls are rate-limited to ensure fair usage:\n- 1000 requests per hour per organization\n- Rate limit headers are included in all responses\n\n## Pagination\nList endpoints (a GET on a collection) use cursor-based pagination.\nPlease provide the following query parameters (both optional) to control the output:\n- `limit` to control page size (default: 10, max: 1000)\n- `cursor` to control where to start (use the `nextCursor` value from the previous response)\n\nThe following fields are present in the response for list endpoints:\n- `total` to indicate the total items available in the list\n- `limit` to indicate the actual page size determined by the server\n- `hasMore` to indicate more items are available in following page(s)\n- `nextCursor` to provide the starting point for the next page request\n"
     license:
         name: Commercial
         url: https://ag5.com/terms
@@ -11071,6 +10972,134 @@ paths:
                 - Proposals
         parameters:
             - description: UpdateCustomFieldDefinitionProposal ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+    /createDocuments:
+        get:
+            description: List all createDocuments proposals. These are proposed changes to create new Document records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listCreateDocumentProposal
+            parameters:
+                - description: Maximum number of items to return (1-1000)
+                  in: query
+                  name: limit
+                  schema:
+                    default: 10
+                    maximum: 1000
+                    minimum: 1
+                    type: integer
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
+                  in: query
+                  name: cursor
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ListCreateDocumentProposalResponse'
+                    description: Successful response
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List Document creation proposals
+            tags:
+                - Documents
+                - Proposals
+        parameters: []
+    /createDocuments/{id}:
+        get:
+            description: Get details of a specific Document creation proposal by ID
+            operationId: getCreateDocumentProposal
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/CreateDocumentProposal'
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "404":
+                    $ref: '#/components/responses/NotFound'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Get Document creation proposal
+            tags:
+                - Documents
+                - Proposals
+        parameters:
+            - description: CreateDocumentProposal ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+    /deleteDocuments:
+        get:
+            description: List all deleteDocuments proposals. These are proposed changes to delete Document records that may be automatically approved or require manual approval depending on system configuration.
+            operationId: listDeleteDocumentProposal
+            parameters:
+                - description: Maximum number of items to return (1-1000)
+                  in: query
+                  name: limit
+                  schema:
+                    default: 10
+                    maximum: 1000
+                    minimum: 1
+                    type: integer
+                - description: Cursor for pagination. Use the value from the 'nextCursor' field of the previous response.
+                  in: query
+                  name: cursor
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ListDeleteDocumentProposalResponse'
+                    description: Successful response
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List Document deletion proposals
+            tags:
+                - Documents
+                - Proposals
+        parameters: []
+    /deleteDocuments/{id}:
+        get:
+            description: Get details of a specific Document deletion proposal by ID
+            operationId: getDeleteDocumentProposal
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/DeleteDocumentProposal'
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "404":
+                    $ref: '#/components/responses/NotFound'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Get Document deletion proposal
+            tags:
+                - Documents
+                - Proposals
+        parameters:
+            - description: DeleteDocumentProposal ID
               in: path
               name: id
               required: true
@@ -11528,6 +11557,70 @@ paths:
               required: true
               schema:
                 type: string
+    /employees/{id}/uploadDocument:
+        parameters:
+            - description: Employee ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+        post:
+            description: Upload a binary document that will be attached to the specified resource via a proposal.
+            operationId: uploadDocumentForEmployee
+            requestBody:
+                content:
+                    multipart/form-data:
+                        schema:
+                            properties:
+                                file:
+                                    format: binary
+                                    type: string
+                            required:
+                                - file
+                            type: object
+                required: true
+            responses:
+                "202":
+                    description: Upload accepted
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Upload document for Employee
+            tags:
+                - Employees
+                - Querying
+    /employees/{id}/documents:
+        parameters:
+            - description: Employee ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+        post:
+            description: List documents for the Employee resource
+            operationId: listDocumentsForEmployee
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    $ref: '#/components/schemas/Document'
+                                type: array
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List documents for Employee
+            tags:
+                - Employees
+                - Querying
     /createEmployees:
         get:
             description: List all createEmployees proposals. These are proposed changes to create new Employee records that may be automatically approved or require manual approval depending on system configuration.
@@ -16511,6 +16604,70 @@ paths:
               required: true
               schema:
                 type: string
+    /skillDefinitions/{id}/uploadDocument:
+        parameters:
+            - description: SkillDefinition ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+        post:
+            description: Upload a binary document that will be attached to the specified resource via a proposal.
+            operationId: uploadDocumentForSkillDefinition
+            requestBody:
+                content:
+                    multipart/form-data:
+                        schema:
+                            properties:
+                                file:
+                                    format: binary
+                                    type: string
+                            required:
+                                - file
+                            type: object
+                required: true
+            responses:
+                "202":
+                    description: Upload accepted
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Upload document for SkillDefinition
+            tags:
+                - SkillDefinitions
+                - Querying
+    /skillDefinitions/{id}/documents:
+        parameters:
+            - description: SkillDefinition ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+        post:
+            description: List documents for the SkillDefinition resource
+            operationId: listDocumentsForSkillDefinition
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    $ref: '#/components/schemas/Document'
+                                type: array
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List documents for SkillDefinition
+            tags:
+                - SkillDefinitions
+                - Querying
     /createSkillDefinitions:
         get:
             description: |-
@@ -17337,6 +17494,70 @@ paths:
               required: true
               schema:
                 type: string
+    /skillResults/{id}/uploadDocument:
+        parameters:
+            - description: SkillResult ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+        post:
+            description: Upload a binary document that will be attached to the specified resource via a proposal.
+            operationId: uploadDocumentForSkillResult
+            requestBody:
+                content:
+                    multipart/form-data:
+                        schema:
+                            properties:
+                                file:
+                                    format: binary
+                                    type: string
+                            required:
+                                - file
+                            type: object
+                required: true
+            responses:
+                "202":
+                    description: Upload accepted
+                "400":
+                    $ref: '#/components/responses/BadRequest'
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: Upload document for SkillResult
+            tags:
+                - SkillResults
+                - Querying
+    /skillResults/{id}/documents:
+        parameters:
+            - description: SkillResult ID
+              in: path
+              name: id
+              required: true
+              schema:
+                type: string
+        post:
+            description: List documents for the SkillResult resource
+            operationId: listDocumentsForSkillResult
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    $ref: '#/components/schemas/Document'
+                                type: array
+                    description: Successful response
+                "401":
+                    $ref: '#/components/responses/Unauthorized'
+                "500":
+                    $ref: '#/components/responses/InternalError'
+            summary: List documents for SkillResult
+            tags:
+                - SkillResults
+                - Querying
     /createSkillResults:
         get:
             description: |-
@@ -18064,6 +18285,8 @@ tags:
       name: Querying
     - description: Operations for CustomFieldDefinitions
       name: CustomFieldDefinitions
+    - description: Operations for Documents
+      name: Documents
     - description: Operations for EmployeeUnavailabilities
       name: EmployeeUnavailabilities
     - description: Operations for Employees
@@ -18106,25 +18329,3 @@ tags:
       name: TypesOfProof
     - description: API metadata operations
       name: Meta
-x-webhooks:
-    proposalStatusChanged:
-        post:
-            description: Triggered when a proposal's status changes
-            requestBody:
-                content:
-                    application/json:
-                        schema:
-                            properties:
-                                newStatus:
-                                    type: string
-                                previousStatus:
-                                    type: string
-                                proposalId:
-                                    format: uuid
-                                    type: string
-                                timestamp:
-                                    format: date-time
-                                    type: string
-                            type: object
-                required: true
-            summary: Proposal status changed
